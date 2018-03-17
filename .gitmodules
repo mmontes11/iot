@@ -1,0 +1,6 @@
+[submodule "iot-server"]
+	path = iot-server
+	url = git@github.com:mmontes11/iot-server.git
+[submodule "biot"]
+	path = biot
+	url = git@github.com:mmontes11/biot.git
