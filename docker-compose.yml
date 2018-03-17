@@ -9,7 +9,6 @@ services:
       - node2
     restart: always
   node1:
-    image: mmontes11/iot-server
     env_file:
       - iot-server/.env
     expose:
@@ -17,9 +16,7 @@ services:
     links:
       - mongo
       - redis
-    restart: always
   node2:
-    image: mmontes11/iot-server
     env_file:
       - iot-server/.env
     expose:
@@ -27,7 +24,6 @@ services:
     links:
       - mongo
       - redis
-    restart: always
   mongo:
     image: mongo
     expose:
@@ -39,11 +35,9 @@ services:
       - "${REDIS_PORT}"
     restart: always
   biot:
-    image: mmontes11/biot
     env_file:
       - biot/.env
     expose:
       - "${BIOT_PORT}"
     links:
       - nginx
-    restart: always

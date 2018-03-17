@@ -1,0 +1,8 @@
+version: '2'
+services:
+  node1:
+    build: iot-server
+  node2:
+    build: iot-server
+  biot:
+    build: biot

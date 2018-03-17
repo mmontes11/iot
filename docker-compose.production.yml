@@ -1,0 +1,11 @@
+version: '2'
+services:
+  node1:
+    image: mmontes11/iot-server
+    restart: always
+  node2:
+    image: mmontes11/iot-server
+    restart: always
+  biot:
+    image: mmontes11/biot
+    restart: always
