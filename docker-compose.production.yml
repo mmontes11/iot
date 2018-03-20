@@ -1,10 +1,18 @@
 version: '2'
 services:
+  nginx:
+    restart: always
   node1:
     image: mmontes11/iot-server
     restart: always
   node2:
     image: mmontes11/iot-server
+    restart: always
+  mongo:
+    restart: always
+  redis:
+    restart: always
+  mosquitto:
     restart: always
   biot:
     image: mmontes11/biot

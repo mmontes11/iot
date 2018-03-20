@@ -7,7 +7,6 @@ services:
     links:
       - node1
       - node2
-    restart: always
   node1:
     env_file:
       - iot-server/.env
@@ -16,6 +15,7 @@ services:
     links:
       - mongo
       - redis
+      - mosquitto
   node2:
     env_file:
       - iot-server/.env
@@ -24,16 +24,19 @@ services:
     links:
       - mongo
       - redis
+      - mosquitto
   mongo:
     image: mongo
     expose:
       - "${MONGO_PORT}"
-    restart: always
   redis:
     image: redis
     expose:
       - "${REDIS_PORT}"
-    restart: always
+  mosquitto:
+    build: mosquitto
+    expose:
+      - "${MOSQUITTO_PORT}"
   biot:
     env_file:
       - biot/.env

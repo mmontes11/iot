@@ -14,6 +14,7 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 * [.env](https://github.com/mmontes11/iot/blob/develop/.env)
 * [nginx.conf](https://github.com/mmontes11/iot/blob/develop/nginx/nginx.conf)
 * [iot-server/.env](https://github.com/mmontes11/iot-server/blob/develop/.env)
+* [mosquitto.conf](https://github.com/mmontes11/iot/blob/develop/mosquitto/mosquitto.conf)
 * [biot/.env](https://github.com/mmontes11/biot/blob/develop/.env)
 
 ### Run in development
