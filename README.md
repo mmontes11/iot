@@ -12,9 +12,9 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 ### Configuration
 
 * [.env](https://github.com/mmontes11/iot/blob/develop/.env)
-* [nginx.conf](https://github.com/mmontes11/iot/blob/develop/nginx/nginx.conf)
+* [nginx](https://github.com/mmontes11/iot/blob/develop/nginx)
 * [iot-server/.env](https://github.com/mmontes11/iot-server/blob/develop/.env)
-* [mosquitto.conf](https://github.com/mmontes11/iot/blob/develop/mosquitto/mosquitto.conf)
+* [mosquitto](https://github.com/mmontes11/iot/blob/develop/mosquitto)
 * [biot/.env](https://github.com/mmontes11/biot/blob/develop/.env)
 
 ### Run in development
