@@ -3,7 +3,8 @@ services:
   nginx:
     build: nginx
     ports:
-      - "${NGINX_EXTERNAL_PORT}:${NGINX_INTERNAL_PORT}"
+      - "${NGINX_HTTP_EXTERNAL_PORT}:${NGINX_HTTP_INTERNAL_PORT}"
+      - "${NGINX_MQTT_EXTERNAL_PORT}:${NGINX_MQTT_INTERNAL_PORT}"
     links:
       - node1
       - node2
@@ -15,7 +16,8 @@ services:
     links:
       - mongo
       - redis
-      - mosquitto
+      - mosquitto1
+      - mosquitto2
   node2:
     env_file:
       - iot-server/.env
@@ -24,7 +26,8 @@ services:
     links:
       - mongo
       - redis
-      - mosquitto
+      - mosquitto1
+      - mosquitto2
   mongo:
     image: mongo
     expose:
@@ -33,7 +36,11 @@ services:
     image: redis
     expose:
       - "${REDIS_PORT}"
-  mosquitto:
+  mosquitto1:
+    build: mosquitto
+    expose:
+      - "${MOSQUITTO_PORT}"
+  mosquitto2:
     build: mosquitto
     expose:
       - "${MOSQUITTO_PORT}"
