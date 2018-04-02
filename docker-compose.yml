@@ -6,23 +6,23 @@ services:
       - "${NGINX_HTTP_EXTERNAL_PORT}:${NGINX_HTTP_INTERNAL_PORT}"
       - "${NGINX_MQTT_EXTERNAL_PORT}:${NGINX_MQTT_INTERNAL_PORT}"
     links:
-      - node1
-      - node2
-  node1:
+      - server1
+      - server2
+  server1:
     env_file:
       - iot-server/.env
     expose:
-      - "${NODE_PORT}"
+      - "${SERVER_PORT}"
     links:
       - mongo
       - redis
       - mosquitto1
       - mosquitto2
-  node2:
+  server2:
     env_file:
       - iot-server/.env
     expose:
-      - "${NODE_PORT}"
+      - "${SERVER_PORT}"
     links:
       - mongo
       - redis
@@ -51,3 +51,10 @@ services:
       - "${BIOT_PORT}"
     links:
       - nginx
+  worker:
+    env_file:
+      - iot-worker/.env
+    expose:
+      - "${WORKER_PORT}"
+    links:
+      - biot

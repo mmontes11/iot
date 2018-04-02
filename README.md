@@ -5,17 +5,20 @@
 Generic purpose Internet of Things platform. It consists of the following parts:
 
 * [iot-server](https://github.com/mmontes11/iot-server)
+* [iot-worker](https://github.com/mmontes11/iot-worker)
+* [biot](https://github.com/mmontes11/biot)
 * [iot-client](https://github.com/mmontes11/iot-client)
 * [iot-raspi-sensors](https://github.com/mmontes11/iot-raspi-sensors)
-* [biot](https://github.com/mmontes11/biot)
 
 ### Configuration
 
 * [.env](https://github.com/mmontes11/iot/blob/develop/.env)
 * [nginx](https://github.com/mmontes11/iot/blob/develop/nginx)
-* [iot-server/.env](https://github.com/mmontes11/iot-server/blob/develop/.env)
 * [mosquitto](https://github.com/mmontes11/iot/blob/develop/mosquitto)
+* [iot-server/.env](https://github.com/mmontes11/iot-server/blob/develop/.env)
+* [iot-worker/.env](https://github.com/mmontes11/iot-worker/blob/develop/.env)
 * [biot/.env](https://github.com/mmontes11/biot/blob/develop/.env)
+
 
 ### Run in development
 

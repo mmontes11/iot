@@ -1,8 +1,10 @@
 version: '2'
 services:
-  node1:
+  server1:
     build: iot-server
-  node2:
+  server2:
     build: iot-server
   biot:
     build: biot
+  worker:
+    build: iot-worker

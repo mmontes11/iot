@@ -4,3 +4,6 @@
 [submodule "biot"]
 	path = biot
 	url = git@github.com:mmontes11/biot.git
+[submodule "iot-worker"]
+	path = iot-worker
+	url = git@github.com:mmontes11/iot-worker.git
