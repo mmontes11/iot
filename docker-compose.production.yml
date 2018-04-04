@@ -12,9 +12,7 @@ services:
     restart: always
   redis:
     restart: always
-  mosquitto1:
-    restart: always
-  mosquitto2:
+  mosquitto:
     restart: always
   biot:
     image: mmontes11/biot

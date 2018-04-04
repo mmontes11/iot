@@ -16,8 +16,7 @@ services:
     links:
       - mongo
       - redis
-      - mosquitto1
-      - mosquitto2
+      - mosquitto
   server2:
     env_file:
       - iot-server/.env
@@ -26,8 +25,7 @@ services:
     links:
       - mongo
       - redis
-      - mosquitto1
-      - mosquitto2
+      - mosquitto
   mongo:
     image: mongo
     expose:
@@ -36,11 +34,7 @@ services:
     image: redis
     expose:
       - "${REDIS_PORT}"
-  mosquitto1:
-    build: mosquitto
-    expose:
-      - "${MOSQUITTO_PORT}"
-  mosquitto2:
+  mosquitto:
     build: mosquitto
     expose:
       - "${MOSQUITTO_PORT}"
