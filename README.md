@@ -9,6 +9,7 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 * [biot](https://github.com/mmontes11/biot)
 * [iot-client](https://github.com/mmontes11/iot-client)
 * [iot-raspi-sensors](https://github.com/mmontes11/iot-raspi-sensors)
+* [iot-raspi-door](https://github.com/mmontes11/iot-raspi-door)
 
 ### Configuration
 
@@ -37,3 +38,4 @@ $ ./run-production.sh
 Once backend is up and running, you can start deploying things:
 
 * [iot-raspi-sensors](https://github.com/mmontes11/iot-raspi-sensors)
+* [iot-raspi-door](https://github.com/mmontes11/iot-raspi-door)
