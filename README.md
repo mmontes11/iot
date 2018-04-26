@@ -21,13 +21,13 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 * [biot/.env](https://github.com/mmontes11/biot/blob/develop/.env)
 
 
-### Run in development
+### Development
 
 ```bash
 $ ./run-development.sh 
 ```
 
-### Run in production
+### Production
 
 ```bash
 $ ./run-production.sh 
