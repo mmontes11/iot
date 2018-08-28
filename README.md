@@ -10,6 +10,7 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 * [iot-client](https://github.com/mmontes11/iot-client)
 * [iot-raspi-sensors](https://github.com/mmontes11/iot-raspi-sensors)
 * [iot-raspi-door](https://github.com/mmontes11/iot-raspi-door)
+* [iot-web](https://github.com/mmontes11/iot-web)
 
 ### Configuration
 
@@ -19,6 +20,7 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 * [iot-server/.env](https://github.com/mmontes11/iot-server/blob/develop/.env)
 * [iot-worker/.env](https://github.com/mmontes11/iot-worker/blob/develop/.env)
 * [biot/.env](https://github.com/mmontes11/biot/blob/develop/.env)
+* [iot-web/.env](https://github.com/mmontes11/biot/blob/develop/.env)
 
 
 ### Development
