@@ -52,3 +52,19 @@ services:
       - "${WORKER_PORT}"
     links:
       - biot
+  web1:
+    build: iot-web
+    env_file:
+      - iot-web/.env
+    expose:
+      - "${WEB_PORT}"
+    links:
+      - nginx
+  web2:
+    build: iot-web
+    env_file:
+      - iot-web/.env
+    expose:
+      - "${WEB_PORT}"
+    links:
+      - nginx 
