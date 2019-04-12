@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   nginx:
     build: nginx
@@ -9,27 +9,13 @@ services:
       - server1
       - server2
   server1:
-    env_file:
-      - iot-server/.env
+    env_file: iot-server/.env
     expose:
       - "${SERVER_PORT}"
-    links:
-      - mongo
-      - redis
-      - mosquitto
   server2:
-    env_file:
-      - iot-server/.env
+    env_file: iot-server/.env
     expose:
       - "${SERVER_PORT}"
-    links:
-      - mongo
-      - redis
-      - mosquitto
-  mongo:
-    image: mongo
-    expose:
-      - "${MONGO_PORT}"
   redis:
     image: redis
     expose:
@@ -39,31 +25,27 @@ services:
     expose:
       - "${MOSQUITTO_PORT}"
   biot:
-    env_file:
-      - biot/.env
+    env_file: biot/.env
     expose:
       - "${BIOT_PORT}"
     links:
       - nginx
   worker:
-    env_file:
-      - iot-worker/.env
+    env_file: iot-worker/.env
     expose:
       - "${WORKER_PORT}"
     links:
       - biot
   web1:
     build: iot-web
-    env_file:
-      - iot-web/.env
+    env_file: iot-web/.env
     expose:
       - "${WEB_PORT}"
     links:
       - nginx
   web2:
     build: iot-web
-    env_file:
-      - iot-web/.env
+    env_file: iot-web/.env
     expose:
       - "${WEB_PORT}"
     links:

@@ -1,9 +1,17 @@
-version: '2'
+version: '3'
 services:
   server1:
     build: iot-server
+    links:
+      - mongo
+      - redis
+      - mosquitto
   server2:
     build: iot-server
+    links:
+      - mongo
+      - redis
+      - mosquitto
   biot:
     build: biot
   worker:
