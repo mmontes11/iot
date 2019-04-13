@@ -26,3 +26,7 @@ services:
   worker:
     image: mmontes11/iot-worker
     restart: always
+  web1:
+    restart: always
+  web2:
+    restart: always
