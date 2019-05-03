@@ -4,14 +4,12 @@ services:
     restart: always
   server1:
     image: mmontes11/iot-server
-    env_file: iot-server/rpi.env
     links:
       - redis
       - mosquitto
     restart: always
   server2:
     image: mmontes11/iot-server
-    env_file: iot-server/rpi.env
     links:
       - redis
       - mosquitto

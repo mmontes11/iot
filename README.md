@@ -14,14 +14,13 @@ Generic purpose Internet of Things platform. It consists of the following parts:
 
 ### Configuration
 
-* [.env](https://github.com/mmontes11/iot/blob/develop/.env)
 * [nginx](https://github.com/mmontes11/iot/blob/develop/nginx)
 * [mosquitto](https://github.com/mmontes11/iot/blob/develop/mosquitto)
-* [iot-server/.env](https://github.com/mmontes11/iot-server/blob/develop/.env)
-* [iot-worker/.env](https://github.com/mmontes11/iot-worker/blob/develop/.env)
-* [biot/.env](https://github.com/mmontes11/biot/blob/develop/.env)
-* [iot-web/.env](https://github.com/mmontes11/iot-web/blob/develop/.env)
-
+* `.env` for [docker-compose](https://github.com/mmontes11/iot/blob/develop/docker-compose.prod.yml)
+* `.env` for [iot-server](https://github.com/mmontes11/iot-server/blob/develop/src/config/production.js)
+* `.env` for [iot-worker](https://github.com/mmontes11/iot-worker/blob/develop/src/config/production.js)
+* `.env` for [iot-web](https://github.com/mmontes11/iot-web/blob/develop/webpack.config.js)
+* `.env` for [biot](https://github.com/mmontes11/biot/blob/develop/src/config/production.js)
 
 ### Development
 
