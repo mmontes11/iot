@@ -1,0 +1,44 @@
+{
+  "name": "iot",
+  "version": "1.1.0",
+  "description": "Generic purpose Internet of Things platform",
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  },
+  "scripts": {
+    "install": "lerna bootstrap",
+    "start:front": "cd packages/front && npm start",
+    "start:back": "cd packages/back && npm start",
+    "start:biot": "cd packages/biot && npm start",
+    "start:worker": "cd packages/worker && npm start",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "clean": "lerna run clean",
+    "build": "lerna run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmontes11/iot.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "express",
+    "mongo",
+    "redux",
+    "react",
+    "redux",
+    "raspi",
+    "sensor",
+    "telegram",
+    "bot",
+    "docker",
+    "iot"
+  ],
+  "author": "Martín Montes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmontes11/iot/issues"
+  },
+  "homepage": "https://github.com/mmontes11/iot#readme"
+}
