@@ -1,0 +1,7 @@
+.map {
+  height: 20rem;
+
+  @include from($desktop) {
+    height: 100%;
+  }
+}

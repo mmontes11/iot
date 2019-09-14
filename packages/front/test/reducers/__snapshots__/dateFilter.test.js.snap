@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/dateFilter has a default state 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_END_DATE_UPDATED 1`] = `
+Object {
+  "custom": Object {
+    "endDate": "bar",
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_SELECTOR_TOGGLE 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": true,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_START_DATE_UPDATED 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": "foo",
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_TIME_PERIOD_SELECT 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": true,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_TIME_PERIOD_UPDATED 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": "foo",
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_TIME_PERIODS_REQUEST 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": true,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_TIME_PERIODS_REQUEST_ERROR 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_TIME_PERIODS_REQUEST_SUCCESS 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces DATE_FILTER_TIME_PERIODS_UPDATED 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": true,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [
+      "foo",
+      "bar",
+    ],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces RESET 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;
+
+exports[`reducers/dateFilter reduces nothing 1`] = `
+Object {
+  "custom": Object {
+    "endDate": null,
+    "startDate": null,
+  },
+  "isCustomSelected": false,
+  "timePeriod": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+}
+`;

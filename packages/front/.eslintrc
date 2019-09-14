@@ -1,0 +1,8 @@
+{
+  "extends": ["mmontes11-react"],
+  "rules": {
+    "import/no-dynamic-require": 0,
+    "global-require": 0,
+    "jsx-a11y/anchor-is-valid": 0
+  }
+}

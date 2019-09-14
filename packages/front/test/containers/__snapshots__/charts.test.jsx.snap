@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/charts renders a bar chart 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Charts)
+        charType="BARCHART"
+      >
+        <Charts
+          charType="BARCHART"
+          dispatch={[Function]}
+          isLoading={false}
+          items={
+            Array [
+              Object {
+                "data": Array [
+                  Object {
+                    "avg": 79,
+                    "max": 79,
+                    "min": 79,
+                    "stdDev": 0,
+                    "thing": "arduino",
+                  },
+                ],
+                "type": "temperature",
+                "unit": Object {
+                  "name": "degrees",
+                  "symbol": "°C",
+                },
+              },
+            ]
+          }
+          things={Array []}
+        />
+      </Connect(Charts)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`containers/charts renders a line chart of event data 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Charts)
+        charType="LINECHART"
+      >
+        <Charts
+          charType="LINECHART"
+          dispatch={[Function]}
+          isLoading={false}
+          items={
+            Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "phenomenonTime": "2019-04-06T18:59:00.000Z",
+                    "values": Array [
+                      Object {
+                        "thing": "arduino",
+                        "value": 1200,
+                      },
+                    ],
+                  },
+                ],
+                "type": "door-opened",
+              },
+            ]
+          }
+          things={Array []}
+        />
+      </Connect(Charts)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`containers/charts renders a line chart of measurement data 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Charts)
+        charType="LINECHART"
+      >
+        <Charts
+          charType="LINECHART"
+          dispatch={[Function]}
+          isLoading={false}
+          items={
+            Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "phenomenonTime": "2019-04-06T18:59:00.000Z",
+                    "values": Array [
+                      Object {
+                        "thing": "arduino",
+                        "value": 79,
+                      },
+                    ],
+                  },
+                ],
+                "type": "temperature",
+                "unit": Object {
+                  "name": "degrees",
+                  "symbol": "°C",
+                },
+              },
+            ]
+          }
+          things={
+            Array [
+              "foo",
+              "bar",
+            ]
+          }
+        />
+      </Connect(Charts)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`containers/charts renders nothing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Charts)
+        charType="foo"
+      >
+        <Charts
+          charType="foo"
+          dispatch={[Function]}
+          isLoading={false}
+          items={Array []}
+          things={Array []}
+        />
+      </Connect(Charts)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
+
+exports[`containers/charts renders when loading 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Charts)
+        charType="BARCHART"
+      >
+        <Charts
+          charType="BARCHART"
+          dispatch={[Function]}
+          isLoading={true}
+          items={Array []}
+          things={Array []}
+        >
+          <Loader>
+            <div
+              className="is-horizontal-center"
+            >
+              <figure
+                className="image is-128x128"
+              >
+                <img
+                  alt="Loader"
+                  src="test-file-stub"
+                />
+              </figure>
+            </div>
+          </Loader>
+        </Charts>
+      </Connect(Charts)>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

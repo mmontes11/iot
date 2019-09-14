@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/thingFilter dispatches a selectThingFilter action with all posible params 1`] = `[Function]`;
+
+exports[`actions/thingFilter dispatches a selectThingFilter action with all posible params 2`] = `[Function]`;
+
+exports[`actions/thingFilter dispatches a selectThingFilter action with all posible params 3`] = `[Function]`;
+
+exports[`actions/thingFilter dispatches a selectThingFilter action with all posible params 4`] = `[Function]`;
+
+exports[`actions/thingFilter dispatches a updateThingFilter action 1`] = `[Function]`;

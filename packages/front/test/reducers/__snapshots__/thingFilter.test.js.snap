@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/thingFilter has a default state 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces RESET 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces THING_FILTER_SELECT 1`] = `
+Object {
+  "isActive": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces THING_FILTER_UPDATED 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": undefined,
+}
+`;
+
+exports[`reducers/thingFilter reduces THING_FILTERS_REQUEST 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": true,
+  "isLoading": true,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces THING_FILTERS_REQUEST_ERROR 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces THING_FILTERS_REQUEST_SUCCESS 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces THING_FILTERS_UPDATED 1`] = `
+Object {
+  "isActive": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": undefined,
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces TYPE_SELECT 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;
+
+exports[`reducers/thingFilter reduces nothing 1`] = `
+Object {
+  "isActive": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "items": Array [],
+  "selectedItem": null,
+}
+`;

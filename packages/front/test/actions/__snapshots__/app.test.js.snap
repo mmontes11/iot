@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/auth dispatches a setShowError action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches a toggleHamburgerMenu action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches a toggleMapDialog action 1`] = `[Function]`;

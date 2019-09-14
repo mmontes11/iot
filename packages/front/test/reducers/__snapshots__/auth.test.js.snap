@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/auth has a default state 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "username": null,
+}
+`;
+
+exports[`reducers/auth reduces IS_AUTH 1`] = `
+Object {
+  "isAuth": true,
+  "password": null,
+  "username": null,
+}
+`;
+
+exports[`reducers/auth reduces RESET 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "username": null,
+}
+`;
+
+exports[`reducers/auth reduces SET_PASSWORD 1`] = `
+Object {
+  "isAuth": false,
+  "password": "PASSWORD",
+  "username": null,
+}
+`;
+
+exports[`reducers/auth reduces SET_USERNAME 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "username": "USERNAME",
+}
+`;
+
+exports[`reducers/auth reduces nothing 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "username": null,
+}
+`;

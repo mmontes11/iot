@@ -1,0 +1,3290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/stats renders stats 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          initialEntries={
+            Array [
+              "/",
+            ]
+          }
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <Connect(Connect(ResetOnUnmount))>
+              <Connect(ResetOnUnmount)
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
+                hasError={false}
+                updateParams={[Function]}
+              >
+                <ResetOnUnmount
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
+                  hasError={false}
+                  reset={[Function]}
+                  updateParams={[Function]}
+                >
+                  <withRouter(DataParams)
+                    addCustomTimePeriodFilter={[Function]}
+                    addThingFilter={[Function]}
+                    addTimePeriodFilter={[Function]}
+                    hasError={false}
+                    reset={[Function]}
+                    updateParams={[Function]}
+                  >
+                    <Route>
+                      <DataParams
+                        addCustomTimePeriodFilter={[Function]}
+                        addThingFilter={[Function]}
+                        addTimePeriodFilter={[Function]}
+                        hasError={false}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                        reset={[Function]}
+                        updateParams={[Function]}
+                      >
+                        <Stats
+                          addCustomTimePeriodFilter={[Function]}
+                          addThingFilter={[Function]}
+                          addTimePeriodFilter={[Function]}
+                          hasError={false}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "canGo": [Function],
+                              "createHref": [Function],
+                              "entries": Array [
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                              ],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "index": 0,
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          onFiltersSelected={[Function]}
+                          onParamsSelected={[Function]}
+                          onReset={[Function]}
+                          reset={[Function]}
+                          updateParams={[Function]}
+                        >
+                          <div
+                            className="container is-fluid section"
+                          >
+                            <div
+                              className="columns"
+                            >
+                              <div
+                                className="column is-three-quarters"
+                              >
+                                <Connect(StatsParamsPanel)
+                                  onParamsSelected={[Function]}
+                                  onReset={[Function]}
+                                >
+                                  <StatsParamsPanel
+                                    isResetDisabled={true}
+                                    observation={Object {}}
+                                    onParamsSelected={[Function]}
+                                    onReset={[Function]}
+                                    selectGroupBy={[Function]}
+                                    selectMeasurementType={[Function]}
+                                    selectObservation={[Function]}
+                                    selectThing={[Function]}
+                                    selectType={[Function]}
+                                    type={Object {}}
+                                    updateGroupBy={[Function]}
+                                    updateMeasurementType={[Function]}
+                                    updateObservation={[Function]}
+                                    updateParams={[Function]}
+                                    updateThing={[Function]}
+                                    updateType={[Function]}
+                                  >
+                                    <ParamsPanel
+                                      params={
+                                        Array [
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "type",
+                                            "label": "Type",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "observation",
+                                            "label": "Observation",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                        ]
+                                      }
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="box"
+                                      >
+                                        <div
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column"
+                                            key="type"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Type"
+                                                        id="Type"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Type
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column"
+                                            key="observation"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Observation"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Observation"
+                                                        id="Observation"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Observation
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-2"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
+                                              onClick={[Function]}
+                                            >
+                                              <FormattedMessage
+                                                id="Reset"
+                                                values={Object {}}
+                                              >
+                                                <span>
+                                                  Reset
+                                                </span>
+                                              </FormattedMessage>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </ParamsPanel>
+                                  </StatsParamsPanel>
+                                </Connect(StatsParamsPanel)>
+                                <Connect(Charts)
+                                  chartType="BARCHART"
+                                >
+                                  <Charts
+                                    chartType="BARCHART"
+                                    dispatch={[Function]}
+                                    isLoading={false}
+                                    items={
+                                      Array [
+                                        Object {
+                                          "data": Array [
+                                            Object {
+                                              "thing": "raspi",
+                                              "value": 10,
+                                            },
+                                            Object {
+                                              "thing": "raspi2",
+                                              "value": 11,
+                                            },
+                                            Object {
+                                              "thing": "raspi3",
+                                              "value": 12,
+                                            },
+                                          ],
+                                          "type": "measurement",
+                                          "unit": Object {
+                                            "symbol": "ºC",
+                                          },
+                                        },
+                                        Object {
+                                          "data": Array [
+                                            Object {
+                                              "thing": "raspi",
+                                              "value": 10,
+                                            },
+                                            Object {
+                                              "thing": "raspi2",
+                                              "value": 11,
+                                            },
+                                            Object {
+                                              "thing": "raspi3",
+                                              "value": 12,
+                                            },
+                                          ],
+                                          "type": "measurement2",
+                                        },
+                                      ]
+                                    }
+                                    things={Array []}
+                                  >
+                                    <InjectIntl(ChartBox)
+                                      key="measurement"
+                                      type="measurement"
+                                      unit={
+                                        Object {
+                                          "symbol": "ºC",
+                                        }
+                                      }
+                                    >
+                                      <ChartBox
+                                        intl={
+                                          Object {
+                                            "defaultFormats": Object {},
+                                            "defaultLocale": "en",
+                                            "formatDate": [Function],
+                                            "formatHTMLMessage": [Function],
+                                            "formatMessage": [Function],
+                                            "formatNumber": [Function],
+                                            "formatPlural": [Function],
+                                            "formatRelative": [Function],
+                                            "formatTime": [Function],
+                                            "formats": Object {},
+                                            "formatters": Object {
+                                              "getDateTimeFormat": [Function],
+                                              "getMessageFormat": [Function],
+                                              "getNumberFormat": [Function],
+                                              "getPluralFormat": [Function],
+                                              "getRelativeFormat": [Function],
+                                            },
+                                            "locale": "en",
+                                            "messages": Object {
+                                              "Custom": "Custom",
+                                              "Data": "Data",
+                                              "Delete": "Delete",
+                                              "End date": "End date",
+                                              "Error": "Error",
+                                              "Event stats": "Event stats",
+                                              "Events:": "Events:",
+                                              "Filters": "Filters",
+                                              "Google maps": "Google maps",
+                                              "Group by": "Group by",
+                                              "IP address:": "IP address:",
+                                              "IoT": "IoT",
+                                              "Last observation:": "Last observation:",
+                                              "Login": "Login",
+                                              "Logout": "Logout",
+                                              "MQTT topic:": "MQTT topic:",
+                                              "Measurement stats": "Measurement stats",
+                                              "Measurement type": "Measurement type",
+                                              "Measurements:": "Measurements:",
+                                              "Observation": "Observation",
+                                              "Password": "Password",
+                                              "Real time": "Real time",
+                                              "Request failed": "Request failed",
+                                              "Reset": "Reset",
+                                              "Start date": "Start date",
+                                              "Stats": "Stats",
+                                              "Thing": "Thing",
+                                              "Thing not found": "Thing not found",
+                                              "Things": "Things",
+                                              "Time": "Time",
+                                              "Time period": "Time period",
+                                              "Type": "Type",
+                                              "Username": "Username",
+                                              "avg": "Average",
+                                              "avgByHour": "Average by hour",
+                                              "date": "Date",
+                                              "day": "Day",
+                                              "door-closed": "Door closed",
+                                              "door-opened": "Door opened",
+                                              "en": "English",
+                                              "es": "Spanish",
+                                              "event": "Event",
+                                              "hour": "Hour",
+                                              "humidity": "Humidity",
+                                              "humidity-indoor": "Humidity indoor",
+                                              "humidity-outdoor": "Humidity outdoor",
+                                              "luminosity": "Luminosity",
+                                              "max": "Maximum",
+                                              "maxByHour": "Maximum by hour",
+                                              "measurement": "Mesasurement",
+                                              "min": "Minimum",
+                                              "minByHour": "Minimum by hour",
+                                              "minute": "Minute",
+                                              "month": "Month",
+                                              "second": "Second",
+                                              "stdDev": "Standard deviation",
+                                              "stdDevByHour": "Standard deviation by hour",
+                                              "temperature": "Temperature",
+                                              "temperature-indoor": "Temperature indoor",
+                                              "temperature-outdoor": "Temperature outdoor",
+                                              "thing": "Thing",
+                                              "total": "Total",
+                                              "week": "Week",
+                                              "year": "Year",
+                                            },
+                                            "now": [Function],
+                                            "onError": [Function],
+                                            "textComponent": "span",
+                                            "timeZone": null,
+                                          }
+                                        }
+                                        type="measurement"
+                                        unit={
+                                          Object {
+                                            "symbol": "ºC",
+                                          }
+                                        }
+                                      >
+                                        <div
+                                          className="box"
+                                        >
+                                          <div
+                                            className="columns"
+                                          >
+                                            <div
+                                              className="column"
+                                            >
+                                              <p
+                                                className="title is-3 has-text-primary has-text-centered is-spaced"
+                                              >
+                                                Mesasurement (ºC)
+                                              </p>
+                                              <div
+                                                className="chart"
+                                              >
+                                                <InjectIntl(BarChart)
+                                                  data={
+                                                    Array [
+                                                      Object {
+                                                        "thing": "raspi",
+                                                        "value": 10,
+                                                      },
+                                                      Object {
+                                                        "thing": "raspi2",
+                                                        "value": 11,
+                                                      },
+                                                      Object {
+                                                        "thing": "raspi3",
+                                                        "value": 12,
+                                                      },
+                                                    ]
+                                                  }
+                                                >
+                                                  <BarChart
+                                                    data={
+                                                      Array [
+                                                        Object {
+                                                          "thing": "raspi",
+                                                          "value": 10,
+                                                        },
+                                                        Object {
+                                                          "thing": "raspi2",
+                                                          "value": 11,
+                                                        },
+                                                        Object {
+                                                          "thing": "raspi3",
+                                                          "value": 12,
+                                                        },
+                                                      ]
+                                                    }
+                                                    intl={
+                                                      Object {
+                                                        "defaultFormats": Object {},
+                                                        "defaultLocale": "en",
+                                                        "formatDate": [Function],
+                                                        "formatHTMLMessage": [Function],
+                                                        "formatMessage": [Function],
+                                                        "formatNumber": [Function],
+                                                        "formatPlural": [Function],
+                                                        "formatRelative": [Function],
+                                                        "formatTime": [Function],
+                                                        "formats": Object {},
+                                                        "formatters": Object {
+                                                          "getDateTimeFormat": [Function],
+                                                          "getMessageFormat": [Function],
+                                                          "getNumberFormat": [Function],
+                                                          "getPluralFormat": [Function],
+                                                          "getRelativeFormat": [Function],
+                                                        },
+                                                        "locale": "en",
+                                                        "messages": Object {
+                                                          "Custom": "Custom",
+                                                          "Data": "Data",
+                                                          "Delete": "Delete",
+                                                          "End date": "End date",
+                                                          "Error": "Error",
+                                                          "Event stats": "Event stats",
+                                                          "Events:": "Events:",
+                                                          "Filters": "Filters",
+                                                          "Google maps": "Google maps",
+                                                          "Group by": "Group by",
+                                                          "IP address:": "IP address:",
+                                                          "IoT": "IoT",
+                                                          "Last observation:": "Last observation:",
+                                                          "Login": "Login",
+                                                          "Logout": "Logout",
+                                                          "MQTT topic:": "MQTT topic:",
+                                                          "Measurement stats": "Measurement stats",
+                                                          "Measurement type": "Measurement type",
+                                                          "Measurements:": "Measurements:",
+                                                          "Observation": "Observation",
+                                                          "Password": "Password",
+                                                          "Real time": "Real time",
+                                                          "Request failed": "Request failed",
+                                                          "Reset": "Reset",
+                                                          "Start date": "Start date",
+                                                          "Stats": "Stats",
+                                                          "Thing": "Thing",
+                                                          "Thing not found": "Thing not found",
+                                                          "Things": "Things",
+                                                          "Time": "Time",
+                                                          "Time period": "Time period",
+                                                          "Type": "Type",
+                                                          "Username": "Username",
+                                                          "avg": "Average",
+                                                          "avgByHour": "Average by hour",
+                                                          "date": "Date",
+                                                          "day": "Day",
+                                                          "door-closed": "Door closed",
+                                                          "door-opened": "Door opened",
+                                                          "en": "English",
+                                                          "es": "Spanish",
+                                                          "event": "Event",
+                                                          "hour": "Hour",
+                                                          "humidity": "Humidity",
+                                                          "humidity-indoor": "Humidity indoor",
+                                                          "humidity-outdoor": "Humidity outdoor",
+                                                          "luminosity": "Luminosity",
+                                                          "max": "Maximum",
+                                                          "maxByHour": "Maximum by hour",
+                                                          "measurement": "Mesasurement",
+                                                          "min": "Minimum",
+                                                          "minByHour": "Minimum by hour",
+                                                          "minute": "Minute",
+                                                          "month": "Month",
+                                                          "second": "Second",
+                                                          "stdDev": "Standard deviation",
+                                                          "stdDevByHour": "Standard deviation by hour",
+                                                          "temperature": "Temperature",
+                                                          "temperature-indoor": "Temperature indoor",
+                                                          "temperature-outdoor": "Temperature outdoor",
+                                                          "thing": "Thing",
+                                                          "total": "Total",
+                                                          "week": "Week",
+                                                          "year": "Year",
+                                                        },
+                                                        "now": [Function],
+                                                        "onError": [Function],
+                                                        "textComponent": "span",
+                                                        "timeZone": null,
+                                                      }
+                                                    }
+                                                  >
+                                                    <ResponsiveContainer
+                                                      debounce={0}
+                                                      height="100%"
+                                                      width="100%"
+                                                    >
+                                                      <div
+                                                        className="recharts-responsive-container"
+                                                        style={
+                                                          Object {
+                                                            "height": "100%",
+                                                            "maxHeight": undefined,
+                                                            "minHeight": undefined,
+                                                            "minWidth": undefined,
+                                                            "width": "100%",
+                                                          }
+                                                        }
+                                                      >
+                                                        <BarChart
+                                                          barCategoryGap="10%"
+                                                          barGap={4}
+                                                          data={
+                                                            Array [
+                                                              Object {
+                                                                "thing": "raspi",
+                                                                "value": 10,
+                                                              },
+                                                              Object {
+                                                                "thing": "raspi2",
+                                                                "value": 11,
+                                                              },
+                                                              Object {
+                                                                "thing": "raspi3",
+                                                                "value": 12,
+                                                              },
+                                                            ]
+                                                          }
+                                                          height={0}
+                                                          layout="horizontal"
+                                                          margin={
+                                                            Object {
+                                                              "bottom": 5,
+                                                              "left": 5,
+                                                              "right": 5,
+                                                              "top": 5,
+                                                            }
+                                                          }
+                                                          reverseStackOrder={false}
+                                                          stackOffset="none"
+                                                          width={0}
+                                                        />
+                                                        <ResizeDetector
+                                                          handleHeight={true}
+                                                          handleWidth={true}
+                                                          onResize={[Function]}
+                                                          refreshRate={1000}
+                                                          resizableElementId=""
+                                                          skipOnMount={false}
+                                                        >
+                                                          <div
+                                                            style={
+                                                              Object {
+                                                                "display": "none",
+                                                                "height": 0,
+                                                                "position": "absolute",
+                                                                "visibility": "hidden",
+                                                                "width": 0,
+                                                              }
+                                                            }
+                                                          />
+                                                        </ResizeDetector>
+                                                      </div>
+                                                    </ResponsiveContainer>
+                                                  </BarChart>
+                                                </InjectIntl(BarChart)>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </ChartBox>
+                                    </InjectIntl(ChartBox)>
+                                    <InjectIntl(ChartBox)
+                                      key="measurement2"
+                                      type="measurement2"
+                                    >
+                                      <ChartBox
+                                        intl={
+                                          Object {
+                                            "defaultFormats": Object {},
+                                            "defaultLocale": "en",
+                                            "formatDate": [Function],
+                                            "formatHTMLMessage": [Function],
+                                            "formatMessage": [Function],
+                                            "formatNumber": [Function],
+                                            "formatPlural": [Function],
+                                            "formatRelative": [Function],
+                                            "formatTime": [Function],
+                                            "formats": Object {},
+                                            "formatters": Object {
+                                              "getDateTimeFormat": [Function],
+                                              "getMessageFormat": [Function],
+                                              "getNumberFormat": [Function],
+                                              "getPluralFormat": [Function],
+                                              "getRelativeFormat": [Function],
+                                            },
+                                            "locale": "en",
+                                            "messages": Object {
+                                              "Custom": "Custom",
+                                              "Data": "Data",
+                                              "Delete": "Delete",
+                                              "End date": "End date",
+                                              "Error": "Error",
+                                              "Event stats": "Event stats",
+                                              "Events:": "Events:",
+                                              "Filters": "Filters",
+                                              "Google maps": "Google maps",
+                                              "Group by": "Group by",
+                                              "IP address:": "IP address:",
+                                              "IoT": "IoT",
+                                              "Last observation:": "Last observation:",
+                                              "Login": "Login",
+                                              "Logout": "Logout",
+                                              "MQTT topic:": "MQTT topic:",
+                                              "Measurement stats": "Measurement stats",
+                                              "Measurement type": "Measurement type",
+                                              "Measurements:": "Measurements:",
+                                              "Observation": "Observation",
+                                              "Password": "Password",
+                                              "Real time": "Real time",
+                                              "Request failed": "Request failed",
+                                              "Reset": "Reset",
+                                              "Start date": "Start date",
+                                              "Stats": "Stats",
+                                              "Thing": "Thing",
+                                              "Thing not found": "Thing not found",
+                                              "Things": "Things",
+                                              "Time": "Time",
+                                              "Time period": "Time period",
+                                              "Type": "Type",
+                                              "Username": "Username",
+                                              "avg": "Average",
+                                              "avgByHour": "Average by hour",
+                                              "date": "Date",
+                                              "day": "Day",
+                                              "door-closed": "Door closed",
+                                              "door-opened": "Door opened",
+                                              "en": "English",
+                                              "es": "Spanish",
+                                              "event": "Event",
+                                              "hour": "Hour",
+                                              "humidity": "Humidity",
+                                              "humidity-indoor": "Humidity indoor",
+                                              "humidity-outdoor": "Humidity outdoor",
+                                              "luminosity": "Luminosity",
+                                              "max": "Maximum",
+                                              "maxByHour": "Maximum by hour",
+                                              "measurement": "Mesasurement",
+                                              "min": "Minimum",
+                                              "minByHour": "Minimum by hour",
+                                              "minute": "Minute",
+                                              "month": "Month",
+                                              "second": "Second",
+                                              "stdDev": "Standard deviation",
+                                              "stdDevByHour": "Standard deviation by hour",
+                                              "temperature": "Temperature",
+                                              "temperature-indoor": "Temperature indoor",
+                                              "temperature-outdoor": "Temperature outdoor",
+                                              "thing": "Thing",
+                                              "total": "Total",
+                                              "week": "Week",
+                                              "year": "Year",
+                                            },
+                                            "now": [Function],
+                                            "onError": [Function],
+                                            "textComponent": "span",
+                                            "timeZone": null,
+                                          }
+                                        }
+                                        type="measurement2"
+                                        unit={null}
+                                      >
+                                        <div
+                                          className="box"
+                                        >
+                                          <div
+                                            className="columns"
+                                          >
+                                            <div
+                                              className="column"
+                                            >
+                                              <p
+                                                className="title is-3 has-text-primary has-text-centered is-spaced"
+                                              >
+                                                measurement2
+                                              </p>
+                                              <div
+                                                className="chart"
+                                              >
+                                                <InjectIntl(BarChart)
+                                                  data={
+                                                    Array [
+                                                      Object {
+                                                        "thing": "raspi",
+                                                        "value": 10,
+                                                      },
+                                                      Object {
+                                                        "thing": "raspi2",
+                                                        "value": 11,
+                                                      },
+                                                      Object {
+                                                        "thing": "raspi3",
+                                                        "value": 12,
+                                                      },
+                                                    ]
+                                                  }
+                                                >
+                                                  <BarChart
+                                                    data={
+                                                      Array [
+                                                        Object {
+                                                          "thing": "raspi",
+                                                          "value": 10,
+                                                        },
+                                                        Object {
+                                                          "thing": "raspi2",
+                                                          "value": 11,
+                                                        },
+                                                        Object {
+                                                          "thing": "raspi3",
+                                                          "value": 12,
+                                                        },
+                                                      ]
+                                                    }
+                                                    intl={
+                                                      Object {
+                                                        "defaultFormats": Object {},
+                                                        "defaultLocale": "en",
+                                                        "formatDate": [Function],
+                                                        "formatHTMLMessage": [Function],
+                                                        "formatMessage": [Function],
+                                                        "formatNumber": [Function],
+                                                        "formatPlural": [Function],
+                                                        "formatRelative": [Function],
+                                                        "formatTime": [Function],
+                                                        "formats": Object {},
+                                                        "formatters": Object {
+                                                          "getDateTimeFormat": [Function],
+                                                          "getMessageFormat": [Function],
+                                                          "getNumberFormat": [Function],
+                                                          "getPluralFormat": [Function],
+                                                          "getRelativeFormat": [Function],
+                                                        },
+                                                        "locale": "en",
+                                                        "messages": Object {
+                                                          "Custom": "Custom",
+                                                          "Data": "Data",
+                                                          "Delete": "Delete",
+                                                          "End date": "End date",
+                                                          "Error": "Error",
+                                                          "Event stats": "Event stats",
+                                                          "Events:": "Events:",
+                                                          "Filters": "Filters",
+                                                          "Google maps": "Google maps",
+                                                          "Group by": "Group by",
+                                                          "IP address:": "IP address:",
+                                                          "IoT": "IoT",
+                                                          "Last observation:": "Last observation:",
+                                                          "Login": "Login",
+                                                          "Logout": "Logout",
+                                                          "MQTT topic:": "MQTT topic:",
+                                                          "Measurement stats": "Measurement stats",
+                                                          "Measurement type": "Measurement type",
+                                                          "Measurements:": "Measurements:",
+                                                          "Observation": "Observation",
+                                                          "Password": "Password",
+                                                          "Real time": "Real time",
+                                                          "Request failed": "Request failed",
+                                                          "Reset": "Reset",
+                                                          "Start date": "Start date",
+                                                          "Stats": "Stats",
+                                                          "Thing": "Thing",
+                                                          "Thing not found": "Thing not found",
+                                                          "Things": "Things",
+                                                          "Time": "Time",
+                                                          "Time period": "Time period",
+                                                          "Type": "Type",
+                                                          "Username": "Username",
+                                                          "avg": "Average",
+                                                          "avgByHour": "Average by hour",
+                                                          "date": "Date",
+                                                          "day": "Day",
+                                                          "door-closed": "Door closed",
+                                                          "door-opened": "Door opened",
+                                                          "en": "English",
+                                                          "es": "Spanish",
+                                                          "event": "Event",
+                                                          "hour": "Hour",
+                                                          "humidity": "Humidity",
+                                                          "humidity-indoor": "Humidity indoor",
+                                                          "humidity-outdoor": "Humidity outdoor",
+                                                          "luminosity": "Luminosity",
+                                                          "max": "Maximum",
+                                                          "maxByHour": "Maximum by hour",
+                                                          "measurement": "Mesasurement",
+                                                          "min": "Minimum",
+                                                          "minByHour": "Minimum by hour",
+                                                          "minute": "Minute",
+                                                          "month": "Month",
+                                                          "second": "Second",
+                                                          "stdDev": "Standard deviation",
+                                                          "stdDevByHour": "Standard deviation by hour",
+                                                          "temperature": "Temperature",
+                                                          "temperature-indoor": "Temperature indoor",
+                                                          "temperature-outdoor": "Temperature outdoor",
+                                                          "thing": "Thing",
+                                                          "total": "Total",
+                                                          "week": "Week",
+                                                          "year": "Year",
+                                                        },
+                                                        "now": [Function],
+                                                        "onError": [Function],
+                                                        "textComponent": "span",
+                                                        "timeZone": null,
+                                                      }
+                                                    }
+                                                  >
+                                                    <ResponsiveContainer
+                                                      debounce={0}
+                                                      height="100%"
+                                                      width="100%"
+                                                    >
+                                                      <div
+                                                        className="recharts-responsive-container"
+                                                        style={
+                                                          Object {
+                                                            "height": "100%",
+                                                            "maxHeight": undefined,
+                                                            "minHeight": undefined,
+                                                            "minWidth": undefined,
+                                                            "width": "100%",
+                                                          }
+                                                        }
+                                                      >
+                                                        <BarChart
+                                                          barCategoryGap="10%"
+                                                          barGap={4}
+                                                          data={
+                                                            Array [
+                                                              Object {
+                                                                "thing": "raspi",
+                                                                "value": 10,
+                                                              },
+                                                              Object {
+                                                                "thing": "raspi2",
+                                                                "value": 11,
+                                                              },
+                                                              Object {
+                                                                "thing": "raspi3",
+                                                                "value": 12,
+                                                              },
+                                                            ]
+                                                          }
+                                                          height={0}
+                                                          layout="horizontal"
+                                                          margin={
+                                                            Object {
+                                                              "bottom": 5,
+                                                              "left": 5,
+                                                              "right": 5,
+                                                              "top": 5,
+                                                            }
+                                                          }
+                                                          reverseStackOrder={false}
+                                                          stackOffset="none"
+                                                          width={0}
+                                                        />
+                                                        <ResizeDetector
+                                                          handleHeight={true}
+                                                          handleWidth={true}
+                                                          onResize={[Function]}
+                                                          refreshRate={1000}
+                                                          resizableElementId=""
+                                                          skipOnMount={false}
+                                                        >
+                                                          <div
+                                                            style={
+                                                              Object {
+                                                                "display": "none",
+                                                                "height": 0,
+                                                                "position": "absolute",
+                                                                "visibility": "hidden",
+                                                                "width": 0,
+                                                              }
+                                                            }
+                                                          />
+                                                        </ResizeDetector>
+                                                      </div>
+                                                    </ResponsiveContainer>
+                                                  </BarChart>
+                                                </InjectIntl(BarChart)>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </ChartBox>
+                                    </InjectIntl(ChartBox)>
+                                  </Charts>
+                                </Connect(Charts)>
+                              </div>
+                              <div
+                                className="column is-one-quarter"
+                              >
+                                <Connect(FiltersPanelContainer)
+                                  onFiltersSelected={[Function]}
+                                >
+                                  <FiltersPanelContainer
+                                    addCustomTimePeriodFilter={[Function]}
+                                    addFilterType={[Function]}
+                                    addThingFilter={[Function]}
+                                    addTimePeriodFilter={[Function]}
+                                    dateFilter={
+                                      Object {
+                                        "custom": Object {
+                                          "endDate": null,
+                                          "startDate": null,
+                                        },
+                                        "isCustomSelected": false,
+                                        "timePeriod": Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "selectedItem": null,
+                                        },
+                                      }
+                                    }
+                                    deleteFilterType={[Function]}
+                                    onFiltersSelected={[Function]}
+                                    selectFilterType={[Function]}
+                                    selectThingFilter={[Function]}
+                                    selectTimePeriod={[Function]}
+                                    selectedFilters={Array []}
+                                    statsType={null}
+                                    thingFilter={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
+                                    toggleDateFilterType={[Function]}
+                                    type={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "items": Array [
+                                          "thing",
+                                          "date",
+                                        ],
+                                      }
+                                    }
+                                    updateEndDate={[Function]}
+                                    updateStartDate={[Function]}
+                                    updateThingFilter={[Function]}
+                                    updateTimePeriod={[Function]}
+                                  >
+                                    <FiltersPanel
+                                      dateFilter={
+                                        Object {
+                                          "custom": Object {
+                                            "endDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                            "startDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                          },
+                                          "isCustomSelected": false,
+                                          "onDelete": [Function],
+                                          "selector": Object {
+                                            "isCustomSelected": false,
+                                            "onChange": [Function],
+                                          },
+                                          "timePeriod": Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "label": "Time period",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                            "selectedItem": null,
+                                          },
+                                        }
+                                      }
+                                      selectedFilters={Array []}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "label": "Thing",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
+                                          "selectedItem": null,
+                                        }
+                                      }
+                                      type={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "items": Array [
+                                            "thing",
+                                            "date",
+                                          ],
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="box"
+                                      >
+                                        <div
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column"
+                                          >
+                                            <Dropdown
+                                              buttonStyle="is-primary"
+                                              iconStyle="fa-plus"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "thing",
+                                                  "date",
+                                                ]
+                                              }
+                                              label="Filters"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button is-primary"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Filters"
+                                                        id="Filters"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Filters
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-plus"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="thing"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="thing"
+                                                        id="thing"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Thing
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </div>
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="date"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="date"
+                                                        id="date"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Date
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </FiltersPanel>
+                                  </FiltersPanelContainer>
+                                </Connect(FiltersPanelContainer)>
+                              </div>
+                            </div>
+                          </div>
+                        </Stats>
+                      </DataParams>
+                    </Route>
+                  </withRouter(DataParams)>
+                </ResetOnUnmount>
+              </Connect(ResetOnUnmount)>
+            </Connect(Connect(ResetOnUnmount))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;
+
+exports[`containers/stats renders stats in initial state 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          initialEntries={
+            Array [
+              "/",
+            ]
+          }
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <Connect(Connect(ResetOnUnmount))>
+              <Connect(ResetOnUnmount)
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
+                hasError={false}
+                updateParams={[Function]}
+              >
+                <ResetOnUnmount
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
+                  hasError={false}
+                  reset={[Function]}
+                  updateParams={[Function]}
+                >
+                  <withRouter(DataParams)
+                    addCustomTimePeriodFilter={[Function]}
+                    addThingFilter={[Function]}
+                    addTimePeriodFilter={[Function]}
+                    hasError={false}
+                    reset={[Function]}
+                    updateParams={[Function]}
+                  >
+                    <Route>
+                      <DataParams
+                        addCustomTimePeriodFilter={[Function]}
+                        addThingFilter={[Function]}
+                        addTimePeriodFilter={[Function]}
+                        hasError={false}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                        reset={[Function]}
+                        updateParams={[Function]}
+                      >
+                        <Stats
+                          addCustomTimePeriodFilter={[Function]}
+                          addThingFilter={[Function]}
+                          addTimePeriodFilter={[Function]}
+                          hasError={false}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "canGo": [Function],
+                              "createHref": [Function],
+                              "entries": Array [
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                              ],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "index": 0,
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          onFiltersSelected={[Function]}
+                          onParamsSelected={[Function]}
+                          onReset={[Function]}
+                          reset={[Function]}
+                          updateParams={[Function]}
+                        >
+                          <div
+                            className="container is-fluid section"
+                          >
+                            <div
+                              className="columns"
+                            >
+                              <div
+                                className="column is-three-quarters"
+                              >
+                                <Connect(StatsParamsPanel)
+                                  onParamsSelected={[Function]}
+                                  onReset={[Function]}
+                                >
+                                  <StatsParamsPanel
+                                    isResetDisabled={true}
+                                    observation={Object {}}
+                                    onParamsSelected={[Function]}
+                                    onReset={[Function]}
+                                    selectGroupBy={[Function]}
+                                    selectMeasurementType={[Function]}
+                                    selectObservation={[Function]}
+                                    selectThing={[Function]}
+                                    selectType={[Function]}
+                                    type={Object {}}
+                                    updateGroupBy={[Function]}
+                                    updateMeasurementType={[Function]}
+                                    updateObservation={[Function]}
+                                    updateParams={[Function]}
+                                    updateThing={[Function]}
+                                    updateType={[Function]}
+                                  >
+                                    <ParamsPanel
+                                      params={
+                                        Array [
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "type",
+                                            "label": "Type",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "observation",
+                                            "label": "Observation",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                        ]
+                                      }
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="box"
+                                      >
+                                        <div
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column"
+                                            key="type"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Type"
+                                                        id="Type"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Type
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column"
+                                            key="observation"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Observation"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Observation"
+                                                        id="Observation"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Observation
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-2"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
+                                              onClick={[Function]}
+                                            >
+                                              <FormattedMessage
+                                                id="Reset"
+                                                values={Object {}}
+                                              >
+                                                <span>
+                                                  Reset
+                                                </span>
+                                              </FormattedMessage>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </ParamsPanel>
+                                  </StatsParamsPanel>
+                                </Connect(StatsParamsPanel)>
+                                <Connect(Charts)
+                                  chartType="BARCHART"
+                                >
+                                  <Charts
+                                    chartType="BARCHART"
+                                    dispatch={[Function]}
+                                    isLoading={false}
+                                    items={Array []}
+                                    things={Array []}
+                                  />
+                                </Connect(Charts)>
+                              </div>
+                              <div
+                                className="column is-one-quarter"
+                              >
+                                <Connect(FiltersPanelContainer)
+                                  onFiltersSelected={[Function]}
+                                >
+                                  <FiltersPanelContainer
+                                    addCustomTimePeriodFilter={[Function]}
+                                    addFilterType={[Function]}
+                                    addThingFilter={[Function]}
+                                    addTimePeriodFilter={[Function]}
+                                    dateFilter={
+                                      Object {
+                                        "custom": Object {
+                                          "endDate": null,
+                                          "startDate": null,
+                                        },
+                                        "isCustomSelected": false,
+                                        "timePeriod": Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "selectedItem": null,
+                                        },
+                                      }
+                                    }
+                                    deleteFilterType={[Function]}
+                                    onFiltersSelected={[Function]}
+                                    selectFilterType={[Function]}
+                                    selectThingFilter={[Function]}
+                                    selectTimePeriod={[Function]}
+                                    selectedFilters={Array []}
+                                    statsType={null}
+                                    thingFilter={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
+                                    toggleDateFilterType={[Function]}
+                                    type={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "items": Array [
+                                          "thing",
+                                          "date",
+                                        ],
+                                      }
+                                    }
+                                    updateEndDate={[Function]}
+                                    updateStartDate={[Function]}
+                                    updateThingFilter={[Function]}
+                                    updateTimePeriod={[Function]}
+                                  >
+                                    <FiltersPanel
+                                      dateFilter={
+                                        Object {
+                                          "custom": Object {
+                                            "endDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                            "startDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                          },
+                                          "isCustomSelected": false,
+                                          "onDelete": [Function],
+                                          "selector": Object {
+                                            "isCustomSelected": false,
+                                            "onChange": [Function],
+                                          },
+                                          "timePeriod": Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "label": "Time period",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                            "selectedItem": null,
+                                          },
+                                        }
+                                      }
+                                      selectedFilters={Array []}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "label": "Thing",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
+                                          "selectedItem": null,
+                                        }
+                                      }
+                                      type={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "items": Array [
+                                            "thing",
+                                            "date",
+                                          ],
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="box"
+                                      >
+                                        <div
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column"
+                                          >
+                                            <Dropdown
+                                              buttonStyle="is-primary"
+                                              iconStyle="fa-plus"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "thing",
+                                                  "date",
+                                                ]
+                                              }
+                                              label="Filters"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button is-primary"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Filters"
+                                                        id="Filters"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Filters
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-plus"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="thing"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="thing"
+                                                        id="thing"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Thing
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </div>
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="date"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="date"
+                                                        id="date"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Date
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </FiltersPanel>
+                                  </FiltersPanelContainer>
+                                </Connect(FiltersPanelContainer)>
+                              </div>
+                            </div>
+                          </div>
+                        </Stats>
+                      </DataParams>
+                    </Route>
+                  </withRouter(DataParams)>
+                </ResetOnUnmount>
+              </Connect(ResetOnUnmount)>
+            </Connect(Connect(ResetOnUnmount))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;
+
+exports[`containers/stats renders when loading stats 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          initialEntries={
+            Array [
+              "/",
+            ]
+          }
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <Connect(Connect(ResetOnUnmount))>
+              <Connect(ResetOnUnmount)
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
+                hasError={false}
+                updateParams={[Function]}
+              >
+                <ResetOnUnmount
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
+                  hasError={false}
+                  reset={[Function]}
+                  updateParams={[Function]}
+                >
+                  <withRouter(DataParams)
+                    addCustomTimePeriodFilter={[Function]}
+                    addThingFilter={[Function]}
+                    addTimePeriodFilter={[Function]}
+                    hasError={false}
+                    reset={[Function]}
+                    updateParams={[Function]}
+                  >
+                    <Route>
+                      <DataParams
+                        addCustomTimePeriodFilter={[Function]}
+                        addThingFilter={[Function]}
+                        addTimePeriodFilter={[Function]}
+                        hasError={false}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                        reset={[Function]}
+                        updateParams={[Function]}
+                      >
+                        <Stats
+                          addCustomTimePeriodFilter={[Function]}
+                          addThingFilter={[Function]}
+                          addTimePeriodFilter={[Function]}
+                          hasError={false}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "canGo": [Function],
+                              "createHref": [Function],
+                              "entries": Array [
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                              ],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "index": 0,
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          onFiltersSelected={[Function]}
+                          onParamsSelected={[Function]}
+                          onReset={[Function]}
+                          reset={[Function]}
+                          updateParams={[Function]}
+                        >
+                          <div
+                            className="container is-fluid section"
+                          >
+                            <div
+                              className="columns"
+                            >
+                              <div
+                                className="column is-three-quarters"
+                              >
+                                <Connect(StatsParamsPanel)
+                                  onParamsSelected={[Function]}
+                                  onReset={[Function]}
+                                >
+                                  <StatsParamsPanel
+                                    isResetDisabled={true}
+                                    observation={Object {}}
+                                    onParamsSelected={[Function]}
+                                    onReset={[Function]}
+                                    selectGroupBy={[Function]}
+                                    selectMeasurementType={[Function]}
+                                    selectObservation={[Function]}
+                                    selectThing={[Function]}
+                                    selectType={[Function]}
+                                    type={Object {}}
+                                    updateGroupBy={[Function]}
+                                    updateMeasurementType={[Function]}
+                                    updateObservation={[Function]}
+                                    updateParams={[Function]}
+                                    updateThing={[Function]}
+                                    updateType={[Function]}
+                                  >
+                                    <ParamsPanel
+                                      params={
+                                        Array [
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "type",
+                                            "label": "Type",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "observation",
+                                            "label": "Observation",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                        ]
+                                      }
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="box"
+                                      >
+                                        <div
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column"
+                                            key="type"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Type"
+                                                        id="Type"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Type
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column"
+                                            key="observation"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Observation"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Observation"
+                                                        id="Observation"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Observation
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-2"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
+                                              onClick={[Function]}
+                                            >
+                                              <FormattedMessage
+                                                id="Reset"
+                                                values={Object {}}
+                                              >
+                                                <span>
+                                                  Reset
+                                                </span>
+                                              </FormattedMessage>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </ParamsPanel>
+                                  </StatsParamsPanel>
+                                </Connect(StatsParamsPanel)>
+                                <Connect(Charts)
+                                  chartType="BARCHART"
+                                >
+                                  <Charts
+                                    chartType="BARCHART"
+                                    dispatch={[Function]}
+                                    isLoading={true}
+                                    items={Array []}
+                                    things={Array []}
+                                  >
+                                    <Loader>
+                                      <div
+                                        className="is-horizontal-center"
+                                      >
+                                        <figure
+                                          className="image is-128x128"
+                                        >
+                                          <img
+                                            alt="Loader"
+                                            src="test-file-stub"
+                                          />
+                                        </figure>
+                                      </div>
+                                    </Loader>
+                                  </Charts>
+                                </Connect(Charts)>
+                              </div>
+                              <div
+                                className="column is-one-quarter"
+                              >
+                                <Connect(FiltersPanelContainer)
+                                  onFiltersSelected={[Function]}
+                                >
+                                  <FiltersPanelContainer
+                                    addCustomTimePeriodFilter={[Function]}
+                                    addFilterType={[Function]}
+                                    addThingFilter={[Function]}
+                                    addTimePeriodFilter={[Function]}
+                                    dateFilter={
+                                      Object {
+                                        "custom": Object {
+                                          "endDate": null,
+                                          "startDate": null,
+                                        },
+                                        "isCustomSelected": false,
+                                        "timePeriod": Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "selectedItem": null,
+                                        },
+                                      }
+                                    }
+                                    deleteFilterType={[Function]}
+                                    onFiltersSelected={[Function]}
+                                    selectFilterType={[Function]}
+                                    selectThingFilter={[Function]}
+                                    selectTimePeriod={[Function]}
+                                    selectedFilters={Array []}
+                                    statsType={null}
+                                    thingFilter={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
+                                    toggleDateFilterType={[Function]}
+                                    type={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "items": Array [
+                                          "thing",
+                                          "date",
+                                        ],
+                                      }
+                                    }
+                                    updateEndDate={[Function]}
+                                    updateStartDate={[Function]}
+                                    updateThingFilter={[Function]}
+                                    updateTimePeriod={[Function]}
+                                  >
+                                    <FiltersPanel
+                                      dateFilter={
+                                        Object {
+                                          "custom": Object {
+                                            "endDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                            "startDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                          },
+                                          "isCustomSelected": false,
+                                          "onDelete": [Function],
+                                          "selector": Object {
+                                            "isCustomSelected": false,
+                                            "onChange": [Function],
+                                          },
+                                          "timePeriod": Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "label": "Time period",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                            "selectedItem": null,
+                                          },
+                                        }
+                                      }
+                                      selectedFilters={Array []}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "label": "Thing",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
+                                          "selectedItem": null,
+                                        }
+                                      }
+                                      type={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "items": Array [
+                                            "thing",
+                                            "date",
+                                          ],
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
+                                        }
+                                      }
+                                    >
+                                      <div
+                                        className="box"
+                                      >
+                                        <div
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column"
+                                          >
+                                            <Dropdown
+                                              buttonStyle="is-primary"
+                                              iconStyle="fa-plus"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "thing",
+                                                  "date",
+                                                ]
+                                              }
+                                              label="Filters"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button is-primary"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Filters"
+                                                        id="Filters"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Filters
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-plus"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="thing"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="thing"
+                                                        id="thing"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Thing
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </div>
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="date"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="date"
+                                                        id="date"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Date
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </FiltersPanel>
+                                  </FiltersPanelContainer>
+                                </Connect(FiltersPanelContainer)>
+                              </div>
+                            </div>
+                          </div>
+                        </Stats>
+                      </DataParams>
+                    </Route>
+                  </withRouter(DataParams)>
+                </ResetOnUnmount>
+              </Connect(ResetOnUnmount)>
+            </Connect(Connect(ResetOnUnmount))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;

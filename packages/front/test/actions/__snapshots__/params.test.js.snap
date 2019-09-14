@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/params dispatches a selectObservation action 1`] = `[Function]`;
+
+exports[`actions/params dispatches a selectType action 1`] = `[Function]`;
+
+exports[`actions/params dispatches a updateObservation action 1`] = `[Function]`;
+
+exports[`actions/params dispatches a updateType action 1`] = `[Function]`;
+
+exports[`actions/params dispatches a updateType action 2`] = `[Function]`;

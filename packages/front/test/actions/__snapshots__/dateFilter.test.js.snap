@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/dateFilter dispatches selectTimePeriod action 1`] = `[Function]`;
+
+exports[`actions/dateFilter dispatches toggleDateFilterType action 1`] = `[Function]`;
+
+exports[`actions/dateFilter dispatches updateEndDate action 1`] = `[Function]`;
+
+exports[`actions/dateFilter dispatches updateStartDate action 1`] = `[Function]`;
+
+exports[`actions/dateFilter dispatches updateTimePeriod action 1`] = `[Function]`;

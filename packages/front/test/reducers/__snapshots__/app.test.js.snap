@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/app has a default state 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
+  "showError": true,
+}
+`;
+
+exports[`reducers/app reduces RESET 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
+  "showError": true,
+}
+`;
+
+exports[`reducers/app reduces SET_SHOW_ERROR 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
+  "showError": true,
+}
+`;
+
+exports[`reducers/app reduces TOGGLE_HAMBURGUER_MENU 1`] = `
+Object {
+  "isHamburgerMenuExpanded": true,
+  "isMapDialogOpened": false,
+  "showError": true,
+}
+`;
+
+exports[`reducers/app reduces TOGGLE_MAP_DIALOG 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": true,
+  "showError": true,
+}
+`;
+
+exports[`reducers/app reduces nothing 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
+  "showError": true,
+}
+`;

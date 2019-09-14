@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/modal renders when is active 1`] = `
+<div
+  className="modal is-active"
+>
+  <div
+    className="modal-background"
+    onClick={[MockFunction]}
+    onKeyPress={[MockFunction]}
+    role="button"
+    tabIndex={0}
+  />
+  <div
+    className="modal-content"
+  >
+    <article
+      className="message is-medium is-info"
+    >
+      <div
+        className="message-header"
+      >
+        <p>
+          Test
+        </p>
+      </div>
+      <div
+        className="message-body has-text-centered"
+      >
+        Test
+      </div>
+    </article>
+  </div>
+  <button
+    aria-label="close"
+    className="modal-close is-large"
+    onClick={[MockFunction]}
+  />
+</div>
+`;

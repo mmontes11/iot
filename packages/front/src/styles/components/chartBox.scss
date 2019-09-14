@@ -1,0 +1,7 @@
+.chart {
+  height: 200px;
+
+  @include from($desktop) {
+    height: 400px;
+  }
+}

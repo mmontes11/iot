@@ -2,6 +2,7 @@
 logs
 *.log
 
+
 # Runtime data
 pids
 *.pid
@@ -19,26 +20,26 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-# dist
-dist
-
 # npm
 .npm
 node_modules
+package-lock.json
 npm-debug.log*
-
-# git
-*.orig
 
 # Test & Coverage
 .nyc_output
 coverage
 
-# other
-*.rdb
+# Node persist
+.node-persist
 
-# env
-.env
-
-# data
-data/
+# Development
+.babelrc
+.gitignore
+.gitmodules
+.istanbul.yml
+.travis.yml
+.npmignore
+.nycrc
+src
+test

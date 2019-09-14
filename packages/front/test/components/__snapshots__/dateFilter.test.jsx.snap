@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/dateFilter renders DateFilter for selecting a custom time period 1`] = `
+<Connect(IntlProvider)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <InjectIntl(DateFilter)
+    dateFilter={
+      Object {
+        "custom": Object {
+          "endDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+          "startDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+        },
+        "onDelete": [Function],
+        "selector": Object {
+          "isCustomSelected": true,
+          "onChange": [Function],
+        },
+        "timePeriod": Object {
+          "isActive": true,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [
+            "foo",
+            "bar",
+          ],
+          "onButtonClick": [Function],
+          "onItemClick": [Function],
+          "selectedItem": null,
+        },
+      }
+    }
+  />
+</Connect(IntlProvider)>
+`;
+
+exports[`components/dateFilter renders DateFilter for selecting a time period 1`] = `
+<Connect(IntlProvider)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <InjectIntl(DateFilter)
+    dateFilter={
+      Object {
+        "custom": Object {
+          "endDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+          "startDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+        },
+        "onDelete": [Function],
+        "selector": Object {
+          "isCustomSelected": false,
+          "onChange": [Function],
+        },
+        "timePeriod": Object {
+          "isActive": true,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [
+            "foo",
+            "bar",
+          ],
+          "label": "Select time period:",
+          "onButtonClick": [Function],
+          "onItemClick": [Function],
+          "selectedItem": null,
+        },
+      }
+    }
+  />
+</Connect(IntlProvider)>
+`;

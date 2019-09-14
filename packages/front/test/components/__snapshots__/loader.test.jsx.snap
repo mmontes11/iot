@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/loader renders 1`] = `
+<div
+  className="is-horizontal-center"
+>
+  <figure
+    className="image is-128x128"
+  >
+    <img
+      alt="Loader"
+      src="test-file-stub"
+    />
+  </figure>
+</div>
+`;

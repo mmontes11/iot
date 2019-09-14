@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/request has a default state 1`] = `
+Object {
+  "error": null,
+  "pending": 0,
+  "statusCode": null,
+}
+`;
+
+exports[`reducers/request reduces /_REQUEST$/ 1`] = `
+Object {
+  "error": null,
+  "pending": 1,
+  "statusCode": null,
+}
+`;
+
+exports[`reducers/request reduces /_REQUEST_ERROR$/ 1`] = `
+Object {
+  "error": undefined,
+  "pending": -1,
+  "statusCode": undefined,
+}
+`;
+
+exports[`reducers/request reduces /_REQUEST_SUCCESS$/ 1`] = `
+Object {
+  "error": undefined,
+  "pending": -1,
+  "statusCode": undefined,
+}
+`;
+
+exports[`reducers/request reduces RESET 1`] = `
+Object {
+  "error": null,
+  "pending": 0,
+  "statusCode": null,
+}
+`;
+
+exports[`reducers/request reduces nothing 1`] = `
+Object {
+  "error": null,
+  "pending": 0,
+  "statusCode": null,
+}
+`;
+
+exports[`reducers/request simulates a flow of requests 1`] = `
+Object {
+  "error": undefined,
+  "pending": -1,
+  "statusCode": undefined,
+}
+`;

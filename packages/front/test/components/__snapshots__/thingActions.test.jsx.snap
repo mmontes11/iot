@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/thingActions renders 1`] = `
+<p
+  className="buttons is-horizontal-center"
+>
+  <a
+    className="button"
+    href="https://www.google.es/maps"
+    id="google-maps-link"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-map-marked"
+      />
+    </span>
+    <FormattedMessage
+      id="Google maps"
+      values={Object {}}
+    />
+  </a>
+  <button
+    className="button"
+    id="event-stats-button"
+    onClick={[Function]}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-chart-bar"
+      />
+    </span>
+    <FormattedMessage
+      id="Event stats"
+      values={Object {}}
+    />
+  </button>
+  <button
+    className="button"
+    id="measurement-stats-button"
+    onClick={[Function]}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-chart-bar"
+      />
+    </span>
+    <FormattedMessage
+      id="Measurement stats"
+      values={Object {}}
+    />
+  </button>
+</p>
+`;

@@ -1,0 +1,10 @@
+$datepicker__highlighted-color: $info;
+$datepicker__selected-color: $info;
+$datepicker__header-color: $primary;
+
+@import "~react-datepicker/src/stylesheets/datepicker.scss";
+
+.react-datepicker-wrapper,
+.react-datepicker-wrapper * {
+  width: 100%;
+}

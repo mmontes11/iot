@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/filters dispatches a addFilterType action 1`] = `[Function]`;
+
+exports[`actions/filters dispatches a deleteFilterType action 1`] = `[Function]`;
+
+exports[`actions/filters dispatches a selectFilterType action 1`] = `[Function]`;

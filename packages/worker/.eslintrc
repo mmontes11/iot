@@ -1,0 +1,9 @@
+{
+  "env": {
+    "mongo": true
+  },
+  "extends": ["mmontes11-node"],
+  "rules": {
+    "no-await-in-loop": 0
+  }
+}

@@ -1,0 +1,6 @@
+.thing-item-card {
+  @extend .card;
+
+  cursor: pointer;
+  outline: none;
+}
