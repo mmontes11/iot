@@ -11,8 +11,7 @@
   "main": "dist/index.js",
   "scripts": {
     "install:submodules": "git submodule foreach npm install",
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix",
+    "lint": "eslint . --fix",
     "pretest": "npm run lint:fix",
     "test": "cross-env NODE_ENV=test nyc mocha --timeout 10000 test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon src/index.js --exec babel-node",
-    "lint": "eslint --ignore-path .gitignore . --fix",
+    "lint": "eslint . --fix",
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test nyc mocha --timeout 10000 test/",
     "coverage": "nyc report --reporter=text-lcov | coveralls",

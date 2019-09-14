@@ -13,7 +13,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --ignore-path .gitignore . --ext js,jsx --fix",
+    "lint:js": "eslint . --ext js,jsx --fix",
     "lint:css": "stylelint **/*.scss --fix",
     "clean": "rm -rf dist/*",
     "pretest": "npm run lint",

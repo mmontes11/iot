@@ -14,7 +14,7 @@ const logger = new winston.Logger({
       colorize: true,
       filename: "log-iot-worker.log",
     }),
-  ]
+  ],
 });
 
 export default logger;
