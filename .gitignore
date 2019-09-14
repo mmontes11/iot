@@ -2,6 +2,7 @@
 logs
 *.log
 
+
 # Runtime data
 pids
 *.pid
@@ -19,5 +20,23 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# Babel ES6
+dist
+
+# npm
+.npm
+node_modules
+npm-debug.log*
+
+# Test & Coverage
+.nyc_output
+coverage
+
+# other
+*.rdb
+
 # env
 .env
+
+# data
+data/
