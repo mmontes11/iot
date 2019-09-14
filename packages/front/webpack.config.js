@@ -80,10 +80,10 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        IOT_SERVER_API_URL: JSON.stringify(process.env.IOT_SERVER_API_URL),
-        IOT_SERVER_SOCKET_URL: JSON.stringify(process.env.IOT_SERVER_SOCKET_URL),
-        IOT_SERVER_BASIC_AUTH_USERNAME: JSON.stringify(process.env.IOT_SERVER_BASIC_AUTH_USERNAME),
-        IOT_SERVER_BASIC_AUTH_PASSWORD: JSON.stringify(process.env.IOT_SERVER_BASIC_AUTH_PASSWORD),
+        FRONT_API_URL: JSON.stringify(process.env.FRONT_API_URL),
+        FRONT_SOCKET_URL: JSON.stringify(process.env.FRONT_SOCKET_URL),
+        BACK_BASIC_AUTH_USER: JSON.stringify(process.env.BACK_BASIC_AUTH_USER),
+        BACK_BASIC_AUTH_PASSWORD: JSON.stringify(process.env.BACK_BASIC_AUTH_PASSWORD),
         GOOGLE_MAPS_KEY: JSON.stringify(process.env.GOOGLE_MAPS_KEY),
       },
     }),

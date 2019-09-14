@@ -1,6 +1,6 @@
 export default {
   env: process.env.NODE_ENV,
-  nodePort: process.env.NODE_PORT,
+  nodePort: process.env.WORKER_PORT,
   mongoUrl: process.env.MONGO_URL,
   mongoDb: process.env.MONGO_DB,
   mqttBrokerHost: process.env.MQTT_BROKER_HOST,
@@ -15,7 +15,7 @@ export default {
   biotUrl: process.env.BIOT_URL,
   biotBasicAuthUsername: process.env.BIOT_BASIC_AUTH_USERNAME,
   biotBasicAuthPassword: process.env.BIOT_BASIC_AUTH_PASSWORD,
-  biotUsername: process.env.BIOT_USERNAME,
+  biotUsername: process.env.BIOT_USER,
   biotPassword: process.env.BIOT_PASSWORD,
   debug: process.env.IOT_DEBUG,
 };

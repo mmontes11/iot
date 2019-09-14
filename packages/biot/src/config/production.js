@@ -1,6 +1,6 @@
 export default {
   env: process.env.NODE_ENV,
-  nodePort: process.env.NODE_PORT,
+  nodePort: process.env.BIOT_PORT,
   biotBasicAuthUsers: {
     [process.env.BIOT_BASIC_AUTH_USER]: process.env.BIOT_BASIC_AUTH_PASSWORD,
   },
@@ -16,9 +16,9 @@ export default {
   biotGrowthRateModerateAbsoluteThreshold: parseFloat(process.env.BIOT_GROWTH_RATE_MODERATE_ABSOLUTE_THREESHOLD),
   biotGrowthRateHighAbsoluteThreshold: parseFloat(process.env.BIOT_GROWTH_RATE_HIGH_ABSOLUTE_THREESHOLD),
   biotDebug: process.env.IOT_DEBUG,
-  iotServerUrl: process.env.IOT_SERVER_URL,
-  iotServerBasicAuthUsername: process.env.IOT_SERVER_BASIC_AUTH_USERNAME,
-  iotServerBasicAuthPassword: process.env.IOT_SERVER_BASIC_AUTH_PASSWORD,
-  iotServerUsername: process.env.IOT_SERVER_USERNAME,
-  iotServerPassword: process.env.IOT_SERVER_PASSWORD,
+  iotServerUrl: process.env.API_URL,
+  iotServerBasicAuthUsername: process.env.BACK_BASIC_AUTH_USER,
+  iotServerBasicAuthPassword: process.env.BACK_BASIC_AUTH_PASSWORD,
+  iotServerUsername: process.env.BACK_USER,
+  iotServerPassword: process.env.BACK_PASSWORD,
 };
