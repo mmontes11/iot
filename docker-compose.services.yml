@@ -1,0 +1,12 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    expose:
+      - "${REDIS_PORT}"
+    restart: always
+  mosquitto:
+    build: services/mosquitto
+    expose:
+      - "${MQTT_BROKER_PORT}"
+    restart: always
