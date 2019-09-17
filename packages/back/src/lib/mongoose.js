@@ -1,7 +1,7 @@
 import "mongoose-geojson-schema";
 import Promise from "bluebird";
 import mongoose from "mongoose";
-import config from "../config/index";
+import config from "../config";
 import { logInfo } from "../utils/log";
 
 mongoose.Promise = Promise;

@@ -1,6 +1,6 @@
 import express from "express";
 import expressJwt from "express-jwt";
-import config from "../config/index";
+import config from "../config";
 import thingController from "../controllers/rest/thingController";
 
 const router = express.Router();

@@ -1,5 +1,5 @@
 import mqtt from "async-mqtt";
-import config from "../config/index";
+import config from "../config";
 
 const mqttClient = mqtt.connect({
   host: config.mqttBrokerHost,

@@ -6,7 +6,7 @@ import mqtt, { mqttBrokerUrl } from "./lib/mqtt";
 import app from "./lib/express";
 import { setupSocketIO } from "./lib/socketIO";
 import { SocketController } from "./controllers/socket/socketController";
-import config from "./config/index";
+import config from "./config";
 import { logInfo, logError } from "./utils/log";
 
 const server = new Server(app);

@@ -1,6 +1,6 @@
 import _ from "underscore";
 import cacheHandler from "./cacheHandler";
-import config from "../config/index";
+import config from "../config";
 import { CustomTimePeriod } from "../models/timePeriod";
 
 const statsPrefix = "stats";

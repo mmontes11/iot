@@ -1,5 +1,5 @@
 import winston from "../lib/winston";
-import config from "../config/index";
+import config from "../config";
 
 const logInfo = message => {
   if (config.debug) {

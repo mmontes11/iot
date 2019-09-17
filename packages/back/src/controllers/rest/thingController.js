@@ -7,7 +7,7 @@ import responseHandler from "../../helpers/responseHandler";
 import constants from "../../utils/responseKeys";
 import geocoder from "../../utils/geocoder";
 import boolean from "../../utils/boolean";
-import config from "../../config/index";
+import config from "../../config";
 
 const createOrUpdateThing = async (req, lastObservation) => {
   const thingToUpsert = modelFactory.createThing(req, lastObservation);

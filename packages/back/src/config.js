@@ -1,3 +1,13 @@
+import dotenv from "dotenv";
+import path from "path";
+
+if (process.env.NODE_ENV === "development") {
+  dotenv.config({ path: path.resolve(process.cwd(), ".env.dev") });
+}
+if (process.env.NODE_ENV === "test") {
+  dotenv.config({ path: path.resolve(process.cwd(), ".env.test") });
+}
+
 export default {
   env: process.env.NODE_ENV,
   nodePort: process.env.BACK_PORT,

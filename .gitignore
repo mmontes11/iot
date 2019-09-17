@@ -38,7 +38,9 @@ coverage
 *.rdb
 
 # env
-.env
+*.env
+*.env.*
+!.env.example
 
 # data
 data/

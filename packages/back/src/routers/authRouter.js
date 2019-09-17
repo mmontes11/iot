@@ -2,7 +2,7 @@ import express from "express";
 import expressBasicAuth from "express-basic-auth";
 import authController from "../controllers/rest/authController";
 import validationController from "../controllers/rest/validationController";
-import config from "../config/index";
+import config from "../config";
 
 const router = express.Router();
 

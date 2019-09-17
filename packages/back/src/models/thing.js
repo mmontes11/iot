@@ -1,6 +1,6 @@
 import _ from "underscore";
 import mongoose from "../lib/mongoose";
-import config from "../config/index";
+import config from "../config";
 import regex from "../utils/regex";
 
 const SupportedObservationTypesSchema = new mongoose.Schema({

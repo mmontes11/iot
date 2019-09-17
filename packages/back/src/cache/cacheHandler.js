@@ -1,6 +1,6 @@
 import redis from "../lib/redis";
 import { logInfo } from "../utils/log";
-import config from "../config/index";
+import config from "../config";
 
 const setObjectCache = (key, objectValue, expireTimeInSeconds = config.defaultCacheInSeconds) => {
   const objectString = JSON.stringify(objectValue);

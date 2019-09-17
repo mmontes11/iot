@@ -2,7 +2,7 @@ import express from "express";
 import expressJwt from "express-jwt";
 import measurementController from "../controllers/rest/measurementController";
 import validationController from "../controllers/rest/validationController";
-import config from "../config/index";
+import config from "../config";
 
 const router = express.Router();
 

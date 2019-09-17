@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import _ from "underscore";
 import { UserModel } from "../../models/user";
 import modelFactory from "../../helpers/modelFactory";
-import config from "../../config/index";
+import config from "../../config";
 import responseHandler from "../../helpers/responseHandler";
 
 const _checkCredentials = async (username, password) => {
