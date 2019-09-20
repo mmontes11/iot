@@ -2,7 +2,7 @@ import _ from "underscore";
 import { ObjectID } from "mongodb";
 import { MongoModel } from "./mongoModel";
 import mongo from "../lib/mongo";
-import config from "../config/index";
+import config from "../config";
 
 class Measurement extends MongoModel {
   async getMeasurementGrowthRate(currentMeasurement) {

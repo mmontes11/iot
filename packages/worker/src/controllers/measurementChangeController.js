@@ -2,7 +2,7 @@ import _ from "underscore";
 import { TopicController } from "./topicController";
 import subscriptionModel from "../models/subscriptionModel";
 import biotClient from "../lib/biotClient";
-import config from "../config/index";
+import config from "../config";
 
 export class MeasurementChangeController extends TopicController {
   static async handleTopic(topic, measurementChange) {

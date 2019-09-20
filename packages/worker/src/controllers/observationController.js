@@ -5,7 +5,7 @@ import measurementModel from "../models/measurementModel";
 import measurementChangeModel from "../models/measurementChangeModel";
 import biotClient from "../lib/biotClient";
 import mqtt from "../lib/mqtt";
-import config from "../config/index";
+import config from "../config";
 
 const checkNotifications = (notifications, topic) => {
   if (!_.isEmpty(notifications)) {

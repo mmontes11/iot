@@ -1,6 +1,6 @@
 import _ from "underscore";
 import winston from "../lib/winston";
-import config from "../config/index";
+import config from "../config";
 
 class Log {
   constructor(debug) {

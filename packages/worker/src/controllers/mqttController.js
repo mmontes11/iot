@@ -2,7 +2,7 @@ import mqttLib from "../lib/mqtt";
 import { EventController, MeasurementController } from "./observationController";
 import { MeasurementChangeController } from "./measurementChangeController";
 import topicModel from "../models/topicModel";
-import config from "../config/index";
+import config from "../config";
 import log from "../utils/log";
 
 class MQTTController {

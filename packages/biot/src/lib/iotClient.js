@@ -1,5 +1,5 @@
 import { IoTClient } from "@mmontes11/iot-client";
-import config from "../config/index";
+import config from "../config";
 
 const iotClient = new IoTClient({
   url: config.iotServerUrl,

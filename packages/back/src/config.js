@@ -2,10 +2,10 @@ import dotenv from "dotenv";
 import path from "path";
 
 if (process.env.NODE_ENV === "development") {
-  dotenv.config({ path: path.resolve(process.cwd(), ".env.dev") });
+  dotenv.config({ path: path.resolve(process.cwd(), "../../.env.dev") });
 }
 if (process.env.NODE_ENV === "test") {
-  dotenv.config({ path: path.resolve(process.cwd(), ".env.test") });
+  dotenv.config({ path: path.resolve(process.cwd(), "../../.env.test") });
 }
 
 export default {

@@ -1,5 +1,5 @@
 import mqttLib from "async-mqtt";
-import config from "../config/index";
+import config from "../config";
 import log from "../utils/log";
 
 class MQTT {

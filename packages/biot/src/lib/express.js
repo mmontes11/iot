@@ -8,7 +8,7 @@ import helmet from "helmet";
 import winston from "winston";
 import expressWinston from "express-winston";
 import routes from "../routers/indexRouter";
-import config from "../config/index";
+import config from "../config";
 
 const app = express();
 

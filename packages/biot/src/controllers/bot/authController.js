@@ -1,6 +1,6 @@
 import _ from "underscore";
 import errorMessages from "../../utils/errorMessages";
-import config from "../../config/index";
+import config from "../../config";
 
 export class AuthController {
   constructor(telegramBot) {

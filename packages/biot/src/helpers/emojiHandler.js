@@ -1,5 +1,5 @@
 import emojiLib from "node-emoji";
-import config from "../config/index";
+import config from "../config";
 
 export class EmojiHandler {
   static emojiForStatsType(statsType, value) {

@@ -2,7 +2,7 @@ import rest from "restler";
 import httpStatus from "http-status";
 import _ from "underscore";
 import storage from "./storage";
-import config from "../config/index";
+import config from "../config";
 import log from "../utils/log";
 
 const tokenKey = "token";

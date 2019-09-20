@@ -3,7 +3,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
-require("dotenv").config();
+const config = require("./config");
 
 const inProduction = process.env.NODE_ENV === "production";
 
@@ -78,21 +78,14 @@ module.exports = {
       },
     }),
     new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        FRONT_API_URL: JSON.stringify(process.env.FRONT_API_URL),
-        FRONT_SOCKET_URL: JSON.stringify(process.env.FRONT_SOCKET_URL),
-        BACK_BASIC_AUTH_USER: JSON.stringify(process.env.BACK_BASIC_AUTH_USER),
-        BACK_BASIC_AUTH_PASSWORD: JSON.stringify(process.env.BACK_BASIC_AUTH_PASSWORD),
-        GOOGLE_MAPS_KEY: JSON.stringify(process.env.GOOGLE_MAPS_KEY),
-      },
+      "process.env": config,
     }),
   ],
   node: {
     fs: "empty",
   },
   devServer: {
-    port: 8080,
+    port: process.env.FRONT_PORT,
     historyApiFallback: true,
   },
 };

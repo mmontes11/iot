@@ -2,7 +2,7 @@ import { Server } from "http";
 import _ from "underscore";
 import telegramBotController from "./controllers/bot/telegramBotController";
 import express from "./lib/express";
-import config from "./config/index";
+import config from "./config";
 import log from "./utils/log";
 
 telegramBotController.listen();
