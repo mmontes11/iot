@@ -44,3 +44,6 @@ coverage
 
 # data
 data/
+
+# node-persist
+.node-persist/
