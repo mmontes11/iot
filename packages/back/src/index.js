@@ -1,6 +1,6 @@
 import { Server } from "http";
 import _ from "underscore";
-import mongoose from "./lib/mongoose";
+import mongoose, { connectWithRetry } from "./lib/mongoose";
 import redis from "./lib/redis";
 import mqtt, { mqttBrokerUrl } from "./lib/mqtt";
 import app from "./lib/express";
@@ -12,6 +12,7 @@ import { logInfo, logError } from "./utils/log";
 const server = new Server(app);
 const io = setupSocketIO(server);
 
+connectWithRetry();
 mongoose.connection.on("connected", () => {
   logInfo(`Connected to MongoDB ${config.mongoUrl}`);
 });

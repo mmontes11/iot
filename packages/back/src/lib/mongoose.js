@@ -13,6 +13,17 @@ if (config.debug) {
   });
 }
 
-mongoose.connect(config.mongoUrl);
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+};
+
+export const connectWithRetry = () =>
+  mongoose.connect(config.mongoUrl, options, err => {
+    if (err) {
+      setTimeout(connectWithRetry, 5000);
+    }
+  });
 
 export default mongoose;

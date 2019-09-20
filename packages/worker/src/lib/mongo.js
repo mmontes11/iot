@@ -1,5 +1,12 @@
 import { MongoClient } from "mongodb";
 import config from "../config/index";
+import log from "../utils/log";
+
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+};
 
 class Mongo {
   constructor(url, dbName) {
@@ -9,18 +16,18 @@ class Mongo {
   }
   async connect() {
     try {
-      this.client = await MongoClient.connect(this.url);
+      this.client = await MongoClient.connect(this.url, options);
       this.db = this.client.db(this.dbName);
-      return this;
     } catch (err) {
-      throw err;
+      log.logError(err);
+      setTimeout(() => this.connect(), 5000);
     }
   }
   async close() {
     try {
       await this.client.close();
     } catch (err) {
-      throw err;
+      log.logError(err);    
     }
   }
 }
