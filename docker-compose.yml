@@ -15,7 +15,10 @@ services:
       - "${BACK_PORT}"
     restart: always
   front:
-    build: packages/front
+    build: 
+      context: packages/front
+      args:
+        FRONT_PORT: "${FRONT_PORT}"
     expose:
       - "${FRONT_PORT}"
     depends_on:
