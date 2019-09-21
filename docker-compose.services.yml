@@ -6,7 +6,11 @@ services:
       - "${REDIS_PORT}"
     restart: always
   mosquitto:
-    build: services/mosquitto
+    build: 
+      context: services/mosquitto
+      args:
+        MQTT_BROKER_USERNAME: "${MQTT_BROKER_USERNAME}"
+        MQTT_BROKER_PASSWORD: "${MQTT_BROKER_PASSWORD}"
     expose:
       - "${MQTT_BROKER_PORT}"
     restart: always

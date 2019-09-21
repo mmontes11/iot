@@ -3,7 +3,7 @@
 # Requirements
 # ttab: https://github.com/mklement0/ttab
 
-docker-compose -f docker-compose.dev.services.yml up -d
+docker-compose -f docker-compose.dev.services.yml up -d --build
 echo "Starting... 🚀"
 ttab -t "back" "cd packages/back; npm start"
 ttab -t "front" "cd packages/front; npm start"
