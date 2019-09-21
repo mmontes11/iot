@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:12
 
 ENV WORKDIR /usr/src/iot-biot
 
