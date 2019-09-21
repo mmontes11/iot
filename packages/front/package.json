@@ -16,7 +16,6 @@
     "lint:js": "eslint . --ext js,jsx --fix",
     "lint:css": "stylelint **/*.scss --fix",
     "clean": "rm -rf dist/*",
-    "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "coverage": "cat ./coverage/lcov.info | coveralls",

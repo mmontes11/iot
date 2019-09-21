@@ -3,14 +3,22 @@ node_js:
   - "12.0"
 cache:
   directories:
-  - node_modules
-  - ./**/**/node_modules
+    - node_modules
+services:
+  - docker
 stages:
-  - lint
+  # - lint
   - build
+  - test
 jobs:
   include:
-    - stage: lint 
-      script: ./scripts/ci-lint.sh
+    # - stage: lint
+    #   name: Lint
+    #   script: npm run lint
     - stage: build 
-      script: ./scripts/ci-build.sh
+      name: Build
+      script: npm run build
+    - state: test
+      name: Test
+      before_install: ./scripts/ci-docker.sh
+      script: npm test

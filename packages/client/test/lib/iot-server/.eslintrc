@@ -1,7 +1,0 @@
-{
-  "env": {
-    "mocha": true,
-    "mongo": true
-  },
-  "extends": ["mmontes11-node"]
-}
