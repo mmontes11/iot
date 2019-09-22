@@ -1,5 +1,5 @@
 {
-  "name": "iot-worker",
+  "name": "worker",
   "version": "1.0.6",
   "description": "ES6 NodeJS worker that subscribes to MQTT topics from IoT server and sends notifications to BIoT",
   "main": "index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mmontes11/iot-worker.git"
+    "url": "git+https://github.com/mmontes11/iot.git"
   },
   "keywords": [
     "js",
@@ -38,9 +38,9 @@
   "author": "Martín Montes <martin11lrx@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmontes11/iot-worker/issues"
+    "url": "https://github.com/mmontes11/iot/issues"
   },
-  "homepage": "https://github.com/mmontes11/iot-worker#readme",
+  "homepage": "https://github.com/mmontes11/iot#readme",
   "dependencies": {
     "async-mqtt": "^1.0.1",
     "cross-env": "^5.1.3",
