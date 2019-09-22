@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   mongo:
     image: mongo:4.0
@@ -11,7 +11,7 @@ services:
       - "${REDIS_PORT}:${REDIS_PORT}"
     restart: always
   mosquitto:
-    build: 
+    build:
       context: services/mosquitto
       args:
         MQTT_BROKER_USERNAME: "${MQTT_BROKER_USERNAME}"

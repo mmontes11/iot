@@ -1,3 +1,0 @@
-[submodule "test/lib/iot-server"]
-	path = test/lib/iot-server
-	url = https://github.com/mmontes11/iot-server.git
