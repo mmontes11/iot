@@ -2,13 +2,13 @@ version: '3'
 services:
   mongo:
     image: mongo:4.0
-    expose:
-      - "${MONGO_PORT}"
+    ports:
+      - "${MONGO_PORT}:${MONGO_PORT}"
     restart: always
   redis:
     image: redis
-    expose:
-      - "${REDIS_PORT}"
+    ports:
+      - "${REDIS_PORT}:${REDIS_PORT}"
     restart: always
   mosquitto:
     build: 
@@ -16,16 +16,6 @@ services:
       args:
         MQTT_BROKER_USERNAME: "${MQTT_BROKER_USERNAME}"
         MQTT_BROKER_PASSWORD: "${MQTT_BROKER_PASSWORD}"
-    expose:
-      - "${MQTT_BROKER_PORT}"
-    restart: always
-  back:
-    build: packages/back
-    env_file: .env
     ports:
-      - "${BACK_PORT}:${BACK_PORT}"
-    depends_on:
-      - mongo
-      - redis
-      - mosquitto
+      - "${MQTT_BROKER_PORT}:${MQTT_BROKER_PORT}"
     restart: always

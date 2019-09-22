@@ -8,16 +8,16 @@ services:
   - docker
 stages:
   # - lint
-  - build
+  # - build
   - test
 jobs:
   include:
     # - stage: lint
     #   name: Lint
     #   script: npm run lint
-    - stage: build 
-      name: Build
-      script: npm run build
+    # - stage: build 
+    #   name: Build
+    #   script: npm run build
     - state: test
       name: Test
       before_install: ./scripts/ci-docker.sh

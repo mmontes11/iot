@@ -1,7 +1,7 @@
 import chai from "./lib/chai";
-import serverConfig from "./lib/iot-server/src/config/index";
+import serverConfig from "../../back/src/config";
 import { IoTClient } from "../src/index";
-import serverConstants from "./lib/iot-server/test/constants/auth";
+import serverConstants from "../../back/test/constants/auth";
 
 const should = chai.should();
 const url = `http://localhost:${serverConfig.nodePort}`;

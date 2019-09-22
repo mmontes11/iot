@@ -12,6 +12,10 @@ export default {
     username: "testUser",
     password: "1234",
   },
+  userWithInvalidCredentials: {
+    username: "foo",
+    password: "bar",
+  },
   invalidMeasurementRequest: {
     measurement: {
       device: "raspberry",
