@@ -7,7 +7,7 @@ Generic purpose Internet of Things platform.
 
 ## Configuration
 
-Create a `.env` like [this one](./.env.example)
+Create a `.env` like [this one](./.env.example).
 
 ## Development
 
