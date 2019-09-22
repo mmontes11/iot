@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/data dispatches a getStats action for event stats 1`] = `[Function]`;
+
+exports[`actions/data dispatches a getStats action for measurement stats 1`] = `[Function]`;

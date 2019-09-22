@@ -1,0 +1,10 @@
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  & .tag-list-label {
+    margin-bottom: 0.5rem;
+  }
+}

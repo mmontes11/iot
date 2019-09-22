@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# IDE
+.idea
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Babel ES6
+dist
+
+# npm
+.npm
+node_modules
+package-lock.json
+npm-debug.log*
+
+# Test & Coverage
+.nyc_output
+coverage
+
+# Node persist
+.node-persist
+
+# IoT server for testing
+test/lib/iot-server/

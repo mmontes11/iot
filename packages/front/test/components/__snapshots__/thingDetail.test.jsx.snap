@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/thingDetail renders 1`] = `
+<IntlProvider
+  dispatch={[Function]}
+  locale="en"
+  messages={
+    Object {
+      "Custom": "Custom",
+      "Data": "Data",
+      "Delete": "Delete",
+      "End date": "End date",
+      "Error": "Error",
+      "Event stats": "Event stats",
+      "Events:": "Events:",
+      "Filters": "Filters",
+      "Google maps": "Google maps",
+      "Group by": "Group by",
+      "IP address:": "IP address:",
+      "IoT": "IoT",
+      "Last observation:": "Last observation:",
+      "Login": "Login",
+      "Logout": "Logout",
+      "MQTT topic:": "MQTT topic:",
+      "Measurement stats": "Measurement stats",
+      "Measurement type": "Measurement type",
+      "Measurements:": "Measurements:",
+      "Observation": "Observation",
+      "Password": "Password",
+      "Real time": "Real time",
+      "Request failed": "Request failed",
+      "Reset": "Reset",
+      "Start date": "Start date",
+      "Stats": "Stats",
+      "Thing": "Thing",
+      "Thing not found": "Thing not found",
+      "Things": "Things",
+      "Time": "Time",
+      "Time period": "Time period",
+      "Type": "Type",
+      "Username": "Username",
+      "avg": "Average",
+      "avgByHour": "Average by hour",
+      "date": "Date",
+      "day": "Day",
+      "door-closed": "Door closed",
+      "door-opened": "Door opened",
+      "en": "English",
+      "es": "Spanish",
+      "event": "Event",
+      "hour": "Hour",
+      "humidity": "Humidity",
+      "humidity-indoor": "Humidity indoor",
+      "humidity-outdoor": "Humidity outdoor",
+      "luminosity": "Luminosity",
+      "max": "Maximum",
+      "maxByHour": "Maximum by hour",
+      "measurement": "Mesasurement",
+      "min": "Minimum",
+      "minByHour": "Minimum by hour",
+      "minute": "Minute",
+      "month": "Month",
+      "second": "Second",
+      "stdDev": "Standard deviation",
+      "stdDevByHour": "Standard deviation by hour",
+      "temperature": "Temperature",
+      "temperature-indoor": "Temperature indoor",
+      "temperature-outdoor": "Temperature outdoor",
+      "thing": "Thing",
+      "total": "Total",
+      "week": "Week",
+      "year": "Year",
+    }
+  }
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": [Function],
+    }
+  }
+>
+  <InjectIntl(ThingDetail)
+    onEventStatsClick={[Function]}
+    onMeasurementStatsClick={[Function]}
+    thing={
+      Object {
+        "geometry": Object {
+          "coordinates": Array [
+            -40.58457,
+            40.21339,
+          ],
+          "type": "Point",
+        },
+        "googleMapsUrl": "https://www.google.es/maps",
+        "ip": "http://192.168.0.20",
+        "lastObservation": "2018-08-18T10:30:04.158Z",
+        "name": "foo",
+        "supportedObservationTypes": Object {
+          "event": Array [
+            "foo",
+            "bar",
+          ],
+          "measurement": Array [
+            "bar",
+            "foo",
+          ],
+        },
+        "topic": "bar",
+      }
+    }
+  />
+</IntlProvider>
+`;

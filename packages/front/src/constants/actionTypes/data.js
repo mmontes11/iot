@@ -1,0 +1,6 @@
+export const DATA_UPDATED = "DATA_UPDATED";
+export const DATA_REQUEST = "DATA_REQUEST";
+export const DATA_REQUEST_SUCCESS = "DATA_REQUEST_SUCCESS";
+export const DATA_REQUEST_ERROR = "DATA_REQUEST_ERROR";
+export const ADD_DATA_ITEM = "ADD_DATA_ITEM";
+export const RESET_DATA = "RESET_DATA";

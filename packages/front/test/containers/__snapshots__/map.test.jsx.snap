@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/map renders a map 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+    <withProps(withScriptjs(withGoogleMap(Map)))
+      isDialogOpened={false}
+      toggleDialog={[Function]}
+    >
+      <withScriptjs(withGoogleMap(Map))
+        containerElement={
+          <div
+            className="map"
+          />
+        }
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        isDialogOpened={false}
+        loadingElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        mapElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        toggleDialog={[Function]}
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        />
+      </withScriptjs(withGoogleMap(Map))>
+    </withProps(withScriptjs(withGoogleMap(Map)))>
+  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+</Provider>
+`;
+
+exports[`containers/map renders a map with label and marker 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
+    marker={
+      Object {
+        "label": "foo",
+        "point": Object {
+          "lat": 40.21339,
+          "lng": -40.58457,
+        },
+      }
+    }
+  >
+    <withProps(withScriptjs(withGoogleMap(Map)))
+      isDialogOpened={false}
+      marker={
+        Object {
+          "label": "foo",
+          "point": Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          },
+        }
+      }
+      toggleDialog={[Function]}
+    >
+      <withScriptjs(withGoogleMap(Map))
+        center={
+          Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          }
+        }
+        containerElement={
+          <div
+            className="map"
+          />
+        }
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        isDialogOpened={false}
+        label="foo"
+        loadingElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        mapElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        marker={
+          Object {
+            "label": "foo",
+            "point": Object {
+              "lat": 40.21339,
+              "lng": -40.58457,
+            },
+          }
+        }
+        point={
+          Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          }
+        }
+        toggleDialog={[Function]}
+        zoom={12}
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        />
+      </withScriptjs(withGoogleMap(Map))>
+    </withProps(withScriptjs(withGoogleMap(Map)))>
+  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+</Provider>
+`;
+
+exports[`containers/map renders a map with marker 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
+    marker={
+      Object {
+        "point": Object {
+          "lat": 40.21339,
+          "lng": -40.58457,
+        },
+      }
+    }
+  >
+    <withProps(withScriptjs(withGoogleMap(Map)))
+      isDialogOpened={false}
+      marker={
+        Object {
+          "point": Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          },
+        }
+      }
+      toggleDialog={[Function]}
+    >
+      <withScriptjs(withGoogleMap(Map))
+        center={
+          Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          }
+        }
+        containerElement={
+          <div
+            className="map"
+          />
+        }
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        isDialogOpened={false}
+        loadingElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        mapElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        marker={
+          Object {
+            "point": Object {
+              "lat": 40.21339,
+              "lng": -40.58457,
+            },
+          }
+        }
+        point={
+          Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          }
+        }
+        toggleDialog={[Function]}
+        zoom={12}
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        />
+      </withScriptjs(withGoogleMap(Map))>
+    </withProps(withScriptjs(withGoogleMap(Map)))>
+  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+</Provider>
+`;
+
+exports[`containers/map renders a map with open dialog 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
+    marker={
+      Object {
+        "label": "foo",
+        "point": Object {
+          "lat": 40.21339,
+          "lng": -40.58457,
+        },
+      }
+    }
+  >
+    <withProps(withScriptjs(withGoogleMap(Map)))
+      isDialogOpened={true}
+      marker={
+        Object {
+          "label": "foo",
+          "point": Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          },
+        }
+      }
+      toggleDialog={[Function]}
+    >
+      <withScriptjs(withGoogleMap(Map))
+        center={
+          Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          }
+        }
+        containerElement={
+          <div
+            className="map"
+          />
+        }
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        isDialogOpened={true}
+        label="foo"
+        loadingElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        mapElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+        marker={
+          Object {
+            "label": "foo",
+            "point": Object {
+              "lat": 40.21339,
+              "lng": -40.58457,
+            },
+          }
+        }
+        point={
+          Object {
+            "lat": 40.21339,
+            "lng": -40.58457,
+          }
+        }
+        toggleDialog={[Function]}
+        zoom={12}
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        />
+      </withScriptjs(withGoogleMap(Map))>
+    </withProps(withScriptjs(withGoogleMap(Map)))>
+  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+</Provider>
+`;

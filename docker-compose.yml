@@ -1,50 +1,40 @@
 version: '3'
 services:
   nginx:
-    build: nginx
+    build: services/nginx
     ports:
-      - "${NGINX_HTTP_EXTERNAL_PORT}:${NGINX_HTTP_INTERNAL_PORT}"
-      - "${NGINX_MQTT_EXTERNAL_PORT}:${NGINX_MQTT_INTERNAL_PORT}"
-    links:
-      - server1
-      - server2
-  server1:
-    env_file: iot-server/.env
+      - "${NGINX_HTTP_PORT}:${NGINX_HTTP_PORT}"
+      - "${NGINX_MQTT_PORT}:${NGINX_MQTT_PORT}"
+    depends_on:
+      - back
+    restart: always
+  back:
+    build: packages/back
+    env_file: .env
     expose:
-      - "${SERVER_PORT}"
-  server2:
-    env_file: iot-server/.env
+      - "${BACK_PORT}"
+    restart: always
+  front:
+    build: 
+      context: packages/front
+      args:
+        FRONT_PORT: "${FRONT_PORT}"
     expose:
-      - "${SERVER_PORT}"
-  redis:
-    image: redis
-    expose:
-      - "${REDIS_PORT}"
-  mosquitto:
-    build: mosquitto
-    expose:
-      - "${MOSQUITTO_PORT}"
+      - "${FRONT_PORT}"
+    depends_on:
+      - back
+    restart: always
   biot:
-    env_file: biot/.env
+    build: packages/biot
+    env_file: .env
     expose:
       - "${BIOT_PORT}"
-    links:
-      - nginx
+    depends_on:
+      - back
+    restart: always
   worker:
-    env_file: iot-worker/.env
+    build: packages/worker
+    env_file: .env
     expose:
       - "${WORKER_PORT}"
-    links:
-      - biot
-  web1:
-    build: iot-web
-    expose:
-      - "${WEB_PORT}"
-    links:
-      - nginx
-  web2:
-    build: iot-web
-    expose:
-      - "${WEB_PORT}"
-    links:
-      - nginx 
+    restart: always

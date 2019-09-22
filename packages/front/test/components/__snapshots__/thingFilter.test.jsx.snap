@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/thingFilter renders ThingFilter in initial state 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-10"
+    >
+      <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select filter:"
+        onButtonClick={[Function]}
+        onDelete={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column is-center"
+    >
+      <button
+        className="delete is-medium"
+        id="delete-button"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <FormattedMessage
+          id="Delete"
+          values={Object {}}
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

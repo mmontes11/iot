@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/params has a default state 1`] = `
+Object {
+  "allIds": Array [],
+  "byId": Object {},
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_ITEMS_UPDATED 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [
+        "foo",
+        "bar",
+      ],
+      "selectedItem": null,
+    },
+  },
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_REQUEST 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": true,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_REQUEST_ERROR 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_REQUEST_SUCCESS 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_RESET by reseting TYPE 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_SELECT 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": true,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces PARAM_UPDATE by updating TYPE 1`] = `
+Object {
+  "allIds": Array [
+    "TYPE",
+  ],
+  "byId": Object {
+    "TYPE": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": "foo",
+    },
+  },
+  "isResetDisabled": false,
+}
+`;
+
+exports[`reducers/params reduces RESET 1`] = `
+Object {
+  "allIds": Array [],
+  "byId": Object {},
+  "isResetDisabled": true,
+}
+`;
+
+exports[`reducers/params reduces nothing 1`] = `
+Object {
+  "allIds": Array [],
+  "byId": Object {},
+  "isResetDisabled": true,
+}
+`;

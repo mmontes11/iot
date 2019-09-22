@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - "12.0"
+cache:
+  directories:
+    - node_modules
+services:
+  - docker
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+jobs:
+  include:
+    - stage: lint
+      script: npm run lint
+    - stage: test
+      before_script: ./scripts/ci-docker.sh
+      script: npm test
+      after_script: npm run coverage
+    - stage: build 
+      script: npm run build
+    - stage: deploy
+      if: tag IS present
+      provider: script
+      before_script:
+        - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+      script: npm run deploy
+      skip_cleanup: true
+      on:
+        tags: true

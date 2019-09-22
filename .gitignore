@@ -19,5 +19,31 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# dist
+dist
+
+# npm
+.npm
+node_modules
+npm-debug.log*
+
+# git
+*.orig
+
+# Test & Coverage
+.nyc_output
+coverage
+
+# other
+*.rdb
+
 # env
-.env
+*.env
+*.env.*
+!.env.example
+
+# data
+data/
+
+# node-persist
+.node-persist/

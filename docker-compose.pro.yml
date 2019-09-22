@@ -1,0 +1,12 @@
+version: '3'
+services:
+  back:
+    depends_on:
+      - mongo
+      - redis
+      - mosquitto
+  worker:
+    depends_on:
+      - mongo
+      - mosquitto
+      - biot

@@ -1,0 +1,1501 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <withRouter(Connect(Navbar))>
+              <Route>
+                <Connect(Navbar)
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <Navbar
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    isHamburgerMenuExpanded={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    logout={[Function]}
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                    toggleHamburgerMenu={[Function]}
+                  >
+                    <nav
+                      className="navbar has-shadow is-spaced"
+                    >
+                      <div
+                        className="navbar-brand"
+                      >
+                        <NavLink
+                          activeClassName="active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/"
+                        >
+                          <Route
+                            path="\\\\/"
+                          >
+                            <Link
+                              aria-current="page"
+                              className="navbar-item active"
+                              replace={false}
+                              style={Object {}}
+                              to="/"
+                            >
+                              <a
+                                aria-current="page"
+                                className="navbar-item active"
+                                href="/"
+                                onClick={[Function]}
+                                style={Object {}}
+                              >
+                                <FormattedMessage
+                                  id="IoT"
+                                  values={Object {}}
+                                >
+                                  <h1
+                                    className="title"
+                                  >
+                                    IoT
+                                  </h1>
+                                </FormattedMessage>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <div
+                          className="navbar-burger burger"
+                          data-target="navbar-menu"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                      <div
+                        className="navbar-menu"
+                        id="navbar-menu"
+                      >
+                        <div
+                          className="navbar-start"
+                        >
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/things"
+                          >
+                            <Route
+                              path="\\\\/things"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/things"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/things"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-microchip"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Things"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Things
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/stats"
+                          >
+                            <Route
+                              path="\\\\/stats"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/stats"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/stats"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-chart-bar"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Stats"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Stats
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/data"
+                          >
+                            <Route
+                              path="\\\\/data"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/data"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/data"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-database"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Data"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Data
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/real-time"
+                          >
+                            <Route
+                              path="\\\\/real-time"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/real-time"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/real-time"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-clock"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Real time"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Real time
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </div>
+                        <div
+                          className="navbar-end"
+                        >
+                          <Connect(LanguageSelector)>
+                            <LanguageSelector
+                              languages={
+                                Array [
+                                  "en",
+                                  "es",
+                                ]
+                              }
+                              selectedLanguage="en"
+                              updateLanguage={[Function]}
+                            >
+                              <div
+                                className="navbar-item has-dropdown is-hoverable"
+                              >
+                                <button
+                                  className="navbar-link button is-white"
+                                >
+                                  <LanguageItem
+                                    language="en"
+                                  >
+                                    <span
+                                      className="icon is-medium"
+                                    >
+                                      <i
+                                        className="flag-icon flag-icon-gb"
+                                      />
+                                    </span>
+                                    <FormattedMessage
+                                      id="en"
+                                      values={Object {}}
+                                    >
+                                      <span>
+                                        English
+                                      </span>
+                                    </FormattedMessage>
+                                  </LanguageItem>
+                                </button>
+                                <div
+                                  className="navbar-dropdown"
+                                >
+                                  <button
+                                    className="navbar-item button is-white"
+                                    key="es"
+                                    onClick={[Function]}
+                                  >
+                                    <LanguageItem
+                                      language="es"
+                                    >
+                                      <span
+                                        className="icon is-medium"
+                                      >
+                                        <i
+                                          className="flag-icon flag-icon-es"
+                                        />
+                                      </span>
+                                      <FormattedMessage
+                                        id="es"
+                                        values={Object {}}
+                                      >
+                                        <span>
+                                          Spanish
+                                        </span>
+                                      </FormattedMessage>
+                                    </LanguageItem>
+                                  </button>
+                                </div>
+                              </div>
+                            </LanguageSelector>
+                          </Connect(LanguageSelector)>
+                          <div
+                            className="navbar-item"
+                          >
+                            <div
+                              className="field"
+                            >
+                              <p
+                                className="control"
+                              >
+                                <button
+                                  className="button is-primary"
+                                  id="logout-button"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fa fa-user"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Logout"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Logout
+                                    </span>
+                                  </FormattedMessage>
+                                </button>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </Navbar>
+                </Connect(Navbar)>
+              </Route>
+            </withRouter(Connect(Navbar))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;
+
+exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <withRouter(Connect(Navbar))>
+              <Route>
+                <Connect(Navbar)
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <Navbar
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    isHamburgerMenuExpanded={true}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    logout={[Function]}
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                    toggleHamburgerMenu={[Function]}
+                  >
+                    <nav
+                      className="navbar has-shadow is-spaced"
+                    >
+                      <div
+                        className="navbar-brand"
+                      >
+                        <NavLink
+                          activeClassName="active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/"
+                        >
+                          <Route
+                            path="\\\\/"
+                          >
+                            <Link
+                              aria-current="page"
+                              className="navbar-item active"
+                              replace={false}
+                              style={Object {}}
+                              to="/"
+                            >
+                              <a
+                                aria-current="page"
+                                className="navbar-item active"
+                                href="/"
+                                onClick={[Function]}
+                                style={Object {}}
+                              >
+                                <FormattedMessage
+                                  id="IoT"
+                                  values={Object {}}
+                                >
+                                  <h1
+                                    className="title"
+                                  >
+                                    IoT
+                                  </h1>
+                                </FormattedMessage>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <div
+                          className="navbar-burger burger is-active"
+                          data-target="navbar-menu"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                      <div
+                        className="navbar-menu is-active"
+                        id="navbar-menu"
+                      >
+                        <div
+                          className="navbar-start"
+                        >
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/things"
+                          >
+                            <Route
+                              path="\\\\/things"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/things"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/things"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-microchip"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Things"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Things
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/stats"
+                          >
+                            <Route
+                              path="\\\\/stats"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/stats"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/stats"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-chart-bar"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Stats"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Stats
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/data"
+                          >
+                            <Route
+                              path="\\\\/data"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/data"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/data"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-database"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Data"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Data
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/real-time"
+                          >
+                            <Route
+                              path="\\\\/real-time"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/real-time"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/real-time"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-clock"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Real time"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Real time
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </div>
+                        <div
+                          className="navbar-end"
+                        >
+                          <Connect(LanguageSelector)>
+                            <LanguageSelector
+                              languages={
+                                Array [
+                                  "en",
+                                  "es",
+                                ]
+                              }
+                              selectedLanguage="en"
+                              updateLanguage={[Function]}
+                            >
+                              <div
+                                className="navbar-item has-dropdown is-hoverable"
+                              >
+                                <button
+                                  className="navbar-link button is-white"
+                                >
+                                  <LanguageItem
+                                    language="en"
+                                  >
+                                    <span
+                                      className="icon is-medium"
+                                    >
+                                      <i
+                                        className="flag-icon flag-icon-gb"
+                                      />
+                                    </span>
+                                    <FormattedMessage
+                                      id="en"
+                                      values={Object {}}
+                                    >
+                                      <span>
+                                        English
+                                      </span>
+                                    </FormattedMessage>
+                                  </LanguageItem>
+                                </button>
+                                <div
+                                  className="navbar-dropdown"
+                                >
+                                  <button
+                                    className="navbar-item button is-white"
+                                    key="es"
+                                    onClick={[Function]}
+                                  >
+                                    <LanguageItem
+                                      language="es"
+                                    >
+                                      <span
+                                        className="icon is-medium"
+                                      >
+                                        <i
+                                          className="flag-icon flag-icon-es"
+                                        />
+                                      </span>
+                                      <FormattedMessage
+                                        id="es"
+                                        values={Object {}}
+                                      >
+                                        <span>
+                                          Spanish
+                                        </span>
+                                      </FormattedMessage>
+                                    </LanguageItem>
+                                  </button>
+                                </div>
+                              </div>
+                            </LanguageSelector>
+                          </Connect(LanguageSelector)>
+                          <div
+                            className="navbar-item"
+                          >
+                            <div
+                              className="field"
+                            >
+                              <p
+                                className="control"
+                              >
+                                <button
+                                  className="button is-primary"
+                                  id="logout-button"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fa fa-user"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Logout"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Logout
+                                    </span>
+                                  </FormattedMessage>
+                                </button>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </Navbar>
+                </Connect(Navbar)>
+              </Route>
+            </withRouter(Connect(Navbar))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;
+
+exports[`containers/navbar simulates a click in logout button 1`] = `
+Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
+    "showError": true,
+  },
+  "auth": Object {
+    "isAuth": false,
+    "password": null,
+    "username": null,
+  },
+  "data": Object {
+    "isLoading": false,
+    "items": Array [],
+    "things": Array [],
+  },
+  "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+    },
+    "items": Array [],
+    "thingFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
+  "localization": Object {
+    "languages": Array [
+      "en",
+      "es",
+    ],
+    "selectedLanguage": "en",
+    "translations": Object {
+      "Custom": "Custom",
+      "Data": "Data",
+      "Delete": "Delete",
+      "End date": "End date",
+      "Error": "Error",
+      "Event stats": "Event stats",
+      "Events:": "Events:",
+      "Filters": "Filters",
+      "Google maps": "Google maps",
+      "Group by": "Group by",
+      "IP address:": "IP address:",
+      "IoT": "IoT",
+      "Last observation:": "Last observation:",
+      "Login": "Login",
+      "Logout": "Logout",
+      "MQTT topic:": "MQTT topic:",
+      "Measurement stats": "Measurement stats",
+      "Measurement type": "Measurement type",
+      "Measurements:": "Measurements:",
+      "Observation": "Observation",
+      "Password": "Password",
+      "Real time": "Real time",
+      "Request failed": "Request failed",
+      "Reset": "Reset",
+      "Start date": "Start date",
+      "Stats": "Stats",
+      "Thing": "Thing",
+      "Thing not found": "Thing not found",
+      "Things": "Things",
+      "Time": "Time",
+      "Time period": "Time period",
+      "Type": "Type",
+      "Username": "Username",
+      "avg": "Average",
+      "avgByHour": "Average by hour",
+      "date": "Date",
+      "day": "Day",
+      "door-closed": "Door closed",
+      "door-opened": "Door opened",
+      "en": "English",
+      "es": "Spanish",
+      "event": "Event",
+      "hour": "Hour",
+      "humidity": "Humidity",
+      "humidity-indoor": "Humidity indoor",
+      "humidity-outdoor": "Humidity outdoor",
+      "luminosity": "Luminosity",
+      "max": "Maximum",
+      "maxByHour": "Maximum by hour",
+      "measurement": "Mesasurement",
+      "min": "Minimum",
+      "minByHour": "Minimum by hour",
+      "minute": "Minute",
+      "month": "Month",
+      "second": "Second",
+      "stdDev": "Standard deviation",
+      "stdDevByHour": "Standard deviation by hour",
+      "temperature": "Temperature",
+      "temperature-indoor": "Temperature indoor",
+      "temperature-outdoor": "Temperature outdoor",
+      "thing": "Thing",
+      "total": "Total",
+      "week": "Week",
+      "year": "Year",
+    },
+  },
+  "params": Object {
+    "allIds": Array [],
+    "byId": Object {},
+    "isResetDisabled": true,
+  },
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
+  "things": Object {
+    "items": Array [],
+    "selectedItem": null,
+    "showNotFoundError": false,
+  },
+}
+`;

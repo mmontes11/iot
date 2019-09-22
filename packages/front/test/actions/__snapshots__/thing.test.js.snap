@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/auth dispatches a getThings action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches a selectThing action 1`] = `[Function]`;

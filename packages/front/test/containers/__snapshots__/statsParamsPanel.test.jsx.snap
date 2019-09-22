@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/statsParamsPanel renders in initial state 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+  keyLength={0}
+>
+  <Connect(StatsParamsPanel)
+    onParamsSelected={[Function]}
+    onReset={[Function]}
+  />
+</MemoryRouter>
+`;
+
+exports[`containers/statsParamsPanel renders when TYPE is selected 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+  keyLength={0}
+>
+  <Connect(StatsParamsPanel)
+    onParamsSelected={[Function]}
+    onReset={[Function]}
+  />
+</MemoryRouter>
+`;
+
+exports[`containers/statsParamsPanel renders when loading TYPE 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
+  }
+  keyLength={0}
+>
+  <Connect(StatsParamsPanel)
+    onParamsSelected={[Function]}
+    onReset={[Function]}
+  />
+</MemoryRouter>
+`;

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/paramsPanel renders with some params 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+      key="type"
+    >
+      <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select type"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column"
+      key="observation"
+    >
+      <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select observation"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column"
+      key="groupBy"
+    >
+      <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Group by"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column is-2"
+    >
+      <button
+        className="button is-warning is-fullwidth"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="Reset"
+          values={Object {}}
+        />
+        <span
+          className="icon is-small"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-eraser"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

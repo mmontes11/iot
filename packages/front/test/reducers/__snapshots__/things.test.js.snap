@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/things has a default state 1`] = `
+Object {
+  "items": Array [],
+  "selectedItem": null,
+  "showNotFoundError": false,
+}
+`;
+
+exports[`reducers/things reduces RESET 1`] = `
+Object {
+  "items": Array [],
+  "selectedItem": null,
+  "showNotFoundError": false,
+}
+`;
+
+exports[`reducers/things reduces THING_SELECTED 1`] = `
+Object {
+  "items": Array [],
+  "selectedItem": "foo",
+  "showNotFoundError": false,
+}
+`;
+
+exports[`reducers/things reduces THINGS_UPDATED 1`] = `
+Object {
+  "items": Array [
+    "foo",
+    "bar",
+  ],
+  "selectedItem": null,
+  "showNotFoundError": false,
+}
+`;
+
+exports[`reducers/things reduces nothing 1`] = `
+Object {
+  "items": Array [],
+  "selectedItem": null,
+  "showNotFoundError": false,
+}
+`;
+
+exports[`reducers/things selects and deselects a thing 1`] = `
+Object {
+  "items": Array [],
+  "selectedItem": "foo",
+  "showNotFoundError": false,
+}
+`;
+
+exports[`reducers/things selects and deselects a thing 2`] = `
+Object {
+  "items": Array [],
+  "selectedItem": null,
+  "showNotFoundError": false,
+}
+`;

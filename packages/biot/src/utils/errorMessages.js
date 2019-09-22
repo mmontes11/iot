@@ -1,0 +1,23 @@
+export default {
+  notAuthorizedError: "Sorry, I'm not authorized to talk to you",
+  noThingsAvailable: "No things available",
+  noTimePeriodsAvailable: "No time periods available",
+  noTypesAvailable: "No types available",
+  noLastAvailable: "No observations available",
+  noStatsAvailable: "No stats available",
+  noTopicsAvailable: "No topics available",
+  noSubscriptions: "You are not subscribed to anything",
+  deleteSubscriptionNotFound:
+    "Oops! This is awkward... you are trying to delete a subscription that doesn't actually exist.",
+  errorGettingThings: "Ouch! It seems that something went wrong while obtaining things",
+  errorGettingTimePeriods: "Ouch! It seems that something went wrong while obtaining time periods",
+  errorGettingTypes: "Ouch! It seems that something went wrong while obtaining types",
+  errorGettingLast: "Ouch! It seems that something went wrong while obtaining last observation",
+  errorGettingStats: "Ouch! It seems that something went wrong while stats were calculated",
+  errorSubscribing: "Ouch! It seems that something went wrong while subscribing",
+  errorGettingSubscriptions: "Ouch! It seems that something went wrong while getting subscriptions",
+  errorDeleteSubscription: "Ouch! It seems that something went wrong while deleting the subscription",
+  errorGettingTopics: "Ouch! It seems that something went wrong while getting topics",
+  errorGenericNotFound: "Oops! This is awkward... you are looking for something that doesn't actually exist.",
+  errorGeneric: "Ouch! Houston, we have a problem... something went wrong.",
+};

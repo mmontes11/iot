@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/thingItem renders when it's not selected 1`] = `
+<div
+  className="thing-item-card"
+  onClick={[MockFunction]}
+  onKeyPress={[MockFunction]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    className="card-content"
+  >
+    <div
+      className="content"
+    >
+      <p
+        className="title is-6"
+      >
+        foo
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/thingItem renders when it's selected 1`] = `
+<div
+  className="thing-item-card is-selected"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    className="card-content"
+  >
+    <div
+      className="content"
+    >
+      <p
+        className="title is-6"
+      >
+        bar
+      </p>
+    </div>
+  </div>
+</div>
+`;

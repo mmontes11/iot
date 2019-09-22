@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/auth dispatches a login action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches a logout action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches a setPassword action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches a setUsername action 1`] = `[Function]`;
+
+exports[`actions/auth dispatches an isAuth action 1`] = `[Function]`;

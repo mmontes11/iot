@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/filterPanel renders with filters 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <Dropdown
+        buttonStyle="is-primary"
+        iconStyle="fa-plus"
+        isActive={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Filters"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+  </div>
+  <ThingFilter
+    key="thing"
+    thingFilter={
+      Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [
+          "foo",
+          "bar",
+        ],
+        "label": "Select filter:",
+        "onButtonClick": [Function],
+        "onDelete": [Function],
+        "onItemClick": [Function],
+      }
+    }
+  />
+  <InjectIntl(DateFilter)
+    dateFilter={
+      Object {
+        "custom": Object {
+          "endDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+          "startDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+        },
+        "onDelete": [Function],
+        "selector": Object {
+          "isCustomSelected": false,
+          "onChange": [Function],
+        },
+        "timePeriod": Object {
+          "isActive": true,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [
+            "foo",
+            "bar",
+          ],
+          "label": "Select time period:",
+          "onButtonClick": [Function],
+          "onItemClick": [Function],
+          "selectedItem": null,
+        },
+      }
+    }
+    key="date"
+  />
+</div>
+`;
+
+exports[`components/filterPanel renders with no filters 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <Dropdown
+        buttonStyle="is-primary"
+        iconStyle="fa-plus"
+        isActive={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Filters"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;

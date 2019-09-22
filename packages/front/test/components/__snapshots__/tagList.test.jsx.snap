@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/tagList renders nothing when no tags are specified 1`] = `""`;
+
+exports[`components/tagList renders tags 1`] = `
+<div
+  className="tag-list"
+>
+  <p
+    className="tag-list-label is-6"
+  >
+    <FormattedMessage
+      id="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+  </p>
+  <div
+    className="tags"
+  >
+    <FormattedMessage
+      defaultMessage="foo"
+      id="foo"
+      key="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+    <FormattedMessage
+      defaultMessage="bar"
+      id="bar"
+      key="bar"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+  </div>
+</div>
+`;
+
+exports[`components/tagList renders tags without label 1`] = `
+<div
+  className="tag-list"
+>
+  <div
+    className="tags"
+  >
+    <FormattedMessage
+      defaultMessage="foo"
+      id="foo"
+      key="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+    <FormattedMessage
+      defaultMessage="bar"
+      id="bar"
+      key="bar"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+  </div>
+</div>
+`;
+
+exports[`components/tagList renders tags without style 1`] = `
+<div
+  className="tag-list"
+>
+  <p
+    className="tag-list-label is-6"
+  >
+    <FormattedMessage
+      id="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+  </p>
+  <div
+    className="tags"
+  >
+    <FormattedMessage
+      defaultMessage="foo"
+      id="foo"
+      key="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+    <FormattedMessage
+      defaultMessage="bar"
+      id="bar"
+      key="bar"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
+  </div>
+</div>
+`;

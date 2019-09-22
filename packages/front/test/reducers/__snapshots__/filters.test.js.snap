@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/filters has a default state 1`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "items": Array [
+      "thing",
+      "date",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces ADD_FILTER_TYPE 1`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [
+    "thing",
+  ],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "items": Array [
+      "date",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces ADD_FILTER_TYPE 2`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [
+    "thing",
+    "date",
+  ],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "items": Array [],
+  },
+}
+`;
+
+exports[`reducers/filters reduces DELETE_FILTER_TYPE 1`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [
+    "date",
+  ],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "items": Array [
+      "thing",
+      "date",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces DELETE_FILTER_TYPE 2`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [
+    "thing",
+  ],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "items": Array [
+      "thing",
+      "date",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces DELETE_FILTER_TYPE 3`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [
+    "thing",
+    "date",
+  ],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "items": Array [
+      "thing",
+      "date",
+      "WHATEVER",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces FILTER_TYPE_SELECT 1`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": true,
+    "isDisabled": false,
+    "items": Array [
+      "thing",
+      "date",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces RESET 1`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "items": Array [
+      "thing",
+      "date",
+    ],
+  },
+}
+`;
+
+exports[`reducers/filters reduces nothing 1`] = `
+Object {
+  "dateFilter": Object {
+    "custom": Object {
+      "endDate": null,
+      "startDate": null,
+    },
+    "isCustomSelected": false,
+    "timePeriod": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+  },
+  "items": Array [],
+  "thingFilter": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "type": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "items": Array [
+      "thing",
+      "date",
+    ],
+  },
+}
+`;
