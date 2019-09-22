@@ -15,7 +15,10 @@
     "test": "cross-env NODE_ENV=test nyc mocha --timeout 10000 test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rm -rf dist/*",
-    "build": "babel -d dist/ src/"
+    "prebuild": "npm run clean",
+    "build": "babel -d dist/ src/",
+    "predeploy": "npm run build",
+    "deploy": "npm publish"
   },
   "repository": {
     "type": "git",

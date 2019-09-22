@@ -7,18 +7,32 @@ cache:
 services:
   - docker
 stages:
-  # - lint
-  # - build
+  - lint
+  - build
   - test
+  - coverage
+  - deploy
 jobs:
   include:
-    # - stage: lint
-    #   name: Lint
-    #   script: npm run lint
-    # - stage: build 
-    #   name: Build
-    #   script: npm run build
-    - state: test
+    - stage: lint
+      name: Lint
+      script: npm run lint
+    - stage: build 
+      name: Build
+      script: npm run build
+    - stage: test
       name: Test
-      before_install: ./scripts/ci-docker.sh
+      before_script: ./scripts/ci-docker.sh
       script: npm test
+    - stage: coverage
+      name: Coverage
+      script: npm run coverage
+    - stage: deploy
+      name: Deploy
+      provider: script
+      before_script:
+        - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+      script: "npm run deploy"
+      skip_cleanup: true
+      on:
+        tags: true

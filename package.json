@@ -13,8 +13,10 @@
     "start:worker": "cd packages/worker && npm start",
     "lint": "lerna run lint",
     "test": "lerna run test",
+    "coverage": "lerna run coverage",
     "clean": "lerna run clean",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "deploy": "lerna run deploy"
   },
   "repository": {
     "type": "git",
