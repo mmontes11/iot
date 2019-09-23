@@ -1,7 +1,7 @@
+import serverConfig from "back/src/config";
+import serverConstants from "back/test/constants/auth";
 import chai from "./lib/chai";
-import serverConfig from "../../back/src/config";
 import { IoTClient } from "../src/index";
-import serverConstants from "../../back/test/constants/auth";
 
 const should = chai.should();
 const url = `http://localhost:${serverConfig.nodePort}`;

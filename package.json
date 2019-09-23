@@ -6,7 +6,7 @@
     "lerna": "^3.16.4"
   },
   "scripts": {
-    "install": "lerna exec npm install",
+    "install": "lerna bootstrap",
     "start:front": "cd packages/front && npm start",
     "start:back": "cd packages/back && npm start",
     "start:biot": "cd packages/biot && npm start",
