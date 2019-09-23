@@ -1,4 +1,4 @@
-import { IoTClient } from "@mmontes11/iot-client";
+import { IoTClient } from "@mmontes11/iot-client/src/index";
 
 const iotClient = new IoTClient({
   url: process.env.FRONT_API_URL,
