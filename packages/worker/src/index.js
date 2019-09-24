@@ -21,7 +21,7 @@ import log from "./utils/log";
     }
   });
   mqtt.client.on("error", err => {
-    log.logError(`Error in MQTT Broker ${mqtt.brokerUrl}:`);
+    log.logError(`Error in MQTT Broker ${mqtt.brokerUrl}`);
     log.logError(err);
   });
   mqtt.client.on("close", () => {

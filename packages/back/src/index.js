@@ -39,7 +39,7 @@ mqtt.on("connect", () => {
   logInfo(`Connected to MQTT Broker ${mqttBrokerUrl}`);
 });
 mqtt.on("error", err => {
-  logError(`Error in MQTT Broker ${mqttBrokerUrl}:`);
+  logError(`Error in MQTT Broker ${mqttBrokerUrl}`);
   logError(err);
 });
 mqtt.on("close", () => {
