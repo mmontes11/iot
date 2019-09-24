@@ -1,12 +1,8 @@
-import express from "express";
-import expressBasicAuth from "express-basic-auth";
 import authController from "../controllers/rest/authController";
 import validationController from "../controllers/rest/validationController";
-import config from "../config";
+import { getRouterWithBasicAuth } from "../helpers/router";
 
-const router = express.Router();
-
-router.route("*").all(expressBasicAuth({ users: config.basicAuthUsers }));
+const router = getRouterWithBasicAuth();
 
 router.route("/").post(validationController.validateCheckAuth, authController.checkAuth);
 

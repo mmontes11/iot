@@ -1,12 +1,12 @@
 import _ from "underscore";
+import { derivedConfig } from "common/config";
 import { TopicController } from "./topicController";
 import subscriptionModel from "../models/subscriptionModel";
 import biotClient from "../lib/biotClient";
-import config from "../config";
 
 export class MeasurementChangeController extends TopicController {
   static async handleTopic(topic, measurementChange) {
-    if (Math.abs(measurementChange.growthRate) >= config.measurementChangeGrowthRateThreshold) {
+    if (Math.abs(measurementChange.growthRate) >= derivedConfig.measurementChangeGrowthRateThreshold) {
       try {
         const maybeNotifications = await subscriptionModel.getNotificationsForSubscriptions(
           topic,

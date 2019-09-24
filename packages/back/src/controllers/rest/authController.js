@@ -3,8 +3,9 @@ import jwt from "jsonwebtoken";
 import _ from "underscore";
 import { UserModel } from "../../models/user";
 import modelFactory from "../../helpers/modelFactory";
-import config from "../../config";
 import responseHandler from "../../helpers/responseHandler";
+
+const { BACK_JWT_SECRET } = process.env;
 
 const _checkCredentials = async (username, password) => {
   const user = await UserModel.where({ username, password }).findOne();
@@ -18,7 +19,7 @@ const checkAuth = async (req, res) => {
   const { token, username, password } = req.body;
   if (!_.isUndefined(token)) {
     try {
-      if (jwt.verify(token, config.jwtSecret)) {
+      if (jwt.verify(token, BACK_JWT_SECRET)) {
         return res.sendStatus(httpStatus.OK);
       }
       return res.sendStatus(httpStatus.UNAUTHORIZED);
@@ -61,7 +62,7 @@ const getToken = async (req, res) => {
   } catch (err) {
     return res.sendStatus(httpStatus.UNAUTHORIZED);
   }
-  const token = jwt.sign({ username: req.body.username }, config.jwtSecret);
+  const token = jwt.sign({ username: req.body.username }, BACK_JWT_SECRET);
   return responseHandler.handleResponse(res, { token });
 };
 

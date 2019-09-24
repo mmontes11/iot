@@ -1,13 +1,10 @@
 import mqtt from "async-mqtt";
-import config from "../config";
 
 const mqttClient = mqtt.connect({
-  host: config.mqttBrokerHost,
-  port: config.mqttBrokerPort,
-  username: config.mqttBrokerUsername,
-  password: config.mqttBrokerPassword,
+  host: process.env.MQTT_BROKER_HOST,
+  port: process.env.MQTT_BROKER_PORT,
+  username: process.env.MQTT_BROKER_USERNAME,
+  password: process.env.MQTT_BROKER_PASSWORD,
 });
-
-export const mqttBrokerUrl = `mqtt://${config.mqttBrokerHost}:${config.mqttBrokerPort}`;
 
 export default mqttClient;

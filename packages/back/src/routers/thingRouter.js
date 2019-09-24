@@ -1,11 +1,7 @@
-import express from "express";
-import expressJwt from "express-jwt";
-import config from "../config";
 import thingController from "../controllers/rest/thingController";
+import { getRouterWithJwtAuth } from "../helpers/router";
 
-const router = express.Router();
-
-router.route("*").all(expressJwt({ secret: config.jwtSecret }));
+const router = getRouterWithJwtAuth();
 
 router.route("/:name").get(thingController.getThingByName);
 

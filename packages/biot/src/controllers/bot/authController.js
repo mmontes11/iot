@@ -1,11 +1,11 @@
 import _ from "underscore";
+import { derivedConfig } from "common/config";
 import errorMessages from "../../utils/errorMessages";
-import config from "../../config";
 
 export class AuthController {
   constructor(telegramBot) {
     this.bot = telegramBot;
-    this.usersWhileList = config.biotTelegramWhiteListJson;
+    this.usersWhileList = derivedConfig.biotTelegramWhiteListJson;
   }
   isAuthorized(msg) {
     const user = msg.from.username;

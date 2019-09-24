@@ -1,17 +1,11 @@
-import express from "express";
-import expressJwt from "express-jwt";
 import validationController from "../controllers/rest/validationController";
 import notificationsController from "../controllers/rest/notificationsController";
-import config from "../config";
+import { getRouterWithJwtAuth } from "../helpers/router";
 
-const router = express.Router();
+const router = getRouterWithJwtAuth();
 
 router
   .route("/notifications")
-  .post(
-    expressJwt({ secret: config.biotJwtSecret }),
-    validationController.validateNotifications,
-    notificationsController.receiveMeasurementNotifications,
-  );
+  .post(validationController.validateNotifications, notificationsController.receiveMeasurementNotifications);
 
 export default router;

@@ -1,6 +1,5 @@
 import _ from "underscore";
 import cacheHandler from "./cacheHandler";
-import config from "../config";
 import { CustomTimePeriod } from "../models/timePeriod";
 
 const statsPrefix = "stats";
@@ -14,7 +13,7 @@ class StatsCache {
     return _.isUndefined(this.timePeriod) || !(this.timePeriod instanceof CustomTimePeriod);
   }
   setStatsCache(stats) {
-    cacheHandler.setObjectCache(this.cacheKey, stats, config.statsCacheInSeconds);
+    cacheHandler.setObjectCache(this.cacheKey, stats, process.env.BACK_STATS_CACHE_IN_SECONDS);
   }
   getStatsCache() {
     return cacheHandler.getObjectCache(this.cacheKey);

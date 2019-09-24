@@ -5,7 +5,8 @@ import measurementModel from "../models/measurementModel";
 import measurementChangeModel from "../models/measurementChangeModel";
 import biotClient from "../lib/biotClient";
 import mqtt from "../lib/mqtt";
-import config from "../config";
+
+const { MEASUREMENT_TOPIC, MEASUREMENT_CHANGE_TOPIC } = process.env;
 
 const checkNotifications = (notifications, topic) => {
   if (!_.isEmpty(notifications)) {
@@ -37,7 +38,7 @@ class EventController extends TopicController {
 
 class MeasurementController extends TopicController {
   canHandleTopic(topic) {
-    return super.canHandleTopic(topic) && !topic.includes(config.measurementChangeTopic);
+    return super.canHandleTopic(topic) && !topic.includes(MEASUREMENT_CHANGE_TOPIC);
   }
   static async handleTopic(topic, measurement) {
     try {
@@ -68,7 +69,7 @@ class MeasurementController extends TopicController {
         };
         await measurementChangeModel.insertOne(measurementChange);
 
-        const measurementChangeTopic = topic.replace(config.measurementTopic, config.measurementChangeTopic);
+        const measurementChangeTopic = topic.replace(MEASUREMENT_TOPIC, MEASUREMENT_CHANGE_TOPIC);
         await mqtt.publishJSON(measurementChangeTopic, measurementChange);
       }
     } catch (err) {

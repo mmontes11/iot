@@ -1,12 +1,11 @@
 import "mongoose-geojson-schema";
 import Promise from "bluebird";
 import mongoose from "mongoose";
-import config from "../config";
 import { logInfo } from "../utils/log";
 
 mongoose.Promise = Promise;
 
-if (config.debug) {
+if (process.env.IOT_DEBUG) {
   mongoose.set("debug", (collectionName, method, query, result) => {
     logInfo(`MongoDB query: ${collectionName}.${method}(${JSON.stringify(query)})`);
     logInfo(`MongoDB result: ${JSON.stringify(result)}`);
@@ -20,7 +19,7 @@ const options = {
 };
 
 export const connectWithRetry = () =>
-  mongoose.connect(config.mongoUrl, options, err => {
+  mongoose.connect(process.env.MONGO_URL, options, err => {
     if (err) {
       setTimeout(connectWithRetry, 5000);
     }

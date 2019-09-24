@@ -1,12 +1,12 @@
-import serverConfig from "back/src/config";
+import { derivedConfig } from "common/config";
 import serverConstants from "back/test/constants/auth";
 import chai from "./lib/chai";
 import { IoTClient } from "../src/index";
 
 const should = chai.should();
-const url = `http://localhost:${serverConfig.nodePort}`;
-const basicAuthUsername = Object.keys(serverConfig.basicAuthUsers)[0];
-const basicAuthPassword = serverConfig.basicAuthUsers[basicAuthUsername];
+const url = `http://localhost:${process.env.BACK_PORT}`;
+const basicAuthUsername = Object.keys(derivedConfig.backBasicAuthUsers)[0];
+const basicAuthPassword = derivedConfig.backBasicAuthUsers[basicAuthUsername];
 const { username, password } = serverConstants.validUser;
 
 describe("IoT Client", () => {

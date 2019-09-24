@@ -2,8 +2,9 @@ import mqttLib from "../lib/mqtt";
 import { EventController, MeasurementController } from "./observationController";
 import { MeasurementChangeController } from "./measurementChangeController";
 import topicModel from "../models/topicModel";
-import config from "../config";
 import log from "../utils/log";
+
+const { EVENT_TOPIC, MEASUREMENT_TOPIC, MEASUREMENT_CHANGE_TOPIC } = process.env;
 
 class MQTTController {
   constructor(mqtt, eventTopic, measurementTopic, measurementChangeTopic) {
@@ -48,11 +49,6 @@ class MQTTController {
   }
 }
 
-const mqttController = new MQTTController(
-  mqttLib,
-  config.eventTopic,
-  config.measurementTopic,
-  config.measurementChangeTopic,
-);
+const mqttController = new MQTTController(mqttLib, EVENT_TOPIC, MEASUREMENT_TOPIC, MEASUREMENT_CHANGE_TOPIC);
 
 export default mqttController;

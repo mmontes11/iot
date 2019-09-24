@@ -1,5 +1,4 @@
 import mqttLib from "async-mqtt";
-import config from "../config";
 import log from "../utils/log";
 
 class MQTT {
@@ -25,10 +24,10 @@ class MQTT {
 }
 
 const mqtt = new MQTT(
-  config.mqttBrokerHost,
-  config.mqttBrokerPort,
-  config.mqttBrokerUsername,
-  config.mqttBrokerPassword,
+  process.env.MQTT_BROKER_HOST,
+  process.env.MQTT_BROKER_PORT,
+  process.env.MQTT_BROKER_USERNAME,
+  process.env.MQTT_BROKER_PASSWORD,
 );
 
 export default mqtt;

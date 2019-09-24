@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
-import config from "../config";
 import log from "../utils/log";
+
+const { MONGO_URL, MONGO_DB } = process.env;
 
 class Mongo {
   constructor(url, dbName) {
@@ -26,6 +27,6 @@ class Mongo {
   }
 }
 
-const mongo = new Mongo(config.mongoUrl, config.mongoDb);
+const mongo = new Mongo(MONGO_URL, MONGO_DB);
 
 export default mongo;

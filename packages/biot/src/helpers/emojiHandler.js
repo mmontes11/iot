@@ -1,18 +1,29 @@
 import emojiLib from "node-emoji";
-import config from "../config";
+import { derivedConfig } from "common/config";
+
+const { BIOT_TEMPERATURE_PREFIX, BIOT_HUMIDITY_PREFIX } = process.env;
+
+const {
+  biotHighTemperatureThreshold,
+  biotLowTemperatureThreshold,
+  biotHighHumidityThreshold,
+  biotLowHumidityThreshold,
+  biotGrowthRateHighAbsoluteThreshold,
+  biotGrowthRateModerateAbsoluteThreshold,
+} = derivedConfig;
 
 export class EmojiHandler {
   static emojiForStatsType(statsType, value) {
-    if (statsType.startsWith(config.biotTemperaturePrefix)) {
-      if (value >= config.biotHighTemperatureThreshold) {
+    if (statsType.startsWith(BIOT_TEMPERATURE_PREFIX)) {
+      if (value >= biotHighTemperatureThreshold) {
         return emojiLib.get("fire");
-      } else if (value <= config.biotLowTemperatureThreshold) {
+      } else if (value <= biotLowTemperatureThreshold) {
         return emojiLib.get("snowflake");
       }
-    } else if (statsType.startsWith(config.biotHumidityPrefix)) {
-      if (value >= config.biotHighHumidityThreshold) {
+    } else if (statsType.startsWith(BIOT_HUMIDITY_PREFIX)) {
+      if (value >= biotHighHumidityThreshold) {
         return emojiLib.get("droplet");
-      } else if (value <= config.biotLowHumidityThreshold) {
+      } else if (value <= biotLowHumidityThreshold) {
         return emojiLib.get("cactus");
       }
     }
@@ -23,9 +34,9 @@ export class EmojiHandler {
     const emoji = emojiLib.get(emojiName);
     const growthRateAbsolute = Math.abs(growthRate);
     let numEmojis = 1;
-    if (growthRateAbsolute >= config.biotGrowthRateHighAbsoluteThreshold) {
+    if (growthRateAbsolute >= biotGrowthRateHighAbsoluteThreshold) {
       numEmojis = 3;
-    } else if (growthRateAbsolute >= config.biotGrowthRateModerateAbsoluteThreshold) {
+    } else if (growthRateAbsolute >= biotGrowthRateModerateAbsoluteThreshold) {
       numEmojis = 2;
     }
     let emojis = "";

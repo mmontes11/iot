@@ -1,0 +1,10 @@
+{
+  "name": "common",
+  "version": "2.0.0",
+  "description": "Common utilities for IoT",
+  "author": "Martín Montes <martin11lrx@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0"
+  }
+}

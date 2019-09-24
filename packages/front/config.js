@@ -1,15 +1,4 @@
-const dotenv = require("dotenv");
-const path = require("path");
-
-if (process.env.NODE_ENV === "development") {
-  dotenv.config({ path: path.resolve(process.cwd(), "../../.env.dev") });
-}
-if (process.env.NODE_ENV === "test") {
-  dotenv.config({ path: path.resolve(process.cwd(), "../../.env.test") });
-}
-if (process.env.NODE_ENV === "production") {
-  dotenv.config({ path: path.resolve(process.cwd(), "../../.env") });
-}
+require("common/config");
 
 module.exports = {
   NODE_ENV: JSON.stringify(process.env.NODE_ENV),

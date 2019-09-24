@@ -1,8 +1,7 @@
 import redis from "../lib/redis";
 import { logInfo } from "../utils/log";
-import config from "../config";
 
-const setObjectCache = (key, objectValue, expireTimeInSeconds = config.defaultCacheInSeconds) => {
+const setObjectCache = (key, objectValue, expireTimeInSeconds = process.env.BACK_DEFAULT_CACHE_IN_SECONDS) => {
   const objectString = JSON.stringify(objectValue);
   logInfo(`Redis set key '${key}': ${objectString}`);
   redis.set(key, objectString);

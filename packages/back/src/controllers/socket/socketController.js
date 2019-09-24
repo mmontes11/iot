@@ -1,6 +1,5 @@
 import SocketIOClient from "socket.io-client";
 import { logInfo, logError } from "../../utils/log";
-import config from "../../config";
 
 export class SocketController {
   constructor(io) {
@@ -27,7 +26,9 @@ export class SocketController {
       logInfo("Socket connection");
       const { thing } = socket;
       const query = SocketController._getQueryParams(socket);
-      const thingSocket = new SocketIOClient(`http://${thing.ip}:${config.thingSocketPort}`, { query });
+      const thingSocket = new SocketIOClient(`http://${thing.ip}:${process.env.THING_SOCKET_PORT}`, {
+        query,
+      });
       thingSocket.on("data", data => {
         logInfo(`Receiving data from ${thing.name}:`);
         logInfo(JSON.stringify(data));

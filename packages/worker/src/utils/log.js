@@ -1,6 +1,5 @@
 import _ from "underscore";
 import winston from "../lib/winston";
-import config from "../config";
 
 class Log {
   constructor(debug) {
@@ -76,6 +75,6 @@ class Log {
   }
 }
 
-const log = new Log(config.debug);
+const log = new Log(process.env.IOT_DEBUG);
 
 export default log;

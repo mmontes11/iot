@@ -7,7 +7,6 @@ import responseHandler from "../../helpers/responseHandler";
 import constants from "../../utils/responseKeys";
 import geocoder from "../../utils/geocoder";
 import boolean from "../../utils/boolean";
-import config from "../../config";
 
 const createOrUpdateThing = async (req, lastObservation) => {
   const thingToUpsert = modelFactory.createThing(req, lastObservation);
@@ -82,7 +81,7 @@ const getThingsFromRequest = async req => {
     throw err;
   }
   if (!_.isUndefined(things) && !_.isEmpty(things)) {
-    return _.map(_.first(things, config.maxNumOfThingsInStatsResults), thing => thing.name);
+    return _.map(_.first(things, process.env.BACK_MAX_NUM_OF_THINGS_IN_STATS_RESULTS), thing => thing.name);
   }
   return undefined;
 };

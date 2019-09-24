@@ -1,7 +1,6 @@
 import SocketIO from "socket.io";
 import jwt from "jsonwebtoken";
 import _ from "underscore";
-import config from "../config";
 import { logError } from "../utils/log";
 import { ThingModel } from "../models/thing";
 
@@ -19,7 +18,7 @@ export const setupSocketIO = server => {
       return next(tokenError);
     }
     try {
-      if (jwt.verify(token, config.jwtSecret)) {
+      if (jwt.verify(token, process.env.BACK_JWT_SECRET)) {
         if (_.isUndefined(thingName)) {
           const thingError = new Error("No thing provided");
           logError(thingError);

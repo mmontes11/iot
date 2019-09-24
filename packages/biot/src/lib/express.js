@@ -8,7 +8,6 @@ import helmet from "helmet";
 import winston from "winston";
 import expressWinston from "express-winston";
 import routes from "../routers/indexRouter";
-import config from "../config";
 
 const app = express();
 
@@ -20,7 +19,7 @@ app.use(methodOverride());
 app.use(cors());
 app.use(helmet());
 
-if (config.debug) {
+if (process.env.IOT_DEBUG) {
   app.use(
     expressWinston.logger({
       transports: [

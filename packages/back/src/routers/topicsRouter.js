@@ -1,11 +1,7 @@
-import express from "express";
-import expressJwt from "express-jwt";
-import config from "../config";
 import topicsController from "../controllers/rest/topicsController";
+import { getRouterWithJwtAuth } from "../helpers/router";
 
-const router = express.Router();
-
-router.route("*").all(expressJwt({ secret: config.jwtSecret }));
+const router = getRouterWithJwtAuth();
 
 router.route("/").get(topicsController.getTopics);
 

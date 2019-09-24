@@ -1,8 +1,7 @@
 import googleMaps from "@google/maps";
-import config from "../config";
 
 const googleMapsClient = googleMaps.createClient({
-  key: config.googleMapsKey,
+  key: process.env.GOOGLE_MAPS_KEY,
   Promise,
 });
 

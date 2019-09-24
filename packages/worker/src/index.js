@@ -1,3 +1,4 @@
+import "common/config";
 import mqtt from "./lib/mqtt";
 import mongo from "./lib/mongo";
 import mqttController from "./controllers/mqttController";
