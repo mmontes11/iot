@@ -1,0 +1,7 @@
+.git
+*Dockerfile*
+*docker-compose*
+node_modules
+packages/**/node_modules
+packages/**/.node-persist
+data

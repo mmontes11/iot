@@ -17,8 +17,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rm -rf dist/",
     "prebuild": "npm run clean",
-    "build": "babel -d dist/ src/",
-    "production": "cross-env NODE_ENV=production node index.js"
+    "build": "babel -d dist/ src/"
   },
   "repository": {
     "type": "git",
@@ -54,7 +53,6 @@
     "compression": "^1.7.4",
     "cookie-parser": "1.4.3",
     "cors": "2.8.1",
-    "cross-env": "^5.1.4",
     "express": "^4.16.4",
     "express-basic-auth": "^0.2.3",
     "express-jwt": "^5.3.1",
@@ -80,6 +78,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
+    "cross-env": "^5.1.4",
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
     "coveralls": "^3.0.3",

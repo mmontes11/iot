@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   nginx:
     build: services/nginx
@@ -9,14 +9,17 @@ services:
       - back
     restart: always
   back:
-    build: packages/back
+    build:
+      context: .
+      dockerfile: packages/back/Dockerfile
     env_file: .env
     expose:
       - "${BACK_PORT}"
     restart: always
   front:
-    build: 
-      context: packages/front
+    build:
+      context: .
+      dockerfile: packages/front/Dockerfile
       args:
         FRONT_PORT: "${FRONT_PORT}"
     expose:
@@ -25,7 +28,9 @@ services:
       - back
     restart: always
   biot:
-    build: packages/biot
+    build:
+      context: .
+      dockerfile: packages/biot/Dockerfile
     env_file: .env
     expose:
       - "${BIOT_PORT}"
@@ -33,7 +38,9 @@ services:
       - back
     restart: always
   worker:
-    build: packages/worker
+    build:
+      context: .
+      dockerfile: packages/worker/Dockerfile
     env_file: .env
     expose:
       - "${WORKER_PORT}"

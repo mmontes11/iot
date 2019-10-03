@@ -1,15 +1,34 @@
 FROM node:12
 
-ENV WORKDIR /usr/src/iot-biot
+ENV WORKDIR /usr/src/biot
+ENV COMMONDIR ${WORKDIR}/packages/common
+ENV CLIENTDIR ${WORKDIR}/packages/client
+ENV BACKDIR ${WORKDIR}/packages/back
+ENV BIOTDIR ${WORKDIR}/packages/biot
+ENV COMMON packages/common
+ENV CLIENT packages/client
+ENV BACK packages/back
+ENV BIOT packages/biot
 
-RUN mkdir ${WORKDIR}
+RUN mkdir -p ${WORKDIR}
+RUN mkdir -p ${COMMONDIR}
+RUN mkdir -p ${CLIENTDIR}
+RUN mkdir -p ${BACKDIR}
+RUN mkdir -p ${BIOTDIR}
 
 WORKDIR ${WORKDIR}
 
-COPY package.json ${WORKDIR}
+COPY ${COMMON} ${COMMONDIR}
+COPY ${CLIENT} ${CLIENTDIR}
+COPY ${BACK} ${BACKDIR}
+COPY ${BIOT} ${BIOTDIR}
 
-RUN npm install --production
+COPY package*.json lerna.json ${WORKDIR}/
 
-ADD dist ${WORKDIR}
+COPY ${BIOT}/dist ${BIOTDIR}
 
-CMD ["npm", "run", "production"]
+RUN npm install -g lerna cross-env
+
+RUN lerna bootstrap
+
+CMD cross-env NODE_ENV=production node ${BIOTDIR}/dist/index.js
