@@ -1,6 +1,6 @@
 {
   "name": "@mmontes11/iot-client",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ES6 client library for consuming IoT server REST API",
   "license": "MIT",
   "private": false,
@@ -46,8 +46,8 @@
   "homepage": "https://github.com/mmontes11/iot#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "back": "2.0.0",
-    "common": "2.0.0",
+    "back": "^2.0.1",
+    "common": "^2.0.1",
     "http-status": "^1.0.1",
     "node-persist": "^3.0.1",
     "restler": "^3.4.0",
