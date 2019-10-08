@@ -1,6 +1,6 @@
 {
   "name": "front",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Martín Montes <martin11lrx@gmail.com>",
   "license": "MIT",
   "description": "React app for visualizing data about your things",
@@ -47,9 +47,9 @@
     "bulma"
   ],
   "dependencies": {
-    "@mmontes11/iot-client": "^2.0.0",
+    "@mmontes11/iot-client": "^2.0.1",
     "classnames": "^2.2.6",
-    "common": "2.0.0",
+    "common": "^2.0.1",
     "cross-env": "^5.1.6",
     "date-fns": "^2.0.0-alpha.23",
     "deep-equal": "^1.0.1",
