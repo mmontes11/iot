@@ -88,7 +88,6 @@ describe("Auth", () => {
       chai
         .request(server)
         .post("/auth/user")
-        .set("Authorization", constants.validAuthHeader)
         .send(constants.validUser)
         .end((err, res) => {
           should.not.exist(err);
@@ -109,7 +108,6 @@ describe("Auth", () => {
       chai
         .request(server)
         .post("/auth")
-        .set("Authorization", constants.validAuthHeader)
         .send(constants.validUser)
         .end((err, res) => {
           should.exist(err);
@@ -124,7 +122,6 @@ describe("Auth", () => {
       chai
         .request(server)
         .post("/auth/user")
-        .set("Authorization", constants.validAuthHeader)
         .send(constants.validUser)
         .end((err, res) => {
           should.not.exist(err);
@@ -148,7 +145,6 @@ describe("Auth", () => {
       chai
         .request(server)
         .post("/auth/user")
-        .set("Authorization", constants.validAuthHeader)
         .send(constants.validUser)
         .end((err, res) => {
           should.not.exist(err);
@@ -172,7 +168,6 @@ describe("Auth", () => {
       chai
         .request(server)
         .post("/auth/user")
-        .set("Authorization", constants.validAuthHeader)
         .send(constants.validUser)
         .end((err, res) => {
           should.not.exist(err);
