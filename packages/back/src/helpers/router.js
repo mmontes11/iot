@@ -7,4 +7,4 @@ const getRouterWithJwtAuth = () => {
   return router;
 };
 
-export {  getRouterWithJwtAuth };
+export { getRouterWithJwtAuth };
