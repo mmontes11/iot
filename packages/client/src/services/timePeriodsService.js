@@ -5,6 +5,7 @@ export class TimePeriodsService extends Service {
     super(client, "timePeriods");
   }
   async getSupportedTimePeriods() {
-    return this.get();
+    const options = { auth: true };
+    return this.get(undefined, options);
   }
 }

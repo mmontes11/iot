@@ -1,5 +1,4 @@
 import _ from "underscore";
-import { Credentials } from "./models/credentials";
 import { AuthService } from "./services/authService";
 import { EventService, MeasurementService } from "./services/observationService";
 import { ObservationsService } from "./services/observationsService";
@@ -10,24 +9,20 @@ import { SubscriptionService } from "./services/subscriptionService";
 import { SubscriptionsService } from "./services/subscriptionsService";
 import { TopicsService } from "./services/topicsService";
 import { TokenHandler } from "./helpers/tokenHandler";
-import { Log } from "./util/log";
-import defaultOptions from "./config/defaultOptions";
+import { Log } from "./helpers/log";
 
 export class IoTClient {
-  constructor(optionsByParam) {
-    const options = Object.assign({}, defaultOptions, optionsByParam);
-    let basicAuthCredentials;
+  constructor(options = {}) {
     if (!_.isUndefined(options.basicAuthUsername) && !_.isUndefined(options.basicAuthPassword)) {
-      basicAuthCredentials = new Credentials(options.basicAuthUsername, options.basicAuthPassword);
+      this.basicAuthCredentials = { username: options.basicAuthUsername, password: options.basicAuthPassword };
     }
-    let userCredentials;
     if (!_.isUndefined(options.username) && !_.isUndefined(options.password)) {
-      userCredentials = new Credentials(options.username, options.password);
+      this.userCredentials = { username: options.username, password: options.password };
     }
-    this.url = options.url;
-    this.headers = options.headers;
-    this.log = new Log(options.debug);
-    this.authService = new AuthService(this, basicAuthCredentials, userCredentials);
+    this.url = options.url || "";
+    const debug = !_.isUndefined(options.debug) ? options.debug : true;
+    this.log = new Log(debug);
+    this.authService = new AuthService(this);
     this.eventService = new EventService(this);
     this.measurementService = new MeasurementService(this);
     this.observationsService = new ObservationsService(this);

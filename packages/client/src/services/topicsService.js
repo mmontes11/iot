@@ -5,6 +5,7 @@ export class TopicsService extends Service {
     super(client, "topics");
   }
   async getTopics() {
-    return this.get();
+    const options = { auth: true };
+    return this.get(undefined, options);
   }
 }

@@ -50,7 +50,7 @@
     "cross-fetch": "^3.0.4",
     "http-status": "^1.0.1",
     "node-persist": "^3.0.1",
-    "restler": "^3.4.0",
+    "query-string": "^6.8.3",
     "underscore": "^1.9.0",
     "winston": "^3.0.0",
     "winston-transport": "^4.2.0"

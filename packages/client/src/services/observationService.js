@@ -2,17 +2,19 @@ import { Service } from "./service";
 
 class ObservationService extends Service {
   async create(observation) {
-    return this.post(undefined, undefined, observation);
+    return this.post(undefined, observation);
   }
   async getData(query) {
     const options = {
       query,
+      auth: true,
     };
     return this.get(undefined, options);
   }
   async getStats(query) {
     const options = {
       query,
+      auth: true,
     };
     return this.get("stats", options);
   }
@@ -40,11 +42,13 @@ class ObservationService extends Service {
         thing,
         type,
       },
+      auth: true,
     };
     return this.get("last", options);
   }
   async getTypes() {
-    return this.get("types");
+    const options = { auth: true };
+    return this.get("types", options);
   }
 }
 
