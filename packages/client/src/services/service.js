@@ -41,9 +41,11 @@ export class Service {
     return this._request(url, fetchOptions);
   }
   _getUrl(path, options) {
+    const { query } = options;
     let baseUrl = !_.isUndefined(path) ? `${this.baseUrl}/${path}` : this.baseUrl;
-    if (!_.isUndefined(options.query)) {
-      baseUrl = `${baseUrl}?${queryString.stringify(options.query)}`;
+    const addQuery = !_.isUndefined(query) && _.some(Object.values(query), q => !_.isUndefined(q));
+    if (addQuery) {
+      baseUrl = `${baseUrl}?${queryString.stringify(query)}`;
     }
     return baseUrl;
   }

@@ -31,7 +31,6 @@ export const login = () => (dispatch, getState) => {
   iotClient.authService
     .getToken()
     .then(response => {
-      console.log(response);
       dispatch({
         type: LOGIN_REQUEST_SUCCESS,
         statusCode: response.statusCode,
