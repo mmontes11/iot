@@ -5,9 +5,11 @@ export class SubscriptionService extends Service {
     super(client, "subscription");
   }
   async subscribe(subscription) {
-    return this.post(undefined, undefined, subscription);
+    const options = { auth: true };
+    return this.post(undefined, subscription, options);
   }
   async unSubscribe(subscriptionId) {
-    return this.del(subscriptionId);
+    const options = { auth: true };
+    return this.delete(subscriptionId, options);
   }
 }

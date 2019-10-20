@@ -1,6 +1,5 @@
 import { createLogger, format, transports } from "winston";
 import { MultiPlatformHelper } from "../helpers/multiPlatformHelper";
-import { BrowserConsole } from "../util/browserConsole";
 
 const logger = createLogger({
   level: "info",
@@ -10,15 +9,10 @@ const logger = createLogger({
   ),
 });
 
-if (MultiPlatformHelper.isBrowser()) {
-  logger.add(new BrowserConsole());
-} else {
-  logger.add(new transports.Console());
-  logger.add(
-    new transports.File({
-      filename: "log-iot-client.log",
-    }),
-  );
+logger.add(new transports.Console());
+
+if (!MultiPlatformHelper.isBrowser()) {
+  logger.add(new transports.File({ filename: "log-iot-client.log" }));
 }
 
 export default logger;

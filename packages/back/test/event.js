@@ -43,15 +43,14 @@ describe("Event", () => {
   before(done => {
     chai
       .request(server)
-      .post("/auth/user")
+      .post("/api/auth/user")
       .set("Authorization", authConstants.validAuthHeader)
       .send(authConstants.validUser)
       .end(err => {
         assert(err !== undefined, "Error creating user");
         chai
           .request(server)
-          .post("/auth/token")
-          .set("Authorization", authConstants.validAuthHeader)
+          .post("/api/auth/token")
           .send(authConstants.validUser)
           .end((errInnerReq, { body: { token: tokenInnerReq } }) => {
             assert(tokenInnerReq !== undefined, "Error obtaining token");
@@ -72,11 +71,11 @@ describe("Event", () => {
       });
   });
 
-  describe("POST /event 400", () => {
+  describe("POST /api/event 400", () => {
     it("tries to create an invalid event", done => {
       chai
         .request(server)
-        .post("/event")
+        .post("/api/event")
         .set("Authorization", auth())
         .send(constants.eventRequestWithInvalidEvent)
         .end((err, res) => {
@@ -89,7 +88,7 @@ describe("Event", () => {
     it("tries to create an event with an invalid thing", done => {
       chai
         .request(server)
-        .post("/event")
+        .post("/api/event")
         .set("Authorization", auth())
         .send(constants.eventRequestWithInvalidThing)
         .end((err, res) => {
@@ -102,7 +101,7 @@ describe("Event", () => {
     it("tries to create an event with a thing that has an invalid geometry", done => {
       chai
         .request(server)
-        .post("/event")
+        .post("/api/event")
         .set("Authorization", auth())
         .send(constants.eventRequestWithThingWithInvalidGeometry)
         .end((err, res) => {
@@ -114,11 +113,11 @@ describe("Event", () => {
     });
   });
 
-  describe("POST /event 200", () => {
+  describe("POST /api/event 200", () => {
     it("creates an event", done => {
       chai
         .request(server)
-        .post("/event")
+        .post("/api/event")
         .set("Authorization", auth())
         .send(constants.validEventRequest)
         .end((err, res) => {
@@ -130,7 +129,7 @@ describe("Event", () => {
     it("creates an event with value", done => {
       chai
         .request(server)
-        .post("/event")
+        .post("/api/event")
         .set("Authorization", auth())
         .send(constants.validEventRequestWithValue)
         .end((err, res) => {
@@ -141,11 +140,11 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/types 404", () => {
+  describe("GET /api/event/types 404", () => {
     it("gets all event types but no one has been created yet", done => {
       chai
         .request(server)
-        .get("/event/types")
+        .get("/api/event/types")
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -155,14 +154,14 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/types 200", () => {
+  describe("GET /api/event/types 200", () => {
     beforeEach(done => {
       createEvents([constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent], done);
     });
     it("gets all event types", done => {
       chai
         .request(server)
-        .get("/event/types")
+        .get("/api/event/types")
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -174,11 +173,11 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/last 404", () => {
+  describe("GET /api/event/last 404", () => {
     it("gets the last event but no one has been created yet", done => {
       chai
         .request(server)
-        .get("/event/last")
+        .get("/api/event/last")
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -188,14 +187,14 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/last 200", () => {
+  describe("GET /api/event/last 200", () => {
     beforeEach(done => {
       createEvents([constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent], done);
     });
     it("gets the last event", done => {
       chai
         .request(server)
-        .get("/event/last")
+        .get("/api/event/last")
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -207,11 +206,11 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/last?type=X&thing=Y 404", () => {
+  describe("GET /api/event/last?type=X&thing=Y 404", () => {
     it("gets the last event of a non existing type", done => {
       chai
         .request(server)
-        .get("/event/last")
+        .get("/api/event/last")
         .query({
           type: "whatever",
           thing: "whatever",
@@ -225,7 +224,7 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/last?type=X&thing=Y 200", () => {
+  describe("GET /api/event/last?type=X&thing=Y 200", () => {
     beforeEach(done => {
       createEvents(
         [constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent, constants.doorClosedEvent2],
@@ -235,7 +234,7 @@ describe("Event", () => {
     it("gets the last door closed event", done => {
       chai
         .request(server)
-        .get("/event/last")
+        .get("/api/event/last")
         .query({
           type: "door_closed",
           thing: "arduino",
@@ -253,7 +252,7 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /event/stats 200", () => {
+  describe("GET /api/event/stats 200", () => {
     beforeEach(done => {
       createEvents(
         [constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent, constants.doorClosedEvent2],
@@ -263,7 +262,7 @@ describe("Event", () => {
     it("gets event stats", done => {
       chai
         .request(server)
-        .get("/event/stats")
+        .get("/api/event/stats")
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -272,14 +271,14 @@ describe("Event", () => {
         });
     });
 
-    describe("GET /measurement 200", () => {
+    describe("GET /api/measurement 200", () => {
       beforeEach(done => {
         createEvents([constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent], done);
       });
       it("gets event data grouped by minute", done => {
         chai
           .request(server)
-          .get("/event")
+          .get("/api/event")
           .query({
             groupBy: "minute",
           })

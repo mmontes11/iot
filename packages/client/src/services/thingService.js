@@ -5,6 +5,7 @@ export class ThingService extends Service {
     super(client, "thing");
   }
   async getThingByName(name) {
-    return this.get(name);
+    const options = { auth: true };
+    return this.get(name, options);
   }
 }

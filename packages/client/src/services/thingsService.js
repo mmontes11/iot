@@ -10,6 +10,7 @@ export class ThingsService extends Service {
         supportsMeasurements,
         supportsEvents,
       },
+      auth: true,
     };
     return this.get(undefined, options);
   }

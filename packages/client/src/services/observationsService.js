@@ -5,6 +5,7 @@ export class ObservationsService extends Service {
     super(client, "observations");
   }
   async create(observations) {
-    return this.post(undefined, undefined, observations);
+    const options = { auth: true };
+    return this.post(undefined, observations, options);
   }
 }
