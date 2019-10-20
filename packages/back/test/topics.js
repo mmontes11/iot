@@ -16,14 +16,14 @@ describe("Topics", () => {
   before(done => {
     chai
       .request(server)
-      .post("/auth/user")
+      .post("/api/auth/user")
       .set("Authorization", authConstants.validAuthHeader)
       .send(authConstants.validUser)
       .end(err => {
         assert(err !== undefined, "Error creating user");
         chai
           .request(server)
-          .post("/auth/token")
+          .post("/api/auth/token")
           .set("Authorization", authConstants.validAuthHeader)
           .send(authConstants.validUser)
           .end((errInnerReq, { body: { token: tokenInnerReq } }) => {
@@ -41,11 +41,11 @@ describe("Topics", () => {
     });
   });
 
-  describe("GET /topics 404", () => {
+  describe("GET /api/topics 404", () => {
     it("tries to get topics but no one has been created yet", done => {
       chai
         .request(server)
-        .get("/topics")
+        .get("/api/topics")
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -55,7 +55,7 @@ describe("Topics", () => {
     });
   });
 
-  describe("GET /topics 200", () => {
+  describe("GET /api/topics 200", () => {
     before(done => {
       const topics = [constants.validTopic, constants.validTopic2, constants.validTopic3];
       Promise.each(topics, topic => {
@@ -72,7 +72,7 @@ describe("Topics", () => {
     it("gets topics", done => {
       chai
         .request(server)
-        .get("/topics")
+        .get("/api/topics")
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);

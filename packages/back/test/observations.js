@@ -19,14 +19,14 @@ describe("Observations", () => {
   before(done => {
     chai
       .request(server)
-      .post("/auth/user")
+      .post("/api/auth/user")
       .set("Authorization", authConstants.validAuthHeader)
       .send(authConstants.validUser)
       .end(err => {
         assert(err !== undefined, "Error creating user");
         chai
           .request(server)
-          .post("/auth/token")
+          .post("/api/auth/token")
           .set("Authorization", authConstants.validAuthHeader)
           .send(authConstants.validUser)
           .end((errInnerReq, { body: { token: tokenInnerReq } }) => {
@@ -48,7 +48,7 @@ describe("Observations", () => {
       });
   });
 
-  describe("POST /observations 304", () => {
+  describe("POST /api/observations 304", () => {
     it("tries to create observations using an empty array", done => {
       const emptyObservations = {
         observations: [],
@@ -56,7 +56,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(emptyObservations)
         .end((err, res) => {
@@ -67,7 +67,7 @@ describe("Observations", () => {
     });
   });
 
-  describe("POST /observations 400", () => {
+  describe("POST /api/observations 400", () => {
     it("tries to create observations using an invalid payload", done => {
       const invalidPayload = {
         foo: [],
@@ -75,7 +75,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(invalidPayload)
         .end((err, res) => {
@@ -96,7 +96,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(invalidObservations)
         .end((err, res) => {
@@ -117,7 +117,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(invalidObservations)
         .end((err, res) => {
@@ -134,7 +134,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(invalidObservations)
         .end((err, res) => {
@@ -146,7 +146,7 @@ describe("Observations", () => {
     });
   });
 
-  describe("POST /observations 201", () => {
+  describe("POST /api/observations 201", () => {
     it("creates observations", done => {
       const validObservations = {
         observations: [constants.validMeasurementWithKind, constants.validEventWithKind],
@@ -154,7 +154,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(validObservations)
         .end((err, res) => {
@@ -168,7 +168,7 @@ describe("Observations", () => {
     });
   });
 
-  describe("POST /observations 207", () => {
+  describe("POST /api/observations 207", () => {
     it("creates observations and also tries to create invalid ones", done => {
       const measurements = [
         constants.validMeasurementWithKind,
@@ -186,7 +186,7 @@ describe("Observations", () => {
       };
       chai
         .request(server)
-        .post("/observations")
+        .post("/api/observations")
         .set("Authorization", auth())
         .send(validAndInvalidObservations)
         .end((err, res) => {
