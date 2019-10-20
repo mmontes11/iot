@@ -12,7 +12,6 @@
   "scripts": {
     "install:submodules": "git submodule foreach npm install",
     "lint": "eslint . --fix",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rm -rf dist/*",
     "prebuild": "npm run clean",
     "build": "babel -d dist/ src/",
