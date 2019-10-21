@@ -5,9 +5,13 @@ import errorMessages from "../../utils/errorMessages";
 export class AuthController {
   constructor(telegramBot) {
     this.bot = telegramBot;
+    this.authorizeAll = derivedConfig.biotTelegramAuthorizeAll;
     this.usersWhileList = derivedConfig.biotTelegramWhiteListJson;
   }
   isAuthorized(msg) {
+    if (this.authorizeAll) {
+      return true;
+    }
     const user = msg.from.username;
     return _.contains(this.usersWhileList, user);
   }
