@@ -9,41 +9,45 @@ import { updateParams } from "actions/params";
 import { addThingFilter } from "actions/thingFilter";
 import { addTimePeriodFilter, addCustomTimePeriodFilter } from "actions/dateFilter";
 import * as fromState from "reducers";
+import { defaultTimePeriodFilter, defaultGroupBy } from "config/params";
 
 export const handleDataParams = (path, paramNames, getData, reset) => WrappedComponent => {
   class DataParams extends React.Component {
     componentDidMount() {
       const {
+        history,
         match: { params: urlParams },
         location: { search },
       } = this.props;
       const [firstParamName, secondParamName, thirdParamName] = paramNames;
       const firstParam = urlParams[firstParamName];
       const secondParam = urlParams[secondParamName];
-      if (!firstParam || !secondParam) {
+      const thirdParam = urlParams[thirdParamName] || defaultGroupBy;
+      if (!firstParam || !secondParam || !thirdParam) {
         return;
       }
-      const queryParams = QueryString.parse(search);
-      if (queryParams.thing) {
-        this.props.addThingFilter(queryParams.thing);
-      }
-      if (queryParams.timePeriod) {
-        this.props.addTimePeriodFilter(queryParams.timePeriod);
-      } else if (queryParams.startDate || queryParams.endDate) {
-        this.props.addCustomTimePeriodFilter(queryParams.startDate, queryParams.endDate);
-      }
-      let params = {
+      const params = {
         [firstParamName]: firstParam,
         [secondParamName]: secondParam,
+        [thirdParamName]: thirdParam,
       };
-      const thirdParam = params[thirdParamName];
-      if (thirdParam) {
-        params = {
-          ...params,
-          [thirdParamName]: thirdParam,
-        };
-      }
       this.props.updateParams(params);
+      const { thing, timePeriod = defaultTimePeriodFilter, startDate, endDate } = QueryString.parse(search) || {};
+      let newQueryParams = {};
+      if (thing) {
+        this.props.addThingFilter(thing);
+        newQueryParams = { ...newQueryParams, thing };
+      }
+      if (startDate || endDate) {
+        this.props.addCustomTimePeriodFilter(startDate, endDate);
+        newQueryParams = { ...newQueryParams, startDate, endDate };
+      } else {
+        this.props.addTimePeriodFilter(timePeriod);
+        newQueryParams = { ...newQueryParams, timePeriod };
+      }
+      const newSearch = QueryString.stringify(newQueryParams);
+      const basePath = `/${path}/${firstParam}/${secondParam}/${thirdParam}?${newSearch}`;
+      history.push(basePath);
       getData();
     }
     componentDidUpdate() {
@@ -51,27 +55,24 @@ export const handleDataParams = (path, paramNames, getData, reset) => WrappedCom
         match: { params },
         hasError,
       } = this.props;
-      const [firstParamName, secondParamName] = paramNames;
+      const [firstParamName, secondParamName, thirdParamName] = paramNames;
       const firstParam = params[firstParamName];
       const secondParam = params[secondParamName];
-      if (firstParam && secondParam && hasError) {
+      const thirdParam = params[thirdParamName];
+      if (firstParam && secondParam && thirdParam && hasError) {
         this._pushRootPath();
       }
     }
     _onParamsSelected = (...params) => {
       const [firstParam, secondParam, thirdParam] = params;
-      if (!firstParam || !secondParam) {
+      if (!firstParam || !secondParam || !thirdParam) {
         return;
       }
       const {
         history,
         location: { search },
       } = this.props;
-      let basePath = `/${path}/${firstParam}/${secondParam}`;
-      if (thirdParam) {
-        basePath += `/${thirdParam}`;
-      }
-      basePath += `${search}`;
+      const basePath = `/${path}/${firstParam}/${secondParam}/${thirdParam}?${search}`;
       history.push(basePath);
       getData();
     };
@@ -94,9 +95,7 @@ export const handleDataParams = (path, paramNames, getData, reset) => WrappedCom
         params.endDate = endDate.toISOString();
       }
       if (thing || timePeriod || startDate || endDate) {
-        const search = Object.keys(params)
-          .map(p => `${encodeURIComponent(p)}=${encodeURIComponent(params[p])}`)
-          .join("&");
+        const search = QueryString.stringify(params);
         history.push(`${pathname}?${search}`);
       } else {
         history.push(pathname);
