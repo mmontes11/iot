@@ -12,7 +12,7 @@ import * as fromState from "reducers";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { injectIntl, intlShape } from "react-intl";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
-import { defaultGroupBy } from "config/params";
+import { defaultTimePeriodFilter, defaultGroupBy } from "config/params";
 
 class Things extends React.Component {
   componentDidMount() {
@@ -55,16 +55,16 @@ class Things extends React.Component {
     const supportedMeasurements = thing.supportedObservationTypes.measurement;
     let url;
     if (type === EVENT_TYPE && supportedEvents && supportedEvents.length > 0) {
-      url = `/stats/${type}/${supportedEvents[0]}?thing=${thing.name}&timePeriod=day`;
+      url = `/stats/${type}/${supportedEvents[0]}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`;
     } else if (type === MEASUREMENT_TYPE && supportedMeasurements && supportedMeasurements.length > 0) {
-      url = `/stats/${type}/${supportedMeasurements[0]}?thing=${thing.name}&timePeriod=day`;
+      url = `/stats/${type}/${supportedMeasurements[0]}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`;
     }
     if (url) {
       this.props.history.push(url);
     }
   };
   _onDataClick = (type, observation, thing) => {
-    this.props.history.push(`/data/${type}/${observation}?thing=${thing.name}&groupBy=${defaultGroupBy}`);
+    this.props.history.push(`/data/${type}/${observation}/${defaultGroupBy}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`);
   };
   render() {
     const {
