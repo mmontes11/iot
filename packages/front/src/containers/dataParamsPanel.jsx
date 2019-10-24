@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
-import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
+import { TYPE, OBSERVATION, GROUP_BY } from "constants/params";
 import { isParamDisabled } from "helpers/paramsPanel";
 
 const DataParamsPanel = ({
@@ -24,7 +24,7 @@ const DataParamsPanel = ({
   <ParamsPanel
     params={[
       {
-        key: "type",
+        key: TYPE,
         label: type.selectedItem || "Type",
         items: type.items || [],
         isActive: type.isActive || false,
@@ -34,7 +34,7 @@ const DataParamsPanel = ({
         onItemClick: item => updateType(item),
       },
       {
-        key: "observation",
+        key: OBSERVATION,
         label: observation.selectedItem || "Observation",
         items: observation.items || [],
         isActive: observation.isActive || false,
@@ -47,7 +47,7 @@ const DataParamsPanel = ({
         },
       },
       {
-        key: "groupBy",
+        key: GROUP_BY,
         label: groupBy.selectedItem || "Group by",
         items: groupBy.items || [],
         isActive: groupBy.isActive || false,
@@ -86,7 +86,7 @@ const withConnect = connect(
   state => ({
     type: fromState.getParam(state, TYPE),
     observation: fromState.getParam(state, OBSERVATION),
-    groupBy: fromState.getParam(state, GROUPBY),
+    groupBy: fromState.getParam(state, GROUP_BY),
     isResetDisabled: fromState.isResetDisabled(state),
   }),
   { ...paramsActions },

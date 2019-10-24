@@ -64,7 +64,9 @@ class Things extends React.Component {
     }
   };
   _onDataClick = (type, observation, thing) => {
-    this.props.history.push(`/data/${type}/${observation}/${defaultGroupBy}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`);
+    this.props.history.push(
+      `/data/${type}/${observation}/${defaultGroupBy}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`,
+    );
   };
   render() {
     const {

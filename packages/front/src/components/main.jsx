@@ -5,7 +5,7 @@ import Things from "containers/things";
 import Stats from "containers/stats";
 import Data from "containers/data";
 import RealTime from "containers/realTime";
-import { TYPE, OBSERVATION, GROUPBY, THING } from "constants/params";
+import { TYPE, OBSERVATION, GROUP_BY, THING } from "constants/params";
 
 const Main = () => (
   <div className="has-navbar-fixed-top">
@@ -16,7 +16,7 @@ const Main = () => (
         <Route path="/things" component={Things} />
         <Route path={`/stats/:${TYPE}/:${OBSERVATION}`} component={Stats} />
         <Route path="/stats" component={Stats} />
-        <Route path={`/data/:${TYPE}/:${OBSERVATION}/:${GROUPBY}?`} component={Data} />
+        <Route path={`/data/:${TYPE}/:${OBSERVATION}/:${GROUP_BY}?`} component={Data} />
         <Route path="/data" component={Data} />
         <Route path={`/real-time/:${THING}/:${TYPE}`} component={RealTime} />
         <Route path="/real-time" component={RealTime} />

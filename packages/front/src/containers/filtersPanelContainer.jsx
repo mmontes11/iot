@@ -26,89 +26,89 @@ const FiltersPanelContainer = ({
   updateTimePeriod,
   updateStartDate,
   updateEndDate,
-}) => (
-  <FiltersPanel
-    type={{
-      ...type,
-      onButtonClick: () => selectFilterType(),
-      onItemClick: item => addFilterType(item),
-    }}
-    thingFilter={{
-      ...thingFilter,
-      label: thingFilter.selectedItem || "Thing",
-      onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
-      onItemClick: item => {
-        updateThingFilter(item);
-        onFiltersSelected(
-          item,
-          dateFilter.timePeriod.selectedItem,
-          dateFilter.custom.startDate,
-          dateFilter.custom.endDate,
-        );
-      },
-      onDelete: item => {
-        deleteFilterType(item);
-        onFiltersSelected();
-      },
-    }}
-    dateFilter={{
-      ...dateFilter,
-      selector: {
-        isCustomSelected: dateFilter.isCustomSelected,
-        onChange: () => toggleDateFilterType(),
-      },
-      timePeriod: {
-        ...dateFilter.timePeriod,
-        label: dateFilter.timePeriod.selectedItem || "Time period",
-        onButtonClick: () => selectTimePeriod(dateFilter.timePeriod.isActive),
+}) => {
+  const onDeleteFilter = item => {
+    deleteFilterType(item);
+    if (item === THING_FILTER_TYPE) {
+      onFiltersSelected(
+        undefined,
+        dateFilter.timePeriod.selectedItem,
+        dateFilter.custom.startDate,
+        dateFilter.custom.endDate,
+      );
+    } else if (item === DATE_FILTER_TYPE) {
+      onFiltersSelected(thingFilter.selectedItem);
+    }
+  };
+  return (
+    <FiltersPanel
+      type={{
+        ...type,
+        onButtonClick: () => selectFilterType(),
+        onItemClick: item => addFilterType(item),
+      }}
+      thingFilter={{
+        ...thingFilter,
+        label: thingFilter.selectedItem || "Thing",
+        onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
         onItemClick: item => {
-          updateTimePeriod(item);
-          onFiltersSelected(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
-        },
-      },
-      custom: {
-        startDate: {
-          selected: dateFilter.custom.startDate,
-          onChange: date => {
-            updateStartDate(date);
-            onFiltersSelected(
-              thingFilter.selectedItem,
-              dateFilter.timePeriod.selectedItem,
-              date,
-              dateFilter.custom.endDate,
-            );
-          },
-        },
-        endDate: {
-          selected: dateFilter.custom.endDate,
-          onChange: date => {
-            updateEndDate(date);
-            onFiltersSelected(
-              thingFilter.selectedItem,
-              dateFilter.timePeriod.selectedItem,
-              dateFilter.custom.startDate,
-              date,
-            );
-          },
-        },
-      },
-      onDelete: item => {
-        deleteFilterType(item);
-        if (item === THING_FILTER_TYPE) {
+          updateThingFilter(item);
           onFiltersSelected(
-            undefined,
+            item,
             dateFilter.timePeriod.selectedItem,
             dateFilter.custom.startDate,
             dateFilter.custom.endDate,
           );
-        } else if (item === DATE_FILTER_TYPE) {
-          onFiltersSelected(thingFilter.selectedItem);
-        }
-      },
-    }}
-    selectedFilters={selectedFilters}
-  />
-);
+        },
+        onDelete: onDeleteFilter,
+      }}
+      dateFilter={{
+        ...dateFilter,
+        selector: {
+          isCustomSelected: dateFilter.isCustomSelected,
+          onChange: () => toggleDateFilterType(),
+        },
+        timePeriod: {
+          ...dateFilter.timePeriod,
+          label: dateFilter.timePeriod.selectedItem || "Time period",
+          onButtonClick: () => selectTimePeriod(dateFilter.timePeriod.isActive),
+          onItemClick: item => {
+            updateTimePeriod(item);
+            onFiltersSelected(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
+          },
+        },
+        custom: {
+          startDate: {
+            selected: dateFilter.custom.startDate,
+            onChange: date => {
+              updateStartDate(date);
+              onFiltersSelected(
+                thingFilter.selectedItem,
+                dateFilter.timePeriod.selectedItem,
+                date,
+                dateFilter.custom.endDate,
+              );
+            },
+          },
+          endDate: {
+            selected: dateFilter.custom.endDate,
+            onChange: date => {
+              updateEndDate(date);
+              onFiltersSelected(
+                thingFilter.selectedItem,
+                dateFilter.timePeriod.selectedItem,
+                dateFilter.custom.startDate,
+                date,
+              );
+            },
+          },
+        },
+        onDelete: onDeleteFilter,
+      }}
+      selectedFilters={selectedFilters}
+    />
+  );
+};
 
 FiltersPanelContainer.propTypes = {
   onFiltersSelected: PropTypes.func.isRequired,
