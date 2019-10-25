@@ -9,7 +9,7 @@ import {
   PARAM_DISABLE,
 } from "constants/actionTypes/params";
 import { EVENT_TYPE, MEASUREMENT_TYPE, OBSERVATION_TYPES } from "constants/observationTypes";
-import { TYPE, OBSERVATION, GROUPBY, THING } from "constants/params";
+import { TYPE, OBSERVATION, GROUP_BY, THING } from "constants/params";
 import iotClient from "lib/iotClient";
 import * as fromState from "reducers";
 import { isEmpty } from "helpers/validation";
@@ -81,26 +81,26 @@ export const updateObservation = observation => dispatch => {
 
 export const selectGroupBy = () => (dispatch, getState) => {
   const state = getState();
-  const groupBy = fromState.getParam(state, GROUPBY);
+  const groupBy = fromState.getParam(state, GROUP_BY);
   if (groupBy && !isEmpty(groupBy.items)) {
-    dispatch({ type: PARAM_SELECT, param: GROUPBY });
+    dispatch({ type: PARAM_SELECT, param: GROUP_BY });
   } else {
-    dispatch({ type: PARAM_REQUEST, param: GROUPBY });
+    dispatch({ type: PARAM_REQUEST, param: GROUP_BY });
     iotClient.timePeriodsService
       .getSupportedTimePeriods()
       .then(res => {
-        dispatch({ type: PARAM_REQUEST_SUCCESS, param: GROUPBY, statusCode: res.statusCode, error: null });
-        dispatch({ type: PARAM_ITEMS_UPDATED, param: GROUPBY, items: res.body.timePeriods });
-        dispatch({ type: PARAM_SELECT, param: GROUPBY });
+        dispatch({ type: PARAM_REQUEST_SUCCESS, param: GROUP_BY, statusCode: res.statusCode, error: null });
+        dispatch({ type: PARAM_ITEMS_UPDATED, param: GROUP_BY, items: res.body.timePeriods });
+        dispatch({ type: PARAM_SELECT, param: GROUP_BY });
       })
       .catch(error => {
-        dispatch({ type: PARAM_REQUEST_ERROR, param: GROUPBY, statusCode: error.statusCode, error });
+        dispatch({ type: PARAM_REQUEST_ERROR, param: GROUP_BY, statusCode: error.statusCode, error });
       });
   }
 };
 
 export const updateGroupBy = groupBy => dispatch => {
-  dispatch({ type: PARAM_UPDATE, param: GROUPBY, selectedItem: groupBy });
+  dispatch({ type: PARAM_UPDATE, param: GROUP_BY, selectedItem: groupBy });
 };
 
 export const updateParams = params => dispatch => {

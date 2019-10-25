@@ -8,7 +8,8 @@ import DataParamsPanel from "containers/dataParamsPanel";
 import FiltersPanelContainer from "containers/filtersPanelContainer";
 import Charts from "containers/charts";
 import { LINECHART } from "constants/chartTypes";
-import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
+import { TYPE, OBSERVATION, GROUP_BY, THING, START_DATE, END_DATE, TIME_PERIOD } from "constants/params";
+import { defaultTimePeriodFilter, defaultGroupBy } from "config/params";
 
 const Data = ({ onParamsSelected, onFiltersSelected, onReset }) => (
   <div className="container is-fluid section">
@@ -30,11 +31,37 @@ Data.propTypes = {
   onReset: PropTypes.func.isRequired,
 };
 
-const withDataParams = handleDataParams(
-  "data",
-  [TYPE, OBSERVATION, GROUPBY],
-  () => store.dispatch(getData()),
-  () => store.dispatch(reset()),
-);
+const withDataParams = handleDataParams({
+  path: "data",
+  pathParams: [
+    {
+      id: TYPE,
+    },
+    {
+      id: OBSERVATION,
+    },
+    {
+      id: GROUP_BY,
+      defaultValue: defaultGroupBy,
+    },
+  ],
+  queryParams: [
+    {
+      id: THING,
+    },
+    {
+      id: START_DATE,
+    },
+    {
+      id: END_DATE,
+    },
+    {
+      id: TIME_PERIOD,
+      defaultValue: defaultTimePeriodFilter,
+    },
+  ],
+  getData: () => store.dispatch(getData()),
+  reset: () => store.dispatch(reset()),
+});
 
 export default withDataParams(Data);

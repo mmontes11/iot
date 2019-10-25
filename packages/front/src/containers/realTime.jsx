@@ -33,17 +33,25 @@ RealTime.propTypes = {
   onReset: PropTypes.func.isRequired,
 };
 
-const withDataParams = handleDataParams(
-  "real-time",
-  [THING, TYPE],
-  () => {
+const withDataParams = handleDataParams({
+  path: "real-time",
+  pathParams: [
+    {
+      id: THING,
+    },
+    {
+      id: TYPE,
+    },
+  ],
+  queryParams: [],
+  getData: () => {
     store.dispatch(resetData());
     store.dispatch(startRealTimeData());
   },
-  () => {
+  reset: () => {
     store.dispatch(reset());
     store.dispatch(finishRealTimeData());
   },
-);
+});
 
 export default withDataParams(RealTime);
