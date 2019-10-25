@@ -24,7 +24,6 @@ const derivedConfig = {
   biotHighTemperatureThreshold: parseFloat(process.env.BIOT_HIGH_TEMPERATURE_THRESHOLD),
   biotLowHumidityThreshold: parseFloat(process.env.BIOT_LOW_HUMIDITY_THRESHOLD),
   biotLowTemperatureThreshold: parseFloat(process.env.BIOT_LOW_TEMPERATURE_THRESHOLD),
-  biotTelegramAuthorizeAll: process.env.BIOT_AUTHORIZE_ALL === "true",
   biotTelegramWhiteListJson: process.env.BIOT_USERS_WHITELIST_JSON && JSON.parse(process.env.BIOT_USERS_WHITELIST_JSON),
   measurementChangePastIntervalInHours: parseFloat(process.env.MEASUREMENT_CHANGE_PAST_INTERVAL_IN_HOURS),
   measurementChangeGrowthRateThreshold: parseFloat(process.env.MEASUREMENT_CHANGE_GROWTH_RATE_THRESHOLD),
