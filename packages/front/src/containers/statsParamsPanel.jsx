@@ -21,7 +21,7 @@ const StatsParamsPanel = ({
   <ParamsPanel
     params={[
       {
-        key: "type",
+        key: TYPE,
         label: type.selectedItem || "Type",
         items: type.items || [],
         isActive: type.isActive || false,
@@ -31,7 +31,7 @@ const StatsParamsPanel = ({
         onItemClick: item => updateType(item),
       },
       {
-        key: "observation",
+        key: OBSERVATION,
         label: observation.selectedItem || "Observation",
         items: observation.items || [],
         isActive: observation.isActive || false,

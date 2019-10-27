@@ -19,14 +19,14 @@ describe("Subscriptions", () => {
   before(done => {
     chai
       .request(server)
-      .post("/auth/user")
+      .post("/api/auth/user")
       .set("Authorization", authConstants.validAuthHeader)
       .send(authConstants.validUser)
       .end(err => {
         assert(err !== undefined, "Error creating user");
         chai
           .request(server)
-          .post("/auth/token")
+          .post("/api/auth/token")
           .set("Authorization", authConstants.validAuthHeader)
           .send(authConstants.validUser)
           .end((errInnerReq, { body: { token: tokenInnerReq } }) => {
@@ -47,11 +47,11 @@ describe("Subscriptions", () => {
       });
   });
 
-  describe("POST /subscription 400", () => {
+  describe("POST /api/subscription 400", () => {
     it("tries to create an invalid subscription", done => {
       chai
         .request(server)
-        .post("/subscription")
+        .post("/api/subscription")
         .set("Authorization", auth())
         .send(subscriptionConstants.invalidSubscription)
         .end((err, res) => {
@@ -63,7 +63,7 @@ describe("Subscriptions", () => {
     it("tries to create a subscription with an invalid topicId", done => {
       chai
         .request(server)
-        .post("/subscription")
+        .post("/api/subscription")
         .set("Authorization", auth())
         .send(subscriptionConstants.subscriptionWithInvalidTopicId)
         .end((err, res) => {
@@ -74,11 +74,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("POST /subscription 409", () => {
+  describe("POST /api/subscription 409", () => {
     it("tries to recreate an already created subscription", done => {
       chai
         .request(server)
-        .post("/subscription")
+        .post("/api/subscription")
         .set("Authorization", auth())
         .send(subscriptionConstants.validSubscription)
         .end((err, res) => {
@@ -87,7 +87,7 @@ describe("Subscriptions", () => {
 
           chai
             .request(server)
-            .post("/subscription")
+            .post("/api/subscription")
             .set("Authorization", auth())
             .send(subscriptionConstants.validSubscription)
             .end((errInnerReq, resInnerReq) => {
@@ -99,11 +99,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("POST /subscription 201", () => {
+  describe("POST /api/subscription 201", () => {
     it("creates a subscription", done => {
       chai
         .request(server)
-        .post("/subscription")
+        .post("/api/subscription")
         .set("Authorization", auth())
         .send(subscriptionConstants.validSubscription)
         .end((err, res) => {
@@ -123,7 +123,7 @@ describe("Subscriptions", () => {
           };
           chai
             .request(server)
-            .post("/subscription")
+            .post("/api/subscription")
             .set("Authorization", auth())
             .send(subscription)
             .end((err, res) => {
@@ -136,11 +136,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("DELETE /subscription 400", () => {
+  describe("DELETE /api/subscription 400", () => {
     it("tries to delete a subscription with an invalid subscription ID", done => {
       chai
         .request(server)
-        .delete(`/subscription/${subscriptionConstants.invalidSubscriptionId}`)
+        .delete(`/api/subscription/${subscriptionConstants.invalidSubscriptionId}`)
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -150,11 +150,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("DELETE /subscription 404", () => {
+  describe("DELETE /api/subscription 404", () => {
     it("tries to delete a subscription  with non existing with subscription ID", done => {
       chai
         .request(server)
-        .delete(`/subscription/${subscriptionConstants.nonExistingSubscriptionId}`)
+        .delete(`/api/subscription/${subscriptionConstants.nonExistingSubscriptionId}`)
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -164,11 +164,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("DELETE /subscription 200", () => {
+  describe("DELETE /api/subscription 200", () => {
     it("deletes a subscription", done => {
       chai
         .request(server)
-        .post("/subscription")
+        .post("/api/subscription")
         .set("Authorization", auth())
         .send(subscriptionConstants.validSubscription)
         .end((err, res) => {
@@ -178,7 +178,7 @@ describe("Subscriptions", () => {
 
           chai
             .request(server)
-            .delete(`/subscription/${subscriptionId}`)
+            .delete(`/api/subscription/${subscriptionId}`)
             .set("Authorization", auth())
             .end((errInnerReq, resInnerReq) => {
               should.not.exist(errInnerReq);
@@ -189,11 +189,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("GET /subscriptions 400", () => {
+  describe("GET /api/subscriptions 400", () => {
     it("tries to get subscriptions but no chatId query param is specified", done => {
       chai
         .request(server)
-        .get("/subscriptions")
+        .get("/api/subscriptions")
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -205,7 +205,7 @@ describe("Subscriptions", () => {
     it("tries to get subscriptions with an invalid chatId query param", done => {
       chai
         .request(server)
-        .get("/subscriptions")
+        .get("/api/subscriptions")
         .set("Authorization", auth())
         .query({
           [responseKeys.chatIdKey]: subscriptionConstants.invalidChatId,
@@ -219,11 +219,11 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("GET /subscriptions 404", () => {
+  describe("GET /api/subscriptions 404", () => {
     it("tries to get subscriptions but no one has been created yet", done => {
       chai
         .request(server)
-        .get("/subscriptions")
+        .get("/api/subscriptions")
         .set("Authorization", auth())
         .query({
           [responseKeys.chatIdKey]: subscriptionConstants.validChatId,
@@ -236,7 +236,7 @@ describe("Subscriptions", () => {
     });
   });
 
-  describe("GET /subscriptions 200", () => {
+  describe("GET /api/subscriptions 200", () => {
     it("gets subscriptions", done => {
       const subscriptions = [
         subscriptionConstants.validSubscription,
@@ -251,7 +251,7 @@ describe("Subscriptions", () => {
         .then(() => {
           chai
             .request(server)
-            .get("/subscriptions")
+            .get("/api/subscriptions")
             .set("Authorization", auth())
             .query({
               [responseKeys.chatIdKey]: subscriptionConstants.validChatId2,
@@ -264,7 +264,7 @@ describe("Subscriptions", () => {
 
               chai
                 .request(server)
-                .delete(`/subscription/${subscriptionId}`)
+                .delete(`/api/subscription/${subscriptionId}`)
                 .set("Authorization", auth())
                 .end((errInnerReq, resInnerReq) => {
                   should.not.exist(errInnerReq);
@@ -272,7 +272,7 @@ describe("Subscriptions", () => {
 
                   chai
                     .request(server)
-                    .get("/subscriptions")
+                    .get("/api/subscriptions")
                     .set("Authorization", auth())
                     .query({
                       [responseKeys.chatIdKey]: subscriptionConstants.validChatId2,

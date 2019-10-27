@@ -28,14 +28,14 @@ describe("Thing", () => {
   before(done => {
     chai
       .request(server)
-      .post("/auth/user")
+      .post("/api/auth/user")
       .set("Authorization", authConstants.validAuthHeader)
       .send(authConstants.validUser)
       .end(err => {
         assert(err !== undefined, "Error creating user");
         chai
           .request(server)
-          .post("/auth/token")
+          .post("/api/auth/token")
           .set("Authorization", authConstants.validAuthHeader)
           .send(authConstants.validUser)
           .end((errInnerReq, { body: { token: tokenInnerReq } }) => {
@@ -62,11 +62,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /thing/X 404", () => {
+  describe("GET /api/thing/X 404", () => {
     it("tries to get a non existing thing", done => {
       chai
         .request(server)
-        .get("/thing/whatever")
+        .get("/api/thing/whatever")
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -76,11 +76,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /thing/X 200", () => {
+  describe("GET /api/thing/X 200", () => {
     it("gets an existing thing", done => {
       chai
         .request(server)
-        .get("/thing/raspi-coruna")
+        .get("/api/thing/raspi-coruna")
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -90,11 +90,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things?supportsEvents=X 400", () => {
+  describe("GET /api/things?supportsEvents=X 400", () => {
     it("tries to get things providing invalid supportsEvent param", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           supportsEvents: "foo",
         })
@@ -109,7 +109,7 @@ describe("Thing", () => {
     it("tries to get things using invalid coordinates", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           latitude: 42.08,
         })
@@ -123,11 +123,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things?longitude=X&latitude=X 404", () => {
+  describe("GET /api/things?longitude=X&latitude=X 404", () => {
     it("gets things by Madagascar coordinates", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           longitude: -18.4,
           latitude: 43.37,
@@ -141,11 +141,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things 200", () => {
+  describe("GET /api/things 200", () => {
     it("gets all things", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -156,11 +156,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things?longitude=X&latitude=X 200", () => {
+  describe("GET /api/things?longitude=X&latitude=X 200", () => {
     it("gets things by A Coruna coordinates", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           longitude: -8.4065665,
           latitude: 43.3682188,
@@ -177,7 +177,7 @@ describe("Thing", () => {
     it("gets things by A Coruna coordinates with max distance of 10 metres", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           longitude: -8.4065665,
           latitude: 43.3682188,
@@ -193,11 +193,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things?supportsMeasurements=X&supportsEvents=X 400", () => {
+  describe("GET /api/things?supportsMeasurements=X&supportsEvents=X 400", () => {
     it("tries to get things with invalid supportsMeasurements and supportsEvents", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           supportsMeasurements: constants.invalidSupportsMeasurementsQueryParam,
           supportsEvents: constants.invalidSupportsEventsQueryParam,
@@ -212,11 +212,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things?supportsMeasurements=X&supportsEvents=X 404", () => {
+  describe("GET /api/things?supportsMeasurements=X&supportsEvents=X 404", () => {
     it("tries to get things with supportsMeasurements = false and supportsEvents = false but no one matches", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           supportsMeasurements: false,
           supportsEvents: false,
@@ -230,11 +230,11 @@ describe("Thing", () => {
     });
   });
 
-  describe("GET /things?supportsMeasurements=X&supportsEvents=X 200", () => {
+  describe("GET /api/things?supportsMeasurements=X&supportsEvents=X 200", () => {
     it("gets things with supportsMeasurements = true and supportsEvents = false", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           supportsMeasurements: true,
           supportsEvents: false,
@@ -250,7 +250,7 @@ describe("Thing", () => {
     it("gets things with supportsEvents = false", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           supportsEvents: true,
         })
@@ -265,7 +265,7 @@ describe("Thing", () => {
     it("gets things with with supportsMeasurements = true and supportsEvents = true", done => {
       chai
         .request(server)
-        .get("/things")
+        .get("/api/things")
         .query({
           supportsMeasurements: true,
           supportsEvents: true,

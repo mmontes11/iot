@@ -15,20 +15,10 @@ export class Log {
       winston.error(message);
     }
   }
-  logRequest(request, id) {
+  logRequest(id, url, options) {
     if (this.debug) {
-      const {
-        options: { method, query, data: body },
-        url: { href: url },
-        headers,
-      } = request;
-      if (!_.isUndefined(method) && !_.isUndefined(url)) {
-        winston.info(`Request ${id} ${method} ${url}`);
-      }
-      if (!_.isUndefined(query)) {
-        winston.info(`Request ${id} Query Params`);
-        winston.info(Log._prettyPrintJSON(query));
-      }
+      const { method, headers, body } = options;
+      winston.info(`Request ${id} ${method} ${url}`);
       if (!_.isUndefined(body)) {
         winston.info(`Request ${id} Body`);
         winston.info(Log._prettyPrintJSON(JSON.parse(body)));
@@ -39,19 +29,12 @@ export class Log {
       }
     }
   }
-  logResponse(body, response, id) {
+  logResponse(id, status, body) {
     if (this.debug) {
-      const { statusCode, statusMessage, headers } = response;
-      if (!_.isUndefined(statusCode) && !_.isUndefined(statusMessage)) {
-        winston.info(`Response ${id} ${statusCode} ${statusMessage}`);
-      }
+      winston.info(`Response ${id} ${status}`);
       if (!_.isUndefined(body)) {
         winston.info(`Response ${id} Body`);
         winston.info(Log._prettyPrintJSON(body));
-      }
-      if (!_.isUndefined(headers)) {
-        winston.info(`Response ${id} Headers`);
-        winston.info(Log._prettyPrintJSON(headers));
       }
     }
   }

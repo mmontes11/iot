@@ -10,68 +10,96 @@ import { addThingFilter } from "actions/thingFilter";
 import { addTimePeriodFilter, addCustomTimePeriodFilter } from "actions/dateFilter";
 import * as fromState from "reducers";
 
-export const handleDataParams = (path, paramNames, getData, reset) => WrappedComponent => {
+export const handleDataParams = ({ path, pathParams, queryParams, getData, reset }) => WrappedComponent => {
+  const getPathParamsObject = urlParams =>
+    pathParams.reduce((acc, { id, defaultValue }) => {
+      const value = urlParams[id] || defaultValue;
+      if (value) {
+        return { ...acc, [id]: value };
+      }
+      return acc;
+    }, {});
+
+  const getQueryParamsObject = search => {
+    const queryParamsFromUrl = QueryString.parse(search) || {};
+    return queryParams.reduce((acc, { id, defaultValue }) => {
+      const value = queryParamsFromUrl[id] || defaultValue;
+      if (value) {
+        return { ...acc, [id]: value };
+      }
+      return acc;
+    }, {});
+  };
+
+  const getPath = (pathParamsObject, queryParamsObject) => {
+    const paramsPath = Object.keys(pathParamsObject).reduce((acc, id) => {
+      const partialPath = pathParamsObject[id];
+      if (acc === "") {
+        return partialPath;
+      }
+      return `${acc}/${partialPath}`;
+    }, "");
+    let basePath = `/${path}`;
+    if (paramsPath.length > 0) {
+      basePath += `/${paramsPath}`;
+    }
+    if (Object.keys(queryParamsObject).length > 0) {
+      const search = QueryString.stringify(queryParamsObject);
+      basePath += `?${search}`;
+    }
+    return basePath;
+  };
+
   class DataParams extends React.Component {
     componentDidMount() {
       const {
+        history,
         match: { params: urlParams },
         location: { search },
       } = this.props;
-      const [firstParamName, secondParamName, thirdParamName] = paramNames;
-      const firstParam = urlParams[firstParamName];
-      const secondParam = urlParams[secondParamName];
-      if (!firstParam || !secondParam) {
-        return;
+      const paramsWithValues = getPathParamsObject(urlParams);
+      if (Object.keys(paramsWithValues).length > 0) {
+        this.props.updateParams(paramsWithValues);
       }
-      const queryParams = QueryString.parse(search);
-      if (queryParams.thing) {
-        this.props.addThingFilter(queryParams.thing);
+      const queryParamsWithValues = getQueryParamsObject(search);
+      const { thing, startDate, endDate, timePeriod } = queryParamsWithValues;
+      if (thing) {
+        this.props.addThingFilter(thing);
       }
-      if (queryParams.timePeriod) {
-        this.props.addTimePeriodFilter(queryParams.timePeriod);
-      } else if (queryParams.startDate || queryParams.endDate) {
-        this.props.addCustomTimePeriodFilter(queryParams.startDate, queryParams.endDate);
+      if (startDate || endDate) {
+        this.props.addCustomTimePeriodFilter(startDate, endDate);
+      } else {
+        this.props.addTimePeriodFilter(timePeriod);
       }
-      let params = {
-        [firstParamName]: firstParam,
-        [secondParamName]: secondParam,
-      };
-      const thirdParam = params[thirdParamName];
-      if (thirdParam) {
-        params = {
-          ...params,
-          [thirdParamName]: thirdParam,
-        };
+      const newPath = getPath(paramsWithValues, queryParamsWithValues);
+      history.push(newPath);
+      if (Object.keys(paramsWithValues).length === pathParams.length) {
+        getData();
       }
-      this.props.updateParams(params);
-      getData();
     }
     componentDidUpdate() {
       const {
-        match: { params },
+        match: { params: urlParams },
         hasError,
       } = this.props;
-      const [firstParamName, secondParamName] = paramNames;
-      const firstParam = params[firstParamName];
-      const secondParam = params[secondParamName];
-      if (firstParam && secondParam && hasError) {
+      const paramsWithValues = getPathParamsObject(urlParams);
+      if (Object.keys(paramsWithValues).length === pathParams.length && hasError) {
         this._pushRootPath();
       }
     }
     _onParamsSelected = (...params) => {
-      const [firstParam, secondParam, thirdParam] = params;
-      if (!firstParam || !secondParam) {
+      if (pathParams.length !== params.length) {
         return;
       }
       const {
         history,
         location: { search },
       } = this.props;
-      let basePath = `/${path}/${firstParam}/${secondParam}`;
-      if (thirdParam) {
-        basePath += `/${thirdParam}`;
+      const paramsPath = params.reduce((acc, value) => (acc !== "" ? `${acc}/${value}` : value), "");
+      let basePath = `/${path}/${paramsPath}`;
+      if (search) {
+        basePath += `${search}`;
       }
-      basePath += `${search}`;
       history.push(basePath);
       getData();
     };
@@ -94,9 +122,7 @@ export const handleDataParams = (path, paramNames, getData, reset) => WrappedCom
         params.endDate = endDate.toISOString();
       }
       if (thing || timePeriod || startDate || endDate) {
-        const search = Object.keys(params)
-          .map(p => `${encodeURIComponent(p)}=${encodeURIComponent(params[p])}`)
-          .join("&");
+        const search = QueryString.stringify(params);
         history.push(`${pathname}?${search}`);
       } else {
         history.push(pathname);
@@ -122,6 +148,7 @@ export const handleDataParams = (path, paramNames, getData, reset) => WrappedCom
       );
     }
   }
+
   DataParams.propTypes = {
     hasError: PropTypes.bool.isRequired,
     updateParams: PropTypes.func.isRequired,
@@ -134,12 +161,14 @@ export const handleDataParams = (path, paramNames, getData, reset) => WrappedCom
       push: PropTypes.func.isRequired,
     }).isRequired,
   };
+
   const withConnect = connect(
     state => ({
       hasError: fromState.hasError(state),
     }),
     { updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },
   );
+
   return compose(
     withConnect,
     withResetOnUnmount,

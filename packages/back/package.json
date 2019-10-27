@@ -1,6 +1,6 @@
 {
   "name": "back",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "Generic purpose ES6 NodeJS + MongoDB + Redis IoT backend",
   "author": "Martín Montes <martin11lrx@gmail.com>",
   "license": "MIT",
@@ -49,7 +49,7 @@
     "async-mqtt": "^1.0.1",
     "bluebird": "^3.4.7",
     "body-parser": "^1.18.3",
-    "common": "^2.0.2",
+    "common": "^2.0.4",
     "compression": "^1.7.4",
     "cookie-parser": "1.4.3",
     "cors": "2.8.1",

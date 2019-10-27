@@ -9,7 +9,10 @@ export class AuthController {
   }
   isAuthorized(msg) {
     const user = msg.from.username;
-    return _.contains(this.usersWhileList, user);
+    if (this.usersWhileList) {
+      return _.contains(this.usersWhileList, user);
+    }
+    return true;
   }
   sendNotAuthorizedMessage(msg) {
     const chatId = msg.chat.id;

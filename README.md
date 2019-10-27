@@ -5,6 +5,26 @@
 
 Generic purpose Internet of Things platform.
 
+## Demo
+
+### Front
+
+https://iot.mmontes-dev.duckdns.org/
+<details>
+  <summary>Credentials</summary>
+  <p>
+  
+  Username: `demo`
+  
+  Password: `demoIoT$`
+  
+  </p>
+</details>
+
+### BIoT
+
+[@mmontesIoTBot](https://t.me/mmontesIoTBot)
+
 ## Configuration
 
 Create a `.env` like [this one](./.env.example).

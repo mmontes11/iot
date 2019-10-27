@@ -9,6 +9,7 @@ export class SubscriptionsService extends Service {
       query: {
         chatId,
       },
+      auth: true,
     };
     return this.get(undefined, options);
   }

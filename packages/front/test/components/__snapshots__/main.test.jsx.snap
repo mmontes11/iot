@@ -2613,7 +2613,7 @@ exports[`components/main renders a main in /stats path 1`] = `
           <Router
             history={
               Object {
-                "action": "POP",
+                "action": "PUSH",
                 "block": [Function],
                 "canGo": [Function],
                 "createHref": [Function],
@@ -2624,17 +2624,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                     "search": "",
                     "state": undefined,
                   },
+                  Object {
+                    "hash": "",
+                    "pathname": "/stats",
+                    "search": "?timePeriod=day",
+                    "state": undefined,
+                  },
                 ],
                 "go": [Function],
                 "goBack": [Function],
                 "goForward": [Function],
-                "index": 0,
-                "length": 1,
+                "index": 1,
+                "length": 2,
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
                   "pathname": "/stats",
-                  "search": "",
+                  "search": "?timePeriod=day",
                   "state": undefined,
                 },
                 "push": [Function],
@@ -2651,7 +2657,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                     <Connect(Navbar)
                       history={
                         Object {
-                          "action": "POP",
+                          "action": "PUSH",
                           "block": [Function],
                           "canGo": [Function],
                           "createHref": [Function],
@@ -2662,17 +2668,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                               "search": "",
                               "state": undefined,
                             },
+                            Object {
+                              "hash": "",
+                              "pathname": "/stats",
+                              "search": "?timePeriod=day",
+                              "state": undefined,
+                            },
                           ],
                           "go": [Function],
                           "goBack": [Function],
                           "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
+                          "index": 1,
+                          "length": 2,
                           "listen": [Function],
                           "location": Object {
                             "hash": "",
                             "pathname": "/stats",
-                            "search": "",
+                            "search": "?timePeriod=day",
                             "state": undefined,
                           },
                           "push": [Function],
@@ -2683,7 +2695,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                         Object {
                           "hash": "",
                           "pathname": "/stats",
-                          "search": "",
+                          "search": "?timePeriod=day",
                           "state": undefined,
                         }
                       }
@@ -2699,7 +2711,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                       <Navbar
                         history={
                           Object {
-                            "action": "POP",
+                            "action": "PUSH",
                             "block": [Function],
                             "canGo": [Function],
                             "createHref": [Function],
@@ -2710,17 +2722,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 "search": "",
                                 "state": undefined,
                               },
+                              Object {
+                                "hash": "",
+                                "pathname": "/stats",
+                                "search": "?timePeriod=day",
+                                "state": undefined,
+                              },
                             ],
                             "go": [Function],
                             "goBack": [Function],
                             "goForward": [Function],
-                            "index": 0,
-                            "length": 1,
+                            "index": 1,
+                            "length": 2,
                             "listen": [Function],
                             "location": Object {
                               "hash": "",
                               "pathname": "/stats",
-                              "search": "",
+                              "search": "?timePeriod=day",
                               "state": undefined,
                             },
                             "push": [Function],
@@ -2732,7 +2750,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           Object {
                             "hash": "",
                             "pathname": "/stats",
-                            "search": "",
+                            "search": "?timePeriod=day",
                             "state": undefined,
                           }
                         }
@@ -3101,7 +3119,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                         Object {
                           "hash": "",
                           "pathname": "/stats",
-                          "search": "",
+                          "search": "?timePeriod=day",
                           "state": undefined,
                         }
                       }
@@ -3110,7 +3128,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                       <Connect(Connect(ResetOnUnmount))
                         history={
                           Object {
-                            "action": "POP",
+                            "action": "PUSH",
                             "block": [Function],
                             "canGo": [Function],
                             "createHref": [Function],
@@ -3121,17 +3139,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 "search": "",
                                 "state": undefined,
                               },
+                              Object {
+                                "hash": "",
+                                "pathname": "/stats",
+                                "search": "?timePeriod=day",
+                                "state": undefined,
+                              },
                             ],
                             "go": [Function],
                             "goBack": [Function],
                             "goForward": [Function],
-                            "index": 0,
-                            "length": 1,
+                            "index": 1,
+                            "length": 2,
                             "listen": [Function],
                             "location": Object {
                               "hash": "",
                               "pathname": "/stats",
-                              "search": "",
+                              "search": "?timePeriod=day",
                               "state": undefined,
                             },
                             "push": [Function],
@@ -3142,7 +3166,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           Object {
                             "hash": "",
                             "pathname": "/stats",
-                            "search": "",
+                            "search": "?timePeriod=day",
                             "state": undefined,
                           }
                         }
@@ -3162,7 +3186,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           hasError={false}
                           history={
                             Object {
-                              "action": "POP",
+                              "action": "PUSH",
                               "block": [Function],
                               "canGo": [Function],
                               "createHref": [Function],
@@ -3173,17 +3197,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                   "search": "",
                                   "state": undefined,
                                 },
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/stats",
+                                  "search": "?timePeriod=day",
+                                  "state": undefined,
+                                },
                               ],
                               "go": [Function],
                               "goBack": [Function],
                               "goForward": [Function],
-                              "index": 0,
-                              "length": 1,
+                              "index": 1,
+                              "length": 2,
                               "listen": [Function],
                               "location": Object {
                                 "hash": "",
                                 "pathname": "/stats",
-                                "search": "",
+                                "search": "?timePeriod=day",
                                 "state": undefined,
                               },
                               "push": [Function],
@@ -3194,7 +3224,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                             Object {
                               "hash": "",
                               "pathname": "/stats",
-                              "search": "",
+                              "search": "?timePeriod=day",
                               "state": undefined,
                             }
                           }
@@ -3215,7 +3245,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                             hasError={false}
                             history={
                               Object {
-                                "action": "POP",
+                                "action": "PUSH",
                                 "block": [Function],
                                 "canGo": [Function],
                                 "createHref": [Function],
@@ -3226,17 +3256,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                     "search": "",
                                     "state": undefined,
                                   },
+                                  Object {
+                                    "hash": "",
+                                    "pathname": "/stats",
+                                    "search": "?timePeriod=day",
+                                    "state": undefined,
+                                  },
                                 ],
                                 "go": [Function],
                                 "goBack": [Function],
                                 "goForward": [Function],
-                                "index": 0,
-                                "length": 1,
+                                "index": 1,
+                                "length": 2,
                                 "listen": [Function],
                                 "location": Object {
                                   "hash": "",
                                   "pathname": "/stats",
-                                  "search": "",
+                                  "search": "?timePeriod=day",
                                   "state": undefined,
                                 },
                                 "push": [Function],
@@ -3247,7 +3283,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                               Object {
                                 "hash": "",
                                 "pathname": "/stats",
-                                "search": "",
+                                "search": "?timePeriod=day",
                                 "state": undefined,
                               }
                             }
@@ -3269,7 +3305,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                               hasError={false}
                               history={
                                 Object {
-                                  "action": "POP",
+                                  "action": "PUSH",
                                   "block": [Function],
                                   "canGo": [Function],
                                   "createHref": [Function],
@@ -3280,17 +3316,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       "search": "",
                                       "state": undefined,
                                     },
+                                    Object {
+                                      "hash": "",
+                                      "pathname": "/stats",
+                                      "search": "?timePeriod=day",
+                                      "state": undefined,
+                                    },
                                   ],
                                   "go": [Function],
                                   "goBack": [Function],
                                   "goForward": [Function],
-                                  "index": 0,
-                                  "length": 1,
+                                  "index": 1,
+                                  "length": 2,
                                   "listen": [Function],
                                   "location": Object {
                                     "hash": "",
                                     "pathname": "/stats",
-                                    "search": "",
+                                    "search": "?timePeriod=day",
                                     "state": undefined,
                                   },
                                   "push": [Function],
@@ -3301,7 +3343,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 Object {
                                   "hash": "",
                                   "pathname": "/stats",
-                                  "search": "",
+                                  "search": "?timePeriod=day",
                                   "state": undefined,
                                 }
                               }
@@ -3324,7 +3366,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                   hasError={false}
                                   history={
                                     Object {
-                                      "action": "POP",
+                                      "action": "PUSH",
                                       "block": [Function],
                                       "canGo": [Function],
                                       "createHref": [Function],
@@ -3335,17 +3377,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           "search": "",
                                           "state": undefined,
                                         },
+                                        Object {
+                                          "hash": "",
+                                          "pathname": "/stats",
+                                          "search": "?timePeriod=day",
+                                          "state": undefined,
+                                        },
                                       ],
                                       "go": [Function],
                                       "goBack": [Function],
                                       "goForward": [Function],
-                                      "index": 0,
-                                      "length": 1,
+                                      "index": 1,
+                                      "length": 2,
                                       "listen": [Function],
                                       "location": Object {
                                         "hash": "",
                                         "pathname": "/stats",
-                                        "search": "",
+                                        "search": "?timePeriod=day",
                                         "state": undefined,
                                       },
                                       "push": [Function],
@@ -3356,7 +3404,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                     Object {
                                       "hash": "",
                                       "pathname": "/stats",
-                                      "search": "",
+                                      "search": "?timePeriod=day",
                                       "state": undefined,
                                     }
                                   }
@@ -3378,7 +3426,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                     hasError={false}
                                     history={
                                       Object {
-                                        "action": "POP",
+                                        "action": "PUSH",
                                         "block": [Function],
                                         "canGo": [Function],
                                         "createHref": [Function],
@@ -3389,17 +3437,23 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             "search": "",
                                             "state": undefined,
                                           },
+                                          Object {
+                                            "hash": "",
+                                            "pathname": "/stats",
+                                            "search": "?timePeriod=day",
+                                            "state": undefined,
+                                          },
                                         ],
                                         "go": [Function],
                                         "goBack": [Function],
                                         "goForward": [Function],
-                                        "index": 0,
-                                        "length": 1,
+                                        "index": 1,
+                                        "length": 2,
                                         "listen": [Function],
                                         "location": Object {
                                           "hash": "",
                                           "pathname": "/stats",
-                                          "search": "",
+                                          "search": "?timePeriod=day",
                                           "state": undefined,
                                         },
                                         "push": [Function],
@@ -3410,7 +3464,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       Object {
                                         "hash": "",
                                         "pathname": "/stats",
-                                        "search": "",
+                                        "search": "?timePeriod=day",
                                         "state": undefined,
                                       }
                                     }

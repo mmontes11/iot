@@ -1,6 +1,6 @@
 {
   "name": "worker",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "ES6 NodeJS worker that subscribes to MQTT topics from IoT server and sends notifications to BIoT",
   "main": "index.js",
   "private": false,
@@ -43,7 +43,7 @@
   "homepage": "https://github.com/mmontes11/iot#readme",
   "dependencies": {
     "async-mqtt": "^1.0.1",
-    "common": "^2.0.2",
+    "common": "^2.0.4",
     "dotenv": "^8.0.0",
     "http-status": "^1.0.1",
     "mongodb": "^3.0.5",

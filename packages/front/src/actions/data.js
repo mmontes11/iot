@@ -12,7 +12,7 @@ import { SocketController } from "helpers/socketController";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { RESET } from "constants/actionTypes/common";
 import * as fromState from "reducers";
-import { TYPE, OBSERVATION, GROUPBY, THING } from "constants/params";
+import { TYPE, OBSERVATION, GROUP_BY, THING } from "constants/params";
 
 const getParams = (filterItems, observation, groupBy, thing, timePeriod, startDate, endDate) => {
   let params = {
@@ -153,7 +153,7 @@ export const getData = () => (dispatch, getState) => {
   const filterItems = state.filters.items;
   const type = fromState.getParam(state, TYPE).selectedItem;
   const observation = fromState.getParam(state, OBSERVATION).selectedItem;
-  const groupBy = fromState.getParam(state, GROUPBY).selectedItem;
+  const groupBy = fromState.getParam(state, GROUP_BY).selectedItem;
   const thing = state.filters.thingFilter.selectedItem;
   const {
     timePeriod: { selectedItem: selectedTimePeriod },

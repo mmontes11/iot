@@ -1,12 +1,20 @@
+import express from "express";
+import expressBasicAuth from "express-basic-auth";
+import { derivedConfig } from "common/config";
 import authController from "../controllers/rest/authController";
 import validationController from "../controllers/rest/validationController";
-import { getRouterWithBasicAuth } from "../helpers/router";
 
-const router = getRouterWithBasicAuth();
+const router = express.Router();
 
 router.route("/").post(validationController.validateCheckAuth, authController.checkAuth);
 
-router.route("/user").post(validationController.validateCreateUserIfNotExists, authController.createUserIfNotExists);
+router
+  .route("/user")
+  .post(
+    expressBasicAuth({ users: derivedConfig.backBasicAuthUsers }),
+    validationController.validateCreateUserIfNotExists,
+    authController.createUserIfNotExists,
+  );
 
 router.route("/token").post(authController.getToken);
 

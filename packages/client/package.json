@@ -1,6 +1,6 @@
 {
   "name": "@mmontes11/iot-client",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "ES6 client library for consuming IoT server REST API",
   "license": "MIT",
   "private": false,
@@ -12,8 +12,6 @@
   "scripts": {
     "install:submodules": "git submodule foreach npm install",
     "lint": "eslint . --fix",
-    "test": "cross-env NODE_ENV=test nyc mocha --timeout 10000 test",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "clean": "rm -rf dist/*",
     "prebuild": "npm run clean",
     "build": "babel -d dist/ src/",
@@ -46,11 +44,12 @@
   "homepage": "https://github.com/mmontes11/iot#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "back": "^2.0.2",
-    "common": "^2.0.2",
+    "back": "^2.0.4",
+    "common": "^2.0.4",
+    "cross-fetch": "^3.0.4",
     "http-status": "^1.0.1",
     "node-persist": "^3.0.1",
-    "restler": "^3.4.0",
+    "query-string": "^6.8.3",
     "underscore": "^1.9.0",
     "winston": "^3.0.0",
     "winston-transport": "^4.2.0"
@@ -63,12 +62,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
-    "chai": "^4.1.1",
-    "chai-as-promised": "^7.1.1",
-    "coveralls": "^3.0.0",
     "cross-env": "^5.1.4",
-    "eslint-config-mmontes11-node": "^1.0.5",
-    "mocha": "^3.5.0",
-    "nyc": "^11.7.1"
+    "eslint-config-mmontes11-node": "^1.0.5"
   }
 }
