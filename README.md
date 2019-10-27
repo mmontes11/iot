@@ -63,35 +63,15 @@ $ ./scripts/run-pro-rpi.sh
 $ ./scripts/run-pro.sh
 ```
 
+### Things
+
+Once everything is up and running, it is time to start deploying things:
+- [IoT raspi sensors](https://github.com/mmontes11/iot-raspi-sensors)
+- [IoT raspi door](https://github.com/mmontes11/iot-raspi-door)
+
 ## Client
 
-[![NPM](https://nodei.co/npm/@mmontes11/iot-client.png)](https://nodei.co/npm/@mmontes11/iot-client)
-
-```bash
-$ npm i --save @mmontes11/iot-client
-```
-
-```javascript
-import { IoTClient } from "@mmontes11/iot-client";
-
-const iotClient = new IoTClient({
-  url: 'http://localhost:8000',
-  username: 'foo',
-  password: 'bar',
-  basicAuthUsername: 'foo',
-  basicAuthPassword: 'bar'
-});
-
-try {
-  const res = await iotClient.observationsService.create({
-      observations: observations,
-      thing: thing
-  });
-  console.log(res);
-} catch (err) {
-  console.log(err);
-}
-```
+See [client README](./packages/client/README.md).
 
 ## Postman
 
