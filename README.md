@@ -65,33 +65,7 @@ $ ./scripts/run-pro.sh
 
 ## Client
 
-[![NPM](https://nodei.co/npm/@mmontes11/iot-client.png)](https://nodei.co/npm/@mmontes11/iot-client)
-
-```bash
-$ npm i --save @mmontes11/iot-client
-```
-
-```javascript
-import { IoTClient } from "@mmontes11/iot-client";
-
-const iotClient = new IoTClient({
-  url: 'http://localhost:8000',
-  username: 'foo',
-  password: 'bar',
-  basicAuthUsername: 'foo',
-  basicAuthPassword: 'bar'
-});
-
-try {
-  const res = await iotClient.observationsService.create({
-      observations: observations,
-      thing: thing
-  });
-  console.log(res);
-} catch (err) {
-  console.log(err);
-}
-```
+See [client README](./packages/client/README.md).
 
 ## Postman
 
