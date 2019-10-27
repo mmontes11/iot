@@ -63,7 +63,7 @@ $ ./scripts/run-pro-rpi.sh
 $ ./scripts/run-pro.sh
 ```
 
-### Things
+## Things
 
 Once everything is up and running, it is time to start deploying things:
 - [IoT raspi sensors](https://github.com/mmontes11/iot-raspi-sensors)
