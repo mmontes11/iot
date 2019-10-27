@@ -1,6 +1,6 @@
 {
   "name": "biot",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Telegram IoT bot that notifies you about measurements and events in your things.",
   "main": "src/index.js",
   "scripts": {
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/mmontes11/iot#readme",
   "dependencies": {
-    "@mmontes11/iot-client": "^2.0.4",
+    "@mmontes11/iot-client": "^2.0.5",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "common": "^2.0.4",
