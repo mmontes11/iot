@@ -5,7 +5,7 @@ import storage from "./storage";
 import log from "../utils/log";
 
 const tokenKey = "token";
-const { BIOT_URL, BACK_BASIC_AUTH_USER, BACK_BASIC_AUTH_PASSWORD, BIOT_USER, BIOT_PASSWORD } = process.env;
+const { BIOT_URL, BIOT_BASIC_AUTH_USER, BIOT_BASIC_AUTH_PASSWORD, BIOT_USER, BIOT_PASSWORD } = process.env;
 
 class TokenHandler {
   static getTokenFromStorage() {
@@ -153,6 +153,6 @@ class BiotClient {
   }
 }
 
-const biotClient = new BiotClient(BIOT_URL, BACK_BASIC_AUTH_USER, BACK_BASIC_AUTH_PASSWORD, BIOT_USER, BIOT_PASSWORD);
+const biotClient = new BiotClient(BIOT_URL, BIOT_BASIC_AUTH_USER, BIOT_BASIC_AUTH_PASSWORD, BIOT_USER, BIOT_PASSWORD);
 
 export default biotClient;
