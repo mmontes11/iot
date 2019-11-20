@@ -1,6 +1,6 @@
 {
   "name": "back",
-  "version": "2.0.4",
+  "version": "2.0.8",
   "description": "Generic purpose ES6 NodeJS + MongoDB + Redis IoT backend",
   "author": "Martín Montes <martin11lrx@gmail.com>",
   "license": "MIT",
