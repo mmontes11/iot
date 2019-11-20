@@ -20,6 +20,7 @@ mongoose.connection.on("connected", () => {
 mongoose.connection.on("error", err => {
   logError(`Error in MongoDB ${MONGO_URL}:`);
   logError(err);
+  connectWithRetry();
 });
 mongoose.connection.on("disconnected", () => {
   logInfo(`Disconnected from MongoDB ${MONGO_URL}`);
