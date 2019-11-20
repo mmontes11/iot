@@ -1,6 +1,6 @@
 {
   "name": "back",
-  "version": "2.0.4",
+  "version": "2.0.9",
   "description": "Generic purpose ES6 NodeJS + MongoDB + Redis IoT backend",
   "author": "Martín Montes <martin11lrx@gmail.com>",
   "license": "MIT",
@@ -62,7 +62,7 @@
     "jsonwebtoken": "^8.5.1",
     "method-override": "^2.3.5",
     "moment": "^2.22.1",
-    "mongoose": "^5.2.0",
+    "mongoose": "^5.7.12",
     "mongoose-geojson-schema": "^2.1.2",
     "redis": "^2.6.5",
     "request-ip": "^2.0.2",
