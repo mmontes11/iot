@@ -1,7 +1,7 @@
 {
   "name": "iot",
   "version": "1.1.0",
-  "description": "Generic purpose Internet of Things platform",
+  "description": "General purpose Internet of Things platform",
   "devDependencies": {
     "lerna": "^3.16.4"
   },
