@@ -407,6 +407,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                                 disabled={false}
                                 id="login-button"
                                 onClick={[Function]}
+                                type="button"
                               >
                                 Login
                               </button>
@@ -834,6 +835,7 @@ exports[`containers/login renders login in loading state 1`] = `
                                 disabled={true}
                                 id="login-button"
                                 onClick={[Function]}
+                                type="button"
                               >
                                 Login
                               </button>
@@ -1261,6 +1263,7 @@ exports[`containers/login simulates successful login 1`] = `
                                 disabled={false}
                                 id="login-button"
                                 onClick={[Function]}
+                                type="button"
                               >
                                 Login
                               </button>
@@ -1828,6 +1831,7 @@ exports[`containers/login simulates successful login 3`] = `
                                 disabled={false}
                                 id="login-button"
                                 onClick={[Function]}
+                                type="button"
                               >
                                 Login
                               </button>

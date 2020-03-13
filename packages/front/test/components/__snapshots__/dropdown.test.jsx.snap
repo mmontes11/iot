@@ -216,6 +216,7 @@ exports[`components/dropdown renders in active state 1`] = `
               className="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span>
                 <FormattedMessage
@@ -507,6 +508,7 @@ exports[`components/dropdown renders in disabled state 1`] = `
               className="button"
               disabled={true}
               onClick={[Function]}
+              type="button"
             >
               <span>
                 <FormattedMessage
@@ -798,6 +800,7 @@ exports[`components/dropdown renders in initial state 1`] = `
               className="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span>
                 <FormattedMessage
@@ -1089,6 +1092,7 @@ exports[`components/dropdown renders in loading state 1`] = `
               className="button is-loading"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span>
                 <FormattedMessage

@@ -490,6 +490,7 @@ exports[`containers/stats renders stats 1`] = `
                                                     className="button"
                                                     disabled={false}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -551,6 +552,7 @@ exports[`containers/stats renders stats 1`] = `
                                                     className="button"
                                                     disabled={true}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -592,6 +594,7 @@ exports[`containers/stats renders stats 1`] = `
                                               className="button is-warning is-fullwidth"
                                               disabled={true}
                                               onClick={[Function]}
+                                              type="button"
                                             >
                                               <FormattedMessage
                                                 id="Reset"
@@ -1482,6 +1485,7 @@ exports[`containers/stats renders stats 1`] = `
                                                     className="button is-primary"
                                                     disabled={false}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -2066,6 +2070,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                     className="button"
                                                     disabled={false}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -2127,6 +2132,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                     className="button"
                                                     disabled={true}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -2168,6 +2174,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                               className="button is-warning is-fullwidth"
                                               disabled={true}
                                               onClick={[Function]}
+                                              type="button"
                                             >
                                               <FormattedMessage
                                                 id="Reset"
@@ -2358,6 +2365,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                     className="button is-primary"
                                                     disabled={false}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -2942,6 +2950,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                     className="button"
                                                     disabled={false}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -3003,6 +3012,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                     className="button"
                                                     disabled={true}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage
@@ -3044,6 +3054,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                               className="button is-warning is-fullwidth"
                                               disabled={true}
                                               onClick={[Function]}
+                                              type="button"
                                             >
                                               <FormattedMessage
                                                 id="Reset"
@@ -3249,6 +3260,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                     className="button is-primary"
                                                     disabled={false}
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span>
                                                       <FormattedMessage

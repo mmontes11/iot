@@ -23,7 +23,12 @@ const ParamsPanel = ({ params, reset }) => (
         );
       })}
       <div className="column is-2">
-        <button className="button is-warning is-fullwidth" disabled={reset.isDisabled} onClick={() => reset.onReset()}>
+        <button
+          type="button"
+          className="button is-warning is-fullwidth"
+          disabled={reset.isDisabled}
+          onClick={() => reset.onReset()}
+        >
           <FormattedMessage id="Reset" />
           <span className="icon is-small">
             <i className="fas fa-eraser" aria-hidden="true" />

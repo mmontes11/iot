@@ -18,7 +18,7 @@ const Modal = ({ isActive, onCloseClick, messageStyle, title, subTitle }) => {
           <div className="message-body has-text-centered">{subTitle}</div>
         </article>
       </div>
-      <button className="modal-close is-large" aria-label="close" onClick={onCloseClick} />
+      <button type="button" className="modal-close is-large" aria-label="close" onClick={onCloseClick} />
     </div>
   );
 };

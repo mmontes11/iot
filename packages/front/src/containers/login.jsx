@@ -50,6 +50,7 @@ const Login = ({ intl: { formatMessage }, username, password, isLoading, setUser
                   </div>
                 </div>
                 <button
+                  type="button"
                   id="login-button"
                   className={btnClass}
                   onClick={event => {
@@ -93,8 +94,4 @@ const withConnect = connect(
   authActions,
 );
 
-export default compose(
-  withConnect,
-  withResetOnUnmount,
-  injectIntl,
-)(Login);
+export default compose(withConnect, withResetOnUnmount, injectIntl)(Login);

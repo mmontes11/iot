@@ -17,6 +17,7 @@ const ThingFilter = ({ thingFilter }) => (
       </div>
       <div className="column is-center">
         <button
+          type="button"
           id="delete-button"
           className="delete is-medium"
           onClick={() => thingFilter.onDelete(THING_FILTER_TYPE)}

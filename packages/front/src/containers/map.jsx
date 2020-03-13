@@ -36,10 +36,9 @@ Map.defaultProps = {
   point: null,
 };
 
-const withConnect = connect(
-  state => ({ isDialogOpened: state.app.isMapDialogOpened }),
-  { toggleDialog: toggleMapDialog },
-);
+const withConnect = connect(state => ({ isDialogOpened: state.app.isMapDialogOpened }), {
+  toggleDialog: toggleMapDialog,
+});
 
 const withGoogleMapProps = withProps(props => {
   const point = props.marker && props.marker.point;
@@ -59,9 +58,4 @@ const withGoogleMapProps = withProps(props => {
   };
 });
 
-export default compose(
-  withConnect,
-  withGoogleMapProps,
-  withScriptjs,
-  withGoogleMap,
-)(Map);
+export default compose(withConnect, withGoogleMapProps, withScriptjs, withGoogleMap)(Map);

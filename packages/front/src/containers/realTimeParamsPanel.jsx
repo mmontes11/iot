@@ -5,6 +5,7 @@ import ParamsPanel from "components/paramsPanel";
 import { THING, TYPE } from "constants/params";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
+import { thingShape, paramShape } from "types";
 import { isParamDisabled } from "../helpers/paramsPanel";
 
 const RealTimeParamsPanel = ({
@@ -54,8 +55,8 @@ const RealTimeParamsPanel = ({
 RealTimeParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
-  thing: PropTypes.shape({}).isRequired,
-  type: PropTypes.shape({}).isRequired,
+  thing: thingShape.isRequired,
+  type: paramShape.isRequired,
   isResetDisabled: PropTypes.bool.isRequired,
   selectThing: PropTypes.func.isRequired,
   updateThing: PropTypes.func.isRequired,

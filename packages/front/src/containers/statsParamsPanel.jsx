@@ -6,6 +6,7 @@ import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
 import { TYPE, OBSERVATION } from "constants/params";
 import { isParamDisabled } from "helpers/paramsPanel";
+import { paramShape } from "types";
 
 const StatsParamsPanel = ({
   onParamsSelected,
@@ -54,8 +55,8 @@ const StatsParamsPanel = ({
 StatsParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
-  type: PropTypes.shape({}).isRequired,
-  observation: PropTypes.shape({}).isRequired,
+  type: paramShape.isRequired,
+  observation: paramShape.isRequired,
   isResetDisabled: PropTypes.bool.isRequired,
   selectType: PropTypes.func.isRequired,
   updateType: PropTypes.func.isRequired,

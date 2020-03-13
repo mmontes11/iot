@@ -7,6 +7,7 @@ import { pointToLatLng } from "helpers/geometry";
 import { formatDateTime } from "helpers/date";
 import { injectIntl, intlShape, FormattedMessage } from "react-intl";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
+import { thingShape } from "types";
 
 const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onStatsClick, onDataClick }) => (
   <div className="card">
@@ -52,7 +53,7 @@ const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onStatsClick, on
 
 ThingDetail.propTypes = {
   intl: intlShape.isRequired,
-  thing: PropTypes.shape({}).isRequired,
+  thing: thingShape.isRequired,
   onStatsClick: PropTypes.func.isRequired,
   onDataClick: PropTypes.func.isRequired,
 };

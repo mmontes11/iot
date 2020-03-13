@@ -619,6 +619,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
                                   aria-label="close"
                                   className="modal-close is-large"
                                   onClick={[Function]}
+                                  type="button"
                                 />
                               </div>
                             </Modal>
@@ -2012,6 +2013,7 @@ exports[`containers/things renders things with loaded things 1`] = `
                                   aria-label="close"
                                   className="modal-close is-large"
                                   onClick={[Function]}
+                                  type="button"
                                 />
                               </div>
                             </Modal>
@@ -3307,6 +3309,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                     className="button"
                                                     id="event-stats-button"
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span
                                                       className="icon"
@@ -3328,6 +3331,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                     className="button"
                                                     id="measurement-stats-button"
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span
                                                       className="icon"
@@ -3486,6 +3490,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                   aria-label="close"
                                   className="modal-close is-large"
                                   onClick={[Function]}
+                                  type="button"
                                 />
                               </div>
                             </Modal>
@@ -4811,6 +4816,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                     className="button"
                                                     id="event-stats-button"
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span
                                                       className="icon"
@@ -4832,6 +4838,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                     className="button"
                                                     id="measurement-stats-button"
                                                     onClick={[Function]}
+                                                    type="button"
                                                   >
                                                     <span
                                                       className="icon"
@@ -4990,6 +4997,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                   aria-label="close"
                                   className="modal-close is-large"
                                   onClick={[Function]}
+                                  type="button"
                                 />
                               </div>
                             </Modal>

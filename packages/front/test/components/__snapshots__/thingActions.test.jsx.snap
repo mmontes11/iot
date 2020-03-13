@@ -27,6 +27,7 @@ exports[`components/thingActions renders 1`] = `
     className="button"
     id="event-stats-button"
     onClick={[Function]}
+    type="button"
   >
     <span
       className="icon"
@@ -44,6 +45,7 @@ exports[`components/thingActions renders 1`] = `
     className="button"
     id="measurement-stats-button"
     onClick={[Function]}
+    type="button"
   >
     <span
       className="icon"

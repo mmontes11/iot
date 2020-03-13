@@ -8,6 +8,7 @@ import * as dateFilterActions from "actions/dateFilter";
 import * as fromState from "reducers";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { TYPE } from "constants/params";
+import { paramShape, dateFilterShape } from "types";
 
 const FiltersPanelContainer = ({
   onFiltersSelected,
@@ -114,8 +115,8 @@ FiltersPanelContainer.propTypes = {
   onFiltersSelected: PropTypes.func.isRequired,
   type: PropTypes.shape({}).isRequired,
   statsType: PropTypes.string,
-  thingFilter: PropTypes.shape({}).isRequired,
-  dateFilter: PropTypes.shape({}).isRequired,
+  thingFilter: paramShape.isRequired,
+  dateFilter: dateFilterShape.isRequired,
   selectedFilters: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectFilterType: PropTypes.func.isRequired,
   addFilterType: PropTypes.func.isRequired,

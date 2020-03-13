@@ -39,8 +39,4 @@ const withConnect = connect(
   { setShowError: appActions.setShowError },
 );
 
-export default compose(
-  withRouter,
-  withConnect,
-  injectIntl,
-)(App);
+export default compose(withRouter, withConnect, injectIntl)(App);

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FormattedMessage } from "react-intl";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
+import { thingShape } from "types";
 
 const ThingActions = ({ thing, onStatsClick }) => (
   <p className="buttons is-horizontal-center">
@@ -14,7 +15,7 @@ const ThingActions = ({ thing, onStatsClick }) => (
       </a>
     )}
     {thing.supportedObservationTypes.event.length > 0 && (
-      <button id="event-stats-button" className="button" onClick={() => onStatsClick(EVENT_TYPE)}>
+      <button type="button" id="event-stats-button" className="button" onClick={() => onStatsClick(EVENT_TYPE)}>
         <span className="icon">
           <i className="fas fa-chart-bar" />
         </span>
@@ -22,7 +23,12 @@ const ThingActions = ({ thing, onStatsClick }) => (
       </button>
     )}
     {thing.supportedObservationTypes.measurement.length > 0 && (
-      <button id="measurement-stats-button" className="button" onClick={() => onStatsClick(MEASUREMENT_TYPE)}>
+      <button
+        type="button"
+        id="measurement-stats-button"
+        className="button"
+        onClick={() => onStatsClick(MEASUREMENT_TYPE)}
+      >
         <span className="icon">
           <i className="fas fa-chart-bar" />
         </span>
@@ -33,7 +39,7 @@ const ThingActions = ({ thing, onStatsClick }) => (
 );
 
 ThingActions.propTypes = {
-  thing: PropTypes.shape({}).isRequired,
+  thing: thingShape.isRequired,
   onStatsClick: PropTypes.func.isRequired,
 };
 

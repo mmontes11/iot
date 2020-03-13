@@ -35,6 +35,7 @@ exports[`components/modal renders when is active 1`] = `
     aria-label="close"
     className="modal-close is-large"
     onClick={[MockFunction]}
+    type="button"
   />
 </div>
 `;

@@ -870,6 +870,7 @@ exports[`containers/app renders app in error state 1`] = `
                                             >
                                               <button
                                                 className="navbar-link button is-white"
+                                                type="button"
                                               >
                                                 <LanguageItem
                                                   language="en"
@@ -898,6 +899,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                   className="navbar-item button is-white"
                                                   key="es"
                                                   onClick={[Function]}
+                                                  type="button"
                                                 >
                                                   <LanguageItem
                                                     language="es"
@@ -936,6 +938,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                 className="button is-primary"
                                                 id="logout-button"
                                                 onClick={[Function]}
+                                                type="button"
                                               >
                                                 <span
                                                   className="icon"
@@ -1438,6 +1441,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                         className="button"
                                                                         disabled={false}
                                                                         onClick={[Function]}
+                                                                        type="button"
                                                                       >
                                                                         <span>
                                                                           <FormattedMessage
@@ -1499,6 +1503,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                         className="button"
                                                                         disabled={true}
                                                                         onClick={[Function]}
+                                                                        type="button"
                                                                       >
                                                                         <span>
                                                                           <FormattedMessage
@@ -1540,6 +1545,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                   className="button is-warning is-fullwidth"
                                                                   disabled={true}
                                                                   onClick={[Function]}
+                                                                  type="button"
                                                                 >
                                                                   <FormattedMessage
                                                                     id="Reset"
@@ -1730,6 +1736,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                         className="button is-primary"
                                                                         disabled={false}
                                                                         onClick={[Function]}
+                                                                        type="button"
                                                                       >
                                                                         <span>
                                                                           <FormattedMessage
@@ -1862,6 +1869,7 @@ exports[`containers/app renders app in error state 1`] = `
                             aria-label="close"
                             className="modal-close is-large"
                             onClick={[Function]}
+                            type="button"
                           />
                         </div>
                       </Modal>
@@ -2712,6 +2720,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                             >
                                               <button
                                                 className="navbar-link button is-white"
+                                                type="button"
                                               >
                                                 <LanguageItem
                                                   language="en"
@@ -2740,6 +2749,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                                   className="navbar-item button is-white"
                                                   key="es"
                                                   onClick={[Function]}
+                                                  type="button"
                                                 >
                                                   <LanguageItem
                                                     language="es"
@@ -2778,6 +2788,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                                 className="button is-primary"
                                                 id="logout-button"
                                                 onClick={[Function]}
+                                                type="button"
                                               >
                                                 <span
                                                   className="icon"
@@ -3299,6 +3310,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                                       aria-label="close"
                                                       className="modal-close is-large"
                                                       onClick={[Function]}
+                                                      type="button"
                                                     />
                                                   </div>
                                                 </Modal>
@@ -3356,6 +3368,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                             aria-label="close"
                             className="modal-close is-large"
                             onClick={[Function]}
+                            type="button"
                           />
                         </div>
                       </Modal>
@@ -4063,6 +4076,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                               disabled={false}
                                               id="login-button"
                                               onClick={[Function]}
+                                              type="button"
                                             >
                                               Login
                                             </button>
@@ -4118,6 +4132,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                             aria-label="close"
                             className="modal-close is-large"
                             onClick={[Function]}
+                            type="button"
                           />
                         </div>
                       </Modal>
@@ -4825,6 +4840,7 @@ exports[`containers/app renders the app without auth 1`] = `
                                               disabled={false}
                                               id="login-button"
                                               onClick={[Function]}
+                                              type="button"
                                             >
                                               Login
                                             </button>
@@ -4880,6 +4896,7 @@ exports[`containers/app renders the app without auth 1`] = `
                             aria-label="close"
                             className="modal-close is-large"
                             onClick={[Function]}
+                            type="button"
                           />
                         </div>
                       </Modal>
@@ -5766,6 +5783,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                             >
                                               <button
                                                 className="navbar-link button is-white"
+                                                type="button"
                                               >
                                                 <LanguageItem
                                                   language="en"
@@ -5794,6 +5812,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                   className="navbar-item button is-white"
                                                   key="es"
                                                   onClick={[Function]}
+                                                  type="button"
                                                 >
                                                   <LanguageItem
                                                     language="es"
@@ -5832,6 +5851,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                 className="button is-primary"
                                                 id="logout-button"
                                                 onClick={[Function]}
+                                                type="button"
                                               >
                                                 <span
                                                   className="icon"
@@ -6334,6 +6354,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                         className="button"
                                                                         disabled={false}
                                                                         onClick={[Function]}
+                                                                        type="button"
                                                                       >
                                                                         <span>
                                                                           <FormattedMessage
@@ -6395,6 +6416,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                         className="button"
                                                                         disabled={true}
                                                                         onClick={[Function]}
+                                                                        type="button"
                                                                       >
                                                                         <span>
                                                                           <FormattedMessage
@@ -6436,6 +6458,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                   className="button is-warning is-fullwidth"
                                                                   disabled={true}
                                                                   onClick={[Function]}
+                                                                  type="button"
                                                                 >
                                                                   <FormattedMessage
                                                                     id="Reset"
@@ -6626,6 +6649,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                         className="button is-primary"
                                                                         disabled={false}
                                                                         onClick={[Function]}
+                                                                        type="button"
                                                                       >
                                                                         <span>
                                                                           <FormattedMessage
@@ -6758,6 +6782,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                             aria-label="close"
                             className="modal-close is-large"
                             onClick={[Function]}
+                            type="button"
                           />
                         </div>
                       </Modal>
@@ -7608,6 +7633,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                             >
                                               <button
                                                 className="navbar-link button is-white"
+                                                type="button"
                                               >
                                                 <LanguageItem
                                                   language="en"
@@ -7636,6 +7662,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                                   className="navbar-item button is-white"
                                                   key="es"
                                                   onClick={[Function]}
+                                                  type="button"
                                                 >
                                                   <LanguageItem
                                                     language="es"
@@ -7674,6 +7701,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                                 className="button is-primary"
                                                 id="logout-button"
                                                 onClick={[Function]}
+                                                type="button"
                                               >
                                                 <span
                                                   className="icon"
@@ -8195,6 +8223,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                                       aria-label="close"
                                                       className="modal-close is-large"
                                                       onClick={[Function]}
+                                                      type="button"
                                                     />
                                                   </div>
                                                 </Modal>
@@ -8252,6 +8281,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                             aria-label="close"
                             className="modal-close is-large"
                             onClick={[Function]}
+                            type="button"
                           />
                         </div>
                       </Modal>

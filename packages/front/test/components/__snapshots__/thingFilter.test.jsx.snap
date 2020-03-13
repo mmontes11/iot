@@ -36,6 +36,7 @@ exports[`components/thingFilter renders ThingFilter in initial state 1`] = `
         id="delete-button"
         onClick={[Function]}
         tabIndex={0}
+        type="button"
       >
         <FormattedMessage
           id="Delete"

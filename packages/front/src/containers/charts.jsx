@@ -61,7 +61,7 @@ const Charts = ({ chartType, items, things, isLoading }) => {
 
 Charts.propTypes = {
   chartType: PropTypes.oneOf([BARCHART, LINECHART, REALTIME]).isRequired,
-  items: PropTypes.arrayOf(PropTypes.shape({})),
+  items: PropTypes.arrayOf(PropTypes.shape({ type: PropTypes.string, unit: PropTypes.string })),
   things: PropTypes.arrayOf(PropTypes.string),
   isLoading: PropTypes.bool.isRequired,
 };

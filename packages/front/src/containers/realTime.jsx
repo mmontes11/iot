@@ -13,6 +13,7 @@ class RealTime extends Component {
   componentWillUnmount() {
     store.dispatch(finishRealTimeData());
   }
+
   render() {
     const { onParamsSelected, onReset } = this.props;
     return (

@@ -67,7 +67,7 @@ const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
           <div className="navbar-item">
             <div className="field">
               <p className="control">
-                <button id="logout-button" className="button is-primary" onClick={() => logout()}>
+                <button type="button" id="logout-button" className="button is-primary" onClick={() => logout()}>
                   <span className="icon">
                     <i className="fa fa-user" />
                   </span>
@@ -95,7 +95,4 @@ const withConnect = connect(
   { logout: actionsAuth.logout, toggleHamburgerMenu: appActions.toggleHamburgerMenu },
 );
 
-export default compose(
-  withRouter,
-  withConnect,
-)(Navbar);
+export default compose(withRouter, withConnect)(Navbar);

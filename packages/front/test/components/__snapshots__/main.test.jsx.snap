@@ -590,6 +590,7 @@ exports[`components/main renders a main in / path 1`] = `
                                   >
                                     <button
                                       className="navbar-link button is-white"
+                                      type="button"
                                     >
                                       <LanguageItem
                                         language="en"
@@ -618,6 +619,7 @@ exports[`components/main renders a main in / path 1`] = `
                                         className="navbar-item button is-white"
                                         key="es"
                                         onClick={[Function]}
+                                        type="button"
                                       >
                                         <LanguageItem
                                           language="es"
@@ -656,6 +658,7 @@ exports[`components/main renders a main in / path 1`] = `
                                       className="button is-primary"
                                       id="logout-button"
                                       onClick={[Function]}
+                                      type="button"
                                     >
                                       <span
                                         className="icon"
@@ -1177,6 +1180,7 @@ exports[`components/main renders a main in / path 1`] = `
                                             aria-label="close"
                                             className="modal-close is-large"
                                             onClick={[Function]}
+                                            type="button"
                                           />
                                         </div>
                                       </Modal>
@@ -1791,6 +1795,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                                   >
                                     <button
                                       className="navbar-link button is-white"
+                                      type="button"
                                     >
                                       <LanguageItem
                                         language="en"
@@ -1819,6 +1824,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                                         className="navbar-item button is-white"
                                         key="es"
                                         onClick={[Function]}
+                                        type="button"
                                       >
                                         <LanguageItem
                                           language="es"
@@ -1857,6 +1863,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                                       className="button is-primary"
                                       id="logout-button"
                                       onClick={[Function]}
+                                      type="button"
                                     >
                                       <span
                                         className="icon"
@@ -2378,6 +2385,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                                             aria-label="close"
                                             className="modal-close is-large"
                                             onClick={[Function]}
+                                            type="button"
                                           />
                                         </div>
                                       </Modal>
@@ -3010,6 +3018,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                   >
                                     <button
                                       className="navbar-link button is-white"
+                                      type="button"
                                     >
                                       <LanguageItem
                                         language="en"
@@ -3038,6 +3047,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         className="navbar-item button is-white"
                                         key="es"
                                         onClick={[Function]}
+                                        type="button"
                                       >
                                         <LanguageItem
                                           language="es"
@@ -3076,6 +3086,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       className="button is-primary"
                                       id="logout-button"
                                       onClick={[Function]}
+                                      type="button"
                                     >
                                       <span
                                         className="icon"
@@ -3578,6 +3589,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                               className="button"
                                                               disabled={false}
                                                               onClick={[Function]}
+                                                              type="button"
                                                             >
                                                               <span>
                                                                 <FormattedMessage
@@ -3639,6 +3651,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                               className="button"
                                                               disabled={true}
                                                               onClick={[Function]}
+                                                              type="button"
                                                             >
                                                               <span>
                                                                 <FormattedMessage
@@ -3680,6 +3693,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                         className="button is-warning is-fullwidth"
                                                         disabled={true}
                                                         onClick={[Function]}
+                                                        type="button"
                                                       >
                                                         <FormattedMessage
                                                           id="Reset"
@@ -3870,6 +3884,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                               className="button is-primary"
                                                               disabled={false}
                                                               onClick={[Function]}
+                                                              type="button"
                                                             >
                                                               <span>
                                                                 <FormattedMessage
@@ -4559,6 +4574,7 @@ exports[`components/main renders a main in /things path 1`] = `
                                   >
                                     <button
                                       className="navbar-link button is-white"
+                                      type="button"
                                     >
                                       <LanguageItem
                                         language="en"
@@ -4587,6 +4603,7 @@ exports[`components/main renders a main in /things path 1`] = `
                                         className="navbar-item button is-white"
                                         key="es"
                                         onClick={[Function]}
+                                        type="button"
                                       >
                                         <LanguageItem
                                           language="es"
@@ -4625,6 +4642,7 @@ exports[`components/main renders a main in /things path 1`] = `
                                       className="button is-primary"
                                       id="logout-button"
                                       onClick={[Function]}
+                                      type="button"
                                     >
                                       <span
                                         className="icon"
@@ -5146,6 +5164,7 @@ exports[`components/main renders a main in /things path 1`] = `
                                             aria-label="close"
                                             className="modal-close is-large"
                                             onClick={[Function]}
+                                            type="button"
                                           />
                                         </div>
                                       </Modal>

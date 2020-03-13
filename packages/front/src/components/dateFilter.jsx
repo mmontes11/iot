@@ -47,13 +47,24 @@ const DateFilter = ({ intl: { formatMessage }, dateFilter }) => {
       )}
       <div className="columns">
         <div className="column is-10">
-          <button id="time-period-button" className="button is-info" onClick={() => dateFilter.selector.onChange()}>
+          <button
+            type="button"
+            id="time-period-button"
+            className="button is-info"
+            onClick={() => dateFilter.selector.onChange()}
+          >
             {(dateFilter.selector.isCustomSelected && formatMessage({ id: "Time period" })) ||
               formatMessage({ id: "Custom" })}
           </button>
         </div>
         <div className="column is-center">
-          <button id="delete-button" className="delete is-medium" onClick={() => deleteFilter()} tabIndex={0}>
+          <button
+            type="button"
+            id="delete-button"
+            className="delete is-medium"
+            onClick={() => deleteFilter()}
+            tabIndex={0}
+          >
             {formatMessage({ id: "Delete" })}
           </button>
         </div>

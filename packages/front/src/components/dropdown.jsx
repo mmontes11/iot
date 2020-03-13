@@ -21,6 +21,7 @@ const Dropdown = ({
     <div className={dropdownClass}>
       <div className="dropdown-trigger">
         <button
+          type="button"
           className={buttonClass}
           aria-haspopup="true"
           aria-controls="dropdown-menu"

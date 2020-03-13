@@ -16,10 +16,12 @@ import { defaultTimePeriodFilter, defaultGroupBy } from "config/params";
 
 class Things extends React.Component {
   componentDidMount() {
-    if (this.props.things.length === 0) {
-      this.props.getThings();
+    const { things, getThings } = this.props;
+    if (things.length === 0) {
+      getThings();
     }
   }
+
   componentDidUpdate() {
     const {
       selectedThing,
@@ -27,6 +29,7 @@ class Things extends React.Component {
       match: {
         params: { thing: thingName },
       },
+      showNotFoundError,
     } = this.props;
     if (selectedThing === null && things.length > 0 && thingName) {
       const thing = things.find(t => t.name === thingName);
@@ -34,22 +37,31 @@ class Things extends React.Component {
         this._selectThing(thing);
       } else {
         this._resetPathToRoot();
-        this.props.showNotFoundError(true);
+        showNotFoundError(true);
       }
     }
   }
-  _isSelected = thing => this.props.selectedThing !== null && this.props.selectedThing.name === thing.name;
+
+  _isSelected = thing => {
+    const { selectedThing } = this.props;
+    return selectedThing !== null && selectedThing.name === thing.name;
+  };
+
   _selectThing = thing => {
-    this.props.selectThing(thing);
+    const { selectThing, history } = this.props;
+    selectThing(thing);
     if (this._isSelected(thing)) {
       this._resetPathToRoot();
     } else {
-      this.props.history.push(`/things/${thing.name}`);
+      history.push(`/things/${thing.name}`);
     }
   };
+
   _resetPathToRoot = () => {
-    this.props.history.push("/things");
+    const { history } = this.props;
+    history.push("/things");
   };
+
   _onStatsClick = (type, thing) => {
     const supportedEvents = thing.supportedObservationTypes.event;
     const supportedMeasurements = thing.supportedObservationTypes.measurement;
@@ -60,14 +72,18 @@ class Things extends React.Component {
       url = `/stats/${type}/${supportedMeasurements[0]}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`;
     }
     if (url) {
-      this.props.history.push(url);
+      const { history } = this.props;
+      history.push(url);
     }
   };
+
   _onDataClick = (type, observation, thing) => {
-    this.props.history.push(
+    const { history } = this.props;
+    history.push(
       `/data/${type}/${observation}/${defaultGroupBy}?thing=${thing.name}&timePeriod=${defaultTimePeriodFilter}`,
     );
   };
+
   render() {
     const {
       intl: { formatMessage },
@@ -131,7 +147,11 @@ Things.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
-  match: PropTypes.shape({}).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      thing: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 Things.defaultProps = {
@@ -154,9 +174,4 @@ const withConnect = connect(
   },
 );
 
-export default compose(
-  withConnect,
-  withRouter,
-  withResetOnUnmount,
-  injectIntl,
-)(Things);
+export default compose(withConnect, withRouter, withResetOnUnmount, injectIntl)(Things);
