@@ -7,10 +7,6 @@
   },
   "scripts": {
     "install": "lerna bootstrap",
-    "start:front": "cd packages/front && npm start",
-    "start:back": "cd packages/back && npm start",
-    "start:biot": "cd packages/biot && npm start",
-    "start:worker": "cd packages/worker && npm start",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "coverage": "lerna run coverage",
