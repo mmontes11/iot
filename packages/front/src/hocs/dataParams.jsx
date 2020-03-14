@@ -166,7 +166,7 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
     addTimePeriodFilter: PropTypes.func.isRequired,
     addCustomTimePeriodFilter: PropTypes.func.isRequired,
     match: PropTypes.shape({
-      params: PropTypes.arrayOf(PropTypes.string),
+      params: PropTypes.shape({}),
     }).isRequired,
     location: PropTypes.shape({
       search: PropTypes.string,
