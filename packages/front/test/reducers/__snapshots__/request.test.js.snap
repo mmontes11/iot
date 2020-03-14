@@ -19,7 +19,7 @@ Object {
 exports[`reducers/request reduces /_REQUEST_ERROR$/ 1`] = `
 Object {
   "error": undefined,
-  "pending": -1,
+  "pending": 0,
   "statusCode": undefined,
 }
 `;
@@ -27,7 +27,7 @@ Object {
 exports[`reducers/request reduces /_REQUEST_SUCCESS$/ 1`] = `
 Object {
   "error": undefined,
-  "pending": -1,
+  "pending": 0,
   "statusCode": undefined,
 }
 `;
@@ -51,7 +51,7 @@ Object {
 exports[`reducers/request simulates a flow of requests 1`] = `
 Object {
   "error": undefined,
-  "pending": -1,
+  "pending": 0,
   "statusCode": undefined,
 }
 `;

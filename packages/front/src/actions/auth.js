@@ -7,6 +7,7 @@ import {
   LOGIN_REQUEST_ERROR,
 } from "constants/actionTypes/auth";
 import { setShowError } from "actions/app";
+// eslint-disable-next-line import/no-cycle
 import iotClient from "lib/iotClient";
 
 export const isAuth = () => dispatch => {

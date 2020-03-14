@@ -7,7 +7,7 @@ class Socket {
   constructor(io) {
     this.io = io;
     this.numConnections = 0;
-    this.interval = 3000;
+    this.interval = 2000;
   }
   listen() {
     this.io.on("connection", socket => {
