@@ -7,7 +7,7 @@ services:
       - "${NGINX_MQTT_PORT}:${NGINX_MQTT_PORT}"
     depends_on:
       - back
-    restart: always
+    restart: unless-stopped
   back:
     build:
       context: .
@@ -15,7 +15,7 @@ services:
     env_file: .env
     expose:
       - "${BACK_PORT}"
-    restart: always
+    restart: unless-stopped
   front:
     build:
       context: .
@@ -26,7 +26,7 @@ services:
       - "${FRONT_PORT}"
     depends_on:
       - back
-    restart: always
+    restart: unless-stopped
   biot:
     build:
       context: .
@@ -36,7 +36,7 @@ services:
       - "${BIOT_PORT}"
     depends_on:
       - back
-    restart: always
+    restart: unless-stopped
   worker:
     build:
       context: .
@@ -44,4 +44,12 @@ services:
     env_file: .env
     expose:
       - "${WORKER_PORT}"
-    restart: always
+    restart: unless-stopped
+  thing:
+    build:
+      context: .
+      dockerfile: packages/thing/Dockerfile
+    env_file: .env
+    expose:
+      - "${THING_SOCKET_PORT}"
+    restart: unless-stopped

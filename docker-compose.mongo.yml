@@ -6,4 +6,4 @@ services:
       - "./data:/data/db"
     expose:
       - "${MONGO_PORT}"
-    restart: always
+    restart: unless-stopped
