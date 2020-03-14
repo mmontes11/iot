@@ -47,6 +47,10 @@ export class AuthService extends Service {
   logout() {
     return TokenHandler.invalidateToken();
   }
+  async refreshToken() {
+    await this.logout();
+    await this.getToken();
+  }
   async _getToken() {
     if (_.isUndefined(this.client.userCredentials)) {
       throw new Error("User credentials required");

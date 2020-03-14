@@ -4,7 +4,8 @@
   "description": "Telegram IoT bot that notifies you about measurements and events in your things.",
   "main": "src/index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon  src/index.js --exec babel-node",
+    "start": "cross-env NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "start:debug": "cross-env NODE_ENV=development babel-node --inspect-brk src/index.js",
     "lint": "eslint . --fix",
     "clean": "rm -rf dist/*",
     "prebuild": "npm run clean",

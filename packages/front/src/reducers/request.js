@@ -11,10 +11,12 @@ export default (state = initialState, { type, statusCode, error, preserveError }
     return { ...state, pending: state.pending + 1 };
   }
   if (/_REQUEST_SUCCESS$/.test(type)) {
-    return { ...state, pending: state.pending - 1, statusCode, error: null };
+    const pending = Math.max(0, state.pending - 1)
+    return { ...state, pending, statusCode, error: null };
   }
   if (/_REQUEST_ERROR$/.test(type)) {
-    return { ...state, pending: state.pending - 1, statusCode, error };
+    const pending = Math.max(0, state.pending - 1)
+    return { ...state, pending, statusCode, error };
   }
   if (type === RESET) {
     if (preserveError) {
