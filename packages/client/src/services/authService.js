@@ -56,6 +56,11 @@ export class AuthService extends Service {
       throw new Error("User credentials required");
     }
     const user = this.client.userCredentials;
-    return this.post("token", user);
+    const reqOpts = {
+      auth: false,
+      basicAuth: false,
+      retryOnUnauthorized: false,
+    };
+    return this.post("token", user, reqOpts);
   }
 }

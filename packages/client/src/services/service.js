@@ -49,8 +49,8 @@ export class Service {
     }
     return baseUrl;
   }
-  async _getAuthHeader(opts) {
-    const { auth = false, basicAuth = false } = opts;
+  async _getAuthHeader(reqOpts) {
+    const { auth = false, basicAuth = false } = reqOpts;
     if (auth) {
       const token = await this.client.authService.getToken();
       return { Authorization: `Bearer ${token}` };
@@ -61,13 +61,13 @@ export class Service {
     }
     return null;
   }
-  async _getHeaders(opts, extraHeaders = {}) {
+  async _getHeaders(reqOpts, extraHeaders = {}) {
     let headers = {
       Accept: "application/json",
       ...extraHeaders,
     };
 
-    const auth = await this._getAuthHeader(opts);
+    const auth = await this._getAuthHeader(reqOpts);
     if (auth) {
       headers = {
         ...headers,
@@ -100,12 +100,14 @@ export class Service {
       handleExpiredToken,
       authService: { logout },
     } = this.client;
+    const { auth, basicAuth, retryOnUnauthorized = true } = reqOpts;
+    const shouldRetry = (auth || basicAuth) && retryOnUnauthorized;
     const requestId = this._getRequestId();
     log.logRequest(requestId, url, fetchOpts);
     return new Promise(async (resolve, reject) => {
       try {
         let result = await this._performFetch(url, fetchOpts);
-        if (result.statusCode === UNAUTHORIZED) {
+        if (shouldRetry && result.statusCode === UNAUTHORIZED) {
           if (handleExpiredToken) {
             handleExpiredToken();
             reject(result);
