@@ -1,14 +1,13 @@
 import moment from "moment";
 import _ from "underscore";
 
-export const second = "second";
 export const minute = "minute";
 export const hour = "hour";
 export const day = "day";
 export const week = "week";
 export const month = "month";
 export const year = "year";
-export const orderedTimePeriods = [second, minute, hour, day, week, month, year];
+export const orderedTimePeriods = [minute, hour, day, week, month, year];
 const dateFormats = [moment.ISO_8601, "YYYY-MM-DD"];
 
 export class TimePeriod {

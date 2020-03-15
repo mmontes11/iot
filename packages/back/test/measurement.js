@@ -267,6 +267,9 @@ describe("Measurement", () => {
       chai
         .request(server)
         .get("/api/measurement/stats")
+        .query({
+          timePeriod: "month",
+        })
         .set("Authorization", auth())
         .end((err, res) => {
           should.exist(err);
@@ -345,6 +348,9 @@ describe("Measurement", () => {
         .request(server)
         .get("/api/measurement/stats")
         .query({
+          timePeriod: "month",
+        })
+        .query({
           longitude: -8.35,
         })
         .set("Authorization", auth())
@@ -373,6 +379,9 @@ describe("Measurement", () => {
       chai
         .request(server)
         .get("/api/measurement/stats")
+        .query({
+          timePeriod: "month",
+        })
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -463,6 +472,7 @@ describe("Measurement", () => {
         .get("/api/measurement/whatever/stats")
         .query({
           type: "whatever",
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -489,6 +499,7 @@ describe("Measurement", () => {
         .get("/api/measurement/stats")
         .query({
           type: "temperature",
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -566,22 +577,6 @@ describe("Measurement", () => {
       ];
       createMeasurements(measurements, done);
     });
-    it("gets raspberry measurement stats", done => {
-      chai
-        .request(server)
-        .get("/api/measurement/stats")
-        .query({
-          thing: "raspberry",
-        })
-        .set("Authorization", auth())
-        .end((err, res) => {
-          should.not.exist(err);
-          res.should.have.status(httpStatus.OK);
-          res.body.should.be.a("object");
-          res.body.stats.should.be.a("array");
-          done();
-        });
-    });
     it("gets raspberry measurement stats of a valid time period", done => {
       chai
         .request(server)
@@ -644,6 +639,7 @@ describe("Measurement", () => {
         .query({
           type: "temperature",
           thing: "raspberry",
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -712,6 +708,9 @@ describe("Measurement", () => {
             chai
               .request(server)
               .post("/api/measurement")
+              .query({
+                timePeriod: "month",
+              })
               .set("Authorization", auth())
               .send(measurementRequestBody)
               .end(err => {
@@ -732,6 +731,7 @@ describe("Measurement", () => {
         .query({
           longitude: -3.0167342,
           latitude: 16.7714039,
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -777,6 +777,7 @@ describe("Measurement", () => {
           longitude: -8.4115401,
           latitude: 43.3623436,
           maxDistance: 100000,
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -795,6 +796,7 @@ describe("Measurement", () => {
           longitude: -74.25,
           latitude: 40.69,
           maxDistance: 100000,
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -832,6 +834,8 @@ describe("Measurement", () => {
         .get("/api/measurement")
         .query({
           thing: "foo",
+          timePeriod: "month",
+          groupBy: "minute",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -875,6 +879,7 @@ describe("Measurement", () => {
         .get("/api/measurement")
         .query({
           groupBy: "minute",
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -890,23 +895,9 @@ describe("Measurement", () => {
         .request(server)
         .get("/api/measurement")
         .query({
+          groupBy: "minute",
           thing: "raspi-coruna",
-        })
-        .set("Authorization", auth())
-        .end((err, res) => {
-          should.not.exist(err);
-          res.should.have.status(httpStatus.OK);
-          res.body.should.be.a("object");
-          res.body.data.should.be.a("array");
-          done();
-        });
-    });
-    it("gets measurement data of an specific thing", done => {
-      chai
-        .request(server)
-        .get("/api/measurement")
-        .query({
-          thing: "raspi-coruna",
+          timePeriod: "month",
         })
         .set("Authorization", auth())
         .end((err, res) => {
@@ -922,6 +913,7 @@ describe("Measurement", () => {
         .request(server)
         .get("/api/measurement")
         .query({
+          groupBy: "minute",
           timePeriod: "month",
         })
         .set("Authorization", auth())
@@ -938,6 +930,7 @@ describe("Measurement", () => {
         .request(server)
         .get("/api/measurement")
         .query({
+          groupBy: "minute",
           startDate: moment()
             .utc()
             .subtract(1, "minute")

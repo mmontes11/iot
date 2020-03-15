@@ -58,6 +58,9 @@ const validateCommonParams = (
   res,
   next,
 ) => {
+  if (_.isUndefined(startDate) && _.isUndefined(endDate) && _.isUndefined(timePeriodReq)) {
+    return res.sendStatus(httpStatus.BAD_REQUEST);
+  }
   if (!_.isUndefined(startDate) || !_.isUndefined(endDate)) {
     const customTimePeriod = new CustomTimePeriod(startDate, endDate);
     if (!customTimePeriod.isValid()) {
@@ -86,6 +89,9 @@ const validateCommonParams = (
 };
 
 const validateGetData = ({ query: { groupBy: groupByReq } }, res, next) => {
+  if (_.isUndefined(groupByReq)) {
+    return res.sendStatus(httpStatus.BAD_REQUEST);
+  }
   if (!validateTimePeriod(groupByReq)) {
     return res.status(httpStatus.BAD_REQUEST).json({ [responseKeys.invalidTimePeriod]: groupByReq });
   }
@@ -95,6 +101,9 @@ const validateGetData = ({ query: { groupBy: groupByReq } }, res, next) => {
 const validateCreateObservations = ({ body: { observations, thing } }, res, next) => {
   if (_.isUndefined(observations) || !_.isArray(observations)) {
     return res.status(httpStatus.BAD_REQUEST).json({ [responseKeys.invalidObservationsArrayKey]: observations });
+  }
+  if (observations.length > 10) {
+    return res.sendStatus(httpStatus.REQUEST_ENTITY_TOO_LARGE);
   }
   if (_.isEmpty(observations)) {
     return res.sendStatus(httpStatus.NOT_MODIFIED);

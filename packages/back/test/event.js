@@ -252,17 +252,32 @@ describe("Event", () => {
     });
   });
 
-  describe("GET /api/event/stats 200", () => {
+  describe("GET /api/event/stats", () => {
     beforeEach(done => {
       createEvents(
         [constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent, constants.doorClosedEvent2],
         done,
       );
     });
+    it("tries to get event stats without params", done => {
+      chai
+        .request(server)
+        .get("/api/event/stats")
+        .set("Authorization", auth())
+        .end((err, res) => {
+          should.exist(err);
+          res.should.have.status(httpStatus.BAD_REQUEST);
+          done();
+        });
+    });
     it("gets event stats", done => {
       chai
         .request(server)
         .get("/api/event/stats")
+        .query({
+          groupBy: "minute",
+          timePeriod: "year",
+        })
         .set("Authorization", auth())
         .end((err, res) => {
           should.not.exist(err);
@@ -270,27 +285,37 @@ describe("Event", () => {
           done();
         });
     });
+  });
 
-    describe("GET /api/measurement 200", () => {
-      beforeEach(done => {
-        createEvents([constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent], done);
-      });
-      it("gets event data grouped by minute", done => {
-        chai
-          .request(server)
-          .get("/api/event")
-          .query({
-            groupBy: "minute",
-          })
-          .set("Authorization", auth())
-          .end((err, res) => {
-            should.not.exist(err);
-            res.should.have.status(httpStatus.OK);
-            res.body.should.be.a("object");
-            res.body.data.should.be.a("array");
-            done();
-          });
-      });
+  describe("GET /api/event", () => {
+    beforeEach(done => {
+      createEvents([constants.doorOpenedEvent, constants.doorClosedEvent, constants.windowOpenedEvent], done);
+    });
+    it("tries to gets event data without params", done => {
+      chai
+        .request(server)
+        .get("/api/event")
+        .set("Authorization", auth())
+        .end((err, res) => {
+          should.exist(err);
+          res.should.have.status(httpStatus.BAD_REQUEST);
+          done();
+        });
+    });
+    it("gets event data", done => {
+      chai
+        .request(server)
+        .get("/api/event")
+        .query({
+          groupBy: "minute",
+          timePeriod: "year",
+        })
+        .set("Authorization", auth())
+        .end((err, res) => {
+          should.not.exist(err);
+          res.should.have.status(httpStatus.OK);
+          done();
+        });
     });
   });
 });
