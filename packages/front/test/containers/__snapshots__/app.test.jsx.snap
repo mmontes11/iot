@@ -3871,7 +3871,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                     >
                       <Connect(Connect(ResetOnUnmount))>
                         <Connect(ResetOnUnmount)
-                          isAuth={[Function]}
+                          checkAuth={[Function]}
                           isLoading={false}
                           login={[Function]}
                           logout={[Function]}
@@ -3881,7 +3881,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                           username={null}
                         >
                           <ResetOnUnmount
-                            isAuth={[Function]}
+                            checkAuth={[Function]}
                             isLoading={false}
                             login={[Function]}
                             logout={[Function]}
@@ -3892,7 +3892,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                             username={null}
                           >
                             <InjectIntl(Login)
-                              isAuth={[Function]}
+                              checkAuth={[Function]}
                               isLoading={false}
                               login={[Function]}
                               logout={[Function]}
@@ -3903,6 +3903,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                               username={null}
                             >
                               <Login
+                                checkAuth={[Function]}
                                 intl={
                                   Object {
                                     "defaultFormats": Object {},
@@ -3995,7 +3996,6 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                     "timeZone": null,
                                   }
                                 }
-                                isAuth={[Function]}
                                 isLoading={false}
                                 login={[Function]}
                                 logout={[Function]}
@@ -4635,7 +4635,7 @@ exports[`containers/app renders the app without auth 1`] = `
                     >
                       <Connect(Connect(ResetOnUnmount))>
                         <Connect(ResetOnUnmount)
-                          isAuth={[Function]}
+                          checkAuth={[Function]}
                           isLoading={false}
                           login={[Function]}
                           logout={[Function]}
@@ -4645,7 +4645,7 @@ exports[`containers/app renders the app without auth 1`] = `
                           username={null}
                         >
                           <ResetOnUnmount
-                            isAuth={[Function]}
+                            checkAuth={[Function]}
                             isLoading={false}
                             login={[Function]}
                             logout={[Function]}
@@ -4656,7 +4656,7 @@ exports[`containers/app renders the app without auth 1`] = `
                             username={null}
                           >
                             <InjectIntl(Login)
-                              isAuth={[Function]}
+                              checkAuth={[Function]}
                               isLoading={false}
                               login={[Function]}
                               logout={[Function]}
@@ -4667,6 +4667,7 @@ exports[`containers/app renders the app without auth 1`] = `
                               username={null}
                             >
                               <Login
+                                checkAuth={[Function]}
                                 intl={
                                   Object {
                                     "defaultFormats": Object {},
@@ -4759,7 +4760,6 @@ exports[`containers/app renders the app without auth 1`] = `
                                     "timeZone": null,
                                   }
                                 }
-                                isAuth={[Function]}
                                 isLoading={false}
                                 login={[Function]}
                                 logout={[Function]}

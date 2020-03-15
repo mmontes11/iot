@@ -7,14 +7,13 @@ export class AuthService extends Service {
   constructor(client) {
     super(client, "auth");
   }
-  async checkAuth(user) {
-    return this.post(undefined, user);
+  checkAuth(credentials) {
+    return this.post(undefined, credentials);
   }
-  async isAuth() {
-    const token = await TokenHandler.getToken();
-    return !_.isUndefined(token) && !_.isNull(token);
+  checkAuthToken(token) {
+    return this.post(undefined, { token });
   }
-  async createUser(user) {
+  createUser(user) {
     const options = { basicAuth: true };
     return this.post("user", user, options);
   }
@@ -51,7 +50,7 @@ export class AuthService extends Service {
     await this.logout();
     await this.getToken();
   }
-  async _getToken() {
+  _getToken() {
     if (_.isUndefined(this.client.userCredentials)) {
       throw new Error("User credentials required");
     }

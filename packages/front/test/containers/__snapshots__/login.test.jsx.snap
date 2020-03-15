@@ -202,7 +202,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
       >
         <Connect(Connect(ResetOnUnmount))>
           <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+            checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
             logout={[Function]}
@@ -212,7 +212,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
             username={null}
           >
             <ResetOnUnmount
-              isAuth={[Function]}
+              checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
               logout={[Function]}
@@ -223,7 +223,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
               username={null}
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={false}
                 login={[Function]}
                 logout={[Function]}
@@ -234,6 +234,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                 username={null}
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -326,7 +327,6 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
                   logout={[Function]}
@@ -630,7 +630,7 @@ exports[`containers/login renders login in loading state 1`] = `
       >
         <Connect(Connect(ResetOnUnmount))>
           <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+            checkAuth={[Function]}
             isLoading={true}
             login={[Function]}
             logout={[Function]}
@@ -640,7 +640,7 @@ exports[`containers/login renders login in loading state 1`] = `
             username="username"
           >
             <ResetOnUnmount
-              isAuth={[Function]}
+              checkAuth={[Function]}
               isLoading={true}
               login={[Function]}
               logout={[Function]}
@@ -651,7 +651,7 @@ exports[`containers/login renders login in loading state 1`] = `
               username="username"
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={true}
                 login={[Function]}
                 logout={[Function]}
@@ -662,6 +662,7 @@ exports[`containers/login renders login in loading state 1`] = `
                 username="username"
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -754,7 +755,6 @@ exports[`containers/login renders login in loading state 1`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={true}
                   login={[Function]}
                   logout={[Function]}
@@ -1058,7 +1058,7 @@ exports[`containers/login simulates successful login 1`] = `
       >
         <Connect(Connect(ResetOnUnmount))>
           <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+            checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
             logout={[Function]}
@@ -1068,7 +1068,7 @@ exports[`containers/login simulates successful login 1`] = `
             username={null}
           >
             <ResetOnUnmount
-              isAuth={[Function]}
+              checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
               logout={[Function]}
@@ -1079,7 +1079,7 @@ exports[`containers/login simulates successful login 1`] = `
               username={null}
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={false}
                 login={[Function]}
                 logout={[Function]}
@@ -1090,6 +1090,7 @@ exports[`containers/login simulates successful login 1`] = `
                 username={null}
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -1182,7 +1183,6 @@ exports[`containers/login simulates successful login 1`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
                   logout={[Function]}
@@ -1626,7 +1626,7 @@ exports[`containers/login simulates successful login 3`] = `
       >
         <Connect(Connect(ResetOnUnmount))>
           <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+            checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
             logout={[Function]}
@@ -1636,7 +1636,7 @@ exports[`containers/login simulates successful login 3`] = `
             username={null}
           >
             <ResetOnUnmount
-              isAuth={[Function]}
+              checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
               logout={[Function]}
@@ -1647,7 +1647,7 @@ exports[`containers/login simulates successful login 3`] = `
               username={null}
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={false}
                 login={[Function]}
                 logout={[Function]}
@@ -1658,6 +1658,7 @@ exports[`containers/login simulates successful login 3`] = `
                 username={null}
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -1750,7 +1751,6 @@ exports[`containers/login simulates successful login 3`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
                   logout={[Function]}

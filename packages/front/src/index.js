@@ -6,7 +6,7 @@ import IntlProvider from "containers/intlProvider";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "containers/app";
 import store from "config/store";
-import { isAuth } from "actions/auth";
+import { checkAuth } from "actions/auth";
 import { setupLocalization } from "config/localization";
 
 setupLocalization();
@@ -22,4 +22,4 @@ render(
   document.getElementById("app"),
 );
 
-store.dispatch(isAuth());
+store.dispatch(checkAuth());
