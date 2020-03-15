@@ -22,10 +22,10 @@ export class SocketController {
     this.onError = onError;
   }
 
-  _handleError = err => {
+  _handleError(err) {
     this.onError(err);
     this.close();
-  };
+  }
 
   listen() {
     this.socket.on("data", data => this.onData(data));

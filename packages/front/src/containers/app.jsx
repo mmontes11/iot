@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { compose } from "recompose";
@@ -12,7 +12,7 @@ import Modal from "components/modal";
 import { injectIntl, intlShape } from "react-intl";
 
 const App = ({ intl: { formatMessage }, isAuth, shouldShowError, setShowError }) => (
-  <Fragment>
+  <>
     {isAuth ? <Main /> : <Login />}
     <Modal
       isActive={shouldShowError}
@@ -21,7 +21,7 @@ const App = ({ intl: { formatMessage }, isAuth, shouldShowError, setShowError })
       title={formatMessage({ id: "Error" })}
       subTitle={formatMessage({ id: "Request failed" })}
     />
-  </Fragment>
+  </>
 );
 
 App.propTypes = {

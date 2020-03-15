@@ -1,19 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import * as commonActions from "actions/common";
 
 export const withResetOnUnmount = WrappedComponent => {
-  class ResetOnUnmount extends React.Component {
-    componentWillUnmount() {
-      const { reset } = this.props;
-      reset();
-    }
-
-    render() {
-      return <WrappedComponent {...this.props} />;
-    }
-  }
+  const ResetOnUnmount = props => {
+    const { reset } = props;
+    useEffect(() => () => reset(), []);
+    return <WrappedComponent {...props} />;
+  };
   ResetOnUnmount.propTypes = {
     reset: PropTypes.func.isRequired,
   };

@@ -18,8 +18,11 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        loader: "babel-loader",
         exclude: /node_modules/,
-        use: "babel-loader",
+        options: {
+          presets: [["@babel/env", { targets: { browsers: ["last 2 versions"] } }], "@babel/preset-react"],
+        },
       },
       {
         test: /\.html$/,

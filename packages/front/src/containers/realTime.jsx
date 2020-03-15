@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { handleDataParams } from "hocs/dataParams";
 import store from "config/store";
@@ -9,25 +9,19 @@ import Charts from "containers/charts";
 import { REALTIME } from "constants/chartTypes";
 import { THING, TYPE } from "constants/params";
 
-class RealTime extends Component {
-  componentWillUnmount() {
-    store.dispatch(finishRealTimeData());
-  }
-
-  render() {
-    const { onParamsSelected, onReset } = this.props;
-    return (
-      <div className="container is-fluid section">
-        <div className="columns is-centered">
-          <div className="column is-three-quarters">
-            <RealTimeParamsPanel onParamsSelected={onParamsSelected} onReset={onReset} />
-            <Charts chartType={REALTIME} />
-          </div>
+const RealTime = ({ onParamsSelected, onReset }) => {
+  useEffect(() => () => store.dispatch(finishRealTimeData()), []);
+  return (
+    <div className="container is-fluid section">
+      <div className="columns is-centered">
+        <div className="column is-three-quarters">
+          <RealTimeParamsPanel onParamsSelected={onParamsSelected} onReset={onReset} />
+          <Charts chartType={REALTIME} />
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 RealTime.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,

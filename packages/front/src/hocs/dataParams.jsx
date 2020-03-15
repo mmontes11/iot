@@ -93,7 +93,7 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
       }
     }
 
-    _onParamsSelected = (...params) => {
+    _onParamsSelected(...params) {
       if (pathParams.length !== params.length) {
         return;
       }
@@ -108,9 +108,9 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
       }
       history.push(basePath);
       getData();
-    };
+    }
 
-    _onFiltersSelected = (thing, timePeriod, startDate, endDate) => {
+    _onFiltersSelected(thing, timePeriod, startDate, endDate) {
       const {
         history,
         location: { pathname },
@@ -135,25 +135,25 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
         history.push(pathname);
       }
       getData();
-    };
+    }
 
-    _onReset = () => {
+    _onReset() {
       reset();
       this._pushRootPath();
-    };
+    }
 
-    _pushRootPath = () => {
+    _pushRootPath() {
       const { history } = this.props;
       history.push(`/${path}`);
-    };
+    }
 
     render() {
       return (
         <WrappedComponent
           {...this.props}
-          onParamsSelected={this._onParamsSelected}
-          onFiltersSelected={this._onFiltersSelected}
-          onReset={this._onReset}
+          onParamsSelected={(...params) => this._onParamsSelected(...params)}
+          onFiltersSelected={(...filters) => this._onFiltersSelected(...filters)}
+          onReset={() => this._onReset()}
         />
       );
     }
