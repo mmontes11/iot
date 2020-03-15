@@ -1,7 +1,7 @@
 version: '3'
 services:
   mongo:
-    image: mongo:4.0
+    image: mongo:4.2.3
     volumes:
       - "./data:/data/db"
     expose:
