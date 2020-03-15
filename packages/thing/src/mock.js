@@ -19,26 +19,25 @@ const getValue = (range, prevValue) => {
 };
 
 const getDataOfType = (type, prevValue) => {
-  switch (type) {
-    case TEMPERATURE:
-      return {
-        value: getValue(temperatureRange, prevValue),
-        unit: {
-          name: "degrees",
-          symbol: "ºC",
-        },
-      };
-    case HUMIDITY:
-      return {
-        value: getValue(humidityRange, prevValue),
-        unit: {
-          name: "relative",
-          symbol: "%",
-        },
-      };
-    default:
-      return null;
+  if (type.startsWith(TEMPERATURE)) {
+    return {
+      value: getValue(temperatureRange, prevValue),
+      unit: {
+        name: "degrees",
+        symbol: "ºC",
+      },
+    };
   }
+  if (type.startsWith(HUMIDITY)) {
+    return {
+      value: getValue(humidityRange, prevValue),
+      unit: {
+        name: "relative",
+        symbol: "%",
+      },
+    };
+  }
+  return null;
 };
 
 const getData = ({ type, thing }, prevValue = null) => ({
