@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/thingActions renders 1`] = `
+exports[`components/ThingActions renders 1`] = `
 <p
   className="buttons is-horizontal-center"
 >

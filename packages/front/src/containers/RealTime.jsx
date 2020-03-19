@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { handleDataParams } from "hocs/dataParams";
 import store from "config/store";
-import RealTimeParamsPanel from "containers/realTimeParamsPanel";
+import RealTimeParamsPanel from "containers/RealTimeParamsPanel";
 import { startRealTimeData, finishRealTimeData, resetData } from "actions/data";
 import { reset } from "actions/common";
-import Charts from "containers/charts";
+import Charts from "containers/Charts";
 import { REALTIME } from "constants/chartTypes";
 import { THING, TYPE } from "constants/params";
 

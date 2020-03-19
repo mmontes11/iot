@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { withReset } from "hocs/reset";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
@@ -189,5 +189,5 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
     },
   );
 
-  return compose(withConnect, withResetOnUnmount, withRouter)(DataParams);
+  return compose(withConnect, withReset, withRouter)(DataParams);
 };

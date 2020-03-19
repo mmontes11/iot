@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/map renders a map 1`] = `
+exports[`containers/Map renders Map 1`] = `
 <Provider
   store={
     Object {
@@ -59,7 +59,7 @@ exports[`containers/map renders a map 1`] = `
 </Provider>
 `;
 
-exports[`containers/map renders a map with label and marker 1`] = `
+exports[`containers/Map renders Map with label and marker 1`] = `
 <Provider
   store={
     Object {
@@ -160,7 +160,7 @@ exports[`containers/map renders a map with label and marker 1`] = `
 </Provider>
 `;
 
-exports[`containers/map renders a map with marker 1`] = `
+exports[`containers/Map renders Map with marker 1`] = `
 <Provider
   store={
     Object {
@@ -257,7 +257,7 @@ exports[`containers/map renders a map with marker 1`] = `
 </Provider>
 `;
 
-exports[`containers/map renders a map with open dialog 1`] = `
+exports[`containers/Map renders Map with open dialog 1`] = `
 <Provider
   store={
     Object {

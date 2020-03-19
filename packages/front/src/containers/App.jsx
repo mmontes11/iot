@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 import "styles/index.scss";
 import * as fromState from "reducers";
 import * as appActions from "actions/app";
-import Login from "containers/login";
-import Main from "components/main";
-import Modal from "components/modal";
+import Login from "containers/Login";
+import Main from "components/Main";
+import Modal from "components/Modal";
 import { injectIntl, intlShape } from "react-intl";
 
 const App = ({ intl: { formatMessage }, isAuth, shouldShowError, setShowError }) => (

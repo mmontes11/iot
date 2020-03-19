@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/thingFilter renders ThingFilter in initial state 1`] = `
+exports[`components/ThingFilter renders ThingFilter in initial state 1`] = `
 <div
   className="box"
 >

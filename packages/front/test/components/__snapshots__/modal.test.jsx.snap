@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/modal renders when is active 1`] = `
+exports[`components/Modal renders when is active 1`] = `
 <div
   className="modal is-active"
 >

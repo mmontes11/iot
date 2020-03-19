@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/datePicker renders in initial state 1`] = `
+exports[`components/DatePicker renders in initial state 1`] = `
 <IntlProvider
   dispatch={[Function]}
   locale="en"

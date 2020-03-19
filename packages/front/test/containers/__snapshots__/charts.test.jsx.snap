@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/charts renders a bar chart 1`] = `
+exports[`containers/Charts renders a bar chart 1`] = `
 <Provider
   store={
     Object {
@@ -88,7 +88,7 @@ exports[`containers/charts renders a bar chart 1`] = `
 </Provider>
 `;
 
-exports[`containers/charts renders a line chart of event data 1`] = `
+exports[`containers/Charts renders a line chart of event data 1`] = `
 <Provider
   store={
     Object {
@@ -174,7 +174,7 @@ exports[`containers/charts renders a line chart of event data 1`] = `
 </Provider>
 `;
 
-exports[`containers/charts renders a line chart of measurement data 1`] = `
+exports[`containers/Charts renders a line chart of measurement data 1`] = `
 <Provider
   store={
     Object {
@@ -269,7 +269,7 @@ exports[`containers/charts renders a line chart of measurement data 1`] = `
 </Provider>
 `;
 
-exports[`containers/charts renders nothing 1`] = `
+exports[`containers/Charts renders nothing 1`] = `
 <Provider
   store={
     Object {
@@ -338,7 +338,7 @@ exports[`containers/charts renders nothing 1`] = `
 </Provider>
 `;
 
-exports[`containers/charts renders when loading 1`] = `
+exports[`containers/Charts renders when loading 1`] = `
 <Provider
   store={
     Object {

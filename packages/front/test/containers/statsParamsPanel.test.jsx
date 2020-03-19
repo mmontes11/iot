@@ -4,11 +4,11 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
-import StatsParamsPanel from "containers/statsParamsPanel";
+import StatsParamsPanel from "containers/StatsParamsPanel";
 import { TYPE } from "constants/params";
 import { initialState, defaultStore } from "../constants";
 
-describe("containers/statsParamsPanel", () => {
+describe("containers/StatsParamsPanel", () => {
   it("renders in initial state", () => {
     const wrapper = shallow(
       <Provider store={defaultStore}>

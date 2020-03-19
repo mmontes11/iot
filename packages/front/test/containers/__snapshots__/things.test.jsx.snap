@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/things renders things in initial state and unmounts 1`] = `
+exports[`containers/Things renders Things in loading state 1`] = `
 <Provider
   store={
     Object {
@@ -240,647 +240,8 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
               }
             }
           >
-            <Connect(withRouter(Connect(ResetOnUnmount)))>
-              <withRouter(Connect(ResetOnUnmount))
-                getThings={[Function]}
-                isLoading={false}
-                selectThing={[Function]}
-                selectedThing={null}
-                shouldShowNotFoundError={false}
-                showNotFoundError={[Function]}
-                things={Array []}
-              >
-                <Route>
-                  <Connect(ResetOnUnmount)
-                    getThings={[Function]}
-                    history={
-                      Object {
-                        "action": "POP",
-                        "block": [Function],
-                        "canGo": [Function],
-                        "createHref": [Function],
-                        "entries": Array [
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                        ],
-                        "go": [Function],
-                        "goBack": [Function],
-                        "goForward": [Function],
-                        "index": 0,
-                        "length": 1,
-                        "listen": [Function],
-                        "location": Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                        "push": [Function],
-                        "replace": [Function],
-                      }
-                    }
-                    isLoading={false}
-                    location={
-                      Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      }
-                    }
-                    match={
-                      Object {
-                        "isExact": true,
-                        "params": Object {},
-                        "path": "/",
-                        "url": "/",
-                      }
-                    }
-                    selectThing={[Function]}
-                    selectedThing={null}
-                    shouldShowNotFoundError={false}
-                    showNotFoundError={[Function]}
-                    things={Array []}
-                  >
-                    <ResetOnUnmount
-                      getThings={[Function]}
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      isLoading={false}
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      reset={[Function]}
-                      selectThing={[Function]}
-                      selectedThing={null}
-                      shouldShowNotFoundError={false}
-                      showNotFoundError={[Function]}
-                      things={Array []}
-                    >
-                      <InjectIntl(Things)
-                        getThings={[Function]}
-                        history={
-                          Object {
-                            "action": "POP",
-                            "block": [Function],
-                            "canGo": [Function],
-                            "createHref": [Function],
-                            "entries": Array [
-                              Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                            ],
-                            "go": [Function],
-                            "goBack": [Function],
-                            "goForward": [Function],
-                            "index": 0,
-                            "length": 1,
-                            "listen": [Function],
-                            "location": Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                            "push": [Function],
-                            "replace": [Function],
-                          }
-                        }
-                        isLoading={false}
-                        location={
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          }
-                        }
-                        match={
-                          Object {
-                            "isExact": true,
-                            "params": Object {},
-                            "path": "/",
-                            "url": "/",
-                          }
-                        }
-                        reset={[Function]}
-                        selectThing={[Function]}
-                        selectedThing={null}
-                        shouldShowNotFoundError={false}
-                        showNotFoundError={[Function]}
-                        things={Array []}
-                      >
-                        <Things
-                          getThings={[Function]}
-                          history={
-                            Object {
-                              "action": "POP",
-                              "block": [Function],
-                              "canGo": [Function],
-                              "createHref": [Function],
-                              "entries": Array [
-                                Object {
-                                  "hash": "",
-                                  "pathname": "/",
-                                  "search": "",
-                                  "state": undefined,
-                                },
-                              ],
-                              "go": [Function],
-                              "goBack": [Function],
-                              "goForward": [Function],
-                              "index": 0,
-                              "length": 1,
-                              "listen": [Function],
-                              "location": Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                              "push": [Function],
-                              "replace": [Function],
-                            }
-                          }
-                          intl={
-                            Object {
-                              "defaultFormats": Object {},
-                              "defaultLocale": "en",
-                              "formatDate": [Function],
-                              "formatHTMLMessage": [Function],
-                              "formatMessage": [Function],
-                              "formatNumber": [Function],
-                              "formatPlural": [Function],
-                              "formatRelative": [Function],
-                              "formatTime": [Function],
-                              "formats": Object {},
-                              "formatters": Object {
-                                "getDateTimeFormat": [Function],
-                                "getMessageFormat": [Function],
-                                "getNumberFormat": [Function],
-                                "getPluralFormat": [Function],
-                                "getRelativeFormat": [Function],
-                              },
-                              "locale": "en",
-                              "messages": Object {
-                                "Custom": "Custom",
-                                "Data": "Data",
-                                "Delete": "Delete",
-                                "End date": "End date",
-                                "Error": "Error",
-                                "Event stats": "Event stats",
-                                "Events:": "Events:",
-                                "Filters": "Filters",
-                                "Google maps": "Google maps",
-                                "Group by": "Group by",
-                                "IP address:": "IP address:",
-                                "IoT": "IoT",
-                                "Last observation:": "Last observation:",
-                                "Login": "Login",
-                                "Logout": "Logout",
-                                "MQTT topic:": "MQTT topic:",
-                                "Measurement stats": "Measurement stats",
-                                "Measurement type": "Measurement type",
-                                "Measurements:": "Measurements:",
-                                "Observation": "Observation",
-                                "Password": "Password",
-                                "Real time": "Real time",
-                                "Request failed": "Request failed",
-                                "Reset": "Reset",
-                                "Start date": "Start date",
-                                "Stats": "Stats",
-                                "Thing": "Thing",
-                                "Thing not found": "Thing not found",
-                                "Things": "Things",
-                                "Time": "Time",
-                                "Time period": "Time period",
-                                "Type": "Type",
-                                "Username": "Username",
-                                "avg": "Average",
-                                "avgByHour": "Average by hour",
-                                "date": "Date",
-                                "day": "Day",
-                                "door-closed": "Door closed",
-                                "door-opened": "Door opened",
-                                "en": "English",
-                                "es": "Spanish",
-                                "event": "Event",
-                                "hour": "Hour",
-                                "humidity": "Humidity",
-                                "humidity-indoor": "Humidity indoor",
-                                "humidity-outdoor": "Humidity outdoor",
-                                "luminosity": "Luminosity",
-                                "max": "Maximum",
-                                "maxByHour": "Maximum by hour",
-                                "measurement": "Mesasurement",
-                                "min": "Minimum",
-                                "minByHour": "Minimum by hour",
-                                "minute": "Minute",
-                                "month": "Month",
-                                "second": "Second",
-                                "stdDev": "Standard deviation",
-                                "stdDevByHour": "Standard deviation by hour",
-                                "temperature": "Temperature",
-                                "temperature-indoor": "Temperature indoor",
-                                "temperature-outdoor": "Temperature outdoor",
-                                "thing": "Thing",
-                                "total": "Total",
-                                "week": "Week",
-                                "year": "Year",
-                              },
-                              "now": [Function],
-                              "onError": [Function],
-                              "textComponent": "span",
-                              "timeZone": null,
-                            }
-                          }
-                          isLoading={false}
-                          location={
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            }
-                          }
-                          match={
-                            Object {
-                              "isExact": true,
-                              "params": Object {},
-                              "path": "/",
-                              "url": "/",
-                            }
-                          }
-                          reset={[Function]}
-                          selectThing={[Function]}
-                          selectedThing={null}
-                          shouldShowNotFoundError={false}
-                          showNotFoundError={[Function]}
-                          things={Array []}
-                        >
-                          <div>
-                            <div
-                              className="container is-fluid section"
-                            >
-                              <div
-                                className="columns"
-                              >
-                                <div
-                                  className="column is-one-quarter"
-                                />
-                              </div>
-                            </div>
-                            <Modal
-                              isActive={false}
-                              messageStyle="is-danger"
-                              onCloseClick={[Function]}
-                              subTitle="Thing not found"
-                              title="Error"
-                            >
-                              <div
-                                className="modal"
-                              >
-                                <div
-                                  className="modal-background"
-                                  onClick={[Function]}
-                                  onKeyPress={[Function]}
-                                  role="button"
-                                  tabIndex={0}
-                                />
-                                <div
-                                  className="modal-content"
-                                >
-                                  <article
-                                    className="message is-medium is-danger"
-                                  >
-                                    <div
-                                      className="message-header"
-                                    >
-                                      <p>
-                                        Error
-                                      </p>
-                                    </div>
-                                    <div
-                                      className="message-body has-text-centered"
-                                    >
-                                      Thing not found
-                                    </div>
-                                  </article>
-                                </div>
-                                <button
-                                  aria-label="close"
-                                  className="modal-close is-large"
-                                  onClick={[Function]}
-                                  type="button"
-                                />
-                              </div>
-                            </Modal>
-                          </div>
-                        </Things>
-                      </InjectIntl(Things)>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
-                </Route>
-              </withRouter(Connect(ResetOnUnmount))>
-            </Connect(withRouter(Connect(ResetOnUnmount)))>
-          </Router>
-        </MemoryRouter>
-      </IntlProvider>
-    </IntlProvider>
-  </Connect(IntlProvider)>
-</Provider>
-`;
-
-exports[`containers/things renders things in loading state 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <Connect(IntlProvider)
-    store={
-      Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      }
-    }
-  >
-    <IntlProvider
-      dispatch={[Function]}
-      locale="en"
-      messages={
-        Object {
-          "Custom": "Custom",
-          "Data": "Data",
-          "Delete": "Delete",
-          "End date": "End date",
-          "Error": "Error",
-          "Event stats": "Event stats",
-          "Events:": "Events:",
-          "Filters": "Filters",
-          "Google maps": "Google maps",
-          "Group by": "Group by",
-          "IP address:": "IP address:",
-          "IoT": "IoT",
-          "Last observation:": "Last observation:",
-          "Login": "Login",
-          "Logout": "Logout",
-          "MQTT topic:": "MQTT topic:",
-          "Measurement stats": "Measurement stats",
-          "Measurement type": "Measurement type",
-          "Measurements:": "Measurements:",
-          "Observation": "Observation",
-          "Password": "Password",
-          "Real time": "Real time",
-          "Request failed": "Request failed",
-          "Reset": "Reset",
-          "Start date": "Start date",
-          "Stats": "Stats",
-          "Thing": "Thing",
-          "Thing not found": "Thing not found",
-          "Things": "Things",
-          "Time": "Time",
-          "Time period": "Time period",
-          "Type": "Type",
-          "Username": "Username",
-          "avg": "Average",
-          "avgByHour": "Average by hour",
-          "date": "Date",
-          "day": "Day",
-          "door-closed": "Door closed",
-          "door-opened": "Door opened",
-          "en": "English",
-          "es": "Spanish",
-          "event": "Event",
-          "hour": "Hour",
-          "humidity": "Humidity",
-          "humidity-indoor": "Humidity indoor",
-          "humidity-outdoor": "Humidity outdoor",
-          "luminosity": "Luminosity",
-          "max": "Maximum",
-          "maxByHour": "Maximum by hour",
-          "measurement": "Mesasurement",
-          "min": "Minimum",
-          "minByHour": "Minimum by hour",
-          "minute": "Minute",
-          "month": "Month",
-          "second": "Second",
-          "stdDev": "Standard deviation",
-          "stdDevByHour": "Standard deviation by hour",
-          "temperature": "Temperature",
-          "temperature-indoor": "Temperature indoor",
-          "temperature-outdoor": "Temperature outdoor",
-          "thing": "Thing",
-          "total": "Total",
-          "week": "Week",
-          "year": "Year",
-        }
-      }
-      store={
-        Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        }
-      }
-      storeSubscription={
-        Subscription {
-          "listeners": Object {
-            "clear": [Function],
-            "get": [Function],
-            "notify": [Function],
-            "subscribe": [Function],
-          },
-          "onStateChange": [Function],
-          "parentSub": undefined,
-          "store": Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          },
-          "unsubscribe": [Function],
-        }
-      }
-    >
-      <IntlProvider
-        key="en"
-        locale="en"
-        messages={
-          Object {
-            "Custom": "Custom",
-            "Data": "Data",
-            "Delete": "Delete",
-            "End date": "End date",
-            "Error": "Error",
-            "Event stats": "Event stats",
-            "Events:": "Events:",
-            "Filters": "Filters",
-            "Google maps": "Google maps",
-            "Group by": "Group by",
-            "IP address:": "IP address:",
-            "IoT": "IoT",
-            "Last observation:": "Last observation:",
-            "Login": "Login",
-            "Logout": "Logout",
-            "MQTT topic:": "MQTT topic:",
-            "Measurement stats": "Measurement stats",
-            "Measurement type": "Measurement type",
-            "Measurements:": "Measurements:",
-            "Observation": "Observation",
-            "Password": "Password",
-            "Real time": "Real time",
-            "Request failed": "Request failed",
-            "Reset": "Reset",
-            "Start date": "Start date",
-            "Stats": "Stats",
-            "Thing": "Thing",
-            "Thing not found": "Thing not found",
-            "Things": "Things",
-            "Time": "Time",
-            "Time period": "Time period",
-            "Type": "Type",
-            "Username": "Username",
-            "avg": "Average",
-            "avgByHour": "Average by hour",
-            "date": "Date",
-            "day": "Day",
-            "door-closed": "Door closed",
-            "door-opened": "Door opened",
-            "en": "English",
-            "es": "Spanish",
-            "event": "Event",
-            "hour": "Hour",
-            "humidity": "Humidity",
-            "humidity-indoor": "Humidity indoor",
-            "humidity-outdoor": "Humidity outdoor",
-            "luminosity": "Luminosity",
-            "max": "Maximum",
-            "maxByHour": "Maximum by hour",
-            "measurement": "Mesasurement",
-            "min": "Minimum",
-            "minByHour": "Minimum by hour",
-            "minute": "Minute",
-            "month": "Month",
-            "second": "Second",
-            "stdDev": "Standard deviation",
-            "stdDevByHour": "Standard deviation by hour",
-            "temperature": "Temperature",
-            "temperature-indoor": "Temperature indoor",
-            "temperature-outdoor": "Temperature outdoor",
-            "thing": "Thing",
-            "total": "Total",
-            "week": "Week",
-            "year": "Year",
-          }
-        }
-      >
-        <MemoryRouter
-          initialEntries={
-            Array [
-              "/",
-            ]
-          }
-          keyLength={0}
-        >
-          <Router
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-          >
-            <Connect(withRouter(Connect(ResetOnUnmount)))>
-              <withRouter(Connect(ResetOnUnmount))
+            <Connect(withRouter(Connect(Reset)))>
+              <withRouter(Connect(Reset))
                 getThings={[Function]}
                 isLoading={true}
                 selectThing={[Function]}
@@ -890,7 +251,7 @@ exports[`containers/things renders things in loading state 1`] = `
                 things={Array []}
               >
                 <Route>
-                  <Connect(ResetOnUnmount)
+                  <Connect(Reset)
                     getThings={[Function]}
                     history={
                       Object {
@@ -945,7 +306,7 @@ exports[`containers/things renders things in loading state 1`] = `
                     showNotFoundError={[Function]}
                     things={Array []}
                   >
-                    <ResetOnUnmount
+                    <Reset
                       getThings={[Function]}
                       history={
                         Object {
@@ -1221,11 +582,11 @@ exports[`containers/things renders things in loading state 1`] = `
                           </Loader>
                         </Things>
                       </InjectIntl(Things)>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
+                    </Reset>
+                  </Connect(Reset)>
                 </Route>
-              </withRouter(Connect(ResetOnUnmount))>
-            </Connect(withRouter(Connect(ResetOnUnmount)))>
+              </withRouter(Connect(Reset))>
+            </Connect(withRouter(Connect(Reset)))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -1234,7 +595,7 @@ exports[`containers/things renders things in loading state 1`] = `
 </Provider>
 `;
 
-exports[`containers/things renders things with loaded things 1`] = `
+exports[`containers/Things renders Things with loaded things 1`] = `
 <Provider
   store={
     Object {
@@ -1474,8 +835,8 @@ exports[`containers/things renders things with loaded things 1`] = `
               }
             }
           >
-            <Connect(withRouter(Connect(ResetOnUnmount)))>
-              <withRouter(Connect(ResetOnUnmount))
+            <Connect(withRouter(Connect(Reset)))>
+              <withRouter(Connect(Reset))
                 getThings={[Function]}
                 isLoading={false}
                 selectThing={[Function]}
@@ -1511,7 +872,7 @@ exports[`containers/things renders things with loaded things 1`] = `
                 }
               >
                 <Route>
-                  <Connect(ResetOnUnmount)
+                  <Connect(Reset)
                     getThings={[Function]}
                     history={
                       Object {
@@ -1592,7 +953,7 @@ exports[`containers/things renders things with loaded things 1`] = `
                       ]
                     }
                   >
-                    <ResetOnUnmount
+                    <Reset
                       getThings={[Function]}
                       history={
                         Object {
@@ -2020,11 +1381,11 @@ exports[`containers/things renders things with loaded things 1`] = `
                           </div>
                         </Things>
                       </InjectIntl(Things)>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
+                    </Reset>
+                  </Connect(Reset)>
                 </Route>
-              </withRouter(Connect(ResetOnUnmount))>
-            </Connect(withRouter(Connect(ResetOnUnmount)))>
+              </withRouter(Connect(Reset))>
+            </Connect(withRouter(Connect(Reset)))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -2033,7 +1394,7 @@ exports[`containers/things renders things with loaded things 1`] = `
 </Provider>
 `;
 
-exports[`containers/things renders things with loaded things and selected thing 1`] = `
+exports[`containers/Things renders Things with loaded things and selected thing 1`] = `
 <Provider
   store={
     Object {
@@ -2273,8 +1634,8 @@ exports[`containers/things renders things with loaded things and selected thing 
               }
             }
           >
-            <Connect(withRouter(Connect(ResetOnUnmount)))>
-              <withRouter(Connect(ResetOnUnmount))
+            <Connect(withRouter(Connect(Reset)))>
+              <withRouter(Connect(Reset))
                 getThings={[Function]}
                 isLoading={false}
                 selectThing={[Function]}
@@ -2335,7 +1696,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                 }
               >
                 <Route>
-                  <Connect(ResetOnUnmount)
+                  <Connect(Reset)
                     getThings={[Function]}
                     history={
                       Object {
@@ -2441,7 +1802,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                       ]
                     }
                   >
-                    <ResetOnUnmount
+                    <Reset
                       getThings={[Function]}
                       history={
                         Object {
@@ -3497,11 +2858,11 @@ exports[`containers/things renders things with loaded things and selected thing 
                           </div>
                         </Things>
                       </InjectIntl(Things)>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
+                    </Reset>
+                  </Connect(Reset)>
                 </Route>
-              </withRouter(Connect(ResetOnUnmount))>
-            </Connect(withRouter(Connect(ResetOnUnmount)))>
+              </withRouter(Connect(Reset))>
+            </Connect(withRouter(Connect(Reset)))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -3510,7 +2871,646 @@ exports[`containers/things renders things with loaded things and selected thing 
 </Provider>
 `;
 
-exports[`containers/things simulates a click in a thing and in its actions 1`] = `
+exports[`containers/Things renders things in initial state and unmounts 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          initialEntries={
+            Array [
+              "/",
+            ]
+          }
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <Connect(withRouter(Connect(Reset)))>
+              <withRouter(Connect(Reset))
+                getThings={[Function]}
+                isLoading={false}
+                selectThing={[Function]}
+                selectedThing={null}
+                shouldShowNotFoundError={false}
+                showNotFoundError={[Function]}
+                things={Array []}
+              >
+                <Route>
+                  <Connect(Reset)
+                    getThings={[Function]}
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    isLoading={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                    selectThing={[Function]}
+                    selectedThing={null}
+                    shouldShowNotFoundError={false}
+                    showNotFoundError={[Function]}
+                    things={Array []}
+                  >
+                    <Reset
+                      getThings={[Function]}
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "canGo": [Function],
+                          "createHref": [Function],
+                          "entries": Array [
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                          ],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "index": 0,
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      isLoading={false}
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      reset={[Function]}
+                      selectThing={[Function]}
+                      selectedThing={null}
+                      shouldShowNotFoundError={false}
+                      showNotFoundError={[Function]}
+                      things={Array []}
+                    >
+                      <InjectIntl(Things)
+                        getThings={[Function]}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        isLoading={false}
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                        reset={[Function]}
+                        selectThing={[Function]}
+                        selectedThing={null}
+                        shouldShowNotFoundError={false}
+                        showNotFoundError={[Function]}
+                        things={Array []}
+                      >
+                        <Things
+                          getThings={[Function]}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "canGo": [Function],
+                              "createHref": [Function],
+                              "entries": Array [
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                              ],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "index": 0,
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          intl={
+                            Object {
+                              "defaultFormats": Object {},
+                              "defaultLocale": "en",
+                              "formatDate": [Function],
+                              "formatHTMLMessage": [Function],
+                              "formatMessage": [Function],
+                              "formatNumber": [Function],
+                              "formatPlural": [Function],
+                              "formatRelative": [Function],
+                              "formatTime": [Function],
+                              "formats": Object {},
+                              "formatters": Object {
+                                "getDateTimeFormat": [Function],
+                                "getMessageFormat": [Function],
+                                "getNumberFormat": [Function],
+                                "getPluralFormat": [Function],
+                                "getRelativeFormat": [Function],
+                              },
+                              "locale": "en",
+                              "messages": Object {
+                                "Custom": "Custom",
+                                "Data": "Data",
+                                "Delete": "Delete",
+                                "End date": "End date",
+                                "Error": "Error",
+                                "Event stats": "Event stats",
+                                "Events:": "Events:",
+                                "Filters": "Filters",
+                                "Google maps": "Google maps",
+                                "Group by": "Group by",
+                                "IP address:": "IP address:",
+                                "IoT": "IoT",
+                                "Last observation:": "Last observation:",
+                                "Login": "Login",
+                                "Logout": "Logout",
+                                "MQTT topic:": "MQTT topic:",
+                                "Measurement stats": "Measurement stats",
+                                "Measurement type": "Measurement type",
+                                "Measurements:": "Measurements:",
+                                "Observation": "Observation",
+                                "Password": "Password",
+                                "Real time": "Real time",
+                                "Request failed": "Request failed",
+                                "Reset": "Reset",
+                                "Start date": "Start date",
+                                "Stats": "Stats",
+                                "Thing": "Thing",
+                                "Thing not found": "Thing not found",
+                                "Things": "Things",
+                                "Time": "Time",
+                                "Time period": "Time period",
+                                "Type": "Type",
+                                "Username": "Username",
+                                "avg": "Average",
+                                "avgByHour": "Average by hour",
+                                "date": "Date",
+                                "day": "Day",
+                                "door-closed": "Door closed",
+                                "door-opened": "Door opened",
+                                "en": "English",
+                                "es": "Spanish",
+                                "event": "Event",
+                                "hour": "Hour",
+                                "humidity": "Humidity",
+                                "humidity-indoor": "Humidity indoor",
+                                "humidity-outdoor": "Humidity outdoor",
+                                "luminosity": "Luminosity",
+                                "max": "Maximum",
+                                "maxByHour": "Maximum by hour",
+                                "measurement": "Mesasurement",
+                                "min": "Minimum",
+                                "minByHour": "Minimum by hour",
+                                "minute": "Minute",
+                                "month": "Month",
+                                "second": "Second",
+                                "stdDev": "Standard deviation",
+                                "stdDevByHour": "Standard deviation by hour",
+                                "temperature": "Temperature",
+                                "temperature-indoor": "Temperature indoor",
+                                "temperature-outdoor": "Temperature outdoor",
+                                "thing": "Thing",
+                                "total": "Total",
+                                "week": "Week",
+                                "year": "Year",
+                              },
+                              "now": [Function],
+                              "onError": [Function],
+                              "textComponent": "span",
+                              "timeZone": null,
+                            }
+                          }
+                          isLoading={false}
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          reset={[Function]}
+                          selectThing={[Function]}
+                          selectedThing={null}
+                          shouldShowNotFoundError={false}
+                          showNotFoundError={[Function]}
+                          things={Array []}
+                        >
+                          <div>
+                            <div
+                              className="container is-fluid section"
+                            >
+                              <div
+                                className="columns"
+                              >
+                                <div
+                                  className="column is-one-quarter"
+                                />
+                              </div>
+                            </div>
+                            <Modal
+                              isActive={false}
+                              messageStyle="is-danger"
+                              onCloseClick={[Function]}
+                              subTitle="Thing not found"
+                              title="Error"
+                            >
+                              <div
+                                className="modal"
+                              >
+                                <div
+                                  className="modal-background"
+                                  onClick={[Function]}
+                                  onKeyPress={[Function]}
+                                  role="button"
+                                  tabIndex={0}
+                                />
+                                <div
+                                  className="modal-content"
+                                >
+                                  <article
+                                    className="message is-medium is-danger"
+                                  >
+                                    <div
+                                      className="message-header"
+                                    >
+                                      <p>
+                                        Error
+                                      </p>
+                                    </div>
+                                    <div
+                                      className="message-body has-text-centered"
+                                    >
+                                      Thing not found
+                                    </div>
+                                  </article>
+                                </div>
+                                <button
+                                  aria-label="close"
+                                  className="modal-close is-large"
+                                  onClick={[Function]}
+                                  type="button"
+                                />
+                              </div>
+                            </Modal>
+                          </div>
+                        </Things>
+                      </InjectIntl(Things)>
+                    </Reset>
+                  </Connect(Reset)>
+                </Route>
+              </withRouter(Connect(Reset))>
+            </Connect(withRouter(Connect(Reset)))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;
+
+exports[`containers/Things simulates a click in a ThingItem and in its actions 1`] = `
 <Provider
   store={
     Object {
@@ -3756,8 +3756,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
               }
             }
           >
-            <Connect(withRouter(Connect(ResetOnUnmount)))>
-              <withRouter(Connect(ResetOnUnmount))
+            <Connect(withRouter(Connect(Reset)))>
+              <withRouter(Connect(Reset))
                 getThings={[Function]}
                 isLoading={false}
                 selectThing={[Function]}
@@ -3818,7 +3818,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                 }
               >
                 <Route>
-                  <Connect(ResetOnUnmount)
+                  <Connect(Reset)
                     getThings={[Function]}
                     history={
                       Object {
@@ -3930,7 +3930,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                       ]
                     }
                   >
-                    <ResetOnUnmount
+                    <Reset
                       getThings={[Function]}
                       history={
                         Object {
@@ -5004,11 +5004,11 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                           </div>
                         </Things>
                       </InjectIntl(Things)>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
+                    </Reset>
+                  </Connect(Reset)>
                 </Route>
-              </withRouter(Connect(ResetOnUnmount))>
-            </Connect(withRouter(Connect(ResetOnUnmount)))>
+              </withRouter(Connect(Reset))>
+            </Connect(withRouter(Connect(Reset)))>
           </Router>
         </MemoryRouter>
       </IntlProvider>

@@ -1,10 +1,10 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Navbar from "containers/navbar";
-import Things from "containers/things";
-import Stats from "containers/stats";
-import Data from "containers/data";
-import RealTime from "containers/realTime";
+import Navbar from "containers/Navbar";
+import Things from "containers/Things";
+import Stats from "containers/Stats";
+import Data from "containers/Data";
+import RealTime from "containers/RealTime";
 import { TYPE, OBSERVATION, GROUP_BY, THING } from "constants/params";
 
 const Main = () => (

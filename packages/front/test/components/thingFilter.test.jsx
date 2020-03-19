@@ -1,8 +1,8 @@
 import React from "react";
-import ThingFilter from "components/thingFilter";
+import ThingFilter from "components/ThingFilter";
 import { shallow } from "enzyme";
 
-describe("components/thingFilter", () => {
+describe("components/ThingFilter", () => {
   it("renders ThingFilter in initial state", () => {
     const thingFilter = {
       label: "Select filter:",

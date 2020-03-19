@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/login renders login in initial state and unmounts 1`] = `
+exports[`containers/Login renders login in initial state and unmounts 1`] = `
 <Provider
   store={
     Object {
@@ -200,8 +200,8 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
             checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
@@ -211,7 +211,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
             setUsername={[Function]}
             username={null}
           >
-            <ResetOnUnmount
+            <Reset
               checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
@@ -420,16 +420,16 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>
 </Provider>
 `;
 
-exports[`containers/login renders login in loading state 1`] = `
+exports[`containers/Login renders login in loading state 1`] = `
 <Provider
   store={
     Object {
@@ -629,8 +629,8 @@ exports[`containers/login renders login in loading state 1`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
             checkAuth={[Function]}
             isLoading={true}
             login={[Function]}
@@ -640,7 +640,7 @@ exports[`containers/login renders login in loading state 1`] = `
             setUsername={[Function]}
             username="username"
           >
-            <ResetOnUnmount
+            <Reset
               checkAuth={[Function]}
               isLoading={true}
               login={[Function]}
@@ -849,16 +849,16 @@ exports[`containers/login renders login in loading state 1`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>
 </Provider>
 `;
 
-exports[`containers/login simulates successful login 1`] = `
+exports[`containers/Login simulates successful login 1`] = `
 <Provider
   store={
     Object {
@@ -1058,8 +1058,8 @@ exports[`containers/login simulates successful login 1`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
             checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
@@ -1069,7 +1069,7 @@ exports[`containers/login simulates successful login 1`] = `
             setUsername={[Function]}
             username={null}
           >
-            <ResetOnUnmount
+            <Reset
               checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
@@ -1278,16 +1278,16 @@ exports[`containers/login simulates successful login 1`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>
 </Provider>
 `;
 
-exports[`containers/login simulates successful login 2`] = `
+exports[`containers/Login simulates successful login 2`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
@@ -1427,7 +1427,7 @@ Object {
 }
 `;
 
-exports[`containers/login simulates successful login 3`] = `
+exports[`containers/Login simulates successful login 3`] = `
 <Provider
   store={
     Object {
@@ -1627,8 +1627,8 @@ exports[`containers/login simulates successful login 3`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
             checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
@@ -1638,7 +1638,7 @@ exports[`containers/login simulates successful login 3`] = `
             setUsername={[Function]}
             username={null}
           >
-            <ResetOnUnmount
+            <Reset
               checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
@@ -1847,9 +1847,9 @@ exports[`containers/login simulates successful login 3`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>

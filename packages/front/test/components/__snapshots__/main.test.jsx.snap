@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/main renders a main in / path 1`] = `
+exports[`components/Main renders a Main in / path 1`] = `
 <Provider
   store={
     Object {
@@ -708,7 +708,7 @@ exports[`components/main renders a main in / path 1`] = `
                       }
                       path="/things"
                     >
-                      <Connect(withRouter(Connect(ResetOnUnmount)))
+                      <Connect(withRouter(Connect(Reset)))
                         history={
                           Object {
                             "action": "REPLACE",
@@ -756,7 +756,7 @@ exports[`components/main renders a main in / path 1`] = `
                           }
                         }
                       >
-                        <withRouter(Connect(ResetOnUnmount))
+                        <withRouter(Connect(Reset))
                           getThings={[Function]}
                           history={
                             Object {
@@ -812,7 +812,7 @@ exports[`components/main renders a main in / path 1`] = `
                           things={Array []}
                         >
                           <Route>
-                            <Connect(ResetOnUnmount)
+                            <Connect(Reset)
                               getThings={[Function]}
                               history={
                                 Object {
@@ -867,7 +867,7 @@ exports[`components/main renders a main in / path 1`] = `
                               showNotFoundError={[Function]}
                               things={Array []}
                             >
-                              <ResetOnUnmount
+                              <Reset
                                 getThings={[Function]}
                                 history={
                                   Object {
@@ -1187,11 +1187,11 @@ exports[`components/main renders a main in / path 1`] = `
                                     </div>
                                   </Things>
                                 </InjectIntl(Things)>
-                              </ResetOnUnmount>
-                            </Connect(ResetOnUnmount)>
+                              </Reset>
+                            </Connect(Reset)>
                           </Route>
-                        </withRouter(Connect(ResetOnUnmount))>
-                      </Connect(withRouter(Connect(ResetOnUnmount)))>
+                        </withRouter(Connect(Reset))>
+                      </Connect(withRouter(Connect(Reset)))>
                     </Route>
                   </Switch>
                 </main>
@@ -1205,7 +1205,7 @@ exports[`components/main renders a main in / path 1`] = `
 </Provider>
 `;
 
-exports[`components/main renders a main in /foo path 1`] = `
+exports[`components/Main renders a Main in /foo path 1`] = `
 <Provider
   store={
     Object {
@@ -1913,7 +1913,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                       }
                       path="/things"
                     >
-                      <Connect(withRouter(Connect(ResetOnUnmount)))
+                      <Connect(withRouter(Connect(Reset)))
                         history={
                           Object {
                             "action": "REPLACE",
@@ -1961,7 +1961,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                           }
                         }
                       >
-                        <withRouter(Connect(ResetOnUnmount))
+                        <withRouter(Connect(Reset))
                           getThings={[Function]}
                           history={
                             Object {
@@ -2017,7 +2017,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                           things={Array []}
                         >
                           <Route>
-                            <Connect(ResetOnUnmount)
+                            <Connect(Reset)
                               getThings={[Function]}
                               history={
                                 Object {
@@ -2072,7 +2072,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                               showNotFoundError={[Function]}
                               things={Array []}
                             >
-                              <ResetOnUnmount
+                              <Reset
                                 getThings={[Function]}
                                 history={
                                   Object {
@@ -2392,11 +2392,11 @@ exports[`components/main renders a main in /foo path 1`] = `
                                     </div>
                                   </Things>
                                 </InjectIntl(Things)>
-                              </ResetOnUnmount>
-                            </Connect(ResetOnUnmount)>
+                              </Reset>
+                            </Connect(Reset)>
                           </Route>
-                        </withRouter(Connect(ResetOnUnmount))>
-                      </Connect(withRouter(Connect(ResetOnUnmount)))>
+                        </withRouter(Connect(Reset))>
+                      </Connect(withRouter(Connect(Reset)))>
                     </Route>
                   </Switch>
                 </main>
@@ -2410,7 +2410,7 @@ exports[`components/main renders a main in /foo path 1`] = `
 </Provider>
 `;
 
-exports[`components/main renders a main in /stats path 1`] = `
+exports[`components/Main renders a Main in /stats path 1`] = `
 <Provider
   store={
     Object {
@@ -3136,7 +3136,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                       }
                       path="/stats"
                     >
-                      <Connect(Connect(ResetOnUnmount))
+                      <Connect(Connect(Reset))
                         history={
                           Object {
                             "action": "PUSH",
@@ -3190,7 +3190,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           }
                         }
                       >
-                        <Connect(ResetOnUnmount)
+                        <Connect(Reset)
                           addCustomTimePeriodFilter={[Function]}
                           addThingFilter={[Function]}
                           addTimePeriodFilter={[Function]}
@@ -3249,7 +3249,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           }
                           updateParams={[Function]}
                         >
-                          <ResetOnUnmount
+                          <Reset
                             addCustomTimePeriodFilter={[Function]}
                             addThingFilter={[Function]}
                             addTimePeriodFilter={[Function]}
@@ -3968,9 +3968,9 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 </DataParams>
                               </Route>
                             </withRouter(DataParams)>
-                          </ResetOnUnmount>
-                        </Connect(ResetOnUnmount)>
-                      </Connect(Connect(ResetOnUnmount))>
+                          </Reset>
+                        </Connect(Reset)>
+                      </Connect(Connect(Reset))>
                     </Route>
                   </Switch>
                 </main>
@@ -3984,7 +3984,7 @@ exports[`components/main renders a main in /stats path 1`] = `
 </Provider>
 `;
 
-exports[`components/main renders a main in /things path 1`] = `
+exports[`components/Main renders a Main in /things path 1`] = `
 <Provider
   store={
     Object {
@@ -4692,7 +4692,7 @@ exports[`components/main renders a main in /things path 1`] = `
                       }
                       path="/things"
                     >
-                      <Connect(withRouter(Connect(ResetOnUnmount)))
+                      <Connect(withRouter(Connect(Reset)))
                         history={
                           Object {
                             "action": "POP",
@@ -4740,7 +4740,7 @@ exports[`components/main renders a main in /things path 1`] = `
                           }
                         }
                       >
-                        <withRouter(Connect(ResetOnUnmount))
+                        <withRouter(Connect(Reset))
                           getThings={[Function]}
                           history={
                             Object {
@@ -4796,7 +4796,7 @@ exports[`components/main renders a main in /things path 1`] = `
                           things={Array []}
                         >
                           <Route>
-                            <Connect(ResetOnUnmount)
+                            <Connect(Reset)
                               getThings={[Function]}
                               history={
                                 Object {
@@ -4851,7 +4851,7 @@ exports[`components/main renders a main in /things path 1`] = `
                               showNotFoundError={[Function]}
                               things={Array []}
                             >
-                              <ResetOnUnmount
+                              <Reset
                                 getThings={[Function]}
                                 history={
                                   Object {
@@ -5171,11 +5171,11 @@ exports[`components/main renders a main in /things path 1`] = `
                                     </div>
                                   </Things>
                                 </InjectIntl(Things)>
-                              </ResetOnUnmount>
-                            </Connect(ResetOnUnmount)>
+                              </Reset>
+                            </Connect(Reset)>
                           </Route>
-                        </withRouter(Connect(ResetOnUnmount))>
-                      </Connect(withRouter(Connect(ResetOnUnmount)))>
+                        </withRouter(Connect(Reset))>
+                      </Connect(withRouter(Connect(Reset)))>
                     </Route>
                   </Switch>
                 </main>

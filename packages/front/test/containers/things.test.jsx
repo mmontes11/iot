@@ -4,11 +4,11 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
-import Things from "containers/things";
-import IntlProvider from "containers/intlProvider";
+import Things from "containers/Things";
+import IntlProvider from "containers/IntlProvider";
 import { initialState, defaultStore, thing } from "../constants";
 
-describe("containers/things", () => {
+describe("containers/Things", () => {
   it("renders things in initial state and unmounts", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
@@ -22,7 +22,7 @@ describe("containers/things", () => {
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });
-  it("renders things in loading state", () => {
+  it("renders Things in loading state", () => {
     const state = {
       ...initialState,
       request: {
@@ -41,7 +41,7 @@ describe("containers/things", () => {
     );
     expect(wrapperLoading).toMatchSnapshot();
   });
-  it("renders things with loaded things", () => {
+  it("renders Things with loaded things", () => {
     const state = {
       ...initialState,
       things: {
@@ -62,7 +62,7 @@ describe("containers/things", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders things with loaded things and selected thing", () => {
+  it("renders Things with loaded things and selected thing", () => {
     const state = {
       ...initialState,
       things: {
@@ -83,7 +83,7 @@ describe("containers/things", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("simulates a click in a thing and in its actions", () => {
+  it("simulates a click in a ThingItem and in its actions", () => {
     const state = {
       ...initialState,
       things: {

@@ -7,7 +7,7 @@ import { compose } from "recompose";
 import * as actionsAuth from "actions/auth";
 import * as appActions from "actions/app";
 import { FormattedMessage } from "react-intl";
-import LanguageSelector from "containers/languageSelector";
+import LanguageSelector from "containers/LanguageSelector";
 
 const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
   const navbarBurgerClass = classNames("navbar-burger", "burger", {

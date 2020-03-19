@@ -4,12 +4,12 @@ import configureStore from "redux-mock-store";
 import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 import thunk from "redux-thunk";
-import App from "containers/app";
-import IntlProvider from "containers/intlProvider";
+import App from "containers/App";
+import IntlProvider from "containers/IntlProvider";
 import { initialState, defaultStore } from "../constants/index";
 
-describe("containers/app", () => {
-  it("renders the app without auth", () => {
+describe("containers/App", () => {
+  it("renders App without auth", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
         <IntlProvider store={defaultStore}>
@@ -30,7 +30,7 @@ describe("containers/app", () => {
       showError: true,
     },
   };
-  it("renders app with auth in /", () => {
+  it("renders App with auth in /", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <Provider store={store}>
@@ -43,7 +43,7 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders the app with auth in /foo", () => {
+  it("renders App with auth in /foo", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
         <IntlProvider store={defaultStore}>
@@ -55,7 +55,7 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders the with auth in /things", () => {
+  it("renders App with auth in /things", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <Provider store={store}>
@@ -68,7 +68,7 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders the with auth in /stats", () => {
+  it("renders App with auth in /stats", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <Provider store={store}>
@@ -81,7 +81,7 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders app in error state", () => {
+  it("renders App in error state", () => {
     const state = {
       ...initialState,
       auth: {

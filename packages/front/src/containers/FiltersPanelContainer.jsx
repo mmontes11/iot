@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import FiltersPanel from "components/filtersPanel";
+import FiltersPanel from "components/FiltersPanel";
 import * as filterActions from "actions/filters";
 import * as thingFilterActions from "actions/thingFilter";
 import * as dateFilterActions from "actions/dateFilter";

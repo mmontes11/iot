@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Dropdown from "components/dropdown";
-import ThingFilter from "components/thingFilter";
-import DateFilter from "components/dateFilter";
+import Dropdown from "components/Dropdown";
+import ThingFilter from "components/ThingFilter";
+import DateFilter from "components/DateFilter";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 
 const getFilter = (filterType, thingFilter, dateFilter) => {

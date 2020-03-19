@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/thingItem renders when it's not selected 1`] = `
+exports[`components/ThingItem renders when it's not selected 1`] = `
 <div
   className="thing-item-card"
   onClick={[MockFunction]}
@@ -24,7 +24,7 @@ exports[`components/thingItem renders when it's not selected 1`] = `
 </div>
 `;
 
-exports[`components/thingItem renders when it's selected 1`] = `
+exports[`components/ThingItem renders when it's selected 1`] = `
 <div
   className="thing-item-card is-selected"
   onClick={[Function]}

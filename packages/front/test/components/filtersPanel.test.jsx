@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
-import FiltersPanel from "components/filtersPanel";
+import FiltersPanel from "components/FiltersPanel";
 import { FILTER_TYPES } from "constants/filterTypes";
 
-describe("components/filterPanel", () => {
+describe("components/FiltersPanel", () => {
   it("renders with no filters", () => {
     const wrapper = shallow(
       <FiltersPanel

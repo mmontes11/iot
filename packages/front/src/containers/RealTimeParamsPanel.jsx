@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import ParamsPanel from "components/paramsPanel";
+import ParamsPanel from "components/ParamsPanel";
 import { THING, TYPE } from "constants/params";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";

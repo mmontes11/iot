@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TagList from "components/tagList";
-import ThingActions from "components/thingActions";
-import Map from "containers/map";
+import TagList from "components/TagList";
+import ThingActions from "components/ThingActions";
+import Map from "containers/Map";
 import { pointToLatLng } from "helpers/geometry";
 import { formatDateTime } from "helpers/date";
 import { injectIntl, intlShape, FormattedMessage } from "react-intl";

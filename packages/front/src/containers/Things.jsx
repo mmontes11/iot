@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import PropTypes from "prop-types";
-import ThingItem from "components/thingItem";
-import ThingDetail from "components/thingDetail";
-import Loader from "components/loader";
-import Modal from "components/modal";
+import ThingItem from "components/ThingItem";
+import ThingDetail from "components/ThingDetail";
+import Loader from "components/Loader";
+import Modal from "components/Modal";
 import * as thingActions from "actions/things";
 import * as fromState from "reducers";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { withReset } from "hocs/reset";
 import { injectIntl, intlShape } from "react-intl";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import { defaultTimePeriodFilter, defaultGroupBy } from "config/params";
@@ -149,4 +149,4 @@ const withConnect = connect(
   },
 );
 
-export default compose(withConnect, withRouter, withResetOnUnmount, injectIntl)(Things);
+export default compose(withConnect, withRouter, withReset, injectIntl)(Things);

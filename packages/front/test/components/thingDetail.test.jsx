@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ThingDetail from "components/thingDetail";
-import IntlProvider from "containers/intlProvider";
+import ThingDetail from "components/ThingDetail";
+import IntlProvider from "containers/IntlProvider";
 import { defaultStore, thing } from "../constants";
 
-describe("components/thingDetail", () => {
+describe("components/ThingDetail", () => {
   const wrapper = shallow(
     <IntlProvider store={defaultStore}>
       <ThingDetail thing={thing} onEventStatsClick={() => undefined} onMeasurementStatsClick={() => undefined} />

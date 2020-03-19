@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/barChart renders chart with units in title 1`] = `
+exports[`components/BarChart renders chart with units in title 1`] = `
 <IntlProvider
   dispatch={[Function]}
   locale="en"
@@ -131,7 +131,7 @@ exports[`components/barChart renders chart with units in title 1`] = `
 </IntlProvider>
 `;
 
-exports[`components/barChart renders chart without units in title 1`] = `
+exports[`components/BarChart renders chart without units in title 1`] = `
 <IntlProvider
   dispatch={[Function]}
   locale="en"

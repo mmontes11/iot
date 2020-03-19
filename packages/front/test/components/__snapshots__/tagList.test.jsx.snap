@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/tagList renders nothing when no tags are specified 1`] = `""`;
+exports[`components/TagList renders nothing when no tags are specified 1`] = `""`;
 
-exports[`components/tagList renders tags 1`] = `
+exports[`components/TagList renders tags 1`] = `
 <div
   className="tag-list"
 >
@@ -39,7 +39,7 @@ exports[`components/tagList renders tags 1`] = `
 </div>
 `;
 
-exports[`components/tagList renders tags without label 1`] = `
+exports[`components/TagList renders tags without label 1`] = `
 <div
   className="tag-list"
 >
@@ -66,7 +66,7 @@ exports[`components/tagList renders tags without label 1`] = `
 </div>
 `;
 
-exports[`components/tagList renders tags without style 1`] = `
+exports[`components/TagList renders tags without style 1`] = `
 <div
   className="tag-list"
 >

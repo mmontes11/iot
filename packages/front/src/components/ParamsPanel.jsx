@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Dropdown from "components/dropdown";
+import Dropdown from "components/Dropdown";
 import { FormattedMessage } from "react-intl";
 
 const ParamsPanel = ({ params, reset }) => (

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/app renders app in error state 1`] = `
+exports[`containers/App renders App in error state 1`] = `
 <Provider
   store={
     Object {
@@ -988,7 +988,7 @@ exports[`containers/app renders app in error state 1`] = `
                                 }
                                 path="/stats"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(Connect(Reset))
                                   history={
                                     Object {
                                       "action": "PUSH",
@@ -1042,7 +1042,7 @@ exports[`containers/app renders app in error state 1`] = `
                                     }
                                   }
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <Connect(Reset)
                                     addCustomTimePeriodFilter={[Function]}
                                     addThingFilter={[Function]}
                                     addTimePeriodFilter={[Function]}
@@ -1101,7 +1101,7 @@ exports[`containers/app renders app in error state 1`] = `
                                     }
                                     updateParams={[Function]}
                                   >
-                                    <ResetOnUnmount
+                                    <Reset
                                       addCustomTimePeriodFilter={[Function]}
                                       addThingFilter={[Function]}
                                       addTimePeriodFilter={[Function]}
@@ -1820,9 +1820,9 @@ exports[`containers/app renders app in error state 1`] = `
                                           </DataParams>
                                         </Route>
                                       </withRouter(DataParams)>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                    </Reset>
+                                  </Connect(Reset)>
+                                </Connect(Connect(Reset))>
                               </Route>
                             </Switch>
                           </main>
@@ -1886,7 +1886,7 @@ exports[`containers/app renders app in error state 1`] = `
 </Provider>
 `;
 
-exports[`containers/app renders app with auth in / 1`] = `
+exports[`containers/App renders App with auth in / 1`] = `
 <Provider
   store={
     Object {
@@ -2838,7 +2838,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                 }
                                 path="/things"
                               >
-                                <Connect(withRouter(Connect(ResetOnUnmount)))
+                                <Connect(withRouter(Connect(Reset)))
                                   history={
                                     Object {
                                       "action": "REPLACE",
@@ -2886,7 +2886,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                     }
                                   }
                                 >
-                                  <withRouter(Connect(ResetOnUnmount))
+                                  <withRouter(Connect(Reset))
                                     getThings={[Function]}
                                     history={
                                       Object {
@@ -2942,7 +2942,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                     things={Array []}
                                   >
                                     <Route>
-                                      <Connect(ResetOnUnmount)
+                                      <Connect(Reset)
                                         getThings={[Function]}
                                         history={
                                           Object {
@@ -2997,7 +2997,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                         showNotFoundError={[Function]}
                                         things={Array []}
                                       >
-                                        <ResetOnUnmount
+                                        <Reset
                                           getThings={[Function]}
                                           history={
                                             Object {
@@ -3317,11 +3317,11 @@ exports[`containers/app renders app with auth in / 1`] = `
                                               </div>
                                             </Things>
                                           </InjectIntl(Things)>
-                                        </ResetOnUnmount>
-                                      </Connect(ResetOnUnmount)>
+                                        </Reset>
+                                      </Connect(Reset)>
                                     </Route>
-                                  </withRouter(Connect(ResetOnUnmount))>
-                                </Connect(withRouter(Connect(ResetOnUnmount)))>
+                                  </withRouter(Connect(Reset))>
+                                </Connect(withRouter(Connect(Reset)))>
                               </Route>
                             </Switch>
                           </main>
@@ -3385,7 +3385,7 @@ exports[`containers/app renders app with auth in / 1`] = `
 </Provider>
 `;
 
-exports[`containers/app renders the app with auth in /foo 1`] = `
+exports[`containers/App renders App with auth in /foo 1`] = `
 <Provider
   store={
     Object {
@@ -3869,8 +3869,8 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                       setShowError={[Function]}
                       shouldShowError={false}
                     >
-                      <Connect(Connect(ResetOnUnmount))>
-                        <Connect(ResetOnUnmount)
+                      <Connect(Connect(Reset))>
+                        <Connect(Reset)
                           checkAuth={[Function]}
                           isLoading={false}
                           login={[Function]}
@@ -3880,7 +3880,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                           setUsername={[Function]}
                           username={null}
                         >
-                          <ResetOnUnmount
+                          <Reset
                             checkAuth={[Function]}
                             isLoading={false}
                             login={[Function]}
@@ -4089,9 +4089,9 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                 </section>
                               </Login>
                             </InjectIntl(Login)>
-                          </ResetOnUnmount>
-                        </Connect(ResetOnUnmount)>
-                      </Connect(Connect(ResetOnUnmount))>
+                          </Reset>
+                        </Connect(Reset)>
+                      </Connect(Connect(Reset))>
                       <Modal
                         isActive={false}
                         messageStyle="is-danger"
@@ -4150,772 +4150,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
 </Provider>
 `;
 
-exports[`containers/app renders the app without auth 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <Connect(IntlProvider)
-    store={
-      Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      }
-    }
-  >
-    <IntlProvider
-      dispatch={[Function]}
-      locale="en"
-      messages={
-        Object {
-          "Custom": "Custom",
-          "Data": "Data",
-          "Delete": "Delete",
-          "End date": "End date",
-          "Error": "Error",
-          "Event stats": "Event stats",
-          "Events:": "Events:",
-          "Filters": "Filters",
-          "Google maps": "Google maps",
-          "Group by": "Group by",
-          "IP address:": "IP address:",
-          "IoT": "IoT",
-          "Last observation:": "Last observation:",
-          "Login": "Login",
-          "Logout": "Logout",
-          "MQTT topic:": "MQTT topic:",
-          "Measurement stats": "Measurement stats",
-          "Measurement type": "Measurement type",
-          "Measurements:": "Measurements:",
-          "Observation": "Observation",
-          "Password": "Password",
-          "Real time": "Real time",
-          "Request failed": "Request failed",
-          "Reset": "Reset",
-          "Start date": "Start date",
-          "Stats": "Stats",
-          "Thing": "Thing",
-          "Thing not found": "Thing not found",
-          "Things": "Things",
-          "Time": "Time",
-          "Time period": "Time period",
-          "Type": "Type",
-          "Username": "Username",
-          "avg": "Average",
-          "avgByHour": "Average by hour",
-          "date": "Date",
-          "day": "Day",
-          "door-closed": "Door closed",
-          "door-opened": "Door opened",
-          "en": "English",
-          "es": "Spanish",
-          "event": "Event",
-          "hour": "Hour",
-          "humidity": "Humidity",
-          "humidity-indoor": "Humidity indoor",
-          "humidity-outdoor": "Humidity outdoor",
-          "luminosity": "Luminosity",
-          "max": "Maximum",
-          "maxByHour": "Maximum by hour",
-          "measurement": "Mesasurement",
-          "min": "Minimum",
-          "minByHour": "Minimum by hour",
-          "minute": "Minute",
-          "month": "Month",
-          "second": "Second",
-          "stdDev": "Standard deviation",
-          "stdDevByHour": "Standard deviation by hour",
-          "temperature": "Temperature",
-          "temperature-indoor": "Temperature indoor",
-          "temperature-outdoor": "Temperature outdoor",
-          "thing": "Thing",
-          "total": "Total",
-          "week": "Week",
-          "year": "Year",
-        }
-      }
-      store={
-        Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        }
-      }
-      storeSubscription={
-        Subscription {
-          "listeners": Object {
-            "clear": [Function],
-            "get": [Function],
-            "notify": [Function],
-            "subscribe": [Function],
-          },
-          "onStateChange": [Function],
-          "parentSub": undefined,
-          "store": Object {
-            "clearActions": [Function],
-            "dispatch": [Function],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          },
-          "unsubscribe": [Function],
-        }
-      }
-    >
-      <IntlProvider
-        key="en"
-        locale="en"
-        messages={
-          Object {
-            "Custom": "Custom",
-            "Data": "Data",
-            "Delete": "Delete",
-            "End date": "End date",
-            "Error": "Error",
-            "Event stats": "Event stats",
-            "Events:": "Events:",
-            "Filters": "Filters",
-            "Google maps": "Google maps",
-            "Group by": "Group by",
-            "IP address:": "IP address:",
-            "IoT": "IoT",
-            "Last observation:": "Last observation:",
-            "Login": "Login",
-            "Logout": "Logout",
-            "MQTT topic:": "MQTT topic:",
-            "Measurement stats": "Measurement stats",
-            "Measurement type": "Measurement type",
-            "Measurements:": "Measurements:",
-            "Observation": "Observation",
-            "Password": "Password",
-            "Real time": "Real time",
-            "Request failed": "Request failed",
-            "Reset": "Reset",
-            "Start date": "Start date",
-            "Stats": "Stats",
-            "Thing": "Thing",
-            "Thing not found": "Thing not found",
-            "Things": "Things",
-            "Time": "Time",
-            "Time period": "Time period",
-            "Type": "Type",
-            "Username": "Username",
-            "avg": "Average",
-            "avgByHour": "Average by hour",
-            "date": "Date",
-            "day": "Day",
-            "door-closed": "Door closed",
-            "door-opened": "Door opened",
-            "en": "English",
-            "es": "Spanish",
-            "event": "Event",
-            "hour": "Hour",
-            "humidity": "Humidity",
-            "humidity-indoor": "Humidity indoor",
-            "humidity-outdoor": "Humidity outdoor",
-            "luminosity": "Luminosity",
-            "max": "Maximum",
-            "maxByHour": "Maximum by hour",
-            "measurement": "Mesasurement",
-            "min": "Minimum",
-            "minByHour": "Minimum by hour",
-            "minute": "Minute",
-            "month": "Month",
-            "second": "Second",
-            "stdDev": "Standard deviation",
-            "stdDevByHour": "Standard deviation by hour",
-            "temperature": "Temperature",
-            "temperature-indoor": "Temperature indoor",
-            "temperature-outdoor": "Temperature outdoor",
-            "thing": "Thing",
-            "total": "Total",
-            "week": "Week",
-            "year": "Year",
-          }
-        }
-      >
-        <MemoryRouter
-          initialEntries={
-            Array [
-              "/",
-            ]
-          }
-          keyLength={0}
-        >
-          <Router
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-          >
-            <withRouter(Connect(InjectIntl(App)))>
-              <Route>
-                <Connect(InjectIntl(App))
-                  history={
-                    Object {
-                      "action": "POP",
-                      "block": [Function],
-                      "canGo": [Function],
-                      "createHref": [Function],
-                      "entries": Array [
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                      ],
-                      "go": [Function],
-                      "goBack": [Function],
-                      "goForward": [Function],
-                      "index": 0,
-                      "length": 1,
-                      "listen": [Function],
-                      "location": Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      },
-                      "push": [Function],
-                      "replace": [Function],
-                    }
-                  }
-                  location={
-                    Object {
-                      "hash": "",
-                      "pathname": "/",
-                      "search": "",
-                      "state": undefined,
-                    }
-                  }
-                  match={
-                    Object {
-                      "isExact": true,
-                      "params": Object {},
-                      "path": "/",
-                      "url": "/",
-                    }
-                  }
-                >
-                  <InjectIntl(App)
-                    history={
-                      Object {
-                        "action": "POP",
-                        "block": [Function],
-                        "canGo": [Function],
-                        "createHref": [Function],
-                        "entries": Array [
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                        ],
-                        "go": [Function],
-                        "goBack": [Function],
-                        "goForward": [Function],
-                        "index": 0,
-                        "length": 1,
-                        "listen": [Function],
-                        "location": Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                        "push": [Function],
-                        "replace": [Function],
-                      }
-                    }
-                    isAuth={false}
-                    location={
-                      Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      }
-                    }
-                    match={
-                      Object {
-                        "isExact": true,
-                        "params": Object {},
-                        "path": "/",
-                        "url": "/",
-                      }
-                    }
-                    setShowError={[Function]}
-                    shouldShowError={false}
-                  >
-                    <App
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      intl={
-                        Object {
-                          "defaultFormats": Object {},
-                          "defaultLocale": "en",
-                          "formatDate": [Function],
-                          "formatHTMLMessage": [Function],
-                          "formatMessage": [Function],
-                          "formatNumber": [Function],
-                          "formatPlural": [Function],
-                          "formatRelative": [Function],
-                          "formatTime": [Function],
-                          "formats": Object {},
-                          "formatters": Object {
-                            "getDateTimeFormat": [Function],
-                            "getMessageFormat": [Function],
-                            "getNumberFormat": [Function],
-                            "getPluralFormat": [Function],
-                            "getRelativeFormat": [Function],
-                          },
-                          "locale": "en",
-                          "messages": Object {
-                            "Custom": "Custom",
-                            "Data": "Data",
-                            "Delete": "Delete",
-                            "End date": "End date",
-                            "Error": "Error",
-                            "Event stats": "Event stats",
-                            "Events:": "Events:",
-                            "Filters": "Filters",
-                            "Google maps": "Google maps",
-                            "Group by": "Group by",
-                            "IP address:": "IP address:",
-                            "IoT": "IoT",
-                            "Last observation:": "Last observation:",
-                            "Login": "Login",
-                            "Logout": "Logout",
-                            "MQTT topic:": "MQTT topic:",
-                            "Measurement stats": "Measurement stats",
-                            "Measurement type": "Measurement type",
-                            "Measurements:": "Measurements:",
-                            "Observation": "Observation",
-                            "Password": "Password",
-                            "Real time": "Real time",
-                            "Request failed": "Request failed",
-                            "Reset": "Reset",
-                            "Start date": "Start date",
-                            "Stats": "Stats",
-                            "Thing": "Thing",
-                            "Thing not found": "Thing not found",
-                            "Things": "Things",
-                            "Time": "Time",
-                            "Time period": "Time period",
-                            "Type": "Type",
-                            "Username": "Username",
-                            "avg": "Average",
-                            "avgByHour": "Average by hour",
-                            "date": "Date",
-                            "day": "Day",
-                            "door-closed": "Door closed",
-                            "door-opened": "Door opened",
-                            "en": "English",
-                            "es": "Spanish",
-                            "event": "Event",
-                            "hour": "Hour",
-                            "humidity": "Humidity",
-                            "humidity-indoor": "Humidity indoor",
-                            "humidity-outdoor": "Humidity outdoor",
-                            "luminosity": "Luminosity",
-                            "max": "Maximum",
-                            "maxByHour": "Maximum by hour",
-                            "measurement": "Mesasurement",
-                            "min": "Minimum",
-                            "minByHour": "Minimum by hour",
-                            "minute": "Minute",
-                            "month": "Month",
-                            "second": "Second",
-                            "stdDev": "Standard deviation",
-                            "stdDevByHour": "Standard deviation by hour",
-                            "temperature": "Temperature",
-                            "temperature-indoor": "Temperature indoor",
-                            "temperature-outdoor": "Temperature outdoor",
-                            "thing": "Thing",
-                            "total": "Total",
-                            "week": "Week",
-                            "year": "Year",
-                          },
-                          "now": [Function],
-                          "onError": [Function],
-                          "textComponent": "span",
-                          "timeZone": null,
-                        }
-                      }
-                      isAuth={false}
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      setShowError={[Function]}
-                      shouldShowError={false}
-                    >
-                      <Connect(Connect(ResetOnUnmount))>
-                        <Connect(ResetOnUnmount)
-                          checkAuth={[Function]}
-                          isLoading={false}
-                          login={[Function]}
-                          logout={[Function]}
-                          password={null}
-                          setPassword={[Function]}
-                          setUsername={[Function]}
-                          username={null}
-                        >
-                          <ResetOnUnmount
-                            checkAuth={[Function]}
-                            isLoading={false}
-                            login={[Function]}
-                            logout={[Function]}
-                            password={null}
-                            reset={[Function]}
-                            setPassword={[Function]}
-                            setUsername={[Function]}
-                            username={null}
-                          >
-                            <InjectIntl(Login)
-                              checkAuth={[Function]}
-                              isLoading={false}
-                              login={[Function]}
-                              logout={[Function]}
-                              password={null}
-                              reset={[Function]}
-                              setPassword={[Function]}
-                              setUsername={[Function]}
-                              username={null}
-                            >
-                              <Login
-                                checkAuth={[Function]}
-                                intl={
-                                  Object {
-                                    "defaultFormats": Object {},
-                                    "defaultLocale": "en",
-                                    "formatDate": [Function],
-                                    "formatHTMLMessage": [Function],
-                                    "formatMessage": [Function],
-                                    "formatNumber": [Function],
-                                    "formatPlural": [Function],
-                                    "formatRelative": [Function],
-                                    "formatTime": [Function],
-                                    "formats": Object {},
-                                    "formatters": Object {
-                                      "getDateTimeFormat": [Function],
-                                      "getMessageFormat": [Function],
-                                      "getNumberFormat": [Function],
-                                      "getPluralFormat": [Function],
-                                      "getRelativeFormat": [Function],
-                                    },
-                                    "locale": "en",
-                                    "messages": Object {
-                                      "Custom": "Custom",
-                                      "Data": "Data",
-                                      "Delete": "Delete",
-                                      "End date": "End date",
-                                      "Error": "Error",
-                                      "Event stats": "Event stats",
-                                      "Events:": "Events:",
-                                      "Filters": "Filters",
-                                      "Google maps": "Google maps",
-                                      "Group by": "Group by",
-                                      "IP address:": "IP address:",
-                                      "IoT": "IoT",
-                                      "Last observation:": "Last observation:",
-                                      "Login": "Login",
-                                      "Logout": "Logout",
-                                      "MQTT topic:": "MQTT topic:",
-                                      "Measurement stats": "Measurement stats",
-                                      "Measurement type": "Measurement type",
-                                      "Measurements:": "Measurements:",
-                                      "Observation": "Observation",
-                                      "Password": "Password",
-                                      "Real time": "Real time",
-                                      "Request failed": "Request failed",
-                                      "Reset": "Reset",
-                                      "Start date": "Start date",
-                                      "Stats": "Stats",
-                                      "Thing": "Thing",
-                                      "Thing not found": "Thing not found",
-                                      "Things": "Things",
-                                      "Time": "Time",
-                                      "Time period": "Time period",
-                                      "Type": "Type",
-                                      "Username": "Username",
-                                      "avg": "Average",
-                                      "avgByHour": "Average by hour",
-                                      "date": "Date",
-                                      "day": "Day",
-                                      "door-closed": "Door closed",
-                                      "door-opened": "Door opened",
-                                      "en": "English",
-                                      "es": "Spanish",
-                                      "event": "Event",
-                                      "hour": "Hour",
-                                      "humidity": "Humidity",
-                                      "humidity-indoor": "Humidity indoor",
-                                      "humidity-outdoor": "Humidity outdoor",
-                                      "luminosity": "Luminosity",
-                                      "max": "Maximum",
-                                      "maxByHour": "Maximum by hour",
-                                      "measurement": "Mesasurement",
-                                      "min": "Minimum",
-                                      "minByHour": "Minimum by hour",
-                                      "minute": "Minute",
-                                      "month": "Month",
-                                      "second": "Second",
-                                      "stdDev": "Standard deviation",
-                                      "stdDevByHour": "Standard deviation by hour",
-                                      "temperature": "Temperature",
-                                      "temperature-indoor": "Temperature indoor",
-                                      "temperature-outdoor": "Temperature outdoor",
-                                      "thing": "Thing",
-                                      "total": "Total",
-                                      "week": "Week",
-                                      "year": "Year",
-                                    },
-                                    "now": [Function],
-                                    "onError": [Function],
-                                    "textComponent": "span",
-                                    "timeZone": null,
-                                  }
-                                }
-                                isLoading={false}
-                                login={[Function]}
-                                logout={[Function]}
-                                password={null}
-                                reset={[Function]}
-                                setPassword={[Function]}
-                                setUsername={[Function]}
-                                username={null}
-                              >
-                                <section
-                                  className="hero is-fullheight"
-                                >
-                                  <div
-                                    className="hero-body"
-                                  >
-                                    <div
-                                      className="container has-text-centered"
-                                    >
-                                      <div
-                                        className="column is-4 is-offset-4"
-                                      >
-                                        <div
-                                          className="box"
-                                        >
-                                          <p
-                                            className="title is-1"
-                                          >
-                                            IoT
-                                          </p>
-                                          <form
-                                            onSubmit={[Function]}
-                                          >
-                                            <div
-                                              className="field"
-                                            >
-                                              <div
-                                                className="control has-icons-left"
-                                              >
-                                                <input
-                                                  className="input is-large"
-                                                  id="username-input"
-                                                  onChange={[Function]}
-                                                  placeholder="Username"
-                                                  value=""
-                                                />
-                                                <span
-                                                  className="icon is-large is-left"
-                                                >
-                                                  <i
-                                                    className="fas fa-user"
-                                                  />
-                                                </span>
-                                              </div>
-                                            </div>
-                                            <div
-                                              className="field"
-                                            >
-                                              <div
-                                                className="control has-icons-left"
-                                              >
-                                                <input
-                                                  className="input is-large"
-                                                  id="password-input"
-                                                  onChange={[Function]}
-                                                  placeholder="Password"
-                                                  type="password"
-                                                  value=""
-                                                />
-                                                <span
-                                                  className="icon is-large is-left"
-                                                >
-                                                  <i
-                                                    className="fas fa-lock"
-                                                  />
-                                                </span>
-                                              </div>
-                                            </div>
-                                            <button
-                                              className="button is-block is-primary is-large is-fullwidth"
-                                              disabled={false}
-                                              id="login-button"
-                                              type="submit"
-                                            >
-                                              Login
-                                            </button>
-                                          </form>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </section>
-                              </Login>
-                            </InjectIntl(Login)>
-                          </ResetOnUnmount>
-                        </Connect(ResetOnUnmount)>
-                      </Connect(Connect(ResetOnUnmount))>
-                      <Modal
-                        isActive={false}
-                        messageStyle="is-danger"
-                        onCloseClick={[Function]}
-                        subTitle="Request failed"
-                        title="Error"
-                      >
-                        <div
-                          className="modal"
-                        >
-                          <div
-                            className="modal-background"
-                            onClick={[Function]}
-                            onKeyPress={[Function]}
-                            role="button"
-                            tabIndex={0}
-                          />
-                          <div
-                            className="modal-content"
-                          >
-                            <article
-                              className="message is-medium is-danger"
-                            >
-                              <div
-                                className="message-header"
-                              >
-                                <p>
-                                  Error
-                                </p>
-                              </div>
-                              <div
-                                className="message-body has-text-centered"
-                              >
-                                Request failed
-                              </div>
-                            </article>
-                          </div>
-                          <button
-                            aria-label="close"
-                            className="modal-close is-large"
-                            onClick={[Function]}
-                            type="button"
-                          />
-                        </div>
-                      </Modal>
-                    </App>
-                  </InjectIntl(App)>
-                </Connect(InjectIntl(App))>
-              </Route>
-            </withRouter(Connect(InjectIntl(App)))>
-          </Router>
-        </MemoryRouter>
-      </IntlProvider>
-    </IntlProvider>
-  </Connect(IntlProvider)>
-</Provider>
-`;
-
-exports[`containers/app renders the with auth in /stats 1`] = `
+exports[`containers/App renders App with auth in /stats 1`] = `
 <Provider
   store={
     Object {
@@ -5903,7 +5138,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                 }
                                 path="/stats"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(Connect(Reset))
                                   history={
                                     Object {
                                       "action": "PUSH",
@@ -5957,7 +5192,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                     }
                                   }
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <Connect(Reset)
                                     addCustomTimePeriodFilter={[Function]}
                                     addThingFilter={[Function]}
                                     addTimePeriodFilter={[Function]}
@@ -6016,7 +5251,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                     }
                                     updateParams={[Function]}
                                   >
-                                    <ResetOnUnmount
+                                    <Reset
                                       addCustomTimePeriodFilter={[Function]}
                                       addThingFilter={[Function]}
                                       addTimePeriodFilter={[Function]}
@@ -6735,9 +5970,9 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                           </DataParams>
                                         </Route>
                                       </withRouter(DataParams)>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                    </Reset>
+                                  </Connect(Reset)>
+                                </Connect(Connect(Reset))>
                               </Route>
                             </Switch>
                           </main>
@@ -6801,7 +6036,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
 </Provider>
 `;
 
-exports[`containers/app renders the with auth in /things 1`] = `
+exports[`containers/App renders App with auth in /things 1`] = `
 <Provider
   store={
     Object {
@@ -7753,7 +6988,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                 }
                                 path="/things"
                               >
-                                <Connect(withRouter(Connect(ResetOnUnmount)))
+                                <Connect(withRouter(Connect(Reset)))
                                   history={
                                     Object {
                                       "action": "POP",
@@ -7801,7 +7036,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                     }
                                   }
                                 >
-                                  <withRouter(Connect(ResetOnUnmount))
+                                  <withRouter(Connect(Reset))
                                     getThings={[Function]}
                                     history={
                                       Object {
@@ -7857,7 +7092,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                     things={Array []}
                                   >
                                     <Route>
-                                      <Connect(ResetOnUnmount)
+                                      <Connect(Reset)
                                         getThings={[Function]}
                                         history={
                                           Object {
@@ -7912,7 +7147,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                         showNotFoundError={[Function]}
                                         things={Array []}
                                       >
-                                        <ResetOnUnmount
+                                        <Reset
                                           getThings={[Function]}
                                           history={
                                             Object {
@@ -8232,16 +7467,781 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                               </div>
                                             </Things>
                                           </InjectIntl(Things)>
-                                        </ResetOnUnmount>
-                                      </Connect(ResetOnUnmount)>
+                                        </Reset>
+                                      </Connect(Reset)>
                                     </Route>
-                                  </withRouter(Connect(ResetOnUnmount))>
-                                </Connect(withRouter(Connect(ResetOnUnmount)))>
+                                  </withRouter(Connect(Reset))>
+                                </Connect(withRouter(Connect(Reset)))>
                               </Route>
                             </Switch>
                           </main>
                         </div>
                       </Main>
+                      <Modal
+                        isActive={false}
+                        messageStyle="is-danger"
+                        onCloseClick={[Function]}
+                        subTitle="Request failed"
+                        title="Error"
+                      >
+                        <div
+                          className="modal"
+                        >
+                          <div
+                            className="modal-background"
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            tabIndex={0}
+                          />
+                          <div
+                            className="modal-content"
+                          >
+                            <article
+                              className="message is-medium is-danger"
+                            >
+                              <div
+                                className="message-header"
+                              >
+                                <p>
+                                  Error
+                                </p>
+                              </div>
+                              <div
+                                className="message-body has-text-centered"
+                              >
+                                Request failed
+                              </div>
+                            </article>
+                          </div>
+                          <button
+                            aria-label="close"
+                            className="modal-close is-large"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </div>
+                      </Modal>
+                    </App>
+                  </InjectIntl(App)>
+                </Connect(InjectIntl(App))>
+              </Route>
+            </withRouter(Connect(InjectIntl(App)))>
+          </Router>
+        </MemoryRouter>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
+</Provider>
+`;
+
+exports[`containers/App renders App without auth 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "End date": "End date",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
+          "Measurements:": "Measurements:",
+          "Observation": "Observation",
+          "Password": "Password",
+          "Real time": "Real time",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Start date": "Start date",
+          "Stats": "Stats",
+          "Thing": "Thing",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Type": "Type",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
+    >
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "End date": "End date",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
+            "Measurements:": "Measurements:",
+            "Observation": "Observation",
+            "Password": "Password",
+            "Real time": "Real time",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Start date": "Start date",
+            "Stats": "Stats",
+            "Thing": "Thing",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Type": "Type",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
+      >
+        <MemoryRouter
+          initialEntries={
+            Array [
+              "/",
+            ]
+          }
+          keyLength={0}
+        >
+          <Router
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+          >
+            <withRouter(Connect(InjectIntl(App)))>
+              <Route>
+                <Connect(InjectIntl(App))
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <InjectIntl(App)
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    isAuth={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                    setShowError={[Function]}
+                    shouldShowError={false}
+                  >
+                    <App
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "canGo": [Function],
+                          "createHref": [Function],
+                          "entries": Array [
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                          ],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "index": 0,
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      intl={
+                        Object {
+                          "defaultFormats": Object {},
+                          "defaultLocale": "en",
+                          "formatDate": [Function],
+                          "formatHTMLMessage": [Function],
+                          "formatMessage": [Function],
+                          "formatNumber": [Function],
+                          "formatPlural": [Function],
+                          "formatRelative": [Function],
+                          "formatTime": [Function],
+                          "formats": Object {},
+                          "formatters": Object {
+                            "getDateTimeFormat": [Function],
+                            "getMessageFormat": [Function],
+                            "getNumberFormat": [Function],
+                            "getPluralFormat": [Function],
+                            "getRelativeFormat": [Function],
+                          },
+                          "locale": "en",
+                          "messages": Object {
+                            "Custom": "Custom",
+                            "Data": "Data",
+                            "Delete": "Delete",
+                            "End date": "End date",
+                            "Error": "Error",
+                            "Event stats": "Event stats",
+                            "Events:": "Events:",
+                            "Filters": "Filters",
+                            "Google maps": "Google maps",
+                            "Group by": "Group by",
+                            "IP address:": "IP address:",
+                            "IoT": "IoT",
+                            "Last observation:": "Last observation:",
+                            "Login": "Login",
+                            "Logout": "Logout",
+                            "MQTT topic:": "MQTT topic:",
+                            "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
+                            "Measurements:": "Measurements:",
+                            "Observation": "Observation",
+                            "Password": "Password",
+                            "Real time": "Real time",
+                            "Request failed": "Request failed",
+                            "Reset": "Reset",
+                            "Start date": "Start date",
+                            "Stats": "Stats",
+                            "Thing": "Thing",
+                            "Thing not found": "Thing not found",
+                            "Things": "Things",
+                            "Time": "Time",
+                            "Time period": "Time period",
+                            "Type": "Type",
+                            "Username": "Username",
+                            "avg": "Average",
+                            "avgByHour": "Average by hour",
+                            "date": "Date",
+                            "day": "Day",
+                            "door-closed": "Door closed",
+                            "door-opened": "Door opened",
+                            "en": "English",
+                            "es": "Spanish",
+                            "event": "Event",
+                            "hour": "Hour",
+                            "humidity": "Humidity",
+                            "humidity-indoor": "Humidity indoor",
+                            "humidity-outdoor": "Humidity outdoor",
+                            "luminosity": "Luminosity",
+                            "max": "Maximum",
+                            "maxByHour": "Maximum by hour",
+                            "measurement": "Mesasurement",
+                            "min": "Minimum",
+                            "minByHour": "Minimum by hour",
+                            "minute": "Minute",
+                            "month": "Month",
+                            "second": "Second",
+                            "stdDev": "Standard deviation",
+                            "stdDevByHour": "Standard deviation by hour",
+                            "temperature": "Temperature",
+                            "temperature-indoor": "Temperature indoor",
+                            "temperature-outdoor": "Temperature outdoor",
+                            "thing": "Thing",
+                            "total": "Total",
+                            "week": "Week",
+                            "year": "Year",
+                          },
+                          "now": [Function],
+                          "onError": [Function],
+                          "textComponent": "span",
+                          "timeZone": null,
+                        }
+                      }
+                      isAuth={false}
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      setShowError={[Function]}
+                      shouldShowError={false}
+                    >
+                      <Connect(Connect(Reset))>
+                        <Connect(Reset)
+                          checkAuth={[Function]}
+                          isLoading={false}
+                          login={[Function]}
+                          logout={[Function]}
+                          password={null}
+                          setPassword={[Function]}
+                          setUsername={[Function]}
+                          username={null}
+                        >
+                          <Reset
+                            checkAuth={[Function]}
+                            isLoading={false}
+                            login={[Function]}
+                            logout={[Function]}
+                            password={null}
+                            reset={[Function]}
+                            setPassword={[Function]}
+                            setUsername={[Function]}
+                            username={null}
+                          >
+                            <InjectIntl(Login)
+                              checkAuth={[Function]}
+                              isLoading={false}
+                              login={[Function]}
+                              logout={[Function]}
+                              password={null}
+                              reset={[Function]}
+                              setPassword={[Function]}
+                              setUsername={[Function]}
+                              username={null}
+                            >
+                              <Login
+                                checkAuth={[Function]}
+                                intl={
+                                  Object {
+                                    "defaultFormats": Object {},
+                                    "defaultLocale": "en",
+                                    "formatDate": [Function],
+                                    "formatHTMLMessage": [Function],
+                                    "formatMessage": [Function],
+                                    "formatNumber": [Function],
+                                    "formatPlural": [Function],
+                                    "formatRelative": [Function],
+                                    "formatTime": [Function],
+                                    "formats": Object {},
+                                    "formatters": Object {
+                                      "getDateTimeFormat": [Function],
+                                      "getMessageFormat": [Function],
+                                      "getNumberFormat": [Function],
+                                      "getPluralFormat": [Function],
+                                      "getRelativeFormat": [Function],
+                                    },
+                                    "locale": "en",
+                                    "messages": Object {
+                                      "Custom": "Custom",
+                                      "Data": "Data",
+                                      "Delete": "Delete",
+                                      "End date": "End date",
+                                      "Error": "Error",
+                                      "Event stats": "Event stats",
+                                      "Events:": "Events:",
+                                      "Filters": "Filters",
+                                      "Google maps": "Google maps",
+                                      "Group by": "Group by",
+                                      "IP address:": "IP address:",
+                                      "IoT": "IoT",
+                                      "Last observation:": "Last observation:",
+                                      "Login": "Login",
+                                      "Logout": "Logout",
+                                      "MQTT topic:": "MQTT topic:",
+                                      "Measurement stats": "Measurement stats",
+                                      "Measurement type": "Measurement type",
+                                      "Measurements:": "Measurements:",
+                                      "Observation": "Observation",
+                                      "Password": "Password",
+                                      "Real time": "Real time",
+                                      "Request failed": "Request failed",
+                                      "Reset": "Reset",
+                                      "Start date": "Start date",
+                                      "Stats": "Stats",
+                                      "Thing": "Thing",
+                                      "Thing not found": "Thing not found",
+                                      "Things": "Things",
+                                      "Time": "Time",
+                                      "Time period": "Time period",
+                                      "Type": "Type",
+                                      "Username": "Username",
+                                      "avg": "Average",
+                                      "avgByHour": "Average by hour",
+                                      "date": "Date",
+                                      "day": "Day",
+                                      "door-closed": "Door closed",
+                                      "door-opened": "Door opened",
+                                      "en": "English",
+                                      "es": "Spanish",
+                                      "event": "Event",
+                                      "hour": "Hour",
+                                      "humidity": "Humidity",
+                                      "humidity-indoor": "Humidity indoor",
+                                      "humidity-outdoor": "Humidity outdoor",
+                                      "luminosity": "Luminosity",
+                                      "max": "Maximum",
+                                      "maxByHour": "Maximum by hour",
+                                      "measurement": "Mesasurement",
+                                      "min": "Minimum",
+                                      "minByHour": "Minimum by hour",
+                                      "minute": "Minute",
+                                      "month": "Month",
+                                      "second": "Second",
+                                      "stdDev": "Standard deviation",
+                                      "stdDevByHour": "Standard deviation by hour",
+                                      "temperature": "Temperature",
+                                      "temperature-indoor": "Temperature indoor",
+                                      "temperature-outdoor": "Temperature outdoor",
+                                      "thing": "Thing",
+                                      "total": "Total",
+                                      "week": "Week",
+                                      "year": "Year",
+                                    },
+                                    "now": [Function],
+                                    "onError": [Function],
+                                    "textComponent": "span",
+                                    "timeZone": null,
+                                  }
+                                }
+                                isLoading={false}
+                                login={[Function]}
+                                logout={[Function]}
+                                password={null}
+                                reset={[Function]}
+                                setPassword={[Function]}
+                                setUsername={[Function]}
+                                username={null}
+                              >
+                                <section
+                                  className="hero is-fullheight"
+                                >
+                                  <div
+                                    className="hero-body"
+                                  >
+                                    <div
+                                      className="container has-text-centered"
+                                    >
+                                      <div
+                                        className="column is-4 is-offset-4"
+                                      >
+                                        <div
+                                          className="box"
+                                        >
+                                          <p
+                                            className="title is-1"
+                                          >
+                                            IoT
+                                          </p>
+                                          <form
+                                            onSubmit={[Function]}
+                                          >
+                                            <div
+                                              className="field"
+                                            >
+                                              <div
+                                                className="control has-icons-left"
+                                              >
+                                                <input
+                                                  className="input is-large"
+                                                  id="username-input"
+                                                  onChange={[Function]}
+                                                  placeholder="Username"
+                                                  value=""
+                                                />
+                                                <span
+                                                  className="icon is-large is-left"
+                                                >
+                                                  <i
+                                                    className="fas fa-user"
+                                                  />
+                                                </span>
+                                              </div>
+                                            </div>
+                                            <div
+                                              className="field"
+                                            >
+                                              <div
+                                                className="control has-icons-left"
+                                              >
+                                                <input
+                                                  className="input is-large"
+                                                  id="password-input"
+                                                  onChange={[Function]}
+                                                  placeholder="Password"
+                                                  type="password"
+                                                  value=""
+                                                />
+                                                <span
+                                                  className="icon is-large is-left"
+                                                >
+                                                  <i
+                                                    className="fas fa-lock"
+                                                  />
+                                                </span>
+                                              </div>
+                                            </div>
+                                            <button
+                                              className="button is-block is-primary is-large is-fullwidth"
+                                              disabled={false}
+                                              id="login-button"
+                                              type="submit"
+                                            >
+                                              Login
+                                            </button>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                              </Login>
+                            </InjectIntl(Login)>
+                          </Reset>
+                        </Connect(Reset)>
+                      </Connect(Connect(Reset))>
                       <Modal
                         isActive={false}
                         messageStyle="is-danger"

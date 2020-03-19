@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import * as localizationActions from "actions/localization";
-import LanguageItem from "components/languageItem";
+import LanguageItem from "components/LanguageItem";
 
 const LanguageSelector = ({ selectedLanguage, languages, updateLanguage }) => (
   <div className="navbar-item has-dropdown is-hoverable">

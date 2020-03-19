@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Loader from "components/loader";
-import ChartBox from "components/chartBox";
-import BarChart from "components/barChart";
-import LineChart from "components/lineChart";
+import Loader from "components/Loader";
+import ChartBox from "components/ChartBox";
+import BarChart from "components/BarChart";
+import LineChart from "components/LineChart";
 import { BARCHART, LINECHART, REALTIME } from "constants/chartTypes";
 import { isEmpty } from "helpers/validation";
 

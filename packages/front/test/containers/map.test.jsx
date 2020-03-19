@@ -3,12 +3,12 @@ import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
-import Map from "containers/map";
+import Map from "containers/Map";
 import { pointToLatLng } from "helpers/geometry";
 import { initialState, defaultStore, thing } from "../constants/index";
 
-describe("containers/map", () => {
-  it("renders a map", () => {
+describe("containers/Map", () => {
+  it("renders Map", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
         <Map />
@@ -16,7 +16,7 @@ describe("containers/map", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders a map with marker", () => {
+  it("renders Map with marker", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
         <Map marker={{ point: pointToLatLng(thing.geometry) }} />
@@ -24,7 +24,7 @@ describe("containers/map", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders a map with label and marker", () => {
+  it("renders Map with label and marker", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
         <Map marker={{ label: thing.name, point: pointToLatLng(thing.geometry) }} />
@@ -32,7 +32,7 @@ describe("containers/map", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders a map with open dialog", () => {
+  it("renders Map with open dialog", () => {
     const state = {
       ...initialState,
       app: {

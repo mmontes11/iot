@@ -1,23 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import ParamsPanel from "components/paramsPanel";
+import ParamsPanel from "components/ParamsPanel";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
-import { TYPE, OBSERVATION } from "constants/params";
+import { TYPE, OBSERVATION, GROUP_BY } from "constants/params";
 import { isParamDisabled } from "helpers/paramsPanel";
 import { paramShape } from "types";
 
-const StatsParamsPanel = ({
+const DataParamsPanel = ({
   onParamsSelected,
   onReset,
   type,
   observation,
+  groupBy,
   isResetDisabled,
   selectType,
   updateType,
   selectObservation,
   updateObservation,
+  selectGroupBy,
+  updateGroupBy,
 }) => (
   <ParamsPanel
     params={[
@@ -41,7 +44,20 @@ const StatsParamsPanel = ({
         onButtonClick: () => selectObservation(),
         onItemClick: item => {
           updateObservation(item);
-          onParamsSelected(type.selectedItem, item);
+          onParamsSelected(type.selectedItem, item, groupBy.selectedItem);
+        },
+      },
+      {
+        key: GROUP_BY,
+        label: groupBy.selectedItem || "Group by",
+        items: groupBy.items || [],
+        isActive: groupBy.isActive || false,
+        isLoading: groupBy.isLoading || false,
+        isDisabled: groupBy.isDisabled || false,
+        onButtonClick: () => selectGroupBy(),
+        onItemClick: item => {
+          updateGroupBy(item);
+          onParamsSelected(type.selectedItem, observation.selectedItem, item);
         },
       },
     ]}
@@ -52,25 +68,29 @@ const StatsParamsPanel = ({
   />
 );
 
-StatsParamsPanel.propTypes = {
+DataParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
   type: paramShape.isRequired,
   observation: paramShape.isRequired,
+  groupBy: paramShape.isRequired,
   isResetDisabled: PropTypes.bool.isRequired,
   selectType: PropTypes.func.isRequired,
   updateType: PropTypes.func.isRequired,
   selectObservation: PropTypes.func.isRequired,
   updateObservation: PropTypes.func.isRequired,
+  selectGroupBy: PropTypes.func.isRequired,
+  updateGroupBy: PropTypes.func.isRequired,
 };
 
 const withConnect = connect(
   state => ({
     type: fromState.getParam(state, TYPE),
     observation: fromState.getParam(state, OBSERVATION),
+    groupBy: fromState.getParam(state, GROUP_BY),
     isResetDisabled: fromState.isResetDisabled(state),
   }),
   { ...paramsActions },
 );
 
-export default withConnect(StatsParamsPanel);
+export default withConnect(DataParamsPanel);

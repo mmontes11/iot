@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import * as fromState from "reducers";
 import * as authActions from "actions/auth";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { withReset } from "hocs/reset";
 import { injectIntl, intlShape } from "react-intl";
 
 const Login = ({ intl: { formatMessage }, username, password, isLoading, setUsername, setPassword, login }) => {
@@ -90,4 +90,4 @@ const withConnect = connect(
   authActions,
 );
 
-export default compose(withConnect, withResetOnUnmount, injectIntl)(Login);
+export default compose(withConnect, withReset, injectIntl)(Login);

@@ -1,8 +1,8 @@
 import React from "react";
-import ParamsPanel from "components/paramsPanel";
+import ParamsPanel from "components/ParamsPanel";
 import { shallow } from "enzyme";
 
-describe("components/paramsPanel", () => {
+describe("components/ParamsPanel", () => {
   it("renders with some params", () => {
     const wrapper = shallow(
       <ParamsPanel

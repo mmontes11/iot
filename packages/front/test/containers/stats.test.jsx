@@ -4,12 +4,12 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
-import Stats from "containers/stats";
-import IntlProvider from "containers/intlProvider";
+import Stats from "containers/Stats";
+import IntlProvider from "containers/IntlProvider";
 import { initialState, defaultStore, statsWithUnits, statsWithoutUnits } from "../constants";
 
-describe("containers/stats", () => {
-  it("renders stats in initial state", () => {
+describe("containers/Stats", () => {
+  it("renders Stats in initial state", () => {
     const wrapperLoading = mount(
       <Provider store={defaultStore}>
         <IntlProvider store={defaultStore}>
@@ -47,7 +47,7 @@ describe("containers/stats", () => {
     );
     expect(wrapperLoading).toMatchSnapshot();
   });
-  it("renders stats", () => {
+  it("renders Stats", () => {
     const state = {
       ...initialState,
       data: {

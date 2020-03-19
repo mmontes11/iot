@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/dateFilter renders DateFilter for selecting a custom time period 1`] = `
+exports[`components/DateFilter renders DateFilter for selecting a custom time period 1`] = `
 <Connect(IntlProvider)
   store={
     Object {
@@ -49,7 +49,7 @@ exports[`components/dateFilter renders DateFilter for selecting a custom time pe
 </Connect(IntlProvider)>
 `;
 
-exports[`components/dateFilter renders DateFilter for selecting a time period 1`] = `
+exports[`components/DateFilter renders DateFilter for selecting a time period 1`] = `
 <Connect(IntlProvider)
   store={
     Object {

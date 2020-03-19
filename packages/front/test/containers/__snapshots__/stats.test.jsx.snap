@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/stats renders stats 1`] = `
+exports[`containers/Stats renders Stats 1`] = `
 <Provider
   store={
     Object {
@@ -246,15 +246,15 @@ exports[`containers/stats renders stats 1`] = `
               }
             }
           >
-            <Connect(Connect(ResetOnUnmount))>
-              <Connect(ResetOnUnmount)
+            <Connect(Connect(Reset))>
+              <Connect(Reset)
                 addCustomTimePeriodFilter={[Function]}
                 addThingFilter={[Function]}
                 addTimePeriodFilter={[Function]}
                 hasError={false}
                 updateParams={[Function]}
               >
-                <ResetOnUnmount
+                <Reset
                   addCustomTimePeriodFilter={[Function]}
                   addThingFilter={[Function]}
                   addTimePeriodFilter={[Function]}
@@ -1569,9 +1569,9 @@ exports[`containers/stats renders stats 1`] = `
                       </DataParams>
                     </Route>
                   </withRouter(DataParams)>
-                </ResetOnUnmount>
-              </Connect(ResetOnUnmount)>
-            </Connect(Connect(ResetOnUnmount))>
+                </Reset>
+              </Connect(Reset)>
+            </Connect(Connect(Reset))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -1580,7 +1580,7 @@ exports[`containers/stats renders stats 1`] = `
 </Provider>
 `;
 
-exports[`containers/stats renders stats in initial state 1`] = `
+exports[`containers/Stats renders Stats in initial state 1`] = `
 <Provider
   store={
     Object {
@@ -1826,15 +1826,15 @@ exports[`containers/stats renders stats in initial state 1`] = `
               }
             }
           >
-            <Connect(Connect(ResetOnUnmount))>
-              <Connect(ResetOnUnmount)
+            <Connect(Connect(Reset))>
+              <Connect(Reset)
                 addCustomTimePeriodFilter={[Function]}
                 addThingFilter={[Function]}
                 addTimePeriodFilter={[Function]}
                 hasError={false}
                 updateParams={[Function]}
               >
-                <ResetOnUnmount
+                <Reset
                   addCustomTimePeriodFilter={[Function]}
                   addThingFilter={[Function]}
                   addTimePeriodFilter={[Function]}
@@ -2449,9 +2449,9 @@ exports[`containers/stats renders stats in initial state 1`] = `
                       </DataParams>
                     </Route>
                   </withRouter(DataParams)>
-                </ResetOnUnmount>
-              </Connect(ResetOnUnmount)>
-            </Connect(Connect(ResetOnUnmount))>
+                </Reset>
+              </Connect(Reset)>
+            </Connect(Connect(Reset))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -2460,7 +2460,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
 </Provider>
 `;
 
-exports[`containers/stats renders when loading stats 1`] = `
+exports[`containers/Stats renders when loading stats 1`] = `
 <Provider
   store={
     Object {
@@ -2706,15 +2706,15 @@ exports[`containers/stats renders when loading stats 1`] = `
               }
             }
           >
-            <Connect(Connect(ResetOnUnmount))>
-              <Connect(ResetOnUnmount)
+            <Connect(Connect(Reset))>
+              <Connect(Reset)
                 addCustomTimePeriodFilter={[Function]}
                 addThingFilter={[Function]}
                 addTimePeriodFilter={[Function]}
                 hasError={false}
                 updateParams={[Function]}
               >
-                <ResetOnUnmount
+                <Reset
                   addCustomTimePeriodFilter={[Function]}
                   addThingFilter={[Function]}
                   addTimePeriodFilter={[Function]}
@@ -3344,9 +3344,9 @@ exports[`containers/stats renders when loading stats 1`] = `
                       </DataParams>
                     </Route>
                   </withRouter(DataParams)>
-                </ResetOnUnmount>
-              </Connect(ResetOnUnmount)>
-            </Connect(Connect(ResetOnUnmount))>
+                </Reset>
+              </Connect(Reset)>
+            </Connect(Connect(Reset))>
           </Router>
         </MemoryRouter>
       </IntlProvider>

@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import * as commonActions from "actions/common";
 
-export const withResetOnUnmount = WrappedComponent => {
-  const ResetOnUnmount = props => {
+export const withReset = WrappedComponent => {
+  const Reset = props => {
     const { reset } = props;
     useEffect(() => () => reset(), []);
     return <WrappedComponent {...props} />;
   };
-  ResetOnUnmount.propTypes = {
+  Reset.propTypes = {
     reset: PropTypes.func.isRequired,
   };
-  return connect(null, commonActions)(ResetOnUnmount);
+  return connect(null, commonActions)(Reset);
 };

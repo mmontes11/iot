@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import BarChart from "components/barChart";
-import IntlProvider from "containers/intlProvider";
+import BarChart from "components/BarChart";
+import IntlProvider from "containers/IntlProvider";
 import { defaultStore, statsWithUnits, statsWithoutUnits } from "../constants";
 
-describe("components/barChart", () => {
+describe("components/BarChart", () => {
   it("renders chart with units in title", () => {
     const wrapper = shallow(
       <IntlProvider store={defaultStore}>

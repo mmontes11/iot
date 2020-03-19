@@ -1,10 +1,10 @@
 import React from "react";
 import { mount } from "enzyme";
-import Dropdown from "components/dropdown";
-import IntlProvider from "containers/intlProvider";
+import Dropdown from "components/Dropdown";
+import IntlProvider from "containers/IntlProvider";
 import { defaultStore } from "../constants";
 
-describe("components/dropdown", () => {
+describe("components/Dropdown", () => {
   it("renders in initial state", () => {
     const wrapper = mount(
       <IntlProvider store={defaultStore}>

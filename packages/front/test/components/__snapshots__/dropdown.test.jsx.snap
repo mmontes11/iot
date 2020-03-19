@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/dropdown renders in active state 1`] = `
+exports[`components/Dropdown renders in active state 1`] = `
 <Connect(IntlProvider)
   store={
     Object {
@@ -292,7 +292,7 @@ exports[`components/dropdown renders in active state 1`] = `
 </Connect(IntlProvider)>
 `;
 
-exports[`components/dropdown renders in disabled state 1`] = `
+exports[`components/Dropdown renders in disabled state 1`] = `
 <Connect(IntlProvider)
   store={
     Object {
@@ -584,7 +584,7 @@ exports[`components/dropdown renders in disabled state 1`] = `
 </Connect(IntlProvider)>
 `;
 
-exports[`components/dropdown renders in initial state 1`] = `
+exports[`components/Dropdown renders in initial state 1`] = `
 <Connect(IntlProvider)
   store={
     Object {
@@ -876,7 +876,7 @@ exports[`components/dropdown renders in initial state 1`] = `
 </Connect(IntlProvider)>
 `;
 
-exports[`components/dropdown renders in loading state 1`] = `
+exports[`components/Dropdown renders in loading state 1`] = `
 <Connect(IntlProvider)
   store={
     Object {
