@@ -38,7 +38,7 @@ $ ./scripts/run-dev.sh
 
 #### Other OS
 ```bash
-$ docker-compose -f docker-compose.dev.services.yml up -d --build
+$ docker-compose -f docker-compose.dev.services.yml up -d --build --force-recreate
 $ npm run start:back
 $ npm run start:front
 $ npm run start:biot
