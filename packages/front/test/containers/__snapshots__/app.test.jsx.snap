@@ -4025,7 +4025,9 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                           >
                                             IoT
                                           </p>
-                                          <form>
+                                          <form
+                                            onSubmit={[Function]}
+                                          >
                                             <div
                                               className="field"
                                             >
@@ -4075,8 +4077,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                               className="button is-block is-primary is-large is-fullwidth"
                                               disabled={false}
                                               id="login-button"
-                                              onClick={[Function]}
-                                              type="button"
+                                              type="submit"
                                             >
                                               Login
                                             </button>
@@ -4789,7 +4790,9 @@ exports[`containers/app renders the app without auth 1`] = `
                                           >
                                             IoT
                                           </p>
-                                          <form>
+                                          <form
+                                            onSubmit={[Function]}
+                                          >
                                             <div
                                               className="field"
                                             >
@@ -4839,8 +4842,7 @@ exports[`containers/app renders the app without auth 1`] = `
                                               className="button is-block is-primary is-large is-fullwidth"
                                               disabled={false}
                                               id="login-button"
-                                              onClick={[Function]}
-                                              type="button"
+                                              type="submit"
                                             >
                                               Login
                                             </button>

@@ -356,7 +356,9 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -406,8 +408,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                                 className="button is-block is-primary is-large is-fullwidth"
                                 disabled={false}
                                 id="login-button"
-                                onClick={[Function]}
-                                type="button"
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -784,7 +785,9 @@ exports[`containers/login renders login in loading state 1`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -834,8 +837,7 @@ exports[`containers/login renders login in loading state 1`] = `
                                 className="button is-block is-primary is-large is-fullwidth is-loading"
                                 disabled={true}
                                 id="login-button"
-                                onClick={[Function]}
-                                type="button"
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -1212,7 +1214,9 @@ exports[`containers/login simulates successful login 1`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -1262,8 +1266,7 @@ exports[`containers/login simulates successful login 1`] = `
                                 className="button is-block is-primary is-large is-fullwidth"
                                 disabled={false}
                                 id="login-button"
-                                onClick={[Function]}
-                                type="button"
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -1780,7 +1783,9 @@ exports[`containers/login simulates successful login 3`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -1830,8 +1835,7 @@ exports[`containers/login simulates successful login 3`] = `
                                 className="button is-block is-primary is-large is-fullwidth"
                                 disabled={false}
                                 id="login-button"
-                                onClick={[Function]}
-                                type="button"
+                                type="submit"
                               >
                                 Login
                               </button>
