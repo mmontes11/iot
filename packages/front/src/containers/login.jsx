@@ -19,7 +19,12 @@ const Login = ({ intl: { formatMessage }, username, password, isLoading, setUser
           <div className="column is-4 is-offset-4">
             <div className="box">
               <p className="title is-1">{formatMessage({ id: "IoT" })}</p>
-              <form>
+              <form
+                onSubmit={event => {
+                  event.preventDefault();
+                  login();
+                }}
+              >
                 <div className="field">
                   <div className="control has-icons-left">
                     <input
@@ -49,16 +54,7 @@ const Login = ({ intl: { formatMessage }, username, password, isLoading, setUser
                     </span>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  id="login-button"
-                  className={btnClass}
-                  onClick={event => {
-                    event.preventDefault();
-                    login();
-                  }}
-                  disabled={isLoading}
-                >
+                <button type="submit" id="login-button" className={btnClass} disabled={isLoading}>
                   {formatMessage({ id: "Login" })}
                 </button>
               </form>
