@@ -8,40 +8,40 @@ export class Service {
     this.client = client;
     this.baseUrl = `${this.client.url}/${resource}`;
   }
-  async get(path, options = {}) {
-    const url = this._getUrl(path, options);
-    const headers = await this._getHeaders(options);
-    const fetchOptions = {
+  async get(path, reqOpts = {}) {
+    const url = this._getUrl(path, reqOpts);
+    const headers = await this._getHeaders(reqOpts);
+    const fetchOpts = {
       method: "GET",
       headers,
     };
-    return this._request(url, fetchOptions);
+    return this._request(url, fetchOpts, reqOpts);
   }
-  async post(path, data, options = {}) {
-    const url = this._getUrl(path, options);
+  async post(path, data, reqOpts = {}) {
+    const url = this._getUrl(path, reqOpts);
     const body = JSON.stringify(data);
     const extraHeaders = {
       "Content-Type": "application/json",
     };
-    const headers = await this._getHeaders(options, extraHeaders);
-    const fetchOptions = {
+    const headers = await this._getHeaders(reqOpts, extraHeaders);
+    const fetchOpts = {
       method: "POST",
       body,
       headers,
     };
-    return this._request(url, fetchOptions);
+    return this._request(url, fetchOpts, reqOpts);
   }
-  async delete(path, options = {}) {
-    const url = this._getUrl(path, options);
-    const headers = await this._getHeaders(options);
+  async delete(path, reqOpts = {}) {
+    const url = this._getUrl(path, reqOpts);
+    const headers = await this._getHeaders(reqOpts);
     const fetchOptions = {
       method: "DELETE",
       headers,
     };
-    return this._request(url, fetchOptions);
+    return this._request(url, fetchOptions, reqOpts);
   }
-  _getUrl(path, options) {
-    const { query } = options;
+  _getUrl(path, opts) {
+    const { query } = opts;
     let baseUrl = !_.isUndefined(path) ? `${this.baseUrl}/${path}` : this.baseUrl;
     const addQuery = !_.isUndefined(query) && _.some(Object.values(query), q => !_.isUndefined(q));
     if (addQuery) {
@@ -49,8 +49,8 @@ export class Service {
     }
     return baseUrl;
   }
-  async _getAuthHeader(options) {
-    const { auth = false, basicAuth = false } = options;
+  async _getAuthHeader(reqOpts) {
+    const { auth = false, basicAuth = false } = reqOpts;
     if (auth) {
       const token = await this.client.authService.getToken();
       return { Authorization: `Bearer ${token}` };
@@ -61,12 +61,13 @@ export class Service {
     }
     return null;
   }
-  async _getHeaders(options, extraHeaders = {}) {
+  async _getHeaders(reqOpts, extraHeaders = {}) {
     let headers = {
       Accept: "application/json",
       ...extraHeaders,
     };
-    const auth = await this._getAuthHeader(options);
+
+    const auth = await this._getAuthHeader(reqOpts);
     if (auth) {
       headers = {
         ...headers,
@@ -75,23 +76,50 @@ export class Service {
     }
     return headers;
   }
-  async _request(url, options) {
-    const { log } = this.client;
+  async _refreshOpts(fetchOpts, reqOpts) {
+    await this.client.authService.refreshToken();
+    const headers = await this._getHeaders(reqOpts);
+    return {
+      ...fetchOpts,
+      headers,
+    };
+  }
+  async _performFetch(url, fetchOpts) {
+    const res = await fetch(url, fetchOpts);
+    const { status: statusCode, statusText } = res;
+    const status = `${statusCode} ${statusText}`;
+    const body = await res
+      .clone()
+      .json()
+      .catch(() => res.text());
+    return { statusCode, status, body };
+  }
+  async _request(url, fetchOpts, reqOpts) {
+    const {
+      log,
+      handleExpiredToken,
+      authService: { logout },
+    } = this.client;
+    const { auth, basicAuth, retryOnUnauthorized = true } = reqOpts;
+    const shouldRetry = (auth || basicAuth) && retryOnUnauthorized;
     const requestId = this._getRequestId();
-    log.logRequest(requestId, url, options);
+    log.logRequest(requestId, url, fetchOpts);
     return new Promise(async (resolve, reject) => {
       try {
-        const res = await fetch(url, options);
-        const { status: statusCode, statusText } = res;
-        const status = `${statusCode} ${statusText}`;
-        const body = await res
-          .clone()
-          .json()
-          .catch(() => res.text());
-        const result = { statusCode, statusText, body };
+        let result = await this._performFetch(url, fetchOpts);
+        if (shouldRetry && result.statusCode === UNAUTHORIZED) {
+          if (handleExpiredToken) {
+            handleExpiredToken();
+            reject(result);
+            return;
+          }
+          const newOpts = await this._refreshOpts(fetchOpts, reqOpts);
+          result = await this._performFetch(url, newOpts);
+        }
+        const { statusCode, status, body } = result;
         if (statusCode >= 400) {
           if (statusCode === UNAUTHORIZED) {
-            this.client.authService.logout();
+            await logout();
           }
           log.logInfo(`Request ${requestId} errored`);
           log.logResponse(requestId, status, body);

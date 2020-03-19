@@ -7,13 +7,20 @@ import {
   LOGIN_REQUEST_ERROR,
 } from "constants/actionTypes/auth";
 import { setShowError } from "actions/app";
+import { getToken } from "helpers/localStorage";
+// eslint-disable-next-line import/no-cycle
 import iotClient from "lib/iotClient";
 
-export const isAuth = () => dispatch => {
-  iotClient.authService
-    .isAuth()
-    .then(isAuthVal => dispatch({ type: IS_AUTH, isAuth: isAuthVal }))
-    .catch(() => dispatch({ type: IS_AUTH, isAuth: false }));
+export const checkAuth = () => dispatch => {
+  const token = getToken();
+  const hasToken = token !== null;
+  dispatch({ type: IS_AUTH, isAuth: hasToken });
+  if (hasToken) {
+    iotClient.authService
+      .checkAuthToken(token)
+      .then(({ statusCode }) => dispatch({ type: IS_AUTH, isAuth: statusCode === 200 }))
+      .catch(() => dispatch({ type: IS_AUTH, isAuth: false }));
+  }
 };
 
 export const setUsername = username => dispatch => {
@@ -36,7 +43,7 @@ export const login = () => (dispatch, getState) => {
         statusCode: response.statusCode,
         error: null,
       });
-      isAuth()(dispatch);
+      checkAuth()(dispatch);
     })
     .catch(error => {
       dispatch({
@@ -52,9 +59,9 @@ export const logout = () => dispatch => {
   iotClient.authService
     .logout()
     .then(() => {
-      isAuth()(dispatch);
+      checkAuth()(dispatch);
     })
     .catch(() => {
-      isAuth()(dispatch);
+      checkAuth()(dispatch);
     });
 };

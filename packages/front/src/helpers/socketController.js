@@ -17,14 +17,16 @@ export class SocketController {
       query,
       transports: ["polling", "websocket"],
     };
-    this.socket = SocketIOClient(options);
+    this.socket = SocketIOClient(process.env.FRONT_SOCKET_URL, options);
     this.onData = onData;
     this.onError = onError;
   }
-  _handleError = err => {
+
+  _handleError(err) {
     this.onError(err);
     this.close();
-  };
+  }
+
   listen() {
     this.socket.on("data", data => this.onData(data));
     this.socket.on("error", err => this._handleError(err));
@@ -33,6 +35,7 @@ export class SocketController {
     this.socket.on("thing_error", err => this._handleError(err));
     this.socket.on("socket_server_error", err => this._handleError(err));
   }
+
   close() {
     this.socket.close();
   }

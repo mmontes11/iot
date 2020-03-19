@@ -1,11 +1,12 @@
+import "@babel/polyfill";
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import IntlProvider from "containers/intlProvider";
+import IntlProvider from "containers/IntlProvider";
 import { BrowserRouter as Router } from "react-router-dom";
-import App from "containers/app";
+import App from "containers/App";
 import store from "config/store";
-import { isAuth } from "actions/auth";
+import { checkAuth } from "actions/auth";
 import { setupLocalization } from "config/localization";
 
 setupLocalization();
@@ -21,4 +22,4 @@ render(
   document.getElementById("app"),
 );
 
-store.dispatch(isAuth());
+store.dispatch(checkAuth());

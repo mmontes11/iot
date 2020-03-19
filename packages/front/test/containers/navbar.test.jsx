@@ -4,12 +4,12 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import { MemoryRouter } from "react-router-dom";
-import Navbar from "containers/navbar";
-import IntlProvider from "containers/intlProvider";
+import Navbar from "containers/Navbar";
+import IntlProvider from "containers/IntlProvider";
 import { initialState, defaultStore } from "../constants/index";
 
-describe("containers/navbar", () => {
-  it("renders navbar in initial state and unmounts", () => {
+describe("containers/Navbar", () => {
+  it("renders Navbar in initial state and unmounts", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>
         <IntlProvider store={defaultStore}>
@@ -22,7 +22,7 @@ describe("containers/navbar", () => {
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });
-  it("renders navbar in toggled hamburguer menu state", () => {
+  it("renders Navbar in toggled hamburguer menu state", () => {
     const state = {
       ...initialState,
       app: {

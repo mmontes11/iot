@@ -3,11 +3,11 @@ import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
-import Login from "containers/login";
-import IntlProvider from "containers/intlProvider";
+import Login from "containers/Login";
+import IntlProvider from "containers/IntlProvider";
 import { initialState, defaultStore } from "../constants/index";
 
-describe("containers/login", () => {
+describe("containers/Login", () => {
   it("renders login in initial state and unmounts", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>

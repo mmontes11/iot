@@ -1,4 +1,4 @@
-import { isAuth, setUsername, setPassword, login, logout } from "actions/auth";
+import { checkAuth, setUsername, setPassword, login, logout } from "actions/auth";
 
 describe("actions/auth", () => {
   const testThunk = thunk => {
@@ -8,7 +8,7 @@ describe("actions/auth", () => {
     expect(thunk).toMatchSnapshot();
   };
   it("dispatches an isAuth action", () => {
-    testThunk(isAuth());
+    testThunk(checkAuth());
   });
   it("dispatches a setUsername action", () => {
     testThunk(setUsername());

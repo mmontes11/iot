@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import TagList from "components/tagList";
+import TagList from "components/TagList";
 
-describe("components/tagList", () => {
+describe("components/TagList", () => {
   it("renders nothing when no tags are specified", () => {
     const wrapper = shallow(<TagList label="foo" tagStyle="is-warning" />);
     expect(wrapper).toMatchSnapshot();

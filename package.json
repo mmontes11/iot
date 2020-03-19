@@ -1,22 +1,23 @@
 {
   "name": "iot",
   "version": "1.1.0",
-  "description": "Generic purpose Internet of Things platform",
+  "description": "General purpose Internet of Things platform",
   "devDependencies": {
     "lerna": "^3.16.4"
   },
   "scripts": {
-    "install": "lerna bootstrap",
-    "start:front": "cd packages/front && npm start",
-    "start:back": "cd packages/back && npm start",
-    "start:biot": "cd packages/biot && npm start",
-    "start:worker": "cd packages/worker && npm start",
-    "lint": "lerna run lint",
-    "test": "lerna run test",
-    "coverage": "lerna run coverage",
-    "clean": "lerna run clean",
     "build": "lerna run build",
-    "deploy": "lerna run deploy"
+    "clean": "lerna run clean",
+    "coverage": "lerna run coverage",
+    "deploy": "lerna run deploy",
+    "install": "lerna bootstrap",
+    "lint": "lerna run lint",
+    "start:back": "cd packages/back; nvm use; npm start",
+    "start:front": "cd packages/front; nvm use; npm start",
+    "start:biot": "cd packages/biot; nvm use; npm start",
+    "start:worker": "cd packages/worker; nvm use; npm start",
+    "start:thing": "cd packages/thing; nvm use; npm start",
+    "test": "lerna run test"
   },
   "repository": {
     "type": "git",

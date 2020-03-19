@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/login renders login in initial state and unmounts 1`] = `
+exports[`containers/Login renders login in initial state and unmounts 1`] = `
 <Provider
   store={
     Object {
@@ -200,9 +200,9 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
+            checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
             logout={[Function]}
@@ -211,8 +211,8 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
             setUsername={[Function]}
             username={null}
           >
-            <ResetOnUnmount
-              isAuth={[Function]}
+            <Reset
+              checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
               logout={[Function]}
@@ -223,7 +223,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
               username={null}
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={false}
                 login={[Function]}
                 logout={[Function]}
@@ -234,6 +234,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                 username={null}
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -326,7 +327,6 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
                   logout={[Function]}
@@ -356,7 +356,9 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -406,7 +408,7 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                                 className="button is-block is-primary is-large is-fullwidth"
                                 disabled={false}
                                 id="login-button"
-                                onClick={[Function]}
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -418,16 +420,16 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>
 </Provider>
 `;
 
-exports[`containers/login renders login in loading state 1`] = `
+exports[`containers/Login renders login in loading state 1`] = `
 <Provider
   store={
     Object {
@@ -627,9 +629,9 @@ exports[`containers/login renders login in loading state 1`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
+            checkAuth={[Function]}
             isLoading={true}
             login={[Function]}
             logout={[Function]}
@@ -638,8 +640,8 @@ exports[`containers/login renders login in loading state 1`] = `
             setUsername={[Function]}
             username="username"
           >
-            <ResetOnUnmount
-              isAuth={[Function]}
+            <Reset
+              checkAuth={[Function]}
               isLoading={true}
               login={[Function]}
               logout={[Function]}
@@ -650,7 +652,7 @@ exports[`containers/login renders login in loading state 1`] = `
               username="username"
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={true}
                 login={[Function]}
                 logout={[Function]}
@@ -661,6 +663,7 @@ exports[`containers/login renders login in loading state 1`] = `
                 username="username"
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -753,7 +756,6 @@ exports[`containers/login renders login in loading state 1`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={true}
                   login={[Function]}
                   logout={[Function]}
@@ -783,7 +785,9 @@ exports[`containers/login renders login in loading state 1`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -833,7 +837,7 @@ exports[`containers/login renders login in loading state 1`] = `
                                 className="button is-block is-primary is-large is-fullwidth is-loading"
                                 disabled={true}
                                 id="login-button"
-                                onClick={[Function]}
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -845,16 +849,16 @@ exports[`containers/login renders login in loading state 1`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>
 </Provider>
 `;
 
-exports[`containers/login simulates successful login 1`] = `
+exports[`containers/Login simulates successful login 1`] = `
 <Provider
   store={
     Object {
@@ -1054,9 +1058,9 @@ exports[`containers/login simulates successful login 1`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
+            checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
             logout={[Function]}
@@ -1065,8 +1069,8 @@ exports[`containers/login simulates successful login 1`] = `
             setUsername={[Function]}
             username={null}
           >
-            <ResetOnUnmount
-              isAuth={[Function]}
+            <Reset
+              checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
               logout={[Function]}
@@ -1077,7 +1081,7 @@ exports[`containers/login simulates successful login 1`] = `
               username={null}
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={false}
                 login={[Function]}
                 logout={[Function]}
@@ -1088,6 +1092,7 @@ exports[`containers/login simulates successful login 1`] = `
                 username={null}
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -1180,7 +1185,6 @@ exports[`containers/login simulates successful login 1`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
                   logout={[Function]}
@@ -1210,7 +1214,9 @@ exports[`containers/login simulates successful login 1`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -1260,7 +1266,7 @@ exports[`containers/login simulates successful login 1`] = `
                                 className="button is-block is-primary is-large is-fullwidth"
                                 disabled={false}
                                 id="login-button"
-                                onClick={[Function]}
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -1272,16 +1278,16 @@ exports[`containers/login simulates successful login 1`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>
 </Provider>
 `;
 
-exports[`containers/login simulates successful login 2`] = `
+exports[`containers/Login simulates successful login 2`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
@@ -1421,7 +1427,7 @@ Object {
 }
 `;
 
-exports[`containers/login simulates successful login 3`] = `
+exports[`containers/Login simulates successful login 3`] = `
 <Provider
   store={
     Object {
@@ -1621,9 +1627,9 @@ exports[`containers/login simulates successful login 3`] = `
           }
         }
       >
-        <Connect(Connect(ResetOnUnmount))>
-          <Connect(ResetOnUnmount)
-            isAuth={[Function]}
+        <Connect(Connect(Reset))>
+          <Connect(Reset)
+            checkAuth={[Function]}
             isLoading={false}
             login={[Function]}
             logout={[Function]}
@@ -1632,8 +1638,8 @@ exports[`containers/login simulates successful login 3`] = `
             setUsername={[Function]}
             username={null}
           >
-            <ResetOnUnmount
-              isAuth={[Function]}
+            <Reset
+              checkAuth={[Function]}
               isLoading={false}
               login={[Function]}
               logout={[Function]}
@@ -1644,7 +1650,7 @@ exports[`containers/login simulates successful login 3`] = `
               username={null}
             >
               <InjectIntl(Login)
-                isAuth={[Function]}
+                checkAuth={[Function]}
                 isLoading={false}
                 login={[Function]}
                 logout={[Function]}
@@ -1655,6 +1661,7 @@ exports[`containers/login simulates successful login 3`] = `
                 username={null}
               >
                 <Login
+                  checkAuth={[Function]}
                   intl={
                     Object {
                       "defaultFormats": Object {},
@@ -1747,7 +1754,6 @@ exports[`containers/login simulates successful login 3`] = `
                       "timeZone": null,
                     }
                   }
-                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
                   logout={[Function]}
@@ -1777,7 +1783,9 @@ exports[`containers/login simulates successful login 3`] = `
                             >
                               IoT
                             </p>
-                            <form>
+                            <form
+                              onSubmit={[Function]}
+                            >
                               <div
                                 className="field"
                               >
@@ -1827,7 +1835,7 @@ exports[`containers/login simulates successful login 3`] = `
                                 className="button is-block is-primary is-large is-fullwidth"
                                 disabled={false}
                                 id="login-button"
-                                onClick={[Function]}
+                                type="submit"
                               >
                                 Login
                               </button>
@@ -1839,9 +1847,9 @@ exports[`containers/login simulates successful login 3`] = `
                   </section>
                 </Login>
               </InjectIntl(Login)>
-            </ResetOnUnmount>
-          </Connect(ResetOnUnmount)>
-        </Connect(Connect(ResetOnUnmount))>
+            </Reset>
+          </Connect(Reset)>
+        </Connect(Connect(Reset))>
       </IntlProvider>
     </IntlProvider>
   </Connect(IntlProvider)>

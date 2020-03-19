@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ThingItem from "components/thingItem";
+import ThingItem from "components/ThingItem";
 
-describe("components/thingItem", () => {
+describe("components/ThingItem", () => {
   const onClick = jest.fn();
   const wrapper = shallow(<ThingItem name="foo" isSelected={false} onClick={onClick} />);
   it("renders when it's not selected", () => {

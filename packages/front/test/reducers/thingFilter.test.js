@@ -8,7 +8,6 @@ import {
   THING_FILTERS_REQUEST_ERROR,
   THING_FILTERS_UPDATED,
 } from "constants/actionTypes/thingFilter";
-import { TYPE_SELECT } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
 
 import { initialState } from "../constants/index";
@@ -22,9 +21,6 @@ describe("reducers/thingFilter", () => {
   });
   it("reduces nothing", () => {
     expect(thingFilterReducer(thingFilterInitialState, { type: "WHATEVER" })).toMatchSnapshot();
-  });
-  it("reduces TYPE_SELECT", () => {
-    expect(thingFilterReducer(thingFilterInitialState, { type: TYPE_SELECT })).toMatchSnapshot();
   });
   it("reduces THING_FILTER_SELECT", () => {
     expect(thingFilterReducer(thingFilterInitialState, { type: THING_FILTER_SELECT })).toMatchSnapshot();

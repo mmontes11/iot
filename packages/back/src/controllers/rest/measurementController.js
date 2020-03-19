@@ -25,7 +25,7 @@ const createMeasurement = async (req, res) => {
     await thingController.handleThingCreationError(req, res, [newMeasurement]);
   }
   await mqttController.publishMeasurement(thing, newMeasurement);
-  res.status(httpStatus.CREATED).json(newMeasurement);
+  return res.sendStatus(httpStatus.CREATED);
 };
 
 const getTypes = async (req, res) => {

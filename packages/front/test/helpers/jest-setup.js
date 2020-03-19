@@ -1,8 +1,8 @@
 jest.mock("lib/iotClient", () => ({
   authService: {
-    isAuth: () => Promise.resolve(true),
+    checkAuthToken: () => Promise.resolve({ statusCode: 200 }),
     getToken: () => Promise.resolve("token"),
-    setCredentials: () => undefined,
+    setCredentials: () => {},
     logout: () => Promise.resolve(),
   },
   thingsService: {
@@ -109,6 +109,8 @@ jest.mock("helpers/date", () => ({
 }));
 
 jest.mock("helpers/localStorage", () => ({
-  setLanguage: () => undefined,
+  setToken: () => {},
+  getToken: () => "foo",
+  setLanguage: () => {},
   getLanguage: () => "en",
 }));

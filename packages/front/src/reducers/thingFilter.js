@@ -6,7 +6,6 @@ import {
   THING_FILTERS_REQUEST_ERROR,
   THING_FILTERS_UPDATED,
 } from "constants/actionTypes/thingFilter";
-import { TYPE_SELECT } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
 
 export const initialState = {
@@ -19,8 +18,6 @@ export const initialState = {
 
 export default (state = initialState, { type, updatedThingFilter, thingFilters }) => {
   switch (type) {
-    case TYPE_SELECT:
-      return { ...state, isActive: false };
     case THING_FILTER_SELECT:
       return { ...state, isActive: !state.isActive };
     case THING_FILTER_UPDATED:

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
+exports[`containers/Navbar renders Navbar in initial state and unmounts 1`] = `
 <Provider
   store={
     Object {
@@ -579,6 +579,7 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                               >
                                 <button
                                   className="navbar-link button is-white"
+                                  type="button"
                                 >
                                   <LanguageItem
                                     language="en"
@@ -607,6 +608,7 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                                     className="navbar-item button is-white"
                                     key="es"
                                     onClick={[Function]}
+                                    type="button"
                                   >
                                     <LanguageItem
                                       language="es"
@@ -645,6 +647,7 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                                   className="button is-primary"
                                   id="logout-button"
                                   onClick={[Function]}
+                                  type="button"
                                 >
                                   <span
                                     className="icon"
@@ -680,7 +683,7 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
 </Provider>
 `;
 
-exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] = `
+exports[`containers/Navbar renders Navbar in toggled hamburguer menu state 1`] = `
 <Provider
   store={
     Object {
@@ -1259,6 +1262,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                               >
                                 <button
                                   className="navbar-link button is-white"
+                                  type="button"
                                 >
                                   <LanguageItem
                                     language="en"
@@ -1287,6 +1291,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                                     className="navbar-item button is-white"
                                     key="es"
                                     onClick={[Function]}
+                                    type="button"
                                   >
                                     <LanguageItem
                                       language="es"
@@ -1325,6 +1330,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                                   className="button is-primary"
                                   id="logout-button"
                                   onClick={[Function]}
+                                  type="button"
                                 >
                                   <span
                                     className="icon"
@@ -1360,7 +1366,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
 </Provider>
 `;
 
-exports[`containers/navbar simulates a click in logout button 1`] = `
+exports[`containers/Navbar simulates a click in logout button 1`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,

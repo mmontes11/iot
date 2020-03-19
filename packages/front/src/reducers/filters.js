@@ -61,7 +61,8 @@ export default (state = initialState, action) => {
           ...nextState,
           thingFilter: thingFilterInitialState,
         };
-      } else if (deletedFilterType === DATE_FILTER_TYPE) {
+      }
+      if (deletedFilterType === DATE_FILTER_TYPE) {
         return {
           ...nextState,
           dateFilter: dateFilterInitialState,

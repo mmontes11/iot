@@ -19,7 +19,8 @@ export class IoTClient {
     if (!_.isUndefined(options.username) && !_.isUndefined(options.password)) {
       this.userCredentials = { username: options.username, password: options.password };
     }
-    this.url = options.url || "";
+    this.url = options.url || "";
+    this.handleExpiredToken = options.handleExpiredToken;
     const debug = !_.isUndefined(options.debug) ? options.debug : true;
     this.log = new Log(debug);
     this.authService = new AuthService(this);

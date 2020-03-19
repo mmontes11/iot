@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Modal from "components/modal";
+import Modal from "components/Modal";
 
-describe("components/modal", () => {
+describe("components/Modal", () => {
   const onCloseClick = jest.fn();
   const wrapper = shallow(
     <Modal isActive onCloseClick={onCloseClick} messageStyle="is-info" title="Test" subTitle="Test" />,

@@ -21,12 +21,21 @@ export class SocketController {
     socket.emit("thing_disconnect", err);
     socket.disconnect();
   };
+  static _getThingSocketUrl = thing => {
+    const { THING_SOCKET_URL, THING_SOCKET_PORT } = process.env;
+    if (THING_SOCKET_URL) {
+      return THING_SOCKET_URL;
+    }
+    return `http://${thing.ip}:${THING_SOCKET_PORT}`;
+  };
   listen() {
     this.io.on("connection", socket => {
       logInfo("Socket connection");
       const { thing } = socket;
       const query = SocketController._getQueryParams(socket);
-      const thingSocket = new SocketIOClient(`http://${thing.ip}:${process.env.THING_SOCKET_PORT}`, {
+      const url = SocketController._getThingSocketUrl(thing);
+      logInfo(`Opening socket connection to ${thing.name} @ ${url} ...`);
+      const thingSocket = new SocketIOClient(url, {
         query,
       });
       thingSocket.on("data", data => {

@@ -1,5 +1,8 @@
 {
   "extends": ["mmontes11-react"],
+  "env": {
+    "jest": true
+  },
   "rules": {
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,

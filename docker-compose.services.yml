@@ -4,7 +4,7 @@ services:
     image: redis
     expose:
       - "${REDIS_PORT}"
-    restart: always
+    restart: unless-stopped
   mosquitto:
     build: 
       context: services/mosquitto
@@ -13,4 +13,4 @@ services:
         MQTT_BROKER_PASSWORD: "${MQTT_BROKER_PASSWORD}"
     expose:
       - "${MQTT_BROKER_PORT}"
-    restart: always
+    restart: unless-stopped

@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { withReset } from "hocs/reset";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import QueryString from "query-string";
-import { updateParams } from "actions/params";
-import { addThingFilter } from "actions/thingFilter";
-import { addTimePeriodFilter, addCustomTimePeriodFilter } from "actions/dateFilter";
+import * as paramActions from "actions/params";
+import * as thingFilterActions from "actions/thingFilter";
+import * as dateFilterActions from "actions/dateFilter";
 import * as fromState from "reducers";
 
 export const handleDataParams = ({ path, pathParams, queryParams, getData, reset }) => WrappedComponent => {
@@ -56,20 +56,24 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
         history,
         match: { params: urlParams },
         location: { search },
+        updateParams,
+        addThingFilter,
+        addCustomTimePeriodFilter,
+        addTimePeriodFilter,
       } = this.props;
       const paramsWithValues = getPathParamsObject(urlParams);
       if (Object.keys(paramsWithValues).length > 0) {
-        this.props.updateParams(paramsWithValues);
+        updateParams(paramsWithValues);
       }
       const queryParamsWithValues = getQueryParamsObject(search);
       const { thing, startDate, endDate, timePeriod } = queryParamsWithValues;
       if (thing) {
-        this.props.addThingFilter(thing);
+        addThingFilter(thing);
       }
       if (startDate || endDate) {
-        this.props.addCustomTimePeriodFilter(startDate, endDate);
+        addCustomTimePeriodFilter(startDate, endDate);
       } else {
-        this.props.addTimePeriodFilter(timePeriod);
+        addTimePeriodFilter(timePeriod);
       }
       const newPath = getPath(paramsWithValues, queryParamsWithValues);
       history.push(newPath);
@@ -77,6 +81,7 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
         getData();
       }
     }
+
     componentDidUpdate() {
       const {
         match: { params: urlParams },
@@ -87,7 +92,8 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
         this._pushRootPath();
       }
     }
-    _onParamsSelected = (...params) => {
+
+    _onParamsSelected(...params) {
       if (pathParams.length !== params.length) {
         return;
       }
@@ -102,8 +108,9 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
       }
       history.push(basePath);
       getData();
-    };
-    _onFiltersSelected = (thing, timePeriod, startDate, endDate) => {
+    }
+
+    _onFiltersSelected(thing, timePeriod, startDate, endDate) {
       const {
         history,
         location: { pathname },
@@ -128,22 +135,25 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
         history.push(pathname);
       }
       getData();
-    };
-    _onReset = () => {
+    }
+
+    _onReset() {
       reset();
       this._pushRootPath();
-    };
-    _pushRootPath = () => {
+    }
+
+    _pushRootPath() {
       const { history } = this.props;
       history.push(`/${path}`);
-    };
+    }
+
     render() {
       return (
         <WrappedComponent
           {...this.props}
-          onParamsSelected={this._onParamsSelected}
-          onFiltersSelected={this._onFiltersSelected}
-          onReset={this._onReset}
+          onParamsSelected={(...params) => this._onParamsSelected(...params)}
+          onFiltersSelected={(...filters) => this._onFiltersSelected(...filters)}
+          onReset={() => this._onReset()}
         />
       );
     }
@@ -155,8 +165,13 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
     addThingFilter: PropTypes.func.isRequired,
     addTimePeriodFilter: PropTypes.func.isRequired,
     addCustomTimePeriodFilter: PropTypes.func.isRequired,
-    match: PropTypes.shape({}).isRequired,
-    location: PropTypes.shape({}).isRequired,
+    match: PropTypes.shape({
+      params: PropTypes.shape({}),
+    }).isRequired,
+    location: PropTypes.shape({
+      search: PropTypes.string,
+      pathname: PropTypes.string,
+    }).isRequired,
     history: PropTypes.shape({
       push: PropTypes.func.isRequired,
     }).isRequired,
@@ -166,12 +181,13 @@ export const handleDataParams = ({ path, pathParams, queryParams, getData, reset
     state => ({
       hasError: fromState.hasError(state),
     }),
-    { updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },
+    {
+      updateParams: paramActions.updateParams,
+      addThingFilter: thingFilterActions.addThingFilter,
+      addTimePeriodFilter: dateFilterActions.addTimePeriodFilter,
+      addCustomTimePeriodFilter: dateFilterActions.addCustomTimePeriodFilter,
+    },
   );
 
-  return compose(
-    withConnect,
-    withResetOnUnmount,
-    withRouter,
-  )(DataParams);
+  return compose(withConnect, withReset, withRouter)(DataParams);
 };

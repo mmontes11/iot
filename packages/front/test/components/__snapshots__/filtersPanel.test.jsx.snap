@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/filterPanel renders with filters 1`] = `
+exports[`components/FiltersPanel renders with filters 1`] = `
 <div
   className="box"
 >
@@ -83,7 +83,7 @@ exports[`components/filterPanel renders with filters 1`] = `
 </div>
 `;
 
-exports[`components/filterPanel renders with no filters 1`] = `
+exports[`components/FiltersPanel renders with no filters 1`] = `
 <div
   className="box"
 >

@@ -114,9 +114,7 @@ export class MarkdownBuilder {
     const changedText = MarkdownBuilder._changedText(growthRate);
     const measurementMD = `*${formatNumber(observation.value)}${observation.unit.symbol}*`;
     const growthRateMD = `*${growthRatePercentage > 0 ? "+" : ""}${growthRatePercentage}*`;
-    return `It seems that the *measurement* related to the topic \`${
-      notification.topic
-    }\` is ${changedText}: ${measurementMD} (${growthRateMD}%)\n\n`;
+    return `It seems that the *measurement* related to the topic \`${notification.topic}\` is ${changedText}: ${measurementMD} (${growthRateMD}%)\n\n`;
   }
   static _buildThingMD(thing) {
     let markdown = `*thing*: \`${thing.name}\`\n`;

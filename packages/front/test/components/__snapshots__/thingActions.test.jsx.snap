@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/thingActions renders 1`] = `
+exports[`components/ThingActions renders 1`] = `
 <p
   className="buttons is-horizontal-center"
 >
@@ -27,6 +27,7 @@ exports[`components/thingActions renders 1`] = `
     className="button"
     id="event-stats-button"
     onClick={[Function]}
+    type="button"
   >
     <span
       className="icon"
@@ -44,6 +45,7 @@ exports[`components/thingActions renders 1`] = `
     className="button"
     id="measurement-stats-button"
     onClick={[Function]}
+    type="button"
   >
     <span
       className="icon"

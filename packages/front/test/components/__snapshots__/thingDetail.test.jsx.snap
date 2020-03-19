@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/thingDetail renders 1`] = `
+exports[`components/ThingDetail renders 1`] = `
 <IntlProvider
   dispatch={[Function]}
   locale="en"

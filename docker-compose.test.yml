@@ -4,12 +4,12 @@ services:
     image: mongo:4.0
     ports:
       - "${MONGO_PORT}:${MONGO_PORT}"
-    restart: always
+    restart: unless-stopped
   redis:
     image: redis
     ports:
       - "${REDIS_PORT}:${REDIS_PORT}"
-    restart: always
+    restart: unless-stopped
   mosquitto:
     build:
       context: services/mosquitto
@@ -18,4 +18,4 @@ services:
         MQTT_BROKER_PASSWORD: "${MQTT_BROKER_PASSWORD}"
     ports:
       - "${MQTT_BROKER_PORT}:${MQTT_BROKER_PORT}"
-    restart: always
+    restart: unless-stopped

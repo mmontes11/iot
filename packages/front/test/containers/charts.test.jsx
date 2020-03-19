@@ -4,11 +4,11 @@ import { mount } from "enzyme";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
-import Charts from "containers/charts";
+import Charts from "containers/Charts";
 import { BARCHART, LINECHART } from "constants/chartTypes";
 import { initialState, defaultStore, statsItem, eventDataItem, measurementDataItem } from "../constants";
 
-describe("containers/charts", () => {
+describe("containers/Charts", () => {
   it("renders nothing", () => {
     const wrapper = mount(
       <Provider store={defaultStore}>

@@ -36,7 +36,7 @@ export const setupSocketIO = server => {
         return next();
       }
       const authError = new Error("Auth error");
-      logError(logError);
+      logError(authError);
       return next(authError);
     } catch (err) {
       logError(err);

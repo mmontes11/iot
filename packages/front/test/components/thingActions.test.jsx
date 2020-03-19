@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ThingActions from "components/thingActions";
+import ThingActions from "components/ThingActions";
 import { thing } from "../constants";
 
-describe("components/thingActions", () => {
+describe("components/ThingActions", () => {
   const onStatsClick = jest.fn();
   const onDataClick = jest.fn();
   const wrapper = shallow(<ThingActions thing={thing} onStatsClick={onStatsClick} onDataClick={onDataClick} />);

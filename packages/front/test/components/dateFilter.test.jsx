@@ -1,11 +1,11 @@
 import React from "react";
 import { Provider } from "react-redux";
-import DateFilter from "components/dateFilter";
-import IntlProvider from "containers/intlProvider";
+import DateFilter from "components/DateFilter";
+import IntlProvider from "containers/IntlProvider";
 import { shallow, mount } from "enzyme";
 import { defaultStore } from "../constants";
 
-describe("components/dateFilter", () => {
+describe("components/DateFilter", () => {
   it("renders DateFilter for selecting a time period", () => {
     const dateFilter = {
       selector: {

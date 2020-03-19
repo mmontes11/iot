@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/paramsPanel renders with some params 1`] = `
+exports[`components/ParamsPanel renders with some params 1`] = `
 <div
   className="box"
 >
@@ -77,6 +77,7 @@ exports[`components/paramsPanel renders with some params 1`] = `
         className="button is-warning is-fullwidth"
         disabled={true}
         onClick={[Function]}
+        type="button"
       >
         <FormattedMessage
           id="Reset"

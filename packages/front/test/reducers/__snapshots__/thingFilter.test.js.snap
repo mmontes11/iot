@@ -80,16 +80,6 @@ Object {
 }
 `;
 
-exports[`reducers/thingFilter reduces TYPE_SELECT 1`] = `
-Object {
-  "isActive": false,
-  "isDisabled": false,
-  "isLoading": false,
-  "items": Array [],
-  "selectedItem": null,
-}
-`;
-
 exports[`reducers/thingFilter reduces nothing 1`] = `
 Object {
   "isActive": false,

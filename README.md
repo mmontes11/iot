@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mmontes11/iot)
 
-Generic purpose Internet of Things platform.
+General purpose Internet of Things platform.
 
 ## Demo
 
@@ -38,11 +38,12 @@ $ ./scripts/run-dev.sh
 
 #### Other OS
 ```bash
-$ docker-compose -f docker-compose.dev.services.yml up -d --build
+$ docker-compose -f docker-compose.dev.services.yml up -d --build --force-recreate
 $ npm run start:back
 $ npm run start:front
 $ npm run start:biot
 $ npm run start:worker
+$ npm run start:thing
 ```
 
 ## Test
@@ -53,14 +54,13 @@ $ ./scripts/run-test.sh
 
 ## Production
 
-#### Raspberry Pi
-```bash
-$ ./scripts/run-pro-rpi.sh
-```
-
-#### Other platform
 ```bash
 $ ./scripts/run-pro.sh
+```
+
+#### Lite deployment
+```bash
+$ ./scripts/run-pro-lite.sh
 ```
 
 ## Things
@@ -68,6 +68,12 @@ $ ./scripts/run-pro.sh
 Once everything is up and running, it is time to start deploying things:
 - [IoT raspi sensors](https://github.com/mmontes11/iot-raspi-sensors)
 - [IoT raspi door](https://github.com/mmontes11/iot-raspi-door)
+
+Alternatively, you can start a mock thing:
+
+```bash
+$ npm run start:thing
+```
 
 ## Client
 

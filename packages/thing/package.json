@@ -1,0 +1,39 @@
+{
+  "name": "thing",
+  "version": "2.1.0",
+  "description": "Mock thing for sending data through socket.io",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "start": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start:debug": "cross-env NODE_ENV=development node --inspect-brk src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmontes11/iot.git"
+  },
+  "keywords": [
+    "thing",
+    "socket.io",
+    "express",
+    "iot",
+    "internet-of-things"
+  ],
+  "author": "Martín Montes <martin11lrx@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmontes11/iot/issues"
+  },
+  "homepage": "https://github.com/mmontes11/iot#readme",
+  "dependencies": {
+    "common": "^2.1.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "eslint-config-mmontes11-node": "^1.0.5",
+    "nodemon": "^1.18.11"
+  }
+}

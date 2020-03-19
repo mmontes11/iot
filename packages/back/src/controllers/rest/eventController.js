@@ -25,7 +25,7 @@ const createEvent = async (req, res) => {
     return thingController.handleThingCreationError(req, res, [newEvent]);
   }
   await mqttController.publishEvent(thing, newEvent);
-  return res.status(httpStatus.CREATED).json(newEvent);
+  return res.sendStatus(httpStatus.CREATED);
 };
 
 const getTypes = async (req, res) => {
