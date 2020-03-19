@@ -3,7 +3,7 @@
 # Requirements
 # ttab: https://github.com/mklement0/ttab
 
-docker-compose -f docker-compose.dev.services.yml up -d --build
+docker-compose -f docker-compose.dev.services.yml up -d --build --force-recreate
 echo "Starting... 🚀"
 ttab -t "back" "cd packages/back; nvm use; npm start"
 ttab -t "front" "cd packages/front; nvm use; npm start"
