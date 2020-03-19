@@ -4,12 +4,14 @@ import _ from "underscore";
 import { UserModel } from "../../models/user";
 import modelFactory from "../../helpers/modelFactory";
 import responseHandler from "../../helpers/responseHandler";
+import { logError } from "../../utils/log";
 
 const { BACK_JWT_EXPIRATION, BACK_JWT_SECRET } = process.env;
 
 const _checkCredentials = async (username, password) => {
   const user = await UserModel.where({ username, password }).findOne();
   if (!user) {
+    logError(`Error getting user: ${JSON.stringify(user)}`);
     throw new Error("Unauthorized");
   }
   return true;

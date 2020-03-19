@@ -7,7 +7,7 @@ let biotTelegramWhiteListJson;
 try {
   biotTelegramWhiteListJson = JSON.parse(process.env.BIOT_USERS_WHITELIST_JSON);
 } catch (_) {
-  biotTelegramWhiteListJson = [];
+  biotTelegramWhiteListJson = null;
 }
 
 const derivedConfig = {
