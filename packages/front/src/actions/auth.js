@@ -13,14 +13,14 @@ import iotClient from "lib/iotClient";
 
 export const checkAuth = () => dispatch => {
   const token = getToken();
-  if (!token) {
-    dispatch({ type: IS_AUTH, isAuth: false });
-    return;
+  const hasToken = token !== null;
+  dispatch({ type: IS_AUTH, isAuth: hasToken });
+  if (hasToken) {
+    iotClient.authService
+      .checkAuthToken(token)
+      .then(({ statusCode }) => dispatch({ type: IS_AUTH, isAuth: statusCode === 200 }))
+      .catch(() => dispatch({ type: IS_AUTH, isAuth: false }));
   }
-  iotClient.authService
-    .checkAuthToken(token)
-    .then(({ statusCode }) => dispatch({ type: IS_AUTH, isAuth: statusCode === 200 }))
-    .catch(() => dispatch({ type: IS_AUTH, isAuth: false }));
 };
 
 export const setUsername = username => dispatch => {
