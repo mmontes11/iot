@@ -81,7 +81,10 @@ export class Service {
     const headers = await this._getHeaders(reqOpts);
     return {
       ...fetchOpts,
-      headers,
+      headers: {
+        ...fetchOpts.headers,
+        ...headers,
+      },
     };
   }
   async _performFetch(url, fetchOpts) {
