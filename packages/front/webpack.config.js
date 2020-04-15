@@ -88,7 +88,7 @@ module.exports = {
     fs: "empty",
   },
   devServer: {
-    port: process.env.FRONT_PORT,
+    port: process.env.PORT,
     historyApiFallback: true,
   },
 };

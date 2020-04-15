@@ -1,6 +1,6 @@
 {
   "name": "iot",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "General purpose Internet of Things platform",
   "devDependencies": {
     "lerna": "^3.16.4"
@@ -12,11 +12,12 @@
     "deploy": "lerna run deploy",
     "install": "lerna bootstrap",
     "lint": "lerna run lint",
+    "publish:npm": "lerna run publish:npm",
     "start:back": "cd packages/back; nvm use; npm start",
-    "start:front": "cd packages/front; nvm use; npm start",
     "start:biot": "cd packages/biot; nvm use; npm start",
-    "start:worker": "cd packages/worker; nvm use; npm start",
+    "start:front": "cd packages/front; nvm use; npm start",
     "start:thing": "cd packages/thing; nvm use; npm start",
+    "start:worker": "cd packages/worker; nvm use; npm start",
     "test": "lerna run test"
   },
   "repository": {
@@ -36,7 +37,9 @@
     "telegram",
     "bot",
     "docker",
-    "iot"
+    "kubernetes",
+    "iot",
+    "internet-of-things"
   ],
   "author": "Martín Montes",
   "license": "MIT",

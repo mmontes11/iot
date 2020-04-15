@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+  namespace: iot
+  labels:
+    app: iot
+    tier: worker
+spec:
+  selector:
+    matchLabels:
+      app: iot
+      tier: worker
+  template:
+    metadata:
+      labels:
+        app: iot
+        tier: worker
+    spec:
+      containers:
+        - name: worker
+          image: mmontes11/iot-worker:2.1.0
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 64Mi
+              cpu: 250m
+          envFrom:
+            - configMapRef:
+                name: worker
+            - secretRef:
+                name: worker

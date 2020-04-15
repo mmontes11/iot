@@ -5,7 +5,7 @@ import { logInfo } from "../utils/log";
 
 mongoose.Promise = Promise;
 
-if (process.env.IOT_DEBUG) {
+if (process.env.DEBUG) {
   mongoose.set("debug", (collectionName, method, query, result) => {
     logInfo(`MongoDB query: ${collectionName}.${method}(${JSON.stringify(query)})`);
     logInfo(`MongoDB result: ${JSON.stringify(result)}`);

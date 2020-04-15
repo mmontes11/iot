@@ -43,8 +43,7 @@
   "homepage": "https://github.com/mmontes11/iot#readme",
   "dependencies": {
     "async-mqtt": "^1.0.1",
-    "common": "^2.1.0",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "http-status": "^1.0.1",
     "mongodb": "^3.0.5",
     "mqtt-match": "^1.0.3",

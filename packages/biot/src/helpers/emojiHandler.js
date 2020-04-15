@@ -1,29 +1,29 @@
 import emojiLib from "node-emoji";
-import { derivedConfig } from "common/config";
+import config from "../config";
 
-const { BIOT_TEMPERATURE_PREFIX, BIOT_HUMIDITY_PREFIX } = process.env;
+const { TEMPERATURE_PREFIX, HUMIDITY_PREFIX } = process.env;
 
 const {
-  biotHighTemperatureThreshold,
-  biotLowTemperatureThreshold,
-  biotHighHumidityThreshold,
-  biotLowHumidityThreshold,
-  biotGrowthRateHighAbsoluteThreshold,
-  biotGrowthRateModerateAbsoluteThreshold,
-} = derivedConfig;
+  highTemperatureThreshold,
+  lowTemperatureThreshold,
+  highHumidityThreshold,
+  lowHumidityThreshold,
+  growthRateHighAbsoluteThreshold,
+  growthRateModerateAbsoluteThreshold,
+} = config;
 
 export class EmojiHandler {
   static emojiForStatsType(statsType, value) {
-    if (statsType.startsWith(BIOT_TEMPERATURE_PREFIX)) {
-      if (value >= biotHighTemperatureThreshold) {
+    if (statsType.startsWith(TEMPERATURE_PREFIX)) {
+      if (value >= highTemperatureThreshold) {
         return emojiLib.get("fire");
-      } else if (value <= biotLowTemperatureThreshold) {
+      } else if (value <= lowTemperatureThreshold) {
         return emojiLib.get("snowflake");
       }
-    } else if (statsType.startsWith(BIOT_HUMIDITY_PREFIX)) {
-      if (value >= biotHighHumidityThreshold) {
+    } else if (statsType.startsWith(HUMIDITY_PREFIX)) {
+      if (value >= highHumidityThreshold) {
         return emojiLib.get("droplet");
-      } else if (value <= biotLowHumidityThreshold) {
+      } else if (value <= lowHumidityThreshold) {
         return emojiLib.get("cactus");
       }
     }
@@ -34,9 +34,9 @@ export class EmojiHandler {
     const emoji = emojiLib.get(emojiName);
     const growthRateAbsolute = Math.abs(growthRate);
     let numEmojis = 1;
-    if (growthRateAbsolute >= biotGrowthRateHighAbsoluteThreshold) {
+    if (growthRateAbsolute >= growthRateHighAbsoluteThreshold) {
       numEmojis = 3;
-    } else if (growthRateAbsolute >= biotGrowthRateModerateAbsoluteThreshold) {
+    } else if (growthRateAbsolute >= growthRateModerateAbsoluteThreshold) {
       numEmojis = 2;
     }
     let emojis = "";

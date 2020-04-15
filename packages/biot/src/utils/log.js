@@ -49,6 +49,6 @@ class Log {
   }
 }
 
-const log = new Log(process.env.IOT_DEBUG);
+const log = new Log(process.env.DEBUG);
 
 export default log;

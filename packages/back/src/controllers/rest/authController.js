@@ -6,7 +6,7 @@ import modelFactory from "../../helpers/modelFactory";
 import responseHandler from "../../helpers/responseHandler";
 import { logError } from "../../utils/log";
 
-const { BACK_JWT_EXPIRATION, BACK_JWT_SECRET } = process.env;
+const { JWT_EXPIRATION, JWT_SECRET } = process.env;
 
 const _checkCredentials = async (username, password) => {
   const user = await UserModel.where({ username, password }).findOne();
@@ -21,7 +21,7 @@ const checkAuth = async (req, res) => {
   const { token, username, password } = req.body;
   if (!_.isUndefined(token)) {
     try {
-      if (jwt.verify(token, BACK_JWT_SECRET)) {
+      if (jwt.verify(token, JWT_SECRET)) {
         return res.sendStatus(httpStatus.OK);
       }
       return res.sendStatus(httpStatus.UNAUTHORIZED);
@@ -64,7 +64,7 @@ const getToken = async (req, res) => {
   } catch (err) {
     return res.sendStatus(httpStatus.UNAUTHORIZED);
   }
-  const token = jwt.sign({ username: req.body.username }, BACK_JWT_SECRET, { expiresIn: BACK_JWT_EXPIRATION });
+  const token = jwt.sign({ username: req.body.username }, JWT_SECRET, { expiresIn: JWT_EXPIRATION });
   return responseHandler.handleResponse(res, { token });
 };
 

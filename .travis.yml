@@ -4,13 +4,18 @@ node_js:
 cache:
   directories:
     - node_modules
+addons:
+  apt:
+    packages:
+      - jq
 services:
   - docker
 stages:
   - lint
   - test
+  - build-check
   - build
-  - deploy
+  - publish-npm
 jobs:
   include:
     - stage: lint
@@ -19,14 +24,28 @@ jobs:
       before_script: ./scripts/ci-docker.sh
       script: npm test
       after_script: npm run coverage
-    - stage: build 
+    - stage: build-check
       script: npm run build
-    - stage: deploy
+    - stage: build
+      if: tag IS present
+      before_install:
+        - curl -fsSL https://get.docker.com | sh
+        - echo '{"experimental":"enabled"}' | sudo tee /etc/docker/daemon.json
+        - mkdir -p $HOME/.docker
+        - echo '{"experimental":"enabled"}' | sudo tee $HOME/.docker/config.json
+        - sudo service docker start
+      install:
+        - docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+      script: ./scripts/build.sh
+      skip_cleanup: true
+      on:
+        tags: true
+    - stage: publish-npm
       if: tag IS present
       provider: script
       before_script:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-      script: npm run deploy
+      script: npm run publish:npm
       skip_cleanup: true
       on:
         tags: true

@@ -18,7 +18,7 @@ export const setupSocketIO = server => {
       return next(tokenError);
     }
     try {
-      if (jwt.verify(token, process.env.BACK_JWT_SECRET)) {
+      if (jwt.verify(token, process.env.JWT_SECRET)) {
         if (_.isUndefined(thingName)) {
           const thingError = new Error("No thing provided");
           logError(thingError);

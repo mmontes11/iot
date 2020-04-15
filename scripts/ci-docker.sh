@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-printenv > .env
-docker-compose -f docker-compose.test.yml up -d --build
+printenv > .env	
+docker-compose up -d --build
 docker ps -a

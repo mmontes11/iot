@@ -19,7 +19,7 @@ app.use(methodOverride());
 app.use(cors());
 app.use(helmet());
 
-if (process.env.IOT_DEBUG) {
+if (process.env.DEBUG) {
   app.use(
     expressWinston.logger({
       transports: [
@@ -39,6 +39,7 @@ if (process.env.IOT_DEBUG) {
       msg: "HTTP {{req.method}} {{req.url}} {{res.statusCode}} {{res.responseTime}}ms",
       expressFormat: true,
       colorize: true,
+      ignoreRoute: req => req.path.includes("health-check"),
     }),
   );
 }

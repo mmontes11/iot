@@ -1,6 +1,6 @@
 import express from "express";
 import expressBasicAuth from "express-basic-auth";
-import { derivedConfig } from "common/config";
+import config from "../config";
 import authController from "../controllers/rest/authController";
 import validationController from "../controllers/rest/validationController";
 
@@ -11,7 +11,7 @@ router.route("/").post(validationController.validateCheckAuth, authController.ch
 router
   .route("/user")
   .post(
-    expressBasicAuth({ users: derivedConfig.backBasicAuthUsers }),
+    expressBasicAuth({ users: config.basicAuthUsers }),
     validationController.validateCreateUserIfNotExists,
     authController.createUserIfNotExists,
   );

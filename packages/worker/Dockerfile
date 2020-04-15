@@ -1,26 +1,17 @@
 FROM node:12
 
-ENV WORKDIR /usr/src/worker
-ENV COMMONDIR ${WORKDIR}/packages/common
-ENV WORKERDIR ${WORKDIR}/packages/worker
-ENV COMMON packages/common
-ENV WORKER packages/worker
+ENV WORKDIR /usr/src/iot-worker
 
-RUN mkdir -p ${WORKDIR}
-RUN mkdir -p ${COMMONDIR}
-RUN mkdir -p ${WORKERDIR}
+RUN mkdir ${WORKDIR}
 
 WORKDIR ${WORKDIR}
 
-COPY ${COMMON} ${COMMONDIR}
-COPY ${WORKER} ${WORKERDIR}
+COPY package.json ${WORKDIR}
 
-COPY package*.json lerna.json ${WORKDIR}/
+RUN npm install --production
 
-COPY ${WORKER}/dist ${WORKERDIR}
+ADD dist ${WORKDIR}
 
-RUN npm install -g lerna cross-env
+RUN npm i -g cross-env
 
-RUN lerna bootstrap
-
-CMD cross-env NODE_ENV=production node ${WORKERDIR}/dist/index.js
+CMD cross-env NODE_ENV=production node index.js

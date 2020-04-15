@@ -1,4 +1,4 @@
-import "common/config";
+import "dotenv/config";
 import { Server } from "http";
 import mongoose, { connectWithRetry } from "./lib/mongoose";
 import redis from "./lib/redis";
@@ -11,7 +11,7 @@ import { logInfo, logError } from "./utils/log";
 const server = new Server(app);
 const io = setupSocketIO(server);
 
-const { MONGO_URL, REDIS_URL, MQTT_BROKER_URL, BACK_PORT } = process.env;
+const { MONGO_URL, REDIS_URL, MQTT_BROKER_URL, BACK_SERVICE_PORT } = process.env;
 
 connectWithRetry();
 mongoose.connection.on("connected", () => {
@@ -48,16 +48,16 @@ mqtt.on("close", () => {
 });
 
 server.on("error", err => {
-  logError(`Error in NodeJS server on port ${BACK_PORT}:`);
+  logError(`Error in NodeJS server on port ${BACK_SERVICE_PORT}:`);
   logError(err);
 });
 server.on("close", () => {
-  logInfo(`Stopped NodeJS server on port ${BACK_PORT}`);
+  logInfo(`Stopped NodeJS server on port ${BACK_SERVICE_PORT}`);
 });
 
-server.listen(BACK_PORT, err => {
+server.listen(BACK_SERVICE_PORT, err => {
   if (!err) {
-    logInfo(`NodeJS server started on port ${BACK_PORT}`);
+    logInfo(`NodeJS server started on port ${BACK_SERVICE_PORT}`);
   }
 });
 

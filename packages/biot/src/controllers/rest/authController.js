@@ -11,7 +11,7 @@ const getToken = async (req, res) => {
   if (_validateCredentialsFields(credentials)) {
     try {
       await iotClient.authService.checkAuth(credentials);
-      const token = jwt.sign({ username: credentials.username }, process.env.BIOT_JWT_SECRET);
+      const token = jwt.sign({ username: credentials.username }, process.env.JWT_SECRET);
       res.status(httpStatus.OK).json({ token });
     } catch (err) {
       res.sendStatus(httpStatus.UNAUTHORIZED);

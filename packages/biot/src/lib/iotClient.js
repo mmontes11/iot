@@ -1,9 +1,9 @@
 import { IoTClient } from "@mmontes11/iot-client/index";
 
 const iotClient = new IoTClient({
-  url: process.env.API_URL,
-  username: process.env.BIOT_USER,
-  password: process.env.BIOT_PASSWORD,
+  url: process.env.BACK_URL,
+  username: process.env.BACK_USER,
+  password: process.env.BACK_PASSWORD,
 });
 
 export default iotClient;

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: biot
+  namespace: iot
+  labels:
+    app: iot
+    tier: bot
+data:
+  BACK_URL: http://back/api
+  DEBUG: "true"
+  GROWTH_RATE_HIGH_ABSOLUTE_THREESHOLD: "0.4"
+  GROWTH_RATE_MODERATE_ABSOLUTE_THREESHOLD: "0.6"
+  HIGH_HUMIDITY_THRESHOLD: "90"
+  HIGH_TEMPERATURE_THRESHOLD: "25"
+  HUMIDITY_PREFIX: humidity
+  LOW_HUMIDITY_THRESHOLD: "30"
+  LOW_TEMPERATURE_THRESHOLD: "5"
+  MEASUREMENT_CHANGE_TOPIC: measurement-change
+  MEASUREMENT_TOPIC: measurement
+  TEMPERATURE_PREFIX: temperature

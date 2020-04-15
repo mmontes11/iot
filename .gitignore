@@ -46,4 +46,7 @@ coverage
 data/
 
 # node-persist
-.node-persist/
+.node-persist
+
+# k8s
+secret.yml
