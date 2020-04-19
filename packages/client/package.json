@@ -1,6 +1,6 @@
 {
   "name": "@mmontes11/iot-client",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "ES6 client library for consuming IoT server REST API",
   "license": "MIT",
   "private": false,
@@ -10,13 +10,12 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "install:submodules": "git submodule foreach npm install",
     "lint": "eslint . --fix",
     "clean": "rm -rf dist/*",
     "prebuild": "npm run clean",
     "build": "babel -d dist/ src/",
-    "predeploy": "npm run build",
-    "deploy": "npm publish"
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -45,6 +44,7 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "cross-fetch": "^3.0.4",
+    "dotenv": "^8.2.0",
     "http-status": "^1.0.1",
     "node-persist": "^3.0.1",
     "query-string": "^6.8.3",

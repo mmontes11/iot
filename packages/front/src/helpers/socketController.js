@@ -17,7 +17,7 @@ export class SocketController {
       query,
       transports: ["polling", "websocket"],
     };
-    this.socket = SocketIOClient(process.env.FRONT_SOCKET_URL, options);
+    this.socket = SocketIOClient(process.env.SOCKET_URL, options);
     this.onData = onData;
     this.onError = onError;
   }

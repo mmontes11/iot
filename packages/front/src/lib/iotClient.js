@@ -8,7 +8,7 @@ const handleExpiredToken = () => {
 };
 
 const iotClient = new IoTClient({
-  url: process.env.FRONT_API_URL,
+  url: process.env.API_URL,
   handleExpiredToken,
 });
 

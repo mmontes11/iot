@@ -25,6 +25,7 @@ app.use(
     expressFormat: true,
     meta: true,
     colorize: true,
+    ignoreRoute: req => req.path.includes("health-check"),
   }),
 );
 

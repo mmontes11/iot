@@ -81,7 +81,7 @@ const getThingsFromRequest = async req => {
     throw err;
   }
   if (!_.isUndefined(things) && !_.isEmpty(things)) {
-    return _.map(_.first(things, process.env.BACK_MAX_NUM_OF_THINGS_IN_STATS_RESULTS), thing => thing.name);
+    return _.map(_.first(things, process.env.MAX_NUM_OF_THINGS_IN_STATS_RESULTS), thing => thing.name);
   }
   return undefined;
 };

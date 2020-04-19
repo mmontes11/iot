@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: thing
+  namespace: iot
+  labels:
+    app: iot
+    tier: thing
+spec:
+  selector:
+    app: iot
+    tier: thing
+  ports:
+    - port: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thing
+  namespace: iot
+  labels:
+    app: iot
+    tier: thing
+spec:
+  selector:
+    matchLabels:
+      app: iot
+      tier: thing
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: iot
+        tier: thing
+    spec:
+      containers:
+        - name: thing
+          image: mmontes11/iot-thing:2.1.0
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 32Mi
+              cpu: 125m
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: thing

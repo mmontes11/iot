@@ -1,14 +1,14 @@
 import _ from "underscore";
 import { ObjectID } from "mongodb";
-import { derivedConfig } from "common/config";
 import { MongoModel } from "./mongoModel";
 import mongo from "../lib/mongo";
+import config from "../config";
 
 class Measurement extends MongoModel {
   async getMeasurementGrowthRate(currentMeasurement) {
     const currentObjectId = new ObjectID(currentMeasurement._id);
     const pastDate = new Date();
-    pastDate.setHours(pastDate.getHours() - derivedConfig.measurementChangePastIntervalInHours);
+    pastDate.setHours(pastDate.getHours() - config.measurementChangePastIntervalInHours);
     const pipeline = [
       {
         $match: {

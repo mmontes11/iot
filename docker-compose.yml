@@ -1,55 +1,21 @@
 version: "3"
 services:
-  nginx:
-    build: services/nginx
+  mongo:
+    image: mongo:4.2.3
     ports:
-      - "${NGINX_HTTP_PORT}:${NGINX_HTTP_PORT}"
-      - "${NGINX_MQTT_PORT}:${NGINX_MQTT_PORT}"
-    depends_on:
-      - back
+      - "${MONGO_PORT}:${MONGO_PORT}"
     restart: unless-stopped
-  back:
-    build:
-      context: .
-      dockerfile: packages/back/Dockerfile
-    env_file: .env
-    expose:
-      - "${BACK_PORT}"
+  redis:
+    image: redis
+    ports:
+      - "${REDIS_PORT}:${REDIS_PORT}"
     restart: unless-stopped
-  front:
+  mosquitto:
     build:
-      context: .
-      dockerfile: packages/front/Dockerfile
+      context: services/mosquitto
       args:
-        FRONT_PORT: "${FRONT_PORT}"
-    expose:
-      - "${FRONT_PORT}"
-    depends_on:
-      - back
-    restart: unless-stopped
-  biot:
-    build:
-      context: .
-      dockerfile: packages/biot/Dockerfile
-    env_file: .env
-    expose:
-      - "${BIOT_PORT}"
-    depends_on:
-      - back
-    restart: unless-stopped
-  worker:
-    build:
-      context: .
-      dockerfile: packages/worker/Dockerfile
-    env_file: .env
-    expose:
-      - "${WORKER_PORT}"
-    restart: unless-stopped
-  thing:
-    build:
-      context: .
-      dockerfile: packages/thing/Dockerfile
-    env_file: .env
-    expose:
-      - "${THING_SOCKET_PORT}"
+        MQTT_BROKER_USERNAME: "${MQTT_BROKER_USERNAME}"
+        MQTT_BROKER_PASSWORD: "${MQTT_BROKER_PASSWORD}"
+    ports:
+      - "${MQTT_BROKER_PORT}:${MQTT_BROKER_PORT}"
     restart: unless-stopped

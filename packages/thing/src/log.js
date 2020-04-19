@@ -1,6 +1,6 @@
 const { createLogger, format, transports } = require("winston");
 
-const { IOT_DEBUG } = process.env;
+const { DEBUG } = process.env;
 
 const logger = createLogger({
   level: "info",
@@ -17,13 +17,13 @@ const logger = createLogger({
 });
 
 const logInfo = message => {
-  if (IOT_DEBUG) {
+  if (DEBUG) {
     logger.info(message);
   }
 };
 
 const logError = message => {
-  if (IOT_DEBUG) {
+  if (DEBUG) {
     logger.error(message);
   }
 };

@@ -1,26 +1,17 @@
 FROM node:12
 
-ENV WORKDIR /usr/src/thing
-ENV COMMONDIR ${WORKDIR}/packages/common
-ENV THINGDIR ${WORKDIR}/packages/thing
-ENV COMMON packages/common
-ENV THING packages/thing
+ENV WORKDIR /usr/src/iot-thing
 
-RUN mkdir -p ${WORKDIR}
-RUN mkdir -p ${COMMONDIR}
-RUN mkdir -p ${THINGDIR}
+RUN mkdir ${WORKDIR}
 
 WORKDIR ${WORKDIR}
 
-COPY ${COMMON} ${COMMONDIR}
-COPY ${THING} ${THINGDIR}
+COPY package.json ${WORKDIR}
 
-COPY package*.json lerna.json ${WORKDIR}/
+RUN npm install --production
 
-COPY ${THING}/src ${THINGDIR}
+ADD src ${WORKDIR}
 
-RUN npm install -g lerna cross-env
+RUN npm i -g cross-env
 
-RUN lerna bootstrap
-
-CMD cross-env NODE_ENV=production node ${THINGDIR}/src/index.js
+CMD cross-env NODE_ENV=production node index.js

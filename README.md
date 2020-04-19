@@ -25,20 +25,24 @@ https://iot.mmontes-dev.duckdns.org/
 
 [@mmontesIoTBot](https://t.me/mmontesIoTBot)
 
-## Configuration
-
-Create a `.env` like [this one](./.env.example).
-
 ## Development
+
+Configure `.env` files:
+- [common](./.env.example)
+- [back](./packages/back/.env.example)
+- [biot](./packages/biot/.env.example)
+- [front](./packages/front/.env.example)
+- [thing](./packages/thing/.env.example)
+- [worker](./packages/worker/.env.example)
 
 #### MacOS
 ```bash
-$ ./scripts/run-dev.sh
+$ ./scripts/start-dev.sh
 ```
 
 #### Other OS
 ```bash
-$ ./scripts/run-dev-services.sh
+$ docker-compose up -d --build --force-recreate
 $ npm run start:back
 $ npm run start:front
 $ npm run start:biot
@@ -46,21 +50,16 @@ $ npm run start:worker
 $ npm run start:thing
 ```
 
-## Test
+## Deployment
+
+Configure `secret.yml` files:
+- [back](./packages/back/manifests/secret.yml.example)
+- [biot](./packages/biot/manifests/secret.yml.example)
+- [worker](./packages/worker/manifests/secret.yml.example)
 
 ```bash
-$ ./scripts/run-test.sh
-```
-
-## Production
-
-```bash
-$ ./scripts/run-pro.sh
-```
-
-#### Lite deployment
-```bash
-$ ./scripts/run-pro-lite.sh
+$ ./scripts/build.sh
+$ ./scripts/deploy.sh
 ```
 
 ## Things

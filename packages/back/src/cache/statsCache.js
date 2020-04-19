@@ -13,7 +13,7 @@ class StatsCache {
     return _.isUndefined(this.timePeriod) || !(this.timePeriod instanceof CustomTimePeriod);
   }
   setStatsCache(stats) {
-    cacheHandler.setObjectCache(this.cacheKey, stats, process.env.BACK_STATS_CACHE_IN_SECONDS);
+    cacheHandler.setObjectCache(this.cacheKey, stats, process.env.STATS_CACHE_IN_SECONDS);
   }
   getStatsCache() {
     return cacheHandler.getObjectCache(this.cacheKey);

@@ -58,7 +58,7 @@ ThingSchema.statics.findThingByName = function findThingByName(name) {
 ThingSchema.statics.findThings = function findThings(
   longitude,
   latitude,
-  maxDistance = process.env.BACK_MAX_DEFAULT_NEARBY_DISTANCE_IN_METERS,
+  maxDistance = process.env.MAX_DEFAULT_NEARBY_DISTANCE_IN_METERS,
   supportsMeasurements,
   supportsEvents,
 ) {

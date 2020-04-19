@@ -1,15 +1,15 @@
 import winston from "../lib/winston";
 
-const { IOT_DEBUG } = process.env;
+const { DEBUG } = process.env;
 
 const logInfo = message => {
-  if (IOT_DEBUG) {
+  if (DEBUG) {
     winston.info(message);
   }
 };
 
 const logError = message => {
-  if (IOT_DEBUG) {
+  if (DEBUG) {
     winston.error(message);
   }
 };
