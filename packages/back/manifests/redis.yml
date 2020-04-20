@@ -54,7 +54,7 @@ spec:
           resources:
             limits:
               memory: 64Mi
-              cpu: 250m
+              cpu: 125m
           ports:
             - containerPort: 6379
           volumeMounts:
