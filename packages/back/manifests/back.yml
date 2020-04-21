@@ -48,10 +48,16 @@ spec:
             httpGet:
               path: /api/health-check
               port: service-port
+            initialDelaySeconds: 10
+            timeoutSeconds: 3
+            periodSeconds: 15
           livenessProbe:
             httpGet:
               path: /api/health-check
               port: service-port
+            initialDelaySeconds: 10
+            timeoutSeconds: 3
+            periodSeconds: 15
           envFrom:
             - configMapRef:
                 name: back
