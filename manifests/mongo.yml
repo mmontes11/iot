@@ -52,6 +52,9 @@ spec:
           image: mongo:4.2.3
           imagePullPolicy: Always
           resources:
+            requests:
+              memory: 256Mi
+              cpu: 250m
             limits:
               memory: 512Mi
               cpu: 500m
