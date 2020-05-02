@@ -7,6 +7,7 @@ import cors from "cors";
 import helmet from "helmet";
 import winston from "winston";
 import expressWinston from "express-winston";
+import promBundle from "express-prom-bundle";
 import routes from "../routers/indexRouter";
 
 const app = express();
@@ -43,6 +44,14 @@ if (process.env.DEBUG) {
     }),
   );
 }
+
+app.use(
+  promBundle({
+    includeStatusCode: true,
+    includeMethod: true,
+    includePath: true,
+  }),
+);
 
 app.use("/api", routes);
 
