@@ -35,11 +35,11 @@ spec:
     spec:
       containers:
         - name: thing
-          image: mmontes11/iot-thing:2.1.0
+          image: mmontes11/iot-thing:3.1.0
           imagePullPolicy: Always
           resources:
             limits:
-              memory: 32Mi
+              memory: 64Mi
               cpu: 125m
           ports:
             - containerPort: 80

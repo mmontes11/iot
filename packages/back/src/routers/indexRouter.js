@@ -13,7 +13,7 @@ import topicsRouter from "./topicsRouter";
 
 const router = express.Router();
 
-router.get("/health-check", (req, res) => res.sendStatus(httpStatus.OK));
+router.get("/health", (req, res) => res.sendStatus(httpStatus.OK));
 
 router.use("/auth", authRouter);
 router.use("/measurement", measurementRouter);

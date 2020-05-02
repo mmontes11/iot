@@ -34,23 +34,29 @@ spec:
     spec:
       containers:
         - name: biot
-          image: mmontes11/iot-biot:2.1.1
+          image: mmontes11/iot-biot:3.1.0
           imagePullPolicy: Always
           resources:
             limits:
               memory: 64Mi
-              cpu: 250m
+              cpu: 125m
           ports:
             - name: service-port
               containerPort: 80
           readinessProbe:
             httpGet:
-              path: /api/health-check
+              path: /api/health
               port: service-port
+            initialDelaySeconds: 10
+            timeoutSeconds: 3
+            periodSeconds: 15
           livenessProbe:
             httpGet:
-              path: /api/health-check
+              path: /api/health
               port: service-port
+            initialDelaySeconds: 10
+            timeoutSeconds: 3
+            periodSeconds: 15
           envFrom:
             - configMapRef:
                 name: biot

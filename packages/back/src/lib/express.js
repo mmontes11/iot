@@ -6,6 +6,7 @@ import methodOverride from "method-override";
 import cors from "cors";
 import helmet from "helmet";
 import expressWinston from "express-winston";
+import promBundle from "express-prom-bundle";
 import winston from "./winston";
 import routes from "../routers/indexRouter";
 
@@ -19,13 +20,24 @@ app.use(methodOverride());
 app.use(cors());
 app.use(helmet());
 
+if (process.env.DEBUG) {
+  app.use(
+    expressWinston.logger({
+      winstonInstance: winston,
+      expressFormat: true,
+      meta: true,
+      colorize: true,
+      ignoreRoute: req => req.path.includes("health"),
+    }),
+  );
+}
+
 app.use(
-  expressWinston.logger({
-    winstonInstance: winston,
-    expressFormat: true,
-    meta: true,
-    colorize: true,
-    ignoreRoute: req => req.path.includes("health-check"),
+  promBundle({
+    includeStatusCode: true,
+    includeMethod: true,
+    includePath: true,
+    normalizePath: [["^/api/thing/.*", "/api/thing/#name"]],
   }),
 );
 

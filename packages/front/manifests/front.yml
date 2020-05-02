@@ -35,14 +35,11 @@ spec:
     spec:
       containers:
         - name: front
-          image: mmontes11/iot-front:2.1.1
+          image: mmontes11/iot-front:3.1.0
           imagePullPolicy: Always
           resources:
             limits:
               memory: 64Mi
-              cpu: 250m
+              cpu: 125m
           ports:
             - containerPort: 80
-          envFrom:
-            - configMapRef:
-                name: front

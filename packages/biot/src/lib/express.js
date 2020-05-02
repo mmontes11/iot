@@ -7,6 +7,7 @@ import cors from "cors";
 import helmet from "helmet";
 import winston from "winston";
 import expressWinston from "express-winston";
+import promBundle from "express-prom-bundle";
 import routes from "../routers/indexRouter";
 
 const app = express();
@@ -39,10 +40,18 @@ if (process.env.DEBUG) {
       msg: "HTTP {{req.method}} {{req.url}} {{res.statusCode}} {{res.responseTime}}ms",
       expressFormat: true,
       colorize: true,
-      ignoreRoute: req => req.path.includes("health-check"),
+      ignoreRoute: req => req.path.includes("health"),
     }),
   );
 }
+
+app.use(
+  promBundle({
+    includeStatusCode: true,
+    includeMethod: true,
+    includePath: true,
+  }),
+);
 
 app.use("/api", routes);
 
