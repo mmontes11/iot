@@ -20,15 +20,17 @@ app.use(methodOverride());
 app.use(cors());
 app.use(helmet());
 
-app.use(
-  expressWinston.logger({
-    winstonInstance: winston,
-    expressFormat: true,
-    meta: true,
-    colorize: true,
-    ignoreRoute: req => req.path.includes("health"),
-  }),
-);
+if (process.env.DEBUG) {
+  app.use(
+    expressWinston.logger({
+      winstonInstance: winston,
+      expressFormat: true,
+      meta: true,
+      colorize: true,
+      ignoreRoute: req => req.path.includes("health"),
+    }),
+  );
+}
 
 app.use(
   promBundle({
