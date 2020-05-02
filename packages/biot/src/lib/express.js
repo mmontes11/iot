@@ -39,7 +39,7 @@ if (process.env.DEBUG) {
       msg: "HTTP {{req.method}} {{req.url}} {{res.statusCode}} {{res.responseTime}}ms",
       expressFormat: true,
       colorize: true,
-      ignoreRoute: req => req.path.includes("health-check"),
+      ignoreRoute: req => req.path.includes("health"),
     }),
   );
 }

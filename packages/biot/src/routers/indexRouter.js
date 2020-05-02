@@ -7,7 +7,7 @@ import measurementChangeRouter from "./measurementChangeRouter";
 
 const router = express.Router();
 
-router.get("/health-check", (req, res) => {
+router.get("/health", (req, res) => {
   res.sendStatus(httpStatus.OK);
 });
 
