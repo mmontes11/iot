@@ -27,7 +27,7 @@ if (process.env.DEBUG) {
       expressFormat: true,
       meta: true,
       colorize: true,
-      ignoreRoute: req => req.path.includes("health"),
+      ignoreRoute: req => ["health", "metrics"].some(r => req.path.includes(r)),
     }),
   );
 }
