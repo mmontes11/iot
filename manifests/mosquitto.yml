@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: mosquitto
-          image: mmontes11/iot-mosquitto:2.1.0
+          image: mmontes11/iot-mosquitto:3.1.0
           imagePullPolicy: Always
           resources:
             limits:
