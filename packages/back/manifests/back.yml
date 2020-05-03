@@ -38,9 +38,12 @@ spec:
           image: mmontes11/iot-back:3.1.0
           imagePullPolicy: Always
           resources:
-            limits:
+            requests:
               memory: 128Mi
               cpu: 250m
+            limits:
+              memory: 256Mi
+              cpu: 500m
           ports:
             - name: service-port
               containerPort: 80
