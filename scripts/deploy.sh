@@ -5,6 +5,8 @@ deploy() {
     kubectl apply -f $2
 }
 
+deploy "namespace" manifests/0_namespace.yml
+
 for package in $(npx lerna list); do
     manifests="packages/$package/manifests"
     if [ ! -d $manifests ]; then
@@ -14,6 +16,6 @@ for package in $(npx lerna list); do
     deploy "$package" "$manifests"
 done
 
-deploy "common" "manifests"
+deploy "common" manifests
 
-kubectl get ns,svc,deploy,po,cm,secrets,pvc -o wide -n=iot
+kubectl get all -o wide -n=iot
