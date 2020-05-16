@@ -1,6 +1,6 @@
 {
   "name": "biot",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Telegram IoT bot that notifies you about measurements and events in your things.",
   "main": "src/index.js",
   "scripts": {
