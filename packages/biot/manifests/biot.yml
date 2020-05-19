@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: biot
-          image: mmontes11/iot-biot:3.1.0
+          image: mmontes11/iot-biot:3.2.0
           imagePullPolicy: Always
           resources:
             requests:
