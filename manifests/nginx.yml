@@ -10,9 +10,11 @@ spec:
   selector:
     app: iot
     tier: reverse-proxy
-  type: NodePort
   ports:
     - port: 80
+      name: http
+    - port: 8080
+      name: status
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -46,3 +48,6 @@ spec:
               cpu: "125m"
           ports:
             - containerPort: 80
+              name: http
+            - containerPort: 8080
+              name: status
