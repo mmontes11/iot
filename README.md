@@ -1,5 +1,6 @@
 # IoT
 [![Build Status](https://travis-ci.org/mmontes11/iot.svg?branch=develop)](https://travis-ci.org/mmontes11/iot)
+[![Coverage Status](https://coveralls.io/repos/github/mmontes11/iot/badge.svg?branch=develop)](https://coveralls.io/github/mmontes11/iot?branch=develop)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mmontes11/iot)
 
