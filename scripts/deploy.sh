@@ -5,7 +5,7 @@ deploy() {
     kubectl apply -f $2
 }
 
-deploy "namespace" manifests/0_namespace.yml
+deploy "namespace" manifests/00_namespace.yml
 
 for package in $(npx lerna list); do
     manifests="packages/$package/manifests"
