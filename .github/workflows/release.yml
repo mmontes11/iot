@@ -29,9 +29,12 @@ jobs:
 
       - name: Release Docker
         env:
+          ENV_FRONT: ${{ secrets.ENV_FRONT }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        run: ./scripts/release.sh
+        run: |
+          echo "$ENV_FRONT" > ./packages/front/.env
+          ./scripts/release.sh
 
       - name: Release npm
         env:

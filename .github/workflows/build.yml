@@ -19,7 +19,7 @@ jobs:
 
       - name: Setup front build variables
         env:
-          ENV_PROD: ${{ secrets.ENV_FRONT }}
+          ENV_FRONT: ${{ secrets.ENV_FRONT }}
         run: |
           echo "$ENV_FRONT" > ./packages/front/.env
 
