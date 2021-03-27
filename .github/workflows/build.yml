@@ -17,6 +17,12 @@ jobs:
       - name: Install
         run: npm install
 
+      - name: Setup front build variables
+        env:
+          ENV_PROD: ${{ secrets.ENV_FRONT }}
+        run: |
+          echo "$ENV_FRONT" > ./packages/front/.env
+
       - name: Build
         run: npm run build
 

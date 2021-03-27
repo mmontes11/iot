@@ -17,10 +17,13 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Setup CI
+      - name: Setup Test
         env:
           ENV_TEST: ${{ secrets.ENV_TEST }}
-        run: ./scripts/ci.sh
+        run: |
+          echo "$ENV_TEST" > .env
+          docker-compose up -d
+          docker ps -a
 
       - name: Test
         run: npm run test
