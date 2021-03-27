@@ -22,6 +22,7 @@ jobs:
           ENV_TEST: ${{ secrets.ENV_TEST }}
         run: |
           echo "$ENV_TEST" > .env
+          cp .env packages/back
           docker-compose up -d
           docker ps -a
 
