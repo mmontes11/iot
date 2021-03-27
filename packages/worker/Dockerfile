@@ -2,7 +2,7 @@ FROM node:12.21-alpine3.12
 
 ENV WORKDIR /usr/src/iot-worker
 
-RUN mkdir ${WORKDIR}
+RUN mkdir -p ${WORKDIR}
 
 WORKDIR ${WORKDIR}
 
