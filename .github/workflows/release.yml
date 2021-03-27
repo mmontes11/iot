@@ -27,13 +27,17 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Release Docker
+      - name: Setup front build variables
         env:
           ENV_FRONT: ${{ secrets.ENV_FRONT }}
+        run: |
+          echo "$ENV_FRONT" > ./packages/front/.env
+
+      - name: Release Docker
+        env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
-          echo "$ENV_FRONT" > ./packages/front/.env
           ./scripts/release.sh
 
       - name: Release npm

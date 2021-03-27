@@ -17,7 +17,7 @@ function release() {
 
     echo "🏗    Building '$image'. Context: '$path'"
     docker buildx create --name "$name" --use --append
-    docker buildx build --platform "$platform" -t "$image:$tag" -t "$image:latest" --push .
+    docker buildx build --platform "$platform" -t "$image:$tag" -t "$image:latest" --push "$path"
     docker buildx imagetools inspect "$image:latest"
 }
 
