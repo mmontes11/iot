@@ -14,20 +14,22 @@ docker buildx create --name "$project"
 docker buildx use "$project"
 
 build() {
-    echo "🏗    Building $1 ..."
-    docker buildx build --platform "$platform" -t "$1" --push "$2"
-    docker buildx imagetools inspect "$1"
+  echo "🏗    Building $1 ..."
+  docker buildx build --platform "$platform" -t "$1" --push "$2"
+  docker buildx imagetools inspect "$1"
 }
 
 for package in $(npx lerna list); do
-    package_path="packages/$package"
-    dockerfile="$package_path/Dockerfile"
-    if [ ! -f $dockerfile ]; then
-        echo "⚠️    ${dockerfile} does not exist. Ignoring $package."
-        continue
-    fi
-    package_json="$package_path/package.json"
-    version=$(jq -r .version "$package_json")
-    image="$DOCKER_USERNAME/$project-$package:$version"
-    build "$image" "$package_path"
+  package_path="packages/$package"
+  dockerfile="$package_path/Dockerfile"
+  if [ ! -f $dockerfile ]; then
+    echo "⚠️    ${dockerfile} does not exist. Ignoring $package."
+    continue
+  fi
+  package_json="$package_path/package.json"
+  version=$(jq -r .version "$package_json")
+  image="$DOCKER_USERNAME/$project-$package:$version"
+  build "$image" "$package_path"
 done
+
+build "iot-nginx" "./services/nginx"
