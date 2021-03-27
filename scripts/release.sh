@@ -19,17 +19,18 @@ build() {
   docker buildx imagetools inspect "$1"
 }
 
-for package in $(npx lerna list); do
-  package_path="packages/$package"
-  dockerfile="$package_path/Dockerfile"
+for p in $(ls -d packages/*); do
+  name=$(basename "$p")
+  path="$ms"
+  dockerfile="$path/Dockerfile"
   if [ ! -f $dockerfile ]; then
-    echo "⚠️    ${dockerfile} does not exist. Ignoring $package."
+    echo "⚠️    ${dockerfile} does not exist. Ignoring '$name'."
     continue
   fi
-  package_json="$package_path/package.json"
+  package_json="$path/package.json"
   version=$(jq -r .version "$package_json")
-  image="$DOCKER_USERNAME/$project-$package:$version"
-  build "$image" "$package_path"
+  image="$DOCKER_USERNAME/$project-$name:$version"
+  build "$image" "$path"
 done
 
 build "iot-nginx" "./services/nginx"

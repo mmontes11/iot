@@ -1,0 +1,51 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Artifact Back
+        uses: actions/upload-artifact@v2
+        with:
+          name: back
+          path: ./packages/back/dist
+
+      - name: Artifact BIoT
+        uses: actions/upload-artifact@v2
+        with:
+          name: biot
+          path: ./packages/biot/dist
+
+      - name: Artifact Client
+        uses: actions/upload-artifact@v2
+        with:
+          name: client
+          path: ./packages/client/dist
+      
+      - name: Artifact Front
+        uses: actions/upload-artifact@v2
+        with:
+          name: front
+          path: ./packages/front/dist
+
+      - name: Artifact Worker
+        uses: actions/upload-artifact@v2
+        with:
+          name: worker
+          path: ./packages/worker/dist
