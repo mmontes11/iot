@@ -1,8 +1,8 @@
 FROM node:12.21-alpine3.12
 
-ENV WORKDIR -p /usr/src/iot-thing
+ENV WORKDIR /usr/src/iot-thing
 
-RUN mkdir ${WORKDIR}
+RUN mkdir -p ${WORKDIR}
 
 WORKDIR ${WORKDIR}
 
