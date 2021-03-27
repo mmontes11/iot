@@ -7,8 +7,7 @@
 General purpose Internet of Things platform.
 
 ## Demo
-
-### Front
+###### Front
 
 https://iot.mmontes-dev.duckdns.org/
 <details>
@@ -22,33 +21,25 @@ https://iot.mmontes-dev.duckdns.org/
   </p>
 </details>
 
-### BIoT
+###### BIoT
 
 [@mmontesIoTBot](https://t.me/mmontesIoTBot)
 
-## Development
+## Installation
 
-Configure `.env` files:
+###### Local + Tmux
+
+- Install [tmux](https://github.com/tmux/tmux)
+- Configure `.env` files:
 - [common](./.env.example)
 - [back](./packages/back/.env.example)
 - [biot](./packages/biot/.env.example)
 - [front](./packages/front/.env.example)
 - [thing](./packages/thing/.env.example)
 - [worker](./packages/worker/.env.example)
-
-#### MacOS
+  
 ```bash
-$ ./scripts/start-dev.sh
-```
-
-#### Other OS
-```bash
-$ docker-compose up -d --build --force-recreate
-$ npm run start:back
-$ npm run start:front
-$ npm run start:biot
-$ npm run start:worker
-$ npm run start:thing
+$ ./scripts/run-dev.sh
 ```
 
 ## Deployment

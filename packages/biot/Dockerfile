@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12.21-alpine3.12
 
 ENV WORKDIR /usr/src/iot-biot
 

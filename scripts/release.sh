@@ -31,9 +31,3 @@ for package in $(npx lerna list); do
     image="$DOCKER_USERNAME/$project-$package:$version"
     build "$image" "$package_path"
 done
-
-for service_path in services/*; do
-    service="${service_path##*/}"
-    image="$DOCKER_USERNAME/$project-$service:$version"
-    build "$image" "$service_path"
-done
