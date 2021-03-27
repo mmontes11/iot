@@ -6,31 +6,27 @@ npm run build
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 project=$(jq -r .name package.json)
-version=$(jq -r .version package.json)
+tag=$(git describe --abbrev=0 --tags)
 platform="linux/amd64,linux/arm64,linux/arm"
 
-echo "👷   Creating builder $project ..."
-docker buildx create --name "$project"
-docker buildx use "$project"
+function release() {
+    name="$1"
+    path="$2"
+    image="$DOCKER_USERNAME/$project-$name"
+    platform="linux/amd64,linux/arm64,linux/arm"
 
-build() {
-  echo "🏗    Building $1 ..."
-  docker buildx build --platform "$platform" -t "$1" --push "$2"
-  docker buildx imagetools inspect "$1"
+    echo "🏗    Building '$image'. Context: '$path'"
+    docker buildx create --name "$name" --use --append
+    docker buildx build --platform "$platform" -t "$image:$tag" -t "$image:latest" --push .
+    docker buildx imagetools inspect "$image:latest"
 }
 
 for p in $(ls -d packages/*); do
-  name=$(basename "$p")
-  path="$ms"
-  dockerfile="$path/Dockerfile"
-  if [ ! -f $dockerfile ]; then
-    echo "⚠️    ${dockerfile} does not exist. Ignoring '$name'."
-    continue
-  fi
-  package_json="$path/package.json"
-  version=$(jq -r .version "$package_json")
-  image="$DOCKER_USERNAME/$project-$name:$version"
-  build "$image" "$path"
+    name=$(basename "$p")
+    if [ $name == "client" ]; then
+      continue;
+    fi
+    release "$name" "$p"
 done
 
-build "iot-nginx" "./services/nginx"
+release "nginx" "./services/nginx"
