@@ -72,6 +72,7 @@
     "socket.io-client": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/compat-data": "^7.13.12",
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
