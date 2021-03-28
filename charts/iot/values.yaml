@@ -1,0 +1,19 @@
+mongodb:
+  image: 
+    repository: mongo
+    tag: 4.4.4
+  architecture: standalone
+  auth:
+    enabled: false
+  persistence:
+    enabled: true
+    size: 16Gi
+    mountPath: /data/db
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+      namespace: monitoring
+      additionalLabels:
+        release: kube-prometheus-stack
+
