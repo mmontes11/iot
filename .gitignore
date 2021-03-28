@@ -50,3 +50,6 @@ data/
 
 # k8s
 secret.yml
+
+# Chart dependencies
+charts/**/charts/*.tgz

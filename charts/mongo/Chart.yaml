@@ -1,6 +1,6 @@
 apiVersion: v2
-name: iot
-description: General purpose Internet of Things platform
+name: mongo
+description: MongoDB with metrics compatible with ARM
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -24,6 +24,9 @@ appVersion: 1.16.0
 
 
 dependencies:
-  - name: mongo
-    version: "0.1.0"
-    repository: file://../mongo
+  - name: mongodb
+    version: "10.11.1"
+    repository: https://charts.bitnami.com/bitnami
+  - name: prometheus-mongodb-exporter
+    version: "2.8.1"
+    repository: https://prometheus-community.github.io/helm-charts
