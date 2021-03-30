@@ -1,0 +1,15 @@
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: redis
+  pullPolicy: IfNotPresent
+  tag: 6.2.1
+
+storage: 1Gi
+
+port: 6379
+
+resources: {}
+
+nodeSelector: {}
