@@ -9,8 +9,6 @@ mongodb:
     enabled: true
     size: 8Gi
     mountPath: /data/db
-  metrics:
-    enabled: false
 
 prometheus-mongodb-exporter:
   image:
@@ -37,11 +35,11 @@ prometheus-mongodb-exporter:
       port: metrics
     initialDelaySeconds: 10
   mongodb:
-    uri: "mongodb://iot-mongo:27017"
+    uri: "mongodb://mongo:27017"
   serviceMonitor:
     enabled: true
     interval: 30s
     scrapeTimeout: 10s
     namespace: monitoring
     additionalLabels:
-      release: kube-prometheus-stack
+      release: prometheus

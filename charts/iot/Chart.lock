@@ -2,5 +2,8 @@ dependencies:
 - name: mongo
   repository: file://../mongo
   version: 0.1.0
-digest: sha256:a7dcb1d14d73b52bdf7df4c2a1af5383f76c68b41a3ccf14ff8414b9684d075a
-generated: "2021-03-28T21:47:17.050524+02:00"
+- name: redis
+  repository: file://../redis
+  version: 0.1.0
+digest: sha256:b5c9a307e6b822e32597f52d1a474e615f5cf767aa7ff2c440892bde9c764504
+generated: "2021-03-30T22:57:06.148807+02:00"

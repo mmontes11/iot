@@ -3,4 +3,17 @@ fullnameOverride: ""
 
 # dependencies
 
-mongo: {}
+mongo:
+  prometheus-mongodb-exporter:
+    mongodb:
+      uri: "mongodb://iot-mongo:27017"
+    serviceMonitor:
+      additionalLabels:
+        release: kube-prometheus-stack
+
+redis:
+  prometheus-redis-exporter:
+    redisAddress: redis://iot-redis:6379
+    serviceMonitor:
+      labels:
+        release: kube-prometheus-stack
