@@ -1,6 +1,6 @@
 apiVersion: v2
-name: iot
-description: General purpose Internet of Things platform
+name: mosquitto
+description: Mosquitto for IoT
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -21,18 +21,3 @@ version: 0.1.0
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 appVersion: 1.16.0
-
-
-dependencies:
-  - name: mongo
-    version: "0.1.0"
-    repository: file://../mongo
-  - name: redis
-    version: "0.1.0"
-    repository: file://../redis
-  - name: nginx
-    version: "0.1.0"
-    repository: file://../nginx
-  - name: mosquitto
-    version: "2.1.1"
-    repository: file://../mosquitto

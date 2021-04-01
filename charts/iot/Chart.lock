@@ -9,7 +9,7 @@ dependencies:
   repository: file://../nginx
   version: 0.1.0
 - name: mosquitto
-  repository: https://k8s-at-home.com/charts/
-  version: 2.1.1
-digest: sha256:b75120778506ad605ad3e4268a34615fd9020fa218fb8e4c7854192ffa823194
-generated: "2021-04-01T17:33:48.316613+02:00"
+  repository: file://../mosquitto
+  version: 0.1.0
+digest: sha256:05a0121e2bf3792993b07da03444175d87e9fa14b66662ef2846ffa46cc6ac10
+generated: "2021-04-01T22:03:54.414963+02:00"
