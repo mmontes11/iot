@@ -30,3 +30,4 @@ for p in $(ls -d packages/*); do
 done
 
 release "nginx" "./services/nginx"
+release "mosquitto" "./services/mosquitto"
