@@ -10,24 +10,26 @@ tag=$(git describe --abbrev=0 --tags)
 platform="linux/amd64,linux/arm64,linux/arm"
 
 function release() {
-    name="$1"
-    path="$2"
-    image="$DOCKER_USERNAME/$project-$name"
-    platform="linux/amd64,linux/arm64,linux/arm"
+  name="$1"
+  path="$2"
+  image="$DOCKER_USERNAME/$project-$name"
+  platform="linux/amd64,linux/arm64,linux/arm"
 
-    echo "🏗    Building '$image'. Context: '$path'"
-    docker buildx create --name "$name" --use --append
-    docker buildx build --platform "$platform" -t "$image:$tag" -t "$image:latest" --push "$path"
-    docker buildx imagetools inspect "$image:latest"
+  echo "🏗    Building '$image'. Context: '$path'"
+  docker buildx create --name "$name" --use --append
+  docker buildx build --platform "$platform" -t "$image:$tag" -t "$image:latest" --push "$path"
+  docker buildx imagetools inspect "$image:latest"
 }
 
 for p in $(ls -d packages/*); do
-    name=$(basename "$p")
-    if [ $name == "client" ]; then
-      continue;
-    fi
-    release "$name" "$p"
+  name=$(basename "$p")
+  if [ $name == "client" ]; then
+    continue
+  fi
+  release "$name" "$p"
 done
 
-release "nginx" "./services/nginx"
-release "mosquitto" "./services/mosquitto"
+for p in $(ls -d services/*); do
+  name=$(basename "$p")
+  release "$name" "$p"
+done
