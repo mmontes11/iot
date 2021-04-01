@@ -30,3 +30,6 @@ dependencies:
   - name: redis
     version: "0.1.0"
     repository: file://../redis
+  - name: mosquitto
+    version: "2.1.1"
+    repository: https://k8s-at-home.com/charts/

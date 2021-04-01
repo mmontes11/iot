@@ -17,3 +17,25 @@ redis:
     serviceMonitor:
       labels:
         release: kube-prometheus-stack
+
+mosquitto:
+  image:
+    repository: eclipse-mosquitto
+    pullPolicy: IfNotPresent
+    tag: 2.0.7
+
+  service:
+    type: ClusterIP
+    port:
+      port: 1883
+      name: mqtt
+
+  auth:
+    enabled: false
+
+  persistence:
+    data:
+      enabled: true
+      mountPath: /mosquitto/data
+      accessMode: ReadWriteOnce
+      size: 100Mi

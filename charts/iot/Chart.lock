@@ -5,5 +5,8 @@ dependencies:
 - name: redis
   repository: file://../redis
   version: 0.1.0
-digest: sha256:b5c9a307e6b822e32597f52d1a474e615f5cf767aa7ff2c440892bde9c764504
-generated: "2021-03-30T22:57:06.148807+02:00"
+- name: mosquitto
+  repository: https://k8s-at-home.com/charts/
+  version: 2.1.1
+digest: sha256:306f1173c04cae7d71c0a032bf1ba2260799f6a3c78d77227e8ca5c51c5e905d
+generated: "2021-04-01T16:52:02.688289+02:00"
