@@ -1,0 +1,13 @@
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: mmontes11/iot-nginx
+  pullPolicy: IfNotPresent
+  tag: v3.3.0
+
+port: 80
+
+resources: {}
+
+nodeSelector: {}
