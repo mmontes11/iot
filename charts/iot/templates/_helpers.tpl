@@ -50,13 +50,115 @@ app.kubernetes.io/name: {{ include "iot.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
+
 {{/*
-Create the name of the service account to use
+Secret
 */}}
-{{- define "iot.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "iot.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
+{{- define "iot.secret" -}}
+{{- default .Chart.Name .Values.secretNameOverride  | trunc 63 | trimSuffix "-" }}
 {{- end }}
+
+{{/*
+Full name Back
+*/}}
+{{- define "iot.fullnameBack" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "back" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels API
+*/}}
+{{- define "iot.selectorLabelsBack" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameBack" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Full name Biot
+*/}}
+{{- define "iot.fullnameBiot" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "biot" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels Biot
+*/}}
+{{- define "iot.selectorLabelsBiot" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameBiot" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Full name Front
+*/}}
+{{- define "iot.fullnameFront" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "front" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels Biot
+*/}}
+{{- define "iot.selectorLabelsFront" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameFront" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Full name Thing
+*/}}
+{{- define "iot.fullnameThing" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "thing" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels Thing
+*/}}
+{{- define "iot.selectorLabelsThing" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameThing" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Full name Worker
+*/}}
+{{- define "iot.fullnameWorker" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "worker" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels Worker
+*/}}
+{{- define "iot.selectorLabelsWorker" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameWorker" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Full name Mosquitto
+*/}}
+{{- define "iot.fullnameMosquitto" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "mosquitto" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels Mosquitto
+*/}}
+{{- define "iot.selectorLabelsMosquitto" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameMosquitto" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
+
+{{/*
+Full name Nginx
+*/}}
+{{- define "iot.fullnameNginx" -}}
+{{- printf "%s-%s" (include "iot.fullname" .) "nginx" | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
+{{/*
+Selector labels Mosquitto
+*/}}
+{{- define "iot.selectorLabelsNginx" -}}
+app.kubernetes.io/name: {{ include "iot.fullnameNginx" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}

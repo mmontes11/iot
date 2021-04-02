@@ -1,11 +1,12 @@
-{{ $fullName := include "mosquitto.fullname" . }}
-{{ $selectorLabels := include "mosquitto.selectorLabels" . }}
+{{ with $.Values.mosquitto }}
+{{ $fullName := include "iot.fullnameMosquitto" $ }}
+{{ $selectorLabels := include "iot.selectorLabelsMosquitto" $ }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ $fullName  }}
   labels:
-    {{ include "mosquitto.labels" . | nindent 4 }}
+    {{ include "iot.labels" $ | nindent 4 }}
 spec:
   selector:
     matchLabels:
@@ -17,11 +18,12 @@ spec:
     spec:
       containers:
         - name: {{ $fullName  }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .image.repository }}:{{ .image.tag | default $.Chart.AppVersion }}"
+          imagePullPolicy: {{ .image.pullPolicy }}
           {{ with .resources }}
           resources:
             {{ toYaml . | nindent 12 }}
           {{ end }}
           ports:
-            - containerPort: {{ .Values.port }}
+            - containerPort: {{ .service.port }}
+{{ end}}

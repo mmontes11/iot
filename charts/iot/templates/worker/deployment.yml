@@ -1,0 +1,60 @@
+{{ with $.Values.worker }}
+{{ $fullName := include "iot.fullnameWorker" $ }}
+{{ $selectorLabels := include "iot.selectorLabelsWorker" $ }}
+{{ $secret := include "iot.secret" $ }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{ include "iot.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{ $selectorLabels | nindent 6 }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        {{ $selectorLabels | nindent 8 }}
+    spec:
+      containers:
+        - name: {{ $fullName }}
+          image: "{{ .image.repository }}:{{ .image.tag | default $.Chart.AppVersion }}"
+          imagePullPolicy: {{ .image.pullPolicy }}
+          ports:
+            - name: service-port
+              containerPort: {{ .service.port }}
+          {{ with .resources }}
+          resources:
+            {{ toYaml . | nindent 12 }}
+          {{ end }}
+          envFrom:
+            - configMapRef:
+                name: {{ $fullName }}
+          env:
+            - name: BIOT_BASIC_AUTH_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: BASIC_AUTH_USER
+            - name: BIOT_BASIC_AUTH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: BASIC_AUTH_PASSWORD
+            - name: BIOT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: BIOT_USER
+            - name: BIOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: BIOT_PASSWORD
+      {{ with .nodeSelector }}
+      nodeSelector:
+        {{ toYaml . | nindent 8 }}
+      {{ end}}
+{{ end }}

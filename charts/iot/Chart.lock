@@ -1,15 +1,9 @@
 dependencies:
-- name: mongo
-  repository: file://../mongo
+- name: mongodb
+  repository: file://../mongodb
   version: 0.1.0
 - name: redis
   repository: file://../redis
   version: 0.1.0
-- name: nginx
-  repository: file://../nginx
-  version: 0.1.0
-- name: mosquitto
-  repository: file://../mosquitto
-  version: 0.1.0
-digest: sha256:05a0121e2bf3792993b07da03444175d87e9fa14b66662ef2846ffa46cc6ac10
-generated: "2021-04-01T22:03:54.414963+02:00"
+digest: sha256:97bd46d160d47f21c77c1320cd8d02aa54be0d175186259bb5ce756e79e35c5f
+generated: "2021-04-02T17:37:51.099829+02:00"

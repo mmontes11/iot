@@ -24,15 +24,9 @@ appVersion: 1.16.0
 
 
 dependencies:
-  - name: mongo
+  - name: mongodb
     version: "0.1.0"
-    repository: file://../mongo
+    repository: file://../mongodb
   - name: redis
     version: "0.1.0"
     repository: file://../redis
-  - name: nginx
-    version: "0.1.0"
-    repository: file://../nginx
-  - name: mosquitto
-    version: "2.1.1"
-    repository: file://../mosquitto
