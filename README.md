@@ -8,7 +8,7 @@
 
 General purpose Internet of Things platform.
 
-## Demo
+### Demo
 ###### Front
 
 https://iot.mmontes-dev.duckdns.org/
@@ -27,36 +27,32 @@ https://iot.mmontes-dev.duckdns.org/
 
 [@mmontesIoTBot](https://t.me/mmontesIoTBot)
 
-## Installation
+### Installation
 
 ###### Local + Tmux
 
 - Install [tmux](https://github.com/tmux/tmux)
 - Configure `.env` files:
-- [common](./.env.example)
-- [back](./packages/back/.env.example)
-- [biot](./packages/biot/.env.example)
-- [front](./packages/front/.env.example)
-- [thing](./packages/thing/.env.example)
-- [worker](./packages/worker/.env.example)
+  - [common](./.env.example)
+  - [back](./packages/back/.env.example)
+  - [biot](./packages/biot/.env.example)
+  - [front](./packages/front/.env.example)
+  - [thing](./packages/thing/.env.example)
+  - [worker](./packages/worker/.env.example)
   
 ```bash
 $ ./scripts/run-dev.sh
 ```
 
-## Deployment
+###### Kubernetes + Helm
 
-Configure `secret.yml` files:
-- [back](./packages/back/manifests/secret.yml.example)
-- [biot](./packages/biot/manifests/secret.yml.example)
-- [worker](./packages/worker/manifests/secret.yml.example)
+Configure [`iot-secret.yml`](./charts/iot/iot-secret.yml.example) and then:
 
 ```bash
-$ ./scripts/build.sh
-$ ./scripts/deploy.sh
+$ helm install iot charts/iot
 ```
 
-## Things
+### Things
 
 Once everything is up and running, it is time to start deploying things:
 - [IoT raspi sensors](https://github.com/mmontes11/iot-raspi-sensors)
