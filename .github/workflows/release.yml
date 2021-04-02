@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+
+      - name: Setup QEMU
+        uses: docker/setup-qemu-action@v1
+      
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: npm install
+
+      - name: Setup front build variables
+        env:
+          ENV_FRONT: ${{ secrets.ENV_FRONT }}
+        run: |
+          echo "$ENV_FRONT" > ./packages/front/.env
+
+      - name: Release Docker
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          ./scripts/release.sh
+
+      - name: Release npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "$NPM_TOKEN"
+          npm run publish:npm

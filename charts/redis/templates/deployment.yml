@@ -1,0 +1,34 @@
+{{ $fullName := include "redis.fullname" . }}
+{{ $selectorLabels := include "redis.selectorLabels" . }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $fullName  }}
+  labels:
+    {{ include "redis.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{ $selectorLabels | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{ $selectorLabels | nindent 8 }}
+    spec:
+      containers:
+        - name: {{ $fullName  }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{ with .resources }}
+          resources:
+            {{ toYaml . | nindent 12 }}
+          {{ end }}
+          ports:
+            - containerPort: {{ .Values.port }}
+          volumeMounts:
+            - name: {{ $fullName  }}
+              mountPath: /data
+      volumes:
+        - name: {{ $fullName  }}
+          persistentVolumeClaim:
+            claimName: {{ $fullName  }}

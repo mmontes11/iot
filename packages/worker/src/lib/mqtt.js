@@ -26,8 +26,6 @@ class MQTT {
 const mqtt = new MQTT(
   process.env.MQTT_BROKER_HOST,
   process.env.MQTT_BROKER_PORT,
-  process.env.MQTT_BROKER_USERNAME,
-  process.env.MQTT_BROKER_PASSWORD,
 );
 
 export default mqtt;

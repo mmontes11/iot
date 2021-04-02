@@ -1,0 +1,14 @@
+{{ with $.Values.back }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "iot.fullnameBack" $ }}
+  labels: 
+    {{ include "iot.labels" $ | nindent 4 }}
+spec:
+  type: {{ .service.type }}
+  ports:
+    - port: {{ .service.port }}
+  selector: 
+    {{ include "iot.selectorLabelsBack" $ | nindent 4 }}
+{{ end }}

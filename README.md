@@ -1,14 +1,15 @@
 # IoT
-[![Build Status](https://travis-ci.org/mmontes11/iot.svg?branch=develop)](https://travis-ci.org/mmontes11/iot)
-[![Coverage Status](https://coveralls.io/repos/github/mmontes11/iot/badge.svg?branch=develop)](https://coveralls.io/github/mmontes11/iot?branch=develop)
+[![Lint](https://github.com/mmontes11/iot/workflows/Lint/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ALint)
+[![Build](https://github.com/mmontes11/iot/workflows/Build/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ABuild)
+[![Test](https://github.com/mmontes11/iot/workflows/Test/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ATest)
+[![Release](https://github.com/mmontes11/iot/workflows/Release/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ARelease)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mmontes11/iot)
 
 General purpose Internet of Things platform.
 
-## Demo
-
-### Front
+### Demo
+###### Front
 
 https://iot.mmontes-dev.duckdns.org/
 <details>
@@ -22,48 +23,36 @@ https://iot.mmontes-dev.duckdns.org/
   </p>
 </details>
 
-### BIoT
+###### BIoT
 
 [@mmontesIoTBot](https://t.me/mmontesIoTBot)
 
-## Development
+### Installation
 
-Configure `.env` files:
-- [common](./.env.example)
-- [back](./packages/back/.env.example)
-- [biot](./packages/biot/.env.example)
-- [front](./packages/front/.env.example)
-- [thing](./packages/thing/.env.example)
-- [worker](./packages/worker/.env.example)
+###### Local + Tmux
 
-#### MacOS
+- Install [tmux](https://github.com/tmux/tmux)
+- Configure `.env` files:
+  - [common](./.env.example)
+  - [back](./packages/back/.env.example)
+  - [biot](./packages/biot/.env.example)
+  - [front](./packages/front/.env.example)
+  - [thing](./packages/thing/.env.example)
+  - [worker](./packages/worker/.env.example)
+  
 ```bash
-$ ./scripts/start-dev.sh
+$ ./scripts/run-dev.sh
 ```
 
-#### Other OS
-```bash
-$ docker-compose up -d --build --force-recreate
-$ npm run start:back
-$ npm run start:front
-$ npm run start:biot
-$ npm run start:worker
-$ npm run start:thing
-```
+###### Kubernetes + Helm
 
-## Deployment
-
-Configure `secret.yml` files:
-- [back](./packages/back/manifests/secret.yml.example)
-- [biot](./packages/biot/manifests/secret.yml.example)
-- [worker](./packages/worker/manifests/secret.yml.example)
+Configure [`iot-secret.yml`](./charts/iot/iot-secret.yml.example) and then:
 
 ```bash
-$ ./scripts/build.sh
-$ ./scripts/deploy.sh
+$ helm install iot charts/iot
 ```
 
-## Things
+### Things
 
 Once everything is up and running, it is time to start deploying things:
 - [IoT raspi sensors](https://github.com/mmontes11/iot-raspi-sensors)
