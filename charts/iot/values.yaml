@@ -99,13 +99,6 @@ front:
     port: 80
 
   resources: {}
-  replicaCount: 1
-  autoscaling:
-    enabled: true
-    minReplicas: 1
-    maxReplicas: 4
-    targetCPUUtilizationPercentage: 50
-    targetMemoryUtilizationPercentage: 50
   nodeSelector: {}
 
 thing:
@@ -121,13 +114,6 @@ thing:
     port: 80
 
   resources: {}
-  replicaCount: 1
-  autoscaling:
-    enabled: true
-    minReplicas: 1
-    maxReplicas: 4
-    targetCPUUtilizationPercentage: 50
-    targetMemoryUtilizationPercentage: 50
   nodeSelector: {}
 
   debug: true

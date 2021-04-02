@@ -9,6 +9,9 @@ metadata:
   labels:
     {{ include "iot.labels" $ | nindent 4 }}
 spec:
+  {{ if not .autoscaling.enabled }}
+  replicas: {{ .replicaCount }}
+  {{ end }}
   selector:
     matchLabels:
       {{ $selectorLabels | nindent 6 }}
