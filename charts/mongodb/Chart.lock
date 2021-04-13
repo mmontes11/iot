@@ -1,9 +1,0 @@
-dependencies:
-- name: mongodb
-  repository: https://charts.bitnami.com/bitnami
-  version: 10.11.1
-- name: prometheus-mongodb-exporter
-  repository: https://prometheus-community.github.io/helm-charts
-  version: 2.8.1
-digest: sha256:6d6920bb30b8ab49c5deae111c58bb71376f702c373a68f83047df33732b9235
-generated: "2021-03-28T21:54:19.815015+02:00"

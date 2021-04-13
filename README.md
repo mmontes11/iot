@@ -47,10 +47,9 @@ $ ./scripts/run-dev.sh
 
 ###### Kubernetes + Helm
 
-Configure [`iot-secret.yml`](./charts/iot/iot-secret.yml.example) and then:
-
 ```bash
-$ helm install iot charts/iot
+$ helm repo add mmontes https://charts.mmontes-dev.duckdns.org
+$ helm install iot mmontes/iot
 ```
 
 ### Things

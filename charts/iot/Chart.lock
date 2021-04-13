@@ -1,9 +1,0 @@
-dependencies:
-- name: mongodb
-  repository: file://../mongodb
-  version: 0.1.0
-- name: redis
-  repository: file://../redis
-  version: 0.1.0
-digest: sha256:97bd46d160d47f21c77c1320cd8d02aa54be0d175186259bb5ce756e79e35c5f
-generated: "2021-04-02T17:37:51.099829+02:00"
