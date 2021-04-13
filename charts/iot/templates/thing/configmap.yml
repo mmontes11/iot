@@ -1,0 +1,10 @@
+{{ with $.Values.thing }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "iot.fullnameThing" $ }}
+  labels:
+    {{ include "iot.labels" $ | nindent 4 }}
+data:
+  THING_SERVICE_PORT: {{ .service.port | quote }}
+{{ end }}

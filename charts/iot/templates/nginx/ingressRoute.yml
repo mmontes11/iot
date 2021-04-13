@@ -1,0 +1,21 @@
+{{ with $.Values.nginx }}
+{{ $fullName := include "iot.fullnameNginx" $ }}
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{ include "iot.labels" $ | nindent 4 }}
+spec:
+  entryPoints:
+    {{ range $entrypoint := .ingressRoute.entryPoints }}
+    - {{ $entrypoint }}
+    {{ end }}
+  routes:
+    - kind: Rule
+      match: Host(`{{ .ingressRoute.host }}`)
+      services:
+        - kind: Service
+          name: {{ $fullName }}
+          port: {{ .service.port }}
+{{ end }}

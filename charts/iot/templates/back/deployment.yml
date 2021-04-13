@@ -1,0 +1,77 @@
+{{ with $.Values.back }}
+{{ $fullName := include "iot.fullnameBack" $ }}
+{{ $selectorLabels := include "iot.selectorLabelsBack" $ }}
+{{ $secret := include "iot.secret" $ }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{ include "iot.labels" $ | nindent 4 }}
+spec:
+  {{ if not .autoscaling.enabled }}
+  replicas: {{ .replicaCount }}
+  {{ end }}
+  selector:
+    matchLabels:
+      {{ $selectorLabels | nindent 6 }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        {{ $selectorLabels | nindent 8 }}
+    spec:
+      containers:
+        - name: {{ $fullName }}
+          image: "{{ .image.repository }}:{{ .image.tag | default $.Chart.AppVersion }}"
+          imagePullPolicy: {{ .image.pullPolicy }}
+          ports:
+            - name: service-port
+              containerPort: {{ .service.port }}
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: service-port
+            {{ with .livenessProbe}}
+              {{ toYaml . | nindent 12  }}
+            {{ end }}
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: service-port
+            {{ with .readinessProbe }}
+              {{ toYaml . | nindent 12  }}
+            {{ end }}
+          {{ with .resources }}
+          resources:
+            {{ toYaml . | nindent 12 }}
+          {{ end }}
+          envFrom:
+            - configMapRef:
+                name: {{ $fullName }}
+          env:
+            - name: BASIC_AUTH_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: BASIC_AUTH_USER
+            - name: BASIC_AUTH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: BASIC_AUTH_PASSWORD
+            - name: GOOGLE_MAPS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: GOOGLE_MAPS_KEY
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $secret }}
+                  key: JWT_SECRET
+      {{ with .nodeSelector }}
+      nodeSelector:
+        {{ toYaml . | nindent 8 }}
+      {{ end}}
+{{ end }}

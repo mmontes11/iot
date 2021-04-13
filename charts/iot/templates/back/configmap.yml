@@ -1,0 +1,31 @@
+{{ with $.Values.back }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "iot.fullnameBack" $ }}
+  labels:
+    {{ include "iot.labels" $ | nindent 4 }}
+data:
+  DEBUG: {{ .debug | quote }}
+  BACK_SERVICE_PORT: {{ .service.port | quote }}
+  {{ with .cache }}
+  DEFAULT_CACHE_IN_SECONDS: {{ .defaultExpirationSeconds | quote }}
+  STATS_CACHE_IN_SECONDS: {{ .statsExpirationSeconds | quote }}
+  {{ end }}
+  JWT_EXPIRATION: {{ .jwtExpiration }}
+  MAX_DEFAULT_NEARBY_DISTANCE_IN_METERS: {{ .maxDefaultNearbyDistanceMetres | quote }}
+  MAX_NUM_OF_THINGS_IN_STATS_RESULTS: {{ .maxNumThingsResults | quote }}
+  MONGO_URL: {{ .mongoUrl }}
+  REDIS_URL: {{ .redisUrl }}
+  {{ with .mqtt }}
+  MQTT_BROKER_HOST: {{ .host }}
+  MQTT_BROKER_PORT: {{ .port | quote }}
+  MQTT_BROKER_URL: {{ .url | quote }}
+  {{ end }}
+  {{ if $.Values.thing.enabled }}
+  {{ with .thing }}
+  THING_SOCKET_PORT: {{ .port | quote }}
+  THING_SOCKET_URL: {{ .url | quote }}
+  {{ end }}
+  {{ end }}
+{{ end }}

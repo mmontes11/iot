@@ -1,21 +1,10 @@
 #!/usr/bin/env bash
 
-deploy() {
-    echo "🚀   Deploying $1 ..."
-    kubectl apply -f $2
-}
+RELEASE="iot"
+REPO="mmontes"
 
-deploy "namespace" manifests/0_namespace.yml
+helm repo add "$REPO" https://charts.mmontes-dev.duckdns.org
+helm repo update
 
-for package in $(npx lerna list); do
-    manifests="packages/$package/manifests"
-    if [ ! -d $manifests ]; then
-        echo "⚠️    ${manifests} does not exist. Ignoring $package."
-        continue
-    fi
-    deploy "$package" "$manifests"
-done
-
-deploy "common" manifests
-
-kubectl get all -o wide -n=iot
+echo "🚀 Deploying '${RELEASE}'..."
+helm upgrade --install "$RELEASE" "$REPO/$RELEASE"

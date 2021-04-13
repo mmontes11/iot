@@ -49,4 +49,7 @@ data/
 .node-persist
 
 # k8s
-secret.yml
+*secret.yml
+
+# Chart dependencies
+charts/**/charts/*.tgz

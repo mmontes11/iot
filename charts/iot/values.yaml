@@ -1,0 +1,198 @@
+nameOverride: ""
+fullnameOverride: ""
+
+secretNameOverride: iot
+
+back:
+  image:
+    repository: mmontes11/iot-back
+    pullPolicy: IfNotPresent
+    tag: "v3.3.0"
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  livenessProbe:
+    initialDelaySeconds: 10
+    timeoutSeconds: 3
+    periodSeconds: 15
+  readinessProbe:
+    initialDelaySeconds: 10
+    timeoutSeconds: 3
+    periodSeconds: 15
+
+  resources: {}
+  replicaCount: 2
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 8
+    targetCPUUtilizationPercentage: 50
+    targetMemoryUtilizationPercentage: 50
+  nodeSelector: {}
+
+  debug: true
+  cache:
+    defaultExpirationSeconds: 10
+    statsExpirationSeconds: 10
+  jwtExpiration: 1d
+  maxDefaultNearbyDistanceMetres: 10000
+  maxNumThingsResults: 10
+  mongoUrl: mongodb://iot-mongodb:27017/IoT
+  redisUrl: redis://iot-redis:6379
+  mqtt:
+    host: iot-mosquitto
+    port: 1883
+    url: mqtt://iot-mosquitto:1883
+  thing:
+    port: 80
+    url: http://iot-thing
+
+biot:
+  image:
+    repository: mmontes11/iot-biot
+    pullPolicy: IfNotPresent
+    tag: "v3.3.0"
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  livenessProbe:
+    initialDelaySeconds: 10
+    timeoutSeconds: 3
+    periodSeconds: 15
+  readinessProbe:
+    initialDelaySeconds: 10
+    timeoutSeconds: 3
+    periodSeconds: 15
+
+  resources: {}
+  nodeSelector: {}
+
+  debug: true
+  backUrl: http://iot-back/api
+  growthRate:
+    highAbsoluteThreshold: 0.4
+    moderateAbsoluteThreshold: 0.6
+  temperature:
+    highThreshold: 25
+    lowThreshold: 5
+    prefix: temperature
+  humidity:
+    highThreshold: 90
+    lowThreshold: 30
+    prefix: humidity
+  topics:
+    measurement: measurement
+    measurementChange: measurement-change
+
+front:
+  image:
+    repository: mmontes11/iot-front
+    pullPolicy: Always
+    tag: "v3.3.0"
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  resources: {}
+  nodeSelector: {}
+
+thing:
+  enabled: true
+
+  image:
+    repository: mmontes11/iot-thing
+    pullPolicy: IfNotPresent
+    tag: "v3.3.0"
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  resources: {}
+  nodeSelector: {}
+
+  debug: true
+
+worker:
+  image:
+    repository: mmontes11/iot-worker
+    pullPolicy: IfNotPresent
+    tag: "v3.3.0"
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  resources: {}
+  nodeSelector: {}
+
+  debug: true
+  topics:
+    measurement: measurement
+    measurementChange: measurement-change
+    event: event
+  measurementChange:
+    growthRateThreshold: 0.2
+    pastIntervalHours: 1
+  mongo:
+    url: mongodb://iot-mongodb:27017
+    db: IoT
+  mqtt:
+    host: iot-mosquitto
+    port: 1883
+  biotUrl: http://iot-biot/api
+
+mosquitto:
+  image:
+    repository: mmontes11/iot-mosquitto
+    pullPolicy: IfNotPresent
+    tag: v3.3.0
+
+  service:
+    type: ClusterIP
+    port: 1883
+
+  resources: {}
+
+  nodeSelector: {}
+
+nginx:
+  image:
+    repository: mmontes11/iot-nginx
+    pullPolicy: IfNotPresent
+    tag: v3.3.0
+
+  ingressRoute:
+    host: iot.mmontes-dev.duckdns.org
+    entryPoints:
+      - websecure
+
+  service:
+    type: ClusterIP
+    port: 80
+    
+  resources: {}
+
+  nodeSelector: {}
+
+# dependencies
+
+mongodb:
+  prometheus-mongodb-exporter:
+    mongodb:
+      uri: "mongodb://iot-mongodb:27017"
+    serviceMonitor:
+      additionalLabels:
+        release: kube-prometheus-stack
+
+redis:
+  prometheus-redis-exporter:
+    redisAddress: redis://iot-redis:6379
+    serviceMonitor:
+      labels:
+        release: kube-prometheus-stack

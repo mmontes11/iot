@@ -4,18 +4,21 @@ services:
     image: mongo:4.2.3
     ports:
       - "${MONGO_PORT}:${MONGO_PORT}"
+    volumes:
+      - ./data/mongo:/data/db
     restart: unless-stopped
   redis:
-    image: redis
+    image: redis:5.0.9-alpine3.11
     ports:
       - "${REDIS_PORT}:${REDIS_PORT}"
+    volumes:
+      - ./data/redis:/data
     restart: unless-stopped
   mosquitto:
-    build:
-      context: services/mosquitto
-      args:
-        MQTT_BROKER_USERNAME: "${MQTT_BROKER_USERNAME}"
-        MQTT_BROKER_PASSWORD: "${MQTT_BROKER_PASSWORD}"
+    image: eclipse-mosquitto:2.0.9
     ports:
       - "${MQTT_BROKER_PORT}:${MQTT_BROKER_PORT}"
+    volumes:
+      - ./data/mosquitto/data:/mosquitto/data
+      - ./services/mosquitto:/mosquitto/config
     restart: unless-stopped
