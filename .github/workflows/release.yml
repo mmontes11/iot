@@ -33,6 +33,13 @@ jobs:
         run: |
           echo "$ENV_FRONT" > ./packages/front/.env
 
+      - name: Release npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "$NPM_TOKEN"
+          npm run publish:npm
+          
       - name: Release Docker
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -40,9 +47,4 @@ jobs:
         run: |
           ./scripts/release.sh
 
-      - name: Release npm
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm config set '//registry.npmjs.org/:_authToken' "$NPM_TOKEN"
-          npm run publish:npm
+
