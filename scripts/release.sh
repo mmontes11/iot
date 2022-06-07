@@ -13,7 +13,7 @@ function release() {
   name="$1"
   path="$2"
   image="$DOCKER_USERNAME/$project-$name"
-  platform="linux/amd64,linux/arm64,linux/arm"
+  platform="linux/amd64,linux/arm64"
 
   echo "🏗    Building '$image'. Context: '$path'"
   docker buildx create --name "$name" --use --append
