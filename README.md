@@ -11,25 +11,6 @@
 
 General purpose Internet of Things platform.
 
-### Demo
-###### Front
-
-https://iot.mmontes-dev.duckdns.org/
-<details>
-  <summary>Credentials</summary>
-  <p>
-  
-  Username: `demo`
-  
-  Password: `demoIoT$`
-  
-  </p>
-</details>
-
-###### BIoT
-
-[@mmontesIoTBot](https://t.me/mmontesIoTBot)
-
 ### Installation
 
 ###### Local + Tmux
