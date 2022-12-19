@@ -31,7 +31,7 @@ $ ./scripts/run-dev.sh
 ###### Kubernetes + Helm
 
 ```bash
-$ helm repo add mmontes https://charts.mmontes-dev.duckdns.org
+$ helm repo add mmontes https://charts.mmontes.duckdns.org
 $ helm install iot mmontes/iot
 ```
 
