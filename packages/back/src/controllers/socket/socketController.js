@@ -26,7 +26,7 @@ export class SocketController {
     if (THING_SOCKET_URL) {
       return THING_SOCKET_URL;
     }
-    return `http://${thing.ip}:${THING_SOCKET_PORT}`;
+    return `http://${thing.name}:${THING_SOCKET_PORT}`;
   };
   listen() {
     this.io.on("connection", socket => {
