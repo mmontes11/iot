@@ -22,11 +22,11 @@ export class SocketController {
     socket.disconnect();
   };
   static _getThingSocketUrl = thing => {
-    const { THING_SOCKET_URL, THING_SOCKET_PORT } = process.env;
+    const { THING_SOCKET_URL } = process.env;
     if (THING_SOCKET_URL) {
       return THING_SOCKET_URL;
     }
-    return `http://${thing.name}:${THING_SOCKET_PORT}`;
+    return `http://${thing.name}`;
   };
   listen() {
     this.io.on("connection", socket => {
@@ -37,6 +37,7 @@ export class SocketController {
       logInfo(`Opening socket connection to ${thing.name} @ ${url} ...`);
       const thingSocket = new SocketIOClient(url, {
         query,
+        transports: ["websocket"]
       });
       thingSocket.on("data", data => {
         logInfo(`Receiving data from ${thing.name}:`);
