@@ -26,7 +26,7 @@ export class SocketController {
     if (THING_SOCKET_URL) {
       return THING_SOCKET_URL;
     }
-    return `http://${thing.name}`;
+    return `http://${thing.name}:8080`;
   };
   listen() {
     this.io.on("connection", socket => {
