@@ -15,7 +15,7 @@ export class SocketController {
     }
     const options = {
       query,
-      transports: ["polling", "websocket"],
+      transports: ["websocket"],
     };
     this.socket = SocketIOClient(process.env.SOCKET_URL, options);
     this.onData = onData;
