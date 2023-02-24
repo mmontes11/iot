@@ -1,10 +1,6 @@
 # IoT
-[![Lint](https://github.com/mmontes11/iot/workflows/Lint/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ALint)
-[![Build](https://github.com/mmontes11/iot/workflows/Build/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ABuild)
-[![Test](https://github.com/mmontes11/iot/workflows/Test/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ATest)
-[![Release](https://github.com/mmontes11/iot/workflows/Release/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ARelease)
-[![Deploy](https://github.com/mmontes11/iot/workflows/Deploy/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ADeploy)
-
+[![CI](https://github.com/mmontes11/iot/actions/workflows/ci.yml/badge.svg)](https://github.com/mmontes11/iot/actions/workflows/ci.yml)
+[![Release](https://github.com/mmontes11/iot/actions/workflows/release.yml/badge.svg)](https://github.com/mmontes11/iot/actions/workflows/release.yml)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/iot)](https://artifacthub.io/packages/helm/mmontes/iot)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mmontes11/iot)
