@@ -5,7 +5,7 @@
 [![Release](https://github.com/mmontes11/iot/workflows/Release/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ARelease)
 [![Deploy](https://github.com/mmontes11/iot/workflows/Deploy/badge.svg)](https://github.com/mmontes11/iot/actions?query=workflow%3ADeploy)
 
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/mmontes)](https://artifacthub.io/packages/search?repo=mmontes)
+[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/iot)](https://artifacthub.io/packages/helm/mmontes/iot)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/mmontes11/iot)
 
@@ -31,8 +31,8 @@ $ ./scripts/run-dev.sh
 ###### Kubernetes + Helm
 
 ```bash
-$ helm repo add mmontes https://charts.mmontes.duckdns.org
-$ helm install iot mmontes/iot
+helm repo add mmontes https://mmontes11.github.io/charts
+helm install iot mmontes/iot
 ```
 
 ### Things
