@@ -86,9 +86,9 @@
     "coveralls": "^3.0.3",
     "cross-env": "^5.1.4",
     "eslint-config-mmontes11-node": "^1.0.5",
-    "mocha": "^3.5.3",
+    "mocha": "^10.2.0",
     "nodemon": "^1.18.11",
-    "nyc": "^11.7.1",
+    "nyc": "^15.1.0",
     "prettier": "^1.12.1"
   }
 }
