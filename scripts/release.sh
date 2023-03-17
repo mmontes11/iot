@@ -3,7 +3,7 @@
 npx lerna bootstrap
 npm run build
 
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+echo $DOCKER_PASSWORD | docker login ghcr.io -u $DOCKER_USERNAME --password-stdin
 
 project=$(jq -r .name package.json)
 tag=$(git describe --abbrev=0 --tags)
