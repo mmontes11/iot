@@ -82,7 +82,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
+    "chai-http": "^4.3.0",
     "coveralls": "^3.0.3",
     "cross-env": "^5.1.4",
     "eslint-config-mmontes11-node": "^1.0.5",
