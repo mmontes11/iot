@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "General purpose Internet of Things platform",
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "^6.4.1"
   },
   "scripts": {
     "build": "lerna run build",
